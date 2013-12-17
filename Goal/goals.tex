@@ -1,11 +1,98 @@
 \documentclass{book}
 \usepackage[utf8]{inputenc}
 \usepackage[dutch]{babel}
+
+\usepackage{csquotes}
+\usepackage[backend=bibtex]{biblatex}
+\bibliography{bibText} 
+\usepackage[acronym]{glossaries}
 \usepackage{hyperref}
+\usepackage{fullpage}
+
 
 \begin{document}
+\include{glossary}
+
 \chapter{Probleem- en doelstelling}
+
 \section{Probleemstelling}
+Sinds het begin van WEB 2.0 is het gebruik van het internet veranderd, van een statisch tot een dynamische omgeving waar iedereen een persoonlijke en individuele ervaring heeft. Met deze evolutie is ook de beschikbare data veranderd.
+
+\paragraph{}
+Deze verandering kan allereerst toegeschreven worden aan de toename in het aantal website, daarnaast is ook de content van een webpagina veranderd, geen statische pagina's met enkel tekst maar ook afbeeldingen en (korte) videofragmenten zijn aanwezig. Deze content wordt ook niet meer enkel door de websitebeheerder online geplaatst maar de gebruikers kunnen zelf hun data invoegen en krijgen andere pagina's te zien. 
+Tenslotte is ook de toename in het aantal gebruikers, op 30 juni 2012 waren er meer als 2.4 miljard gebruikers van het internet, een toename van meer als 500\% op 12 jaar tijd.  
+\cite{WorldInternetStatics}
+
+\paragraph{}
+Al deze veranderingen hebben ook hun doorslag op de achterliggende infrastructuur. Waar kleinere en statische websites nog konden gehost worden op een enkele server, is dit niet meer het geval voor hedendaagse populaire websites. 
+Een onderdeel van deze web applicaties is de achterliggende databases waar de vereiste data kan in worden opgeslagen worden en later opgevraagd worden. Veel van deze databases zijn ontworpen naar het systeem van de relationele databases volgens Codd \cite{Codd:1970:RMD:362384.362685}.
+
+Maar voor talrijke van de huidige applicaties is de voorwaarden voor dataopslag verschillend met deze van de jaren 70. Enkele systemen hebben geen nood meer aan onmiddellijke consistentie maar hebben genoeg aan \gls{eventualconsistency}. Onder andere omwille van deze reden is er een stroming van nieuwe database systemen gekomen genaamd \gls{nosql}. Onder deze noemer vallen er vele systemen, elk eigen in hun soort en aangepast aan bepaalde manieren van dataopslag en de daarvoor nodige vereisten, maar een centraal element is het \gls{horizontaalschaalbaar} zijn van deze systemen. Met andere woorden, deze databases zijn ontworpen om de data over meerdere systemen te verspreiden om de load te verspreiden. 
+
+\paragraph{}
+\Gls{horizontaalschaalbaar} brengt verschillende voordelen mee, maar zorgt ook voor 2 problemen die in deze thesis zullen aanbod komen, namelijke de uitrol en daarnaast wat de implicaties zijn van een gedistribueerd datasysteem. 
+
+\subsection{Uitrollen van gedistribueerde databases}
+Voor geavanceerde toepassingen is het gebruik van gespecialiseerde en/of gedistribueerde databases een noodzaak. Maar de tijdsduur van de beslissing dat dit het geval is tot een werkende omgeving hebben, is niet te onderschatten en dit omwille van verschillende componenten. 
+
+\paragraph{}Een eerste stap die doorlopen wordt, is het opzoeken van de nodige informatie over de verschillende databases, nu bestaan er al verschillende websites en papers waar informatie opgezocht kan worden, maar een consistente test bestaat niet. Een voorbeeld van een vergelijkingswebsite is bijvoorbeeld vsChart \cite{vsChart}, ook verschillende papers brengen vergelijkingen naar voor in onder andere performantie en de verschillende data modellen. 
+
+Al deze informatie zou de ontwikkelaar een mogelijkheid geven om de verschillende systemen te kunnen vergelijken en een keuze te maken met welke database hij verder wenst te gaan. 
+
+\paragraph{} Na de selectie van een specifieke database, komt de keuze van de set-up naar boven. Bepaalde databases hebben ondersteuning voor Master-slave, andere hebben ondersteuning voor sharding en nog andere hebben een combinatie van de twee. Deze verschillende manieren zorgt ervoor dat er geen eenduidige manier is om alle verschillende systemen consequent uit te rollen. De ontwikkelaar zal in deze stap een opstellen kiezen onder welke hij de database zal uitrollen. 
+
+\paragraph{} Nu de database en de opstelling is gekozen, kunnen de verschillende machines opgesteld worden. In eerste instantie komt de fysieke opstellen, de verschillende computers op de juiste locatie zetten en te verbinden. De meeste \gls{nosql} systemen zijn ontworpen om te draaien op commodity hardware. 
+
+\paragraph{} In het volgend stadium, komt de softwarematige installatie: beginnende bij het besturingssysteem tot de database software zelf. De meeste van deze databases draaien onder verschillende Linux versies. De meeste hebben wel de nodige andere software nodig om ook te kunnen draaien, een voorbeeld is HBase dat Java en Hadoop nodig heeft. 
+
+Deze systemen worden geïnstalleerd en nadien geconfigureerd. Waar voor de installatie meestal nog standaard tools zoals \gls{yum} of \gls{apt-get} gebruikt kunnen worden, is de configuratie afhankelijk van systeem tot systeem. Bepaalde systemen zoals Pgpool werken volledig met configuratie bestanden, andere systemen zoals MongoDB werken voornamelijk met een configuratie via de shell, nog andere, zoals HBase, hebben een basis configuratie waarbij men zich aanmeldt bij een node en daar de rest van de configuratie ontvangen. Deze verschillende aanpakken maken het opzetten van verschillende systemen niet eenvoudiger.
+
+\paragraph{} Nu het systeem draait, kan het systeem getest worden en bekeken worden of het voldoet aan de vooropgesteld benodigdheden. Indien dit niet het geval is, kan een aanpassing aan de opstelling misschien voldoen of dient een ander systeem geselecteerd worden. 
+
+Vervolgens kan de ontwerpen verder gaan met het ontwerpen van de applicatie, waar de database maar een gedeelte van is. 
+
+Daarnaast zou het kunnen dat de set-up voldoet tijdens het ontwerpen maar niet tijdens de uiteindelijke ingebruikname of maakt de applicatie een groei mee waardoor er extra resources nodig zijn. Nu zijn veel van de databases en zeker de \gls{nosql} databases geschreven om eenvoudig \gls{horizontaalschaalbaar} te zijn: het toevoegen of verwijderen van systemen kan in veel gevallen zelfs dynamisch. 
+
+\paragraph{} Deze stappen zijn allemaal niet zo onlogisch maar vragen wel tijd en kennis van de installatie en configuratie van deze systemen. Bij veel lokale systemen wordt de installatie en configuratie automatisch gedaan door onder andere gebruik te maken van \gls{yum} of \gls{apt-get} waarna deze systemen volledig werken, want uiteindelijk dient een ontwerper om nieuwe systemen te ontwikkelen, oa. door het samenbrengen van verschillende componenten die als een black block kunnen beschouwd worden met zo weinig mogelijk configuratie. 
+
+\subsection{Implicatie van gedistribueerde datasystemen}
+Een tweede element van de thesis is het onderzoek naar de implicaties van gedistribueerde datasystemen. In dit gebied is er al veel onderzoek gedaan naar de verschillen in datamodellen en performantie maar er is nog geen gerelateerd onderzoek naar de implicaties op de beschikbaarheid van de data. 
+
+\paragraph{}De CAP-theorie van  \\\\ E. Brewer staat voor consistency, availability en partition tolerance. De volgende definities zijn naar \\
+
+Consistency of consistentie betekent dat na een aanpassing van een schrijver in een gedeelte databron, alle lezers deze aanpassing zien. 
+
+Availability of beschikbaarheid, meer bepaald hoge beschikbaarheid, betekent dat een systeem de mogelijkheid heeft om verdere operaties (lezen en/of schrijven) te verwerken indien een of meerdere nodes in de cluster niet beschikbaar zijn.
+
+Partition tolerance of partitie tolerantie betekent dat het systeem verder kan blijven werken in zijn geheel indien de volledige cluster (tijdelijke of finaal) in twee of meer delen opgedeeld is. Een andere betekenis is dat er de mogelijkheid is tot het dynamisch verwijderen of toevoegen van nodes, waarbij de te verwijderen of toe te voegen nodes bezien worden als een eigen netwerk partitie. 
+
+\paragraph{} Vervolgens stelt E. Brewer dat in een systeem met gedeelde data maximaal aan 2 van de 3 elementen van de CAP-theorie kan voldaan worden. 
+
+Dit heeft invloed op de beschikbaarheid van de data in gedistribueerde databases, maar verschillende database systemen kiezen verschillende beschikbaarheden. Bepaalde database systemen geven geen consistentie maar enkel eventuele consistentie waarbij de aanpassing na verloop van tijd maar beschikbaar is voor alle gebruikers. Indien een ontwerper hier geen rekening bij houdt bij de implementatie, kunnen in reservatiesysteem bijvoorbeeld dubbele boekingen voorkomen over de tijd. 
 
 \section{Doelstelling}
+De doelstellingen voor deze thesis bestaat uit 2 delen, net zoals de probleemstelling. In eerste instantie de uitrol van gedistribueerde databases, in tweede instantie de implicaties op de beschikbaarheid van de data. 
+
+\subsection{Uitrol van gedistribueerde databases}
+Het eerste gedeelte van de doelstellingen is gerelateerd met de uitrol van gedistribueerde databases, voornamelijk het vereenvoudigen van de uitrol. 
+
+Net zoals \gls{yum} en \gls{apt-get} de mogelijkheid geven om lokaal op een eenvoudige manier software te installeren, zal in deze thesis de uitrol van verschillende database systemen geautomatiseerd worden en dit door middel van \gls{IDP}. 
+
+Aangezien er geen unieke opstelling is, zal er nog steeds een configuratie nodig zijn. Maar het doel is om deze configuratie eenvoudiger te maken op basis van een model. 
+
+De gebruiker zal enkel een systeem moeten selecteren, de set-up bepalen en de systemen fysiek opstellen. De softwarematige installatie en configuratie zal niet langer door gebruiker moeten gebeuren maar bepaalde componenten toewijzen aan bepaalde machines, met de nodige relaties tussen de componenten. 
+
+\subsection{Implicatie op beschikbaarheid van gedistribueerde datasystemen} 
+Naast de automatisatie van de uitrol, zal er ook gefocust worden op het testen van deze systemen. Dit niet op basis van de performantie maar dit op de beschikbaarheid van de data. 
+
+Zoals vermeldt in de probleemstelling, hebben verschillende database systemen een ander methode om om te gaan met het niet beschikbaar zijn van een node en netwerk partities. 
+
+Om deze verschillen te vergelijken zullen er testen geschreven worden om de keuzes en hun implicaties duidelijk te maken. 
+
+Tenslotte zullen deze testen ook beschikbaar gesteld worden om op een eenvoudige manier ook op andere systemen uitgerold te worden en verificatie van de data mogelijk te maken. 
+\printglossary
+
+\printbibliography
+
+
 \end{document}
