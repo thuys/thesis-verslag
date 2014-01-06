@@ -16,6 +16,38 @@
   {}
 \endgroup
 
+\entry{Brewer:2000:TRD:343477.343502}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brewer}{B.}%
+     {Eric~A.}{E.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{BEA1}
+  \strng{fullhash}{BEA1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the Nineteenth Annual ACM Symposium on
+  Principles of Distributed Computing}
+  \verb{doi}
+  \verb 10.1145/343477.343502
+  \endverb
+  \field{isbn}{1-58113-183-6}
+  \field{pages}{7\bibrangedash }
+  \field{series}{PODC '00}
+  \field{title}{Towards Robust Distributed Systems (Abstract)}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/343477.343502
+  \endverb
+  \list{location}{1}{%
+    {Portland, Oregon, USA}%
+  }
+  \field{year}{2000}
+\endentry
+
 \entry{Codd:1970:RMD:362384.362685}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -96,6 +128,26 @@
   \field{urlday}{14}
   \field{urlmonth}{12}
   \field{urlyear}{2013}
+\endentry
+
+\entry{Strauch.NoSQL}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Strauch}{S.}%
+     {Christof}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{CAP theorem, NoSQL database, cloud computing, horizontal data
+  distribution, horizontal scaling, vertical scaling, weak consistency}
+  \strng{namehash}{SC1}
+  \strng{fullhash}{SC1}
+  \field{sortinit}{S}
+  \field{title}{NoSQL Databases}
+  \verb{url}
+  \verb http://www.christof-strauch.de/nosqldbs.pdf
+  \endverb
+  \field{year}{2010}
 \endentry
 
 \lossort

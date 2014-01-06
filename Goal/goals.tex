@@ -16,18 +16,18 @@
 \chapter{Probleem- en doelstelling}
 
 \section{Probleemstelling}
-Sinds het begin van WEB 2.0 is het gebruik van het internet veranderd, van een statisch tot een dynamische omgeving waar iedereen een persoonlijke en individuele ervaring heeft. Met deze evolutie is ook de beschikbare data veranderd.
+Sinds het begin van WEB 2.0 is het gebruik van het internet veranderd, van een statisch tot een dynamische omgeving waar iedereen een persoonlijke en individuele ervaring heeft. Samen met deze evolutie is ook het type, de hoeveelheid en het gebruik van data en de opslag ervan veranderd. 
 
 \paragraph{}
-Deze verandering kan allereerst toegeschreven worden aan de toename in het aantal website, daarnaast is ook de content van een webpagina veranderd, geen statische pagina's met enkel tekst maar ook afbeeldingen en (korte) videofragmenten zijn aanwezig. Deze content wordt ook niet meer enkel door de websitebeheerder online geplaatst maar de gebruikers kunnen zelf hun data invoegen en krijgen andere pagina's te zien. 
+Deze verandering kan allereerst toegeschreven worden aan de toename in het aantal website, daarnaast is ook de content van een webpagina veranderd, geen statische pagina's met enkel tekst maar ook afbeeldingen en (korte) videofragmenten zijn aanwezig. Deze content wordt ook niet meer enkel door de websitebeheerder online geplaatst maar de gebruikers kunnen zelf hun data invoegen en krijgen gepersonaliseerde en dynamische pagina's te zien. 
 Tenslotte is ook de toename in het aantal gebruikers, op 30 juni 2012 waren er meer als 2.4 miljard gebruikers van het internet, een toename van meer als 500\% op 12 jaar tijd.  
 \cite{WorldInternetStatics}
 
 \paragraph{}
-Al deze veranderingen hebben ook hun doorslag op de achterliggende infrastructuur. Waar kleinere en statische websites nog konden gehost worden op een enkele server, is dit niet meer het geval voor hedendaagse populaire websites. 
-Een onderdeel van deze web applicaties is de achterliggende databases waar de vereiste data kan in worden opgeslagen worden en later opgevraagd worden. Veel van deze databases zijn ontworpen naar het systeem van de relationele databases volgens Codd \cite{Codd:1970:RMD:362384.362685}.
+Al deze veranderingen hebben ook hun doorslag op de achterliggende infrastructuur. Waar kleinere en statische websites nog konden gehost worden op een enkele server, is dit niet meer het geval voor hedendaagse (populaire) websites. 
+Een onderdeel van deze web applicaties is de databases waarin de vereiste data kan in worden opgeslagen worden en later opgevraagd worden. Veel van deze databases zijn ontworpen naar het systeem van de relationele databases, uitgewerkt naar Codd \cite{Codd:1970:RMD:362384.362685}.
 
-Maar voor talrijke van de huidige applicaties is de voorwaarden voor dataopslag verschillend met deze van de jaren 70. Enkele systemen hebben geen nood meer aan onmiddellijke consistentie maar hebben genoeg aan \gls{eventualconsistency}. Onder andere omwille van deze reden is er een stroming van nieuwe database systemen gekomen genaamd \gls{nosql}. Onder deze noemer vallen er vele systemen, elk eigen in hun soort en aangepast aan bepaalde manieren van dataopslag en de daarvoor nodige vereisten, maar een centraal element is het \gls{horizontaalschaalbaar} zijn van deze systemen. Met andere woorden, deze databases zijn ontworpen om de data over meerdere systemen te verspreiden om de load te verspreiden. 
+Voor talrijke van de huidige applicaties is de voorwaarden voor dataopslag verschillend met deze van de jaren 70. Enkele systemen hebben geen nood meer aan onmiddellijke consistentie maar hebben genoeg aan \gls{eventualconsistency}. Onder andere omwille van deze reden is er een stroming van nieuwe database systemen gekomen genaamd \gls{nosql}. Onder deze noemer vallen vele systemen, elk eigen in hun soort en aangepast aan bepaalde manieren van dataopslag en de daarvoor nodige vereisten, een belangrijk element is het \gls{horizontaalschaalbaar} zijn van deze systemen. Met andere woorden, deze databases zijn ontworpen om de data over meerdere systemen te verspreiden om de load te verspreiden. 
 
 \paragraph{}
 \Gls{horizontaalschaalbaar} brengt verschillende voordelen mee, maar zorgt ook voor 2 problemen die in deze thesis zullen aanbod komen, namelijke de uitrol en daarnaast wat de implicaties zijn van een gedistribueerd datasysteem. 
@@ -35,13 +35,13 @@ Maar voor talrijke van de huidige applicaties is de voorwaarden voor dataopslag 
 \subsection{Uitrollen van gedistribueerde databases}
 Voor geavanceerde toepassingen is het gebruik van gespecialiseerde en/of gedistribueerde databases een noodzaak. Maar de tijdsduur van de beslissing dat dit het geval is tot een werkende omgeving hebben, is niet te onderschatten en dit omwille van verschillende componenten. 
 
-\paragraph{}Een eerste stap die doorlopen wordt, is het opzoeken van de nodige informatie over de verschillende databases, nu bestaan er al verschillende websites en papers waar informatie opgezocht kan worden, maar een consistente test bestaat niet. Een voorbeeld van een vergelijkingswebsite is bijvoorbeeld vsChart \cite{vsChart}, ook verschillende papers brengen vergelijkingen naar voor in onder andere performantie en de verschillende data modellen. 
+\paragraph{}Een eerste stap die doorlopen wordt, is het opzoeken van de nodige informatie over de verschillende databases, nu bestaan er al verschillende websites en papers waar informatie opgezocht kan worden, maar een consistente test bestaat niet. Een voorbeeld van een vergelijkingswebsite is bijvoorbeeld vsChart \cite{vsChart}, ook verschillende papers brengen vergelijkingen naar voor in onder andere performantie en de verschillende data modellen. Maar in de meeste gevallen blijft het aangeraden om de informatie op te zoeken op de website van de software zelf, deze evolueert snel en informatie van een jaar oud kan al verouderd zijn en zo incorrect. 
 
 Al deze informatie zou de ontwikkelaar een mogelijkheid geven om de verschillende systemen te kunnen vergelijken en een keuze te maken met welke database hij verder wenst te gaan. 
 
-\paragraph{} Na de selectie van een specifieke database, komt de keuze van de set-up naar boven. Bepaalde databases hebben ondersteuning voor Master-slave, andere hebben ondersteuning voor sharding en nog andere hebben een combinatie van de twee. Deze verschillende manieren zorgt ervoor dat er geen eenduidige manier is om alle verschillende systemen consequent uit te rollen. De ontwikkelaar zal in deze stap een opstellen kiezen onder welke hij de database zal uitrollen. 
+\paragraph{} Na de selectie van een specifieke database, komt de keuze voor de opstelling van de database. Bepaalde databases hebben ondersteuning voor Master-slave, andere hebben ondersteuning voor sharding en nog andere hebben een combinatie van de twee. Deze verschillende manieren zorgt ervoor dat er geen eenduidige manier is om alle verschillende systemen consequent uit te rollen. De ontwikkelaar zal in deze stap een opstellen kiezen onder welke hij de database zal uitrollen. 
 
-\paragraph{} Nu de database en de opstelling is gekozen, kunnen de verschillende machines opgesteld worden. In eerste instantie komt de fysieke opstellen, de verschillende computers op de juiste locatie zetten en te verbinden. De meeste \gls{nosql} systemen zijn ontworpen om te draaien op commodity hardware. 
+\paragraph{} Nu de databasesoftware en de opstelling is gekozen, kunnen de verschillende machines fysiek opgesteld worden. Dit wil zeggen, de opstellening wordt fysiek opgesteld: de computers kiezen, deze op de juiste locatie zetten en te verbinden. De meeste \gls{nosql} systemen zijn ontworpen om te draaien op commodity hardware wat wil zeggen dat gewone consumenten computers volstaan. 
 
 \paragraph{} In het volgend stadium, komt de softwarematige installatie: beginnende bij het besturingssysteem tot de database software zelf. De meeste van deze databases draaien onder verschillende Linux versies. De meeste hebben wel de nodige andere software nodig om ook te kunnen draaien, een voorbeeld is HBase dat Java en Hadoop nodig heeft. 
 
@@ -49,22 +49,23 @@ Deze systemen worden geïnstalleerd en nadien geconfigureerd. Waar voor de insta
 
 \paragraph{} Nu het systeem draait, kan het systeem getest worden en bekeken worden of het voldoet aan de vooropgesteld benodigdheden. Indien dit niet het geval is, kan een aanpassing aan de opstelling misschien voldoen of dient een ander systeem geselecteerd worden. 
 
-Vervolgens kan de ontwerpen verder gaan met het ontwerpen van de applicatie, waar de database maar een gedeelte van is. 
+Vervolgens kan de ontwerpen verder gaan met het ontwerpen van de applicatie, waar de databaselaag uiteindelijk maar een gedeelte van is. 
 
 Daarnaast zou het kunnen dat de set-up voldoet tijdens het ontwerpen maar niet tijdens de uiteindelijke ingebruikname of maakt de applicatie een groei mee waardoor er extra resources nodig zijn. Nu zijn veel van de databases en zeker de \gls{nosql} databases geschreven om eenvoudig \gls{horizontaalschaalbaar} te zijn: het toevoegen of verwijderen van systemen kan in veel gevallen zelfs dynamisch. 
 
-\paragraph{} Deze stappen zijn allemaal niet zo onlogisch maar vragen wel tijd en kennis van de installatie en configuratie van deze systemen. Bij veel lokale systemen wordt de installatie en configuratie automatisch gedaan door onder andere gebruik te maken van \gls{yum} of \gls{apt-get} waarna deze systemen volledig werken, want uiteindelijk dient een ontwerper om nieuwe systemen te ontwikkelen, oa. door het samenbrengen van verschillende componenten die als een black block kunnen beschouwd worden met zo weinig mogelijk configuratie. 
+Deze stappen zijn allemaal niet zo onlogisch maar vragen wel tijd en kennis van de installatie en configuratie van deze systemen. Bij veel lokale systemen wordt de installatie en configuratie automatisch gedaan door onder andere gebruik te maken van \gls{yum} of \gls{apt-get} waarna deze systemen volledig werken, want uiteindelijk dient een ontwerper om nieuwe systemen te ontwikkelen, oa. door het samenbrengen van verschillende componenten die als een black block kunnen beschouwd worden met zo weinig mogelijk configuratie. 
 
 \subsection{Implicatie van gedistribueerde datasystemen}
 Een tweede element van de thesis is het onderzoek naar de implicaties van gedistribueerde datasystemen. In dit gebied is er al veel onderzoek gedaan naar de verschillen in datamodellen en performantie maar er is nog geen gerelateerd onderzoek naar de implicaties op de beschikbaarheid van de data. 
 
-\paragraph{}De CAP-theorie van  \\\\ E. Brewer staat voor consistency, availability en partition tolerance. De volgende definities zijn naar \\
+\paragraph{}De CAP-theorie van E. Brewer\cite{Brewer:2000:TRD:343477.343502} staat voor consistency, availability en partition tolerance. De volgende definities zoals geformuleerd in \cite{Strauch.NoSQL}:
 
-Consistency of consistentie betekent dat na een aanpassing van een schrijver in een gedeelte databron, alle lezers deze aanpassing zien. 
 
-Availability of beschikbaarheid, meer bepaald hoge beschikbaarheid, betekent dat een systeem de mogelijkheid heeft om verdere operaties (lezen en/of schrijven) te verwerken indien een of meerdere nodes in de cluster niet beschikbaar zijn.
+\textbf{Consistency} of consistentie betekent dat na een aanpassing van een schrijver in een gedeelte databron, alle lezers deze aanpassing zien. 
 
-Partition tolerance of partitie tolerantie betekent dat het systeem verder kan blijven werken in zijn geheel indien de volledige cluster (tijdelijke of finaal) in twee of meer delen opgedeeld is. Een andere betekenis is dat er de mogelijkheid is tot het dynamisch verwijderen of toevoegen van nodes, waarbij de te verwijderen of toe te voegen nodes bezien worden als een eigen netwerk partitie. 
+\textbf{Availability} of beschikbaarheid, meer bepaald hoge beschikbaarheid, betekent dat een systeem de mogelijkheid heeft om verdere operaties (lezen en/of schrijven) te verwerken indien een of meerdere nodes in de cluster niet beschikbaar zijn.
+
+\textbf{Partition toleranc}e of partitie tolerantie betekent dat het systeem verder kan blijven werken in zijn geheel indien de volledige cluster (tijdelijke of finaal) in twee of meer delen opgedeeld is. Een andere betekenis is dat er de mogelijkheid is tot het dynamisch verwijderen of toevoegen van nodes, waarbij de te verwijderen of toe te voegen nodes bezien worden als een eigen netwerk partitie. 
 
 \paragraph{} Vervolgens stelt E. Brewer dat in een systeem met gedeelde data maximaal aan 2 van de 3 elementen van de CAP-theorie kan voldaan worden. 
 
@@ -89,7 +90,8 @@ Zoals vermeldt in de probleemstelling, hebben verschillende database systemen ee
 
 Om deze verschillen te vergelijken zullen er testen geschreven worden om de keuzes en hun implicaties duidelijk te maken. 
 
-Tenslotte zullen deze testen ook beschikbaar gesteld worden om op een eenvoudige manier ook op andere systemen uitgerold te worden en verificatie van de data mogelijk te maken. 
+Tenslotte zullen deze testen ook beschikbaar gesteld worden om op een eenvoudige manier ook op andere systemen uitgerold te worden en verificatie van de data mogelijk te maken. Daarnaast is het zo ook mogelijk om deze testen opnieuw uit te voeren indien er updates beschikbaar komen, die mogelijke verbeteringen brengen. 
+
 \printglossary
 
 \printbibliography
