@@ -1,0 +1,44 @@
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\contentsline {chapter}{Voorwoord}{i}{chapter*.1}
+\contentsline {chapter}{Samenvatting}{iv}{chapter*.4}
+\contentsline {chapter}{L"yst van figuren en tabellen}{v}{chapter*.6}
+\contentsline {chapter}{Lijst van afkortingen en symbolen}{vi}{chapter*.9}
+\contentsline {chapter}{\chapternumberline {1}Inleiding}{1}{chapter.1}
+\contentsline {chapter}{\chapternumberline {2}Probleem- en doelstelling}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Probleemstelling}{3}{section.2.1}
+\contentsline {paragraph}{}{3}{section*.13}
+\contentsline {paragraph}{}{3}{section*.14}
+\contentsline {paragraph}{}{4}{section*.15}
+\contentsline {subsection}{\numberline {2.1.1}Uitrollen van gedistribueerde databases}{4}{subsection.2.1.1}
+\contentsline {paragraph}{}{4}{section*.16}
+\contentsline {paragraph}{}{4}{section*.17}
+\contentsline {paragraph}{}{4}{section*.18}
+\contentsline {paragraph}{}{4}{section*.19}
+\contentsline {paragraph}{}{5}{section*.20}
+\contentsline {subsection}{\numberline {2.1.2}Implicatie van gedistribueerde datasystemen}{5}{subsection.2.1.2}
+\contentsline {paragraph}{}{5}{section*.21}
+\contentsline {paragraph}{}{6}{section*.22}
+\contentsline {section}{\numberline {2.2}Doelstelling}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Uitrol van gedistribueerde databases}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Implicatie op beschikbaarheid van gedistribueerde datasystemen}{6}{subsection.2.2.2}
+\contentsline {chapter}{\chapternumberline {3}Automatisch uitrollen van databases}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Inleiding}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}IMP: Framework voor installatie}{7}{section.3.2}
+\contentsline {chapter}{\chapternumberline {4}Besluit}{9}{chapter.4}
+\contentsline {chapter}{Bibliografie}{14}{section*.24}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}
+\select@language {dutch}

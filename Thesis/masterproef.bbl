@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{Brewer:2000:TRD:343477.343502}
+E.~A. Brewer.
+\newblock Towards robust distributed systems (abstract).
+\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on
+  Principles of Distributed Computing}, PODC '00, pages 7--. ACM, 2000.
+
+\bibitem{Codd:1970:RMD:362384.362685}
+E.~F. Codd.
+\newblock A relational model of data for large shared data banks.
+\newblock {\em Commun. ACM}, 13(6):377--387, June 1970.
+
+\bibitem{WorldInternetStatics}
+M.~M. Group.
+\newblock World internet users statistics usage and world population stats,
+  Dec. 2013.
+
+\bibitem{vsChart}
+F.~Heinze.
+\newblock vschart.com – the comparison wiki, Dec. 2013.
+
+\bibitem{Strauch.NoSQL}
+C.~Strauch.
+\newblock {\em NoSQL Databases}.
+\newblock 2010.
+
+\end{thebibliography}
