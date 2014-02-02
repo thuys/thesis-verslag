@@ -1,44 +1,95 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Voorwoord}{i}{chapter*.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Samenvatting}{iv}{chapter*.4}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{L"yst van figuren en tabellen}{v}{chapter*.6}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Lijst van afkortingen en symbolen}{vi}{chapter*.9}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Inleiding}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {2}Probleem- en doelstelling}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Probleemstelling}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{3}{section*.13}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{3}{section*.14}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{4}{section*.15}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.1}Uitrollen van gedistribueerde databases}{4}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{4}{section*.16}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{4}{section*.17}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{4}{section*.18}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{4}{section*.19}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{5}{section*.20}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.2}Implicatie van gedistribueerde datasystemen}{5}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{5}{section*.21}
+\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{6}{section*.22}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Doelstelling}{6}{section.2.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}Uitrol van gedistribueerde databases}{6}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Implicatie op beschikbaarheid van gedistribueerde datasystemen}{6}{subsection.2.2.2}
-\contentsline {chapter}{\chapternumberline {3}Automatisch uitrollen van databases}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Inleiding}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}IMP: Framework voor installatie}{7}{section.3.2}
-\contentsline {chapter}{\chapternumberline {4}Besluit}{9}{chapter.4}
-\contentsline {chapter}{Bibliografie}{14}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Selectie van databases}{7}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Column}{7}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Key-}{7}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Automatisch uitrollen van databases}{9}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Inleiding}{9}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}IMP: Framework voor installatie}{9}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Besluit}{11}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{16}{section*.24}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}
+\defcounter {refsection}{0}\relax 
 \select@language {dutch}

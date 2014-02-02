@@ -1,28 +1,156 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{Brewer:2000:TRD:343477.343502}
-E.~A. Brewer.
-\newblock Towards robust distributed systems (abstract).
-\newblock In {\em Proceedings of the Nineteenth Annual ACM Symposium on
-  Principles of Distributed Computing}, PODC '00, pages 7--. ACM, 2000.
+\entry{Brewer:2000:TRD:343477.343502}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brewer}{B.}%
+     {Eric~A.}{E.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{BEA1}
+  \strng{fullhash}{BEA1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the Nineteenth Annual ACM Symposium on
+  Principles of Distributed Computing}
+  \verb{doi}
+  \verb 10.1145/343477.343502
+  \endverb
+  \field{isbn}{1-58113-183-6}
+  \field{pages}{7\bibrangedash }
+  \field{series}{PODC '00}
+  \field{title}{Towards Robust Distributed Systems (Abstract)}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/343477.343502
+  \endverb
+  \list{location}{1}{%
+    {Portland, Oregon, USA}%
+  }
+  \field{year}{2000}
+\endentry
 
-\bibitem{Codd:1970:RMD:362384.362685}
-E.~F. Codd.
-\newblock A relational model of data for large shared data banks.
-\newblock {\em Commun. ACM}, 13(6):377--387, June 1970.
+\entry{Codd:1970:RMD:362384.362685}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Codd}{C.}%
+     {E.~F.}{E.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \keyw{composition, consistency, data bank, data base, data integrity, data
+  organization, data structure, derivability, hierarchies of data, join,
+  networks of data, predicate calculus, redundancy, relations, retrieval
+  language, security}
+  \strng{namehash}{CEF1}
+  \strng{fullhash}{CEF1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1145/362384.362685
+  \endverb
+  \field{issn}{0001-0782}
+  \field{number}{6}
+  \field{pages}{377\bibrangedash 387}
+  \field{title}{A Relational Model of Data for Large Shared Data Banks}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/362384.362685
+  \endverb
+  \field{volume}{13}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{Commun. ACM}
+  \field{month}{06}
+  \field{year}{1970}
+\endentry
 
-\bibitem{WorldInternetStatics}
-M.~M. Group.
-\newblock World internet users statistics usage and world population stats,
-  Dec. 2013.
+\entry{WorldInternetStatics}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Group}{G.}%
+     {Miniwatts~Marketing}{M.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GMM1}
+  \strng{fullhash}{GMM1}
+  \field{sortinit}{G}
+  \field{title}{World Internet Users Statistics Usage and World Population
+  Stats}
+  \verb{url}
+  \verb http://www.internetworldstats.com/stats.htm
+  \endverb
+  \field{month}{12}
+  \field{year}{2013}
+  \field{urlday}{14}
+  \field{urlmonth}{12}
+  \field{urlyear}{2013}
+\endentry
 
-\bibitem{vsChart}
-F.~Heinze.
-\newblock vschart.com – the comparison wiki, Dec. 2013.
+\entry{vsChart}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Heinze}{H.}%
+     {Florian}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HF1}
+  \strng{fullhash}{HF1}
+  \field{sortinit}{H}
+  \field{title}{vsChart.com – The Comparison Wiki}
+  \verb{url}
+  \verb http://vschart.com/
+  \endverb
+  \field{month}{12}
+  \field{year}{2013}
+  \field{urlday}{14}
+  \field{urlmonth}{12}
+  \field{urlyear}{2013}
+\endentry
 
-\bibitem{Strauch.NoSQL}
-C.~Strauch.
-\newblock {\em NoSQL Databases}.
-\newblock 2010.
+\entry{Strauch.NoSQL}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Strauch}{S.}%
+     {Christof}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{CAP theorem, NoSQL database, cloud computing, horizontal data
+  distribution, horizontal scaling, vertical scaling, weak consistency}
+  \strng{namehash}{SC1}
+  \strng{fullhash}{SC1}
+  \field{sortinit}{S}
+  \field{title}{NoSQL Databases}
+  \verb{url}
+  \verb http://www.christof-strauch.de/nosqldbs.pdf
+  \endverb
+  \field{year}{2010}
+\endentry
 
-\end{thebibliography}
+\lossort
+\endlossort
+
+\endinput

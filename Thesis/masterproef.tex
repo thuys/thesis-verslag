@@ -31,8 +31,11 @@
 \usepackage[dutch]{babel}
 \usepackage{lipsum} % for dummy text only
 \usepackage{todonotes}
+\usepackage{csquotes}
+\usepackage[backend=bibtex]{biblatex}
 \usepackage[acronym]{glossaries}
 \include{overige/glossary}
+\bibliography{overige/referenties}
 %%%%%%%
 % Om wat tekst te genereren wordt hier het lipsum pakket gebruikt.
 % Bij een echte masterproef heb je dit natuurlijk nooit nodig!
@@ -75,10 +78,9 @@
 
 \include{overige/inleiding}
 \include{hoofdstukken/doelstelling}
+\include{hoofdstukken/keuze-systemen}
 \include{hoofdstukken/uitrol}
-%\include{hoofdstukken/hfdst-2}
-% ... en zo verder tot
-%\include{hoofdstukken/hfdst-n}
+
 \include{overige/besluit}
 
 % Indien er bijlagen zijn:
@@ -92,8 +94,9 @@
 % Na de bijlagen plaatst men nog de bibliografie.
 % Je kan de  standaard "abbrv" bibliografiestijl vervangen door een andere.
 \printglossary
-\bibliographystyle{abbrv}
-\bibliography{overige/referenties}
+
+\printbibliography
+
 
 \end{document}
 
