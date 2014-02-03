@@ -192,6 +192,29 @@
   \field{urlyear}{2014}
 \endentry
 
+\entry{postgresql-clustering}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Postgresql}{P.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{P1}
+  \strng{fullhash}{P1}
+  \field{sortinit}{P}
+  \field{title}{PostgreSQL - Replication, Clustering, and Connection Pooling}
+  \verb{url}
+  \verb http://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection
+  \verb _Pooling
+  \endverb
+  \field{month}{10}
+  \field{year}{2013}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2013}
+\endentry
+
 \entry{categorizatie-sco10}{online}{}
   \name{author}{1}{}{%
     {{}%

@@ -58,7 +58,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Implicatie op beschikbaarheid van gedistribueerde datasystemen}{6}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Selectie van databases}{7}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}Beschrijving van verschillende databases en selectie van databases}{7}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{8}{section*.23}
 \defcounter {refsection}{0}\relax 
@@ -68,13 +68,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.2}HBase}{8}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Document database}{8}{section.3.2}
+\contentsline {section}{\numberline {3.2}Document database}{9}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Apache CoucheDB}{9}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.2}MongoDB}{9}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Graph database}{9}{section.3.3}
+\contentsline {section}{\numberline {3.3}Graph database}{10}{section.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Key-Value database}{10}{section.3.4}
 \defcounter {refsection}{0}\relax 
@@ -82,27 +82,41 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.2}MemCache}{10}{subsection.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Redis}{10}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.3}Redis}{11}{subsection.3.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.4}Riak}{11}{subsection.3.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.5}Voldemort}{11}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}Project Voldemort}{11}{subsection.3.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Relationeel database}{11}{section.3.5}
+\contentsline {section}{\numberline {3.5}Relationeel database}{12}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}MySQL}{11}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.1}MySQL}{12}{subsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}PgPool(PostgreSQL)}{11}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.2}Pgpool-II(PostgreSQL)}{12}{subsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Automatisch uitrollen van databases}{13}{chapter.4}
+\contentsline {section}{\numberline {3.6}Selectie van de databases}{13}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Inleiding}{13}{section.4.1}
+\contentsline {paragraph}{}{13}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}IMP: Framework voor installatie}{13}{section.4.2}
+\contentsline {paragraph}{}{13}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Besluit}{15}{chapter.5}
+\contentsline {paragraph}{}{13}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{20}{section*.25}
+\contentsline {paragraph}{}{13}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{13}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{13}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Automatisch uitrollen van databases}{15}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Inleiding}{15}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}IMP: Framework voor installatie}{15}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Besluit}{17}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{22}{section*.31}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

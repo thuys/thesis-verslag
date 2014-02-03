@@ -1,4 +1,4 @@
-\chapter{Selectie van databases}
+\chapter{Beschrijving van verschillende databases en selectie van databases}
 NoSQL databases zijn ontwikkeld vanuit de industrie om onmiddellijk te kunnen inzetten op hun problemen, elk met hun eigen specificaties rondom performantie, schaalbaarheid, complexiteit en functionaliteit. Waar er bij de traditionele relationele databases verschillen waren in bijvoorbeeld de queries, zijn deze beperkt als deze bekeken worden in het volledige landschap van databases. 
 
 Onder andere Ben Scofield heeft de verschilllende NoSQL databases opgesplitst in 4 categorieën, met daarnaast de traditionele relationele databases waar categorie heeft een eigen invulling van het datamodel. De opsplitsing bevindt zich in tabel \ref{table:selectie-classificatie}\cite{Strauch.NoSQL}.
@@ -122,12 +122,46 @@ Riak is gebouwd om gedistribueerd te draaien waar al de nodes evenwaardig zijn. 
 
 \subsection{Project Voldemort}
 \textit{Website: \url{http://www.project-voldemort.com/}}\\
-Project Voldemort is een key-value store met enkel 3 basis operaties: get, put en delete. 
+Project Voldemort is een key-value store met enkel 3 basis operaties: get, put en delete met de mogelijkheid voor als keys en values strings, serializable objecten, protocol buffers of raw byte arrays te gebruiken. 
+
+Deze database ondersteunt verschillende modes van distributie. De opbouw bestaat uit verschillende lagen, elk met hun eigen gedefinieerde functie. Met behulp van deze lagen kan de ontwikkelaar extra lagen toevoegen om de applicatie meer te finetunen naar zijn uitwerking. 
+Data wordt verdeeld met behulp van consistent hashing over de verschillende servers, waarbij data verschillende keren wordt bijgehouden om ervoor te zorgen dat de data nog beschikbaar is in het geval van falen. 
+
 %%%		Relationeel	%%%
 \section{Relationeel database}
+Relationele databases zijn want men noemt de traditionele databases: verschillende tabellen waar elk data element een rij van attributen heeft. Daarnaast hebben deze databases een uitgebreide query taal: verschillende tabellen kunnen gecombineerd worden, ... 
 
+Deze systemen waren in eerste instantie niet ontworpen om gedistribueerd te draaien, sommige systemen ondersteunen al bepaalde vormen, anderen hebben hebben nog andere pakketten nodig. 
 \subsection{MySQL}
-\textit{Website: \url{http://www.mongodb.org/}}\\
+\textit{Website: \url{http://www.mysql.com/}}\\
+MySQL is een relationele database waarin data kan voorgesteld worden in verschillende vormen, beginnend met een bool tot een blok tekst. Daarnaast zijn de query mogelijkheden uitgebreid. 
 
-\subsection{PgPool(PostgreSQL)}
-\textit{Website: \url{http://www.mongodb.org/}}\\
+De uitbreiding van een gedistribueerd systeem is bij MySQL ingebouwd door middel van een Master-Slave configuratie. Als mysqlfailover een faal detecteert in één van de slaven, zal de database verder werken, bij het falen van de master zal een nieuwe master handmatig aangeduid moeten worden. Ook de recovery moet handmatig gestart worden, waarna indien gewenst de originele master opnieuw als master kan gezet worden (bv. omdat deze de krachtigste computer is). 
+
+\subsection{Pgpool-II(PostgreSQL)}
+\textit{Website: \url{http://www.pgpool.net/}}\\
+PostgreSQL is een relationele database en heeft soortgelijke specificaties als MySQL op een enkele computer, verschillende soorten data kunnen voorgesteld worden met uitgebreide query mogelijkheden. 
+
+Enkel als de database ook gedistribueerd moet uitgerold worden, is er een verschil. Bij PostgreSQL is er standaard geen ondersteuning voor dit maar moet er op externe elementen vertrouwd worden. Er bestaan verschillende componenten soorten systemen, maar aangezien er load-balancing nodig is en een recent pakket, is er gekozen voor Pgpool-II, een vergelijking van de systemen kan gevonden worden op de wiki van PostgreSQL \cite{postgresql-clustering}. 
+
+Pgpool-II heeft verschillende mode, maar aangezien er de nood was voor replicatie, is er gekozen om de replicatie mode in te stellen. Hierdoor komt de database in een Master-Slave situatie waar er het falen gedetecteerd wordt op het moment een connectie actief is. Indien een node terug online is, moet er manueel het recovery process opgestart worden. 
+
+Andere configuraties zijn mogelijk, onder andere met het opzetten van caching en nog andere elementen. 
+
+\section{Selectie van de databases}
+In deze thesis zullen er 3 databases automatisch geïnstalleerd en getest worden. Voor deze keuze is er gekeken naar een zo groot mogelijke variatie in de verschillende systemen.
+
+Deze selectie was in samenspraak met de andere thesis rondom dit onderwerp. Zo zijn er uiteindelijk 6 systemen uitgewerkt, Riak als key-value, Cassandra en HBase als column, MongoDB als document en MySQL en Pgpool-II (PostgrSQL) uit de relationele categorie.
+
+\paragraph{} \textbf{Riak} is gekozen vanwege de relatief grote query taal in de key-value categorie. 
+
+\paragraph{} \textbf{Cassandra} is gekozen vanwege zijn interessante combinatie van key-value en column categorie. 
+
+\paragraph{} \textbf{HBase} is gekozen vanwege zijn grote gelijkenis tot Google's BigTable.
+
+\paragraph{} \textbf{MongoDB} is van de document categorie gekozen omdat deze een grote configuratie mogelijkheid bood en tegelijk grondige online documentatie had. 
+
+\paragraph{} \textbf{MySQL} en \textbf{Pgpool-II (PostgrSQL)} zijn beide gekozen om een vergelijking te hebben ten opzichte van de meer traditionele databases. 
+
+\paragraph{} De databases die verder in deze thesis besproken zullen worden zijn MongoDB, HBase en Pgpool-II (PostgrSQL). 
+

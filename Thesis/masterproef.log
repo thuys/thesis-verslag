@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.2)  3 FEB 2014 17:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.2)  3 FEB 2014 19:56
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\masterproef.tex"
@@ -1743,7 +1743,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `kulemtfpf' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- <logokuleng.pdf, id=82, 159.33528pt x 85.358pt>
+ <logokuleng.pdf, id=86, 159.33528pt x 85.358pt>
 File: logokuleng.pdf Graphic file (type pdf)
 
 <use logokuleng.pdf>
@@ -1857,41 +1857,27 @@ Package microtype Info: Character `029' is missing
 
 
 
-] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 132--81
-
- []
-
-[11] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\hoofdstukken/uitrol.tex"
-[12
+] [8] [9] [10] [11] [12]) [13]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\hoofdstukken/uitrol.tex"
+[14
 
 
 
-]) [13] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\overige/besluit.tex" [1
-4
+]) [15] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\overige/besluit.tex" [1
+6
 
 
 
-]) [15] [16
+]) [17] [18
 
 
-] [17] [18]
+] [19] [20]
 No file masterproef.gls.
-[19
+[21
 
-] [20
+] [22
 
-] [21
+] [23
 
 ]
 \tf@toc=\write10
@@ -1909,17 +1895,24 @@ ar 2013-2014\Thesis\verslag\Thesis\overige/afkortingen.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\overige/besluit.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
-Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: F7A0B9CCB7D775680B430BBD9A17B5DE;1144.
+
+
+Package rerunfilecheck Warning: File `masterproef.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `masterproef.out':
+(rerunfilecheck)             Before: 3CBCB913A1DE4D9A670D10142EEB723E;1261
+(rerunfilecheck)             After:  819F3BA9B164CF58A0E2D36185579672;1261.
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 29727 strings out of 493921
- 507034 string characters out of 3147280
- 1019228 words of memory out of 3000000
- 32228 multiletter control sequences out of 15000+200000
- 74080 words of font info for 100 fonts, out of 3000000 for 9000
+ 29743 strings out of 493921
+ 507248 string characters out of 3147280
+ 1020228 words of memory out of 3000000
+ 32230 multiletter control sequences out of 15000+200000
+ 74311 words of font info for 102 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  69i,12n,78p,1723b,4181s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:IDP} has been referenced but does not exist, 
@@ -1952,9 +1945,9 @@ KTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmt
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on masterproef.pdf (29 pages, 333477 bytes).
+Output written on masterproef.pdf (31 pages, 345299 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 19626 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 443 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 19634 words of extra memory for PDF output out of 20736 (max. 10000000)
 
