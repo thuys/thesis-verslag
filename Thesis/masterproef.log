@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.2)  2 FEB 2014 20:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.2.2)  3 FEB 2014 12:48
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\masterproef.tex"
@@ -1743,7 +1743,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `kulemtfpf' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- <logokuleng.pdf, id=70, 159.33528pt x 85.358pt>
+ <logokuleng.pdf, id=82, 159.33528pt x 85.358pt>
 File: logokuleng.pdf Graphic file (type pdf)
 
 <use logokuleng.pdf>
@@ -1853,29 +1853,31 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [4] [5]) [6]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\hoofdstukken/keuze-systemen.tex
-") [7
+" [7
 
 
 
-] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\hoofdstukken/uitrol.tex" [8
-
-
-
-]) [9] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\overige/besluit.tex"
+] [8]) [9]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\hoofdstukken/uitrol.tex"
 [10
 
 
 
-]) [11] [12
+]) [11] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis\overige/besluit.tex" [1
+2
 
 
-] [13] [14]
+
+]) [13] [14
+
+
+] [15] [16]
 No file masterproef.gls.
-[15
+[17
 
-] [16
+] [18
 
-] [17
+] [19
 
 ]
 \tf@toc=\write10
@@ -1894,16 +1896,16 @@ ar 2013-2014\Thesis\verslag\Thesis\overige/afkortingen.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: D5E4ADF6CE4629CBE6A524949A3718E1;926.
+(rerunfilecheck)             Checksum: F7A0B9CCB7D775680B430BBD9A17B5DE;1144.
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 29681 strings out of 493921
- 506323 string characters out of 3147280
- 1018228 words of memory out of 3000000
- 32219 multiletter control sequences out of 15000+200000
- 73115 words of font info for 92 fonts, out of 3000000 for 9000
+ 29724 strings out of 493921
+ 507016 string characters out of 3147280
+ 1019228 words of memory out of 3000000
+ 32228 multiletter control sequences out of 15000+200000
+ 73997 words of font info for 99 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  69i,12n,78p,1723b,4181s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:IDP} has been referenced but does not exist, 
@@ -1933,11 +1935,12 @@ TeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
 ic/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/
-uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on masterproef.pdf (25 pages, 288817 bytes).
+pe1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmt
+ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on masterproef.pdf (27 pages, 324248 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 19090 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
+ 19626 words of extra memory for PDF output out of 20736 (max. 10000000)
 

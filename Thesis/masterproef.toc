@@ -60,19 +60,51 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {3}Selectie van databases}{7}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Column}{7}{section.3.1}
+\contentsline {paragraph}{}{8}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Key-}{7}{section.3.2}
+\contentsline {section}{\numberline {3.1}Column database}{8}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Automatisch uitrollen van databases}{9}{chapter.4}
+\contentsline {subsection}{\numberline {3.1.1}Cassandra}{8}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Inleiding}{9}{section.4.1}
+\contentsline {subsection}{\numberline {3.1.2}HBase}{8}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}IMP: Framework voor installatie}{9}{section.4.2}
+\contentsline {section}{\numberline {3.2}Document database}{8}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Besluit}{11}{chapter.5}
+\contentsline {subsection}{\numberline {3.2.1}Apache CoucheDB}{9}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{16}{section*.24}
+\contentsline {subsection}{\numberline {3.2.2}Elastic Search}{9}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}MongoDB}{9}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Graph database}{9}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Key-Value database}{9}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}LightCloud (Tokyo)}{9}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}MemCache}{9}{subsection.3.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Redis}{9}{subsection.3.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.4}Riak}{9}{subsection.3.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.5}Voldemort}{9}{subsection.3.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Relationeel database}{9}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.1}MySQL}{9}{subsection.3.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.2}PgPool(PostgreSQL)}{9}{subsection.3.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Automatisch uitrollen van databases}{11}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Inleiding}{11}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}IMP: Framework voor installatie}{11}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Besluit}{13}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{18}{section*.25}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

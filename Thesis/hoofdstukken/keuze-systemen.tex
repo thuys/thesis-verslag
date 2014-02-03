@@ -1,0 +1,104 @@
+\chapter{Selectie van databases}
+NoSQL databases zijn ontwikkeld vanuit de industrie om onmiddellijk te kunnen inzetten op hun problemen, elk met hun eigen specificaties rondom performantie, schaalbaarheid, complexiteit en functionaliteit. Waar er bij de traditionele relationele databases verschillen waren in bijvoorbeeld de queries, zijn deze beperkt als deze bekeken worden in het volledige landschap van databases. 
+
+Onder andere Ben Scofield heeft de verschilllende NoSQL databases opgesplitst in 4 categorieën, met daarnaast de traditionele relationele databases waar categorie heeft een eigen invulling van het datamodel. De opsplitsing bevindt zich in tabel \ref{table:selectie-classificatie}\cite{Strauch.NoSQL}.
+\begin{table}[!h]
+	\resizebox{\textwidth}{!} {
+		\begin{tabular}{l l l l l l l}
+			\textbf{Soort} & \textbf{Performantie} & \textbf{Schaalbaarheid} & 			\textbf{Flexibiliteit} & \textbf{Complexiteit} & \textbf{Functionaliteit} \\
+			Key-Value & hoog & hoog & hoog & geen & variabel (geen) \\
+			Column & hoog & hoog & gematigd & laag & minimaal \\
+			Document & hoog & variabel(hoog) & hoog & laag & variabel (laag) \\
+			Graph & variabel & variabel & hoog & hoog & graph theory \\
+			Relational & variabel & variabel & laag & gematigd & relational algebra \\
+		\end{tabular}
+	}
+	\label{table:selectie-classificatie}
+	\caption{Classificatie en categorisatie van databases door Scofield en Popescu. \cite{categorizatie-sco10} \cite{categorizatie-pop10b} }
+\end{table}
+
+Voor het tweede deel van deze thesis, het vergelijken van de verschillende systemen in een gedistribueerde omgeving onder falen, hebben de systemen bepaalde vereisten nodig. Allereerst moet het mogelijk zijn om het systeem gedistribueerd uit te rollen waarbij data verdeeld wordt over verschillende nodes, zodat de data liefst nog bereikbaar is wanneer een bepaald node onbereikbaar is. 
+
+Een ander belangrijk element is dat de systemen vrij te installeren moeten zijn, bepaalde databases zoals Google's Bigtable worden beschreven in de literatuur maar zijn niet beschikbaar als installatie maar enkel als service. 
+
+Andere interessante elementen, is het automatisch detecteren als een node niet meer bereikbaar is en daarna ook terug synchroniseren als een node online komt. 
+
+Verder zijn er nog andere differentiatie mogelijkheden, een beperkte query set, al dan niet automatische conflict resolutie, load-balancing, ....  
+
+\paragraph{} In de volgende delen zullen de verschillende categorieën aanbod komen met enkele van de systemen die dit implementeren. De eerste selectie van systemen is gebaseerd op de systemen besproken door Christof Strauch \cite{Strauch.NoSQL}.
+
+%%%		COLUMN		%%%
+\section{Column database}
+In een column-gebaseerd systeem, wordt de data opgeslagen per kolom in plaats van de traditionele manier per rij. Deze aanpak werd in eerste instantie gedaan voor analyse van business intelligence. 
+
+Google's Bigtable is een van de databases gebaseerd op deze technologie, maar dit systeem is niet vrij te installeren. Maar 2 vrije systemen die gebruikt kunnen worden zijn Cassandra en HBase. 
+
+
+\subsection{Cassandra}
+\textit{Website: \url{http://cassandra.apache.org/}}\\
+Cassandra is een database die gebaseerd is op 2 verschillende systemen, Amazon's Dynamo en Google's Bigtable, wat voor een combinatie van een column- en key-value-based database zorgt. 
+
+De query taal is beperkt tot 3 operaties: get, insert en delete \cite{Lakshman:2010:CDS:1773912.1773922}, waar de  laatste waarde in geval van een conflict zal opgeslagen worden.
+
+De database kan gedistribueerd uitgerold worden waar door middel van partitionering en een consistent hashing algoritme de data verspreid wordt over de verschillende nodes. Om beschikbaarheid van de data te hebben bij een failure, wordt deze gerepliceerd over verschillende nodes met verschillende configuratie modellen. 
+
+\subsection{HBase}
+\textit{Website: \url{http://hbase.apache.org/}}\\
+HBase is een database die gebaseerd is op Google's BigTable en draait boven op HDFS, Hadoop Distibuted File System.
+
+De query taal voor HBase bestaat uit 4 elementen, een get, put en delete als standaard operaties en een scan om over verschillende rijen te gaan. 
+
+Voor het gedistribueerd draaien van de database, wordt de database ingedeeld in regio's. Vervolgens is een verantwoordelijk voor regio's  Regionserver om de data van regio's op te slaan. Daarnaast is er ook nog afhankelijkheid van Zookeeper voor management van regio's en name en data-nodes als opslag.  
+
+%%%		Document	%%%
+\section{Document database}
+Document databases zijn volgens vele de volgende stap in key-value databases, waar deze complexere structuren toe laten, dit door middel van meerdere key/value paren per element. 
+Een document moet geen vaste structuur hebben maar elk document op zich kan verschillende velden hebben, dit kan bijvoorbeeld gezien worden bij boken. Waar één boek een recept is, kan een ander een deel zijn van een trilogie. Bij het eerste kan de kooktijd bijvoorbeeld apart opgeslagen worden en bij de tweede de andere boeken. 
+
+Enkele systemen die deze structuur implementeren zijn CoucheDB, Elastic Search en MongoDB. 
+
+\subsection{Apache CoucheDB}
+\textit{Website: \url{http://couchdb.apache.org/}}\\
+Apache CoucheDB is een document database waar alles wordt voorgesteld met behulp van JSON. De database kan bevraagd worden door middel van Map-Reduce, de map gebeurd door een \textit{view}, een JavaScript-functie die de gegevens zal selecteren. Nadien kan met een reduce view de data geaggregeerd worden. 
+
+Bij het gedistribueerd uitrollen zal de data met consistent hashing over verschillende nodes verdeeld worden waar elke node een zelfde rol heeft. Nu zal CoucheDB enkel updates van data van node veranderen en niet data automatisch load-balancen. Ook is het mogelijk om een exacte replica van de ene naar de andere node te sturen, dit wordt bijvoorbeeld handig indien documenten naar een laptop gesynchroniseerd worden om later offline te kunnen werken.
+
+In een gedistribueerde omgeving ziet CouchDB conflicten niet als een exceptie maar als een normale omstandigheid. Wel zullen updates atomisch per rij afgewerkt worden op een enkele node, zodat hier geen conflict in kan bestaan. Maar indien een conflict optreedt, is het aan de bovenliggende applicatie om deze af te handelen. 
+
+%\subsection{Elastic Search}
+%\textit{Website: \url{http://couchdb.apache.org/}}\\
+
+\subsection{MongoDB}
+\textit{Website: \url{http://www.mongodb.org/}}\\
+MongoDB is een document database waar de data wordt voorgesteld aan de hand van BSON, een binaire vorm vergelijkbaar met JSON. Data kan ingegegeven worden via JSON aangezien er een eenvoudige map mogelijk is. 
+
+Er is een uitgebreide query taal, waar er naast het invoegen, verwijderen en opvragen van een document ook talrijke zoekparameters meegegeven kunnen worden: dit gaat van zoeken op een enkel veld tot conjuncties, sorteren, projecties, ... 
+
+MongoDB kan in een gedistribueerde omgeving opgezet worden, waar deze datbase een opsplitsing maakt tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan kan gedaan worden door het combineren van nodes in een ReplicaSet waar er een master-slave configuratie is. Daarnaast kan data ook verdeeld worden over verschillende nodes of replica sets, dit kan door middel van het configureren van shards. 
+Conflicts worden afgehandeld door de master-slave configuratie waar er telkens een meerderheid van de nodes nodig is voor de data. 
+
+%%%		Graph		%%%
+\section{Graph database}
+Graph databases slaan data op door middel van knopen, lijnen en eigenschappen op beiden. 
+
+Deze opslag structuur is significant verschillend van de andere besproken technieken. De data die opgeslagen wordt in een graaf is van een andere type en om deze reden wordt deze categorie niet verder besproken. 
+ 
+%%%		Key-value	%%%
+\section{Key-Value database}
+
+\subsection{LightCloud (Tokyo)}
+
+\subsection{MemCache}
+
+\subsection{Redis}
+
+\subsection{Riak}
+
+\subsection{Voldemort}
+
+%%%		Relationeel	%%%
+\section{Relationeel database}
+
+\subsection{MySQL}
+
+\subsection{PgPool(PostgreSQL)}
