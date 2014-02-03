@@ -19,7 +19,7 @@ Onder andere Ben Scofield heeft de verschilllende NoSQL databases opgesplitst in
 
 Voor het tweede deel van deze thesis, het vergelijken van de verschillende systemen in een gedistribueerde omgeving onder falen, hebben de systemen bepaalde vereisten nodig. Allereerst moet het mogelijk zijn om het systeem gedistribueerd uit te rollen waarbij data verdeeld wordt over verschillende nodes, zodat de data liefst nog bereikbaar is wanneer een bepaald node onbereikbaar is. 
 
-Een ander belangrijk element is dat de systemen vrij te installeren moeten zijn, bepaalde databases zoals Google's Bigtable worden beschreven in de literatuur maar zijn niet beschikbaar als installatie maar enkel als service. 
+Een ander belangrijk element is dat de systemen vrij te installeren moeten zijn, bepaalde databases zoals Google's Bigtable worden beschreven in de literatuur maar zijn niet beschikbaar als installatie maar enkel als service. Tenslotte moet de data ook persistent zijn. 
 
 Andere interessante elementen, is het automatisch detecteren als een node niet meer bereikbaar is en daarna ook terug synchroniseren als een node online komt. 
 
@@ -74,7 +74,7 @@ MongoDB is een document database waar de data wordt voorgesteld aan de hand van 
 
 Er is een uitgebreide query taal, waar er naast het invoegen, verwijderen en opvragen van een document ook talrijke zoekparameters meegegeven kunnen worden: dit gaat van zoeken op een enkel veld tot conjuncties, sorteren, projecties, ... 
 
-MongoDB kan in een gedistribueerde omgeving opgezet worden, waar deze datbase een opsplitsing maakt tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan kan gedaan worden door het combineren van nodes in een ReplicaSet waar er een master-slave configuratie is. Daarnaast kan data ook verdeeld worden over verschillende nodes of replica sets, dit kan door middel van het configureren van shards. 
+MongoDB kan in een gedistribueerde omgeving opgezet worden met een opsplitsing tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan kan gedaan worden door het combineren van nodes in een ReplicaSet waar er een master-slave configuratie is. Daarnaast kan data ook verdeeld worden over verschillende nodes of replica sets, dit kan door middel van het configureren van shards. 
 Conflicts worden afgehandeld door de master-slave configuratie waar er telkens een meerderheid van de nodes nodig is voor de data. 
 
 %%%		Graph		%%%
@@ -85,20 +85,49 @@ Deze opslag structuur is significant verschillend van de andere besproken techni
  
 %%%		Key-value	%%%
 \section{Key-Value database}
+Key-value databases hebben een heel eenvoudig data model, data kan opgeslaan, opgevraagd en verwijderd worden op basis van een key. De informatie die in de database zit, is de waarde voor die key. 
+
+Met dit eenvoudig model en functionaliteit die weinig complexiteit introduceren, kan er gestreefd worden naar een hoge performatie, schaalbaarheid en flexibiliteit. 
+
+In deze categorie zullen er 5 verschillende databases besproken worden, LightCloud, MemCach, Redis, Riak en Voldemort. 
 
 \subsection{LightCloud (Tokyo)}
+\textit{Website: \url{http://opensource.plurk.com/LightCloud/}}\\
+LightCloud is een gedistribueerde uitbreiding van Tokyo Tyrant. Tokyo Tyrant is op zijn beurt een uitbreiding op Tokyo Cabinet en voegt de mogelijkheid tot externe connecties aan Cabinet toe. Cabinet is het basis pakket. 
+
+De query taal is gelimiteerd tot 5 operaties: get, put, delete, add en een iterator om over de keys te gaan. Met add wordt er data aan een bestaand element toegevoegd. 
+
+LightCloud levert een gedistribueerde database met master-master synchronisatie. Met behulp van een consistent hashing algoritme en 2 hash rings, wordt de data verdeeld over verschillende nodes met de nodige redundantie. De eerste ring is verantwoordelijk voor de lookups oftewel het lokaliseren van de keys, de storage ring is verantwoordelijk voor het opslaan van de verschillende waarden. 
 
 \subsection{MemCache}
+\textit{Website: \url{http://memcached.org/}}\\
+MemCache is een veel gebruikt systeem waarin al de data in RAM geheugen wordt gehouden en alhoewel er ondersteuning is met behulp van MemCacheDB voor persistentie is deze database niet bedoeld voor persistente opslag. 
+
+Omdat één van de vereisten was dat de data persistent moest zijn, is dit systeem niet verder onderzocht in deze context. 
 
 \subsection{Redis}
+\textit{Website: \url{http://www.redis.io/}}\\
+Redis is een key-value database met de mogelijkheid tot opslaan van complexe datastructuren zoals lijsten, sets en mappen. Naast de standaard instructies om een enkele waarde toe te voegen, zijn er specifieke commando's om operaties op de complexere objecten te doen, het verwijderen van een lid van een bepaalde set. Daarnaast biedt Redis ook ondersteuning voor transacties en heeft deze de mogelijkheid tot expire, hierdoor zal een waarde automatisch vergeten worden na een meegegeven tijd. 
+
+De database wordt volledig in geheugen geplaatst maar ondersteund 2 soorten van persistentie, oftewel door middel van RDB, oftewel met een AOF log. Bij RDB worden er over tijd snapshots gemaakt van de database en weggeschreven op harde schijf. In het geval van AOF wordt elke schrijfoperaties weggeschreven en kan de database opgebouwd worden met behulp van deze lijst.
+
+Tenslotte heeft Redis momenteel een relatief beperkte mogelijkheid tot een gedistribueerde database. Het is mogelijk om data over verschillende nodes te distribueren met behulp van sharding welke op voorhand gedefinieerd dient te worden en is er ook de mogelijkheid tot master-slave opstelling met automatische failure detection.
+De laatste is nog wel in beta al is het al mogelijk om te gebruiken. Tenslotte is er naar de toekomst ook meer uitbreiding op komst met behulp van Redis Cluster waar data automatisch verspreid wordt over verschillende nodes. 
 
 \subsection{Riak}
+\textit{Website: \url{http://basho.com/riak/}}\\
+Riak is een key-value database met de mogelijkheid tot opslaan van strings, JSON en XML. Daarnaast heeft deze standaard operaties maar hier enkele uitbreidingen op gemaakt. Allereerst is het mogelijk om secundaire indexen te definiëren op de elementen, MapReduce toe te passen en een full-text search. 
 
-\subsection{Voldemort}
+Riak is gebouwd om gedistribueerd te draaien waar al de nodes evenwaardig zijn. Data wordt verdeeld over de verschillende nodes en elk element wordt op 3 verschillende nodes opgeslagen. Indien een bepaalde node faalt, wordt dit met een gossiping algoritme verspreid over de verschillende nodes waarmee een naburige node overneemt. Daarnaast is er automatische recovery indien een node terug online komt. 
 
+\subsection{Project Voldemort}
+\textit{Website: \url{http://www.project-voldemort.com/}}\\
+Project Voldemort is een key-value store met enkel 3 basis operaties: get, put en delete. 
 %%%		Relationeel	%%%
 \section{Relationeel database}
 
 \subsection{MySQL}
+\textit{Website: \url{http://www.mongodb.org/}}\\
 
 \subsection{PgPool(PostgreSQL)}
+\textit{Website: \url{http://www.mongodb.org/}}\\
