@@ -114,9 +114,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}IMP: Framework voor installatie}{15}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Besluit}{17}{chapter.5}
+\contentsline {section}{\numberline {4.3}MongoDB}{15}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{22}{section*.31}
+\contentsline {subsection}{\numberline {4.3.1}Werking van MongoDB}{15}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{15}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{15}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{16}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Uitwerking}{17}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Resultaat}{17}{subsection.4.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Besluit}{19}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{24}{section*.35}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

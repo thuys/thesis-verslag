@@ -30,6 +30,12 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces MongoDB: Drie leden van een replicaset met 1 master en 2 slaves. \cite {mongodb-replicaset}}}{16}{figure.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB: Drie leden van een replicaset met 1 master en 2 slaves. \cite {mongodb-replicaset}}}{16}{figure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces MongoDB: Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers. \cite {mongodb-shard}}}{17}{figure.4.3}
+\defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}

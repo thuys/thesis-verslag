@@ -215,6 +215,17 @@
   \field{urlyear}{2013}
 \endentry
 
+\entry{mongodb-replicaset}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Replication Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/replication-introduction/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
 \entry{categorizatie-sco10}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -235,6 +246,17 @@
   \field{urlday}{03}
   \field{urlmonth}{02}
   \field{urlyear}{2013}
+\endentry
+
+\entry{mongodb-shard}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Sharding Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/sharding-introduction/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
 \endentry
 
 \entry{Strauch.NoSQL}{book}{}
