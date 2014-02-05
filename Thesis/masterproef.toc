@@ -46,11 +46,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{5}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Implicatie van gedistribueerde datasystemen}{5}{subsection.2.1.2}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{5}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{6}{section*.22}
+\contentsline {subsection}{\numberline {2.1.2}Implicatie van gedistribueerde datasystemen}{5}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{5}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{6}{section*.23}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Doelstelling}{6}{section.2.2}
 \defcounter {refsection}{0}\relax 
@@ -60,7 +62,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {3}Beschrijving van verschillende databases en selectie van databases}{7}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{8}{section*.23}
+\contentsline {paragraph}{}{8}{section*.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Column database}{8}{section.3.1}
 \defcounter {refsection}{0}\relax 
@@ -96,10 +98,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}Selectie van de databases}{13}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{13}{section*.24}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{13}{section*.25}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{13}{section*.26}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{13}{section*.27}
@@ -107,6 +105,10 @@
 \contentsline {paragraph}{}{13}{section*.28}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{13}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{13}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{13}{section*.31}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {4}Automatisch uitrollen van databases}{15}{chapter.4}
 \defcounter {refsection}{0}\relax 
@@ -118,19 +120,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.1}Werking van MongoDB}{15}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{15}{section*.31}
+\contentsline {paragraph}{}{15}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{15}{section*.32}
+\contentsline {paragraph}{}{15}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{16}{section*.33}
+\contentsline {paragraph}{}{16}{section*.35}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.2}Uitwerking}{17}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Resultaat}{17}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}Resultaat}{19}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Besluit}{19}{chapter.5}
+\contentsline {section}{\numberline {4.4}PgPool-II (PostgreSQL)}{19}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{24}{section*.35}
+\contentsline {section}{\numberline {4.5}HBase}{19}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Besluit}{21}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{26}{section*.37}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

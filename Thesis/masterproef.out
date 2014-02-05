@@ -17,5 +17,7 @@
 \BOOKMARK [1][-]{section.4.1}{Inleiding}{chapter.4}% 17
 \BOOKMARK [1][-]{section.4.2}{IMP: Framework voor installatie}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.3}{MongoDB}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{Besluit}{}% 20
-\BOOKMARK [0][-]{section*.35}{Bibliografie}{}% 21
+\BOOKMARK [1][-]{section.4.4}{PgPool-II \(PostgreSQL\)}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.5}{HBase}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter.5}{Besluit}{}% 22
+\BOOKMARK [0][-]{section*.37}{Bibliografie}{}% 23

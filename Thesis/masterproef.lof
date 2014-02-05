@@ -30,11 +30,13 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces MongoDB: Drie leden van een replicaset met 1 master en 2 slaves. \cite {mongodb-replicaset}}}{16}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces MongoDB: Drie leden van een replica set met 1 master en 2 slaves. Bron: MongoDB\cite {mongodb-replicaset}}}{16}{figure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB: Drie leden van een replicaset met 1 master en 2 slaves. \cite {mongodb-replicaset}}}{16}{figure.4.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB: Een voorbeeld van het verkiezen van een nieuwe primary bij het niet meer beschikbaar zijn van de vorige primary. Bron: MongoDB\cite {mongodb-replicaset}}}{16}{figure.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces MongoDB: Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers. \cite {mongodb-shard}}}{17}{figure.4.3}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces MongoDB: Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers. Bron: MongoDB\cite {mongodb-shard}}}{17}{figure.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces MongoDB: Het domeinmodel van de implementatie in IMP.}}{19}{figure.4.4}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 

@@ -1,7 +1,7 @@
 \chapter{Beschrijving van verschillende databases en selectie van databases}
-NoSQL databases zijn ontwikkeld vanuit de industrie om onmiddellijk te kunnen inzetten op hun problemen, elk met hun eigen specificaties rondom performantie, schaalbaarheid, complexiteit en functionaliteit. Waar er bij de traditionele relationele databases verschillen waren in bijvoorbeeld de queries, zijn deze beperkt als deze bekeken worden in het volledige landschap van databases. 
+Vele NoSQL databases zijn ontwikkeld vanuit de industrie om onmiddellijk te kunnen inzetten op hun problemen, elk met hun eigen specificaties rondom performantie, schaalbaarheid, complexiteit en functionaliteit. Waar er bij de relationele databases verschillen waren in functionaliteit in beperkt zijn ten opzicht van NoSQL databases. 
 
-Onder andere Ben Scofield heeft de verschilllende NoSQL databases opgesplitst in 4 categorieën, met daarnaast de traditionele relationele databases waar categorie heeft een eigen invulling van het datamodel. De opsplitsing bevindt zich in tabel \ref{table:selectie-classificatie}\cite{Strauch.NoSQL}.
+Onder andere Ben Scofield\cite{Strauch.NoSQL} heeft de verschillende NoSQL databases opgesplitst in 4 categorieën , met daarnaast de traditionele relationele databases waar categorie heeft een eigen invulling van het datamodel. De opsplitsing bevindt zich in tabel \ref{table:selectie-classificatie}.
 \begin{table}[!h]
 	\resizebox{\textwidth}{!} {
 		\begin{tabular}{l l l l l l l}
@@ -18,11 +18,11 @@ Onder andere Ben Scofield heeft de verschilllende NoSQL databases opgesplitst in
 	\label{table:selectie-classificatie}
 \end{table}
 
-Voor het tweede deel van deze thesis, het vergelijken van de verschillende systemen in een gedistribueerde omgeving onder falen, hebben de systemen bepaalde vereisten nodig. Allereerst moet het mogelijk zijn om het systeem gedistribueerd uit te rollen waarbij data verdeeld wordt over verschillende nodes, zodat de data liefst nog bereikbaar is wanneer een bepaald node onbereikbaar is. 
+Voor het tweede deel van deze thesis, het vergelijken van de verschillende gedistribueerde systemen met betrekking tot het beschikbaar zijn van de data, hebben de systemen bepaalde vereisten nodig. Allereerst moet het mogelijk zijn om het systeem gedistribueerd uit te rollen waarbij data verdeeld wordt over verschillende instanties, zodat de data liefst nog bereikbaar is wanneer een bepaald instantie onbereikbaar is. 
 
-Een ander belangrijk element is dat de systemen vrij te installeren moeten zijn, bepaalde databases zoals Google's Bigtable worden beschreven in de literatuur maar zijn niet beschikbaar als installatie maar enkel als service. Tenslotte moet de data ook persistent zijn. 
+Een ander element is dat de systemen vrij te installeren moeten zijn, bepaalde databases zoals Google's Bigtable worden beschreven in papers maar zijn enkel als service op hun systemen. Tenslotte moet de data ook persistent zijn. 
 
-Andere interessante elementen, is het automatisch detecteren als een node niet meer bereikbaar is en daarna ook terug synchroniseren als een node online komt. 
+Andere interessante elementen, is het automatisch detecteren als een instantie niet meer bereikbaar is en daarna ook terug synchroniseren als een instantie online komt. 
 
 Verder zijn er nog andere differentiatie mogelijkheden, een beperkte query set, al dan niet automatische conflict resolutie, load-balancing, ....  
 
@@ -30,9 +30,9 @@ Verder zijn er nog andere differentiatie mogelijkheden, een beperkte query set, 
 
 %%%		COLUMN		%%%
 \section{Column database}
-In een column-gebaseerd systeem, wordt de data opgeslagen per kolom in plaats van de traditionele manier per rij. Deze aanpak werd in eerste instantie gedaan voor analyse van business intelligence. 
+In een column-gebaseerd systeem wordt de data opgeslagen per kolom in plaats van de traditionele manier, per rij. Deze aanpak werd in eerste instantie gedaan voor analyse van business intelligence. 
 
-Google's Bigtable is een van de databases gebaseerd op deze technologie, maar dit systeem is niet vrij te installeren. Maar 2 vrije systemen die gebruikt kunnen worden zijn Cassandra en HBase. 
+Google's Bigtable is een van de databases gebaseerd op deze technologie, maar dit systeem is niet vrij te installeren. Maar 2 systemen die geïnstalleerd kunnen worden zijn Cassandra en HBase. 
 
 
 \subsection{Cassandra}
@@ -41,7 +41,7 @@ Cassandra is een database die gebaseerd is op 2 verschillende systemen, Amazon's
 
 De query taal is beperkt tot 3 operaties: get, insert en delete \cite{Lakshman:2010:CDS:1773912.1773922}, waar de  laatste waarde in geval van een conflict zal opgeslagen worden.
 
-De database kan gedistribueerd uitgerold worden waar door middel van partitionering en een consistent hashing algoritme de data verspreid wordt over de verschillende nodes. Om beschikbaarheid van de data te hebben bij een failure, wordt deze gerepliceerd over verschillende nodes met verschillende configuratie modellen. 
+De database kan gedistribueerd uitgerold worden waar door middel van partitionering en een consistent hashing algoritme de data verspreid wordt over de verschillende instanties. Om beschikbaarheid van de data te hebben bij een failure, wordt deze gerepliceerd over verschillende instanties met verschillende configuratie modellen. 
 
 \subsection{HBase}
 \textit{Website: \url{http://hbase.apache.org/}}\\
@@ -49,12 +49,12 @@ HBase is een database die gebaseerd is op Google's BigTable en draait boven op H
 
 De query taal voor HBase bestaat uit 4 elementen, een get, put en delete als standaard operaties en een scan om over verschillende rijen te gaan. 
 
-Voor het gedistribueerd draaien van de database, wordt de database ingedeeld in regio's. Vervolgens is een verantwoordelijk voor regio's  Regionserver om de data van regio's op te slaan. Daarnaast is er ook nog afhankelijkheid van Zookeeper voor management van regio's en name en data-nodes als opslag.  
+Voor het gedistribueerd draaien van de database, wordt de database ingedeeld in regio's. Vervolgens is een verantwoordelijk voor regio's  Regionserver om de data van regio's op te slaan. Daarnaast is er ook nog afhankelijkheid van Zookeeper voor management van regio's en name en data-instanties als opslag.  
 
 %%%		Document	%%%
 \section{Document database}
 Document databases zijn volgens vele de volgende stap in key-value databases, waar deze complexere structuren toe laten, dit door middel van meerdere key/value paren per element. 
-Een document moet geen vaste structuur hebben maar elk document op zich kan verschillende velden hebben, dit kan bijvoorbeeld gezien worden bij boken. Waar één boek een recept is, kan een ander een deel zijn van een trilogie. Bij het eerste kan de kooktijd bijvoorbeeld apart opgeslagen worden en bij de tweede de andere boeken. 
+Een document moet geen vaste structuur hebben maar elk document op zich kan verschillende velden hebben, dit kan bijvoorbeeld gezien worden bij boken. Waar een bepaald boek een recept is, kan een ander een deel zijn van een trilogie. Bij het eerste kan de kooktijd bijvoorbeeld apart opgeslagen worden en bij de tweede de andere boeken. 
 
 Enkele systemen die deze structuur implementeren zijn CoucheDB, Elastic Search en MongoDB. 
 
@@ -62,9 +62,9 @@ Enkele systemen die deze structuur implementeren zijn CoucheDB, Elastic Search e
 \textit{Website: \url{http://couchdb.apache.org/}}\\
 Apache CoucheDB is een document database waar alles wordt voorgesteld met behulp van JSON. De database kan bevraagd worden door middel van Map-Reduce, de map gebeurd door een \textit{view}, een JavaScript-functie die de gegevens zal selecteren. Nadien kan met een reduce view de data geaggregeerd worden. 
 
-Bij het gedistribueerd uitrollen zal de data met consistent hashing over verschillende nodes verdeeld worden waar elke node een zelfde rol heeft. Nu zal CoucheDB enkel updates van data van node veranderen en niet data automatisch load-balancen. Ook is het mogelijk om een exacte replica van de ene naar de andere node te sturen, dit wordt bijvoorbeeld handig indien documenten naar een laptop gesynchroniseerd worden om later offline te kunnen werken.
+Bij het gedistribueerd uitrollen zal de data met consistent hashing over verschillende instanties verdeeld worden waar elke instantie een zelfde rol heeft. Nu zal CoucheDB enkel updates van data van instantie veranderen en niet data automatisch load-balancen. Ook is het mogelijk om een exacte replica van de ene naar de andere instantie te sturen, dit wordt bijvoorbeeld handig indien documenten naar een laptop gesynchroniseerd worden om later offline te kunnen werken.
 
-In een gedistribueerde omgeving ziet CouchDB conflicten niet als een exceptie maar als een normale omstandigheid. Wel zullen updates atomisch per rij afgewerkt worden op een enkele node, zodat hier geen conflict in kan bestaan. Maar indien een conflict optreedt, is het aan de bovenliggende applicatie om deze af te handelen. 
+In een gedistribueerde omgeving ziet CouchDB conflicten niet als een exceptie maar als een normale omstandigheid. Wel zullen updates atomisch per rij afgewerkt worden op een enkele instantie, zodat hier geen conflict in kan bestaan. Maar indien een conflict optreedt, is het aan de bovenliggende applicatie om deze af te handelen. 
 
 %\subsection{Elastic Search}
 %\textit{Website: \url{http://couchdb.apache.org/}}\\
@@ -75,8 +75,8 @@ MongoDB is een document database waar de data wordt voorgesteld aan de hand van 
 
 Er is een uitgebreide query taal, waar er naast het invoegen, verwijderen en opvragen van een document ook talrijke zoekparameters meegegeven kunnen worden: dit gaat van zoeken op een enkel veld tot conjuncties, sorteren, projecties, ... 
 
-MongoDB kan in een gedistribueerde omgeving opgezet worden met een opsplitsing tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan kan gedaan worden door het combineren van nodes in een ReplicaSet waar er een master-slave configuratie is. Daarnaast kan data ook verdeeld worden over verschillende nodes of replica sets, dit kan door middel van het configureren van shards. 
-Conflicts worden afgehandeld door de master-slave configuratie waar er telkens een meerderheid van de nodes nodig is voor de data. 
+MongoDB kan in een gedistribueerde omgeving opgezet worden met een opsplitsing tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan kan gedaan worden door het combineren van instanties in een ReplicaSet waar er een master-slave configuratie is. Daarnaast kan data ook verdeeld worden over verschillende instanties of replica sets, dit kan door middel van het configureren van shards. 
+Conflicts worden opgevangen door de master waar er telkens een meerderheid van de instanties nodig is voor de data. 
 
 %%%		Graph		%%%
 \section{Graph database}
@@ -90,7 +90,7 @@ Key-value databases hebben een heel eenvoudig data model, data kan opgeslaan, op
 
 Met dit eenvoudig model en functionaliteit die weinig complexiteit introduceren, kan er gestreefd worden naar een hoge performatie, schaalbaarheid en flexibiliteit. 
 
-In deze categorie zullen er 5 verschillende databases besproken worden, LightCloud, MemCach, Redis, Riak en Voldemort. 
+In deze categorie zullen er 5 verschillende databases besproken worden: LightCloud, MemCach, Redis, Riak en Voldemort. 
 
 \subsection{LightCloud (Tokyo)}
 \textit{Website: \url{http://opensource.plurk.com/LightCloud/}}\\
@@ -98,7 +98,7 @@ LightCloud is een gedistribueerde uitbreiding van Tokyo Tyrant. Tokyo Tyrant is 
 
 De query taal is gelimiteerd tot 5 operaties: get, put, delete, add en een iterator om over de keys te gaan. Met add wordt er data aan een bestaand element toegevoegd. 
 
-LightCloud levert een gedistribueerde database met master-master synchronisatie. Met behulp van een consistent hashing algoritme en 2 hash rings, wordt de data verdeeld over verschillende nodes met de nodige redundantie. De eerste ring is verantwoordelijk voor de lookups oftewel het lokaliseren van de keys, de storage ring is verantwoordelijk voor het opslaan van de verschillende waarden. 
+LightCloud levert een gedistribueerde database met master-master synchronisatie. Met behulp van een consistent hashing algoritme en 2 hash rings, wordt de data verdeeld over verschillende instanties met de nodige redundantie. De eerste ring is verantwoordelijk voor de lookups oftewel het lokaliseren van de keys, de storage ring is verantwoordelijk voor het opslaan van de verschillende waarden. 
 
 \subsection{MemCache}
 \textit{Website: \url{http://memcached.org/}}\\
@@ -108,24 +108,24 @@ Omdat één van de vereisten was dat de data persistent moest zijn, is dit syste
 
 \subsection{Redis}
 \textit{Website: \url{http://www.redis.io/}}\\
-Redis is een key-value database met de mogelijkheid tot opslaan van complexe datastructuren zoals lijsten, sets en mappen. Naast de standaard instructies om een enkele waarde toe te voegen, zijn er specifieke commando's om operaties op de complexere objecten te doen, het verwijderen van een lid van een bepaalde set. Daarnaast biedt Redis ook ondersteuning voor transacties en heeft deze de mogelijkheid tot expire, hierdoor zal een waarde automatisch vergeten worden na een meegegeven tijd. 
+Redis is een key-value database met de mogelijkheid tot opslaan van complexe datastructuren zoals lijsten, sets en mappen. Naast de standaard instructies om een enkele waarde toe te voegen, zijn er specifieke commando's om operaties op de complexere objecten te doen, het verwijderen van een lid van een bepaalde set. Redis biedt ook ondersteuning voor transacties en heeft deze de mogelijkheid tot expire, hierdoor zal een waarde automatisch vergeten worden na een meegegeven tijd. 
 
 De database wordt volledig in geheugen geplaatst maar ondersteund 2 soorten van persistentie, oftewel door middel van RDB, oftewel met een AOF log. Bij RDB worden er over tijd snapshots gemaakt van de database en weggeschreven op harde schijf. In het geval van AOF wordt elke schrijfoperaties weggeschreven en kan de database opgebouwd worden met behulp van deze lijst.
 
-Tenslotte heeft Redis momenteel een relatief beperkte mogelijkheid tot een gedistribueerde database. Het is mogelijk om data over verschillende nodes te distribueren met behulp van sharding welke op voorhand gedefinieerd dient te worden en is er ook de mogelijkheid tot master-slave opstelling met automatische failure detection.
-De laatste is nog wel in beta al is het al mogelijk om te gebruiken. Tenslotte is er naar de toekomst ook meer uitbreiding op komst met behulp van Redis Cluster waar data automatisch verspreid wordt over verschillende nodes. 
+Tenslotte heeft Redis momenteel een relatief beperkte mogelijkheid tot een gedistribueerde database. Het is mogelijk om data over verschillende instanties te distribueren met behulp van sharding welke op voorhand gedefinieerd dient te worden en is er ook de mogelijkheid tot master-slave opstelling met automatische failure detection.
+De laatste is nog wel in beta al is het al mogelijk om te gebruiken. Tenslotte is er naar de toekomst ook meer uitbreiding op komst met behulp van Redis Cluster waar data automatisch verspreid wordt over verschillende instanties. 
 
 \subsection{Riak}
 \textit{Website: \url{http://basho.com/riak/}}\\
 Riak is een key-value database met de mogelijkheid tot opslaan van strings, JSON en XML. Daarnaast heeft deze standaard operaties maar hier enkele uitbreidingen op gemaakt. Allereerst is het mogelijk om secundaire indexen te definiëren op de elementen, MapReduce toe te passen en een full-text search. 
 
-Riak is gebouwd om gedistribueerd te draaien waar al de nodes evenwaardig zijn. Data wordt verdeeld over de verschillende nodes en elk element wordt op 3 verschillende nodes opgeslagen. Indien een bepaalde node faalt, wordt dit met een gossiping algoritme verspreid over de verschillende nodes waarmee een naburige node overneemt. Daarnaast is er automatische recovery indien een node terug online komt. 
+Riak is gebouwd om gedistribueerd te draaien waar al de instanties evenwaardig zijn. Data wordt verdeeld over de verschillende instanties en elk element wordt standaard op 3 verschillende instanties opgeslagen. Indien een bepaalde instantie faalt, wordt dit met een gossiping algoritme verspreid over de verschillende instanties waarmee een naburige instantie overneemt. Daarnaast is er automatische recovery indien een instantie terug online komt. 
 
 \subsection{Project Voldemort}
 \textit{Website: \url{http://www.project-voldemort.com/}}\\
 Project Voldemort is een key-value store met enkel 3 basis operaties: get, put en delete met de mogelijkheid voor als keys en values strings, serializable objecten, protocol buffers of raw byte arrays te gebruiken. 
 
-Deze database ondersteunt verschillende modes van distributie. De opbouw bestaat uit verschillende lagen, elk met hun eigen gedefinieerde functie. Met behulp van deze lagen kan de ontwikkelaar extra lagen toevoegen om de applicatie meer te finetunen naar zijn uitwerking. 
+Deze database ondersteunt verschillende modes van distributie. De opbouw bestaat uit verschillende lagen, elk met hun eigen gedefinieerde functie. Met behulp van deze lagen kan de ontwikkelaar extra functionaliteit toevoegen met behulp van een extra laag om de applicatie meer te finetunen naar zijn uitwerking. 
 Data wordt verdeeld met behulp van consistent hashing over de verschillende servers, waarbij data verschillende keren wordt bijgehouden om ervoor te zorgen dat de data nog beschikbaar is in het geval van falen. 
 
 %%%		Relationeel	%%%
@@ -143,9 +143,9 @@ De uitbreiding van een gedistribueerd systeem is bij MySQL ingebouwd door middel
 \textit{Website: \url{http://www.pgpool.net/}}\\
 PostgreSQL is een relationele database en heeft soortgelijke specificaties als MySQL op een enkele computer, verschillende soorten data kunnen voorgesteld worden met uitgebreide query mogelijkheden. 
 
-Enkel als de database ook gedistribueerd moet uitgerold worden, is er een verschil. Bij PostgreSQL is er standaard geen ondersteuning voor dit maar moet er op externe elementen vertrouwd worden. Er bestaan verschillende componenten soorten systemen, maar aangezien er load-balancing nodig is en een recent pakket, is er gekozen voor Pgpool-II, een vergelijking van de systemen kan gevonden worden op de wiki van PostgreSQL \cite{postgresql-clustering}. 
+Enkel als de database ook gedistribueerd moet uitgerold worden, is er een verschil. Bij PostgreSQL is er hiervoor standaard geen ondersteuning hiervoor maar moet er op externe elementen vertrouwd worden. Er bestaan verschillende componenten soorten systemen, maar aangezien er load-balancing nodig is en een zo recent mogelijk pakket, is er gekozen voor Pgpool-II, een vergelijking van de systemen kan gevonden worden op de wiki van PostgreSQL \cite{postgresql-clustering}. 
 
-Pgpool-II heeft verschillende mode, maar aangezien er de nood was voor replicatie, is er gekozen om de replicatie mode in te stellen. Hierdoor komt de database in een Master-Slave situatie waar er het falen gedetecteerd wordt op het moment een connectie actief is. Indien een node terug online is, moet er manueel het recovery process opgestart worden. 
+Pgpool-II heeft verschillende mode, maar aangezien er de nood was voor replicatie, is er gekozen om de replicatie mode in te stellen. Hierdoor komt de database in een Master-Slave situatie waar er het falen gedetecteerd wordt op het moment een connectie actief is. Indien een instantie terug online is, moet er manueel het recovery process opgestart worden. 
 
 Andere configuraties zijn mogelijk, onder andere met het opzetten van caching en nog andere elementen. 
 
@@ -165,4 +165,3 @@ Deze selectie was in samenspraak met de andere thesis rondom dit onderwerp. Zo z
 \paragraph{} \textbf{MySQL} en \textbf{Pgpool-II (PostgrSQL)} zijn beide gekozen om een vergelijking te hebben ten opzichte van de meer traditionele databases. 
 
 \paragraph{} De databases die verder in deze thesis besproken zullen worden zijn MongoDB, HBase en Pgpool-II (PostgrSQL). 
-
