@@ -1,0 +1,285 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Brewer:2000:TRD:343477.343502}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brewer}{B.}%
+     {Eric~A.}{E.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{BEA1}
+  \strng{fullhash}{BEA1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the Nineteenth Annual ACM Symposium on
+  Principles of Distributed Computing}
+  \verb{doi}
+  \verb 10.1145/343477.343502
+  \endverb
+  \field{isbn}{1-58113-183-6}
+  \field{pages}{7\bibrangedash }
+  \field{series}{PODC '00}
+  \field{title}{Towards Robust Distributed Systems (Abstract)}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/343477.343502
+  \endverb
+  \list{location}{1}{%
+    {Portland, Oregon, USA}%
+  }
+  \field{year}{2000}
+\endentry
+
+\entry{Codd:1970:RMD:362384.362685}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Codd}{C.}%
+     {E.~F.}{E.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \keyw{composition, consistency, data bank, data base, data integrity, data
+  organization, data structure, derivability, hierarchies of data, join,
+  networks of data, predicate calculus, redundancy, relations, retrieval
+  language, security}
+  \strng{namehash}{CEF1}
+  \strng{fullhash}{CEF1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1145/362384.362685
+  \endverb
+  \field{issn}{0001-0782}
+  \field{number}{6}
+  \field{pages}{377\bibrangedash 387}
+  \field{title}{A Relational Model of Data for Large Shared Data Banks}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/362384.362685
+  \endverb
+  \field{volume}{13}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{Commun. ACM}
+  \field{month}{06}
+  \field{year}{1970}
+\endentry
+
+\entry{WorldInternetStatics}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Group}{G.}%
+     {Miniwatts~Marketing}{M.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GMM1}
+  \strng{fullhash}{GMM1}
+  \field{sortinit}{G}
+  \field{title}{World Internet Users Statistics Usage and World Population
+  Stats}
+  \verb{url}
+  \verb http://www.internetworldstats.com/stats.htm
+  \endverb
+  \field{month}{12}
+  \field{year}{2013}
+  \field{urlday}{14}
+  \field{urlmonth}{12}
+  \field{urlyear}{2013}
+\endentry
+
+\entry{vsChart}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Heinze}{H.}%
+     {Florian}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HF1}
+  \strng{fullhash}{HF1}
+  \field{sortinit}{H}
+  \field{title}{vsChart.com – The Comparison Wiki}
+  \verb{url}
+  \verb http://vschart.com/
+  \endverb
+  \field{month}{12}
+  \field{year}{2013}
+  \field{urlday}{14}
+  \field{urlmonth}{12}
+  \field{urlyear}{2013}
+\endentry
+
+\entry{Lakshman:2010:CDS:1773912.1773922}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Lakshman}{L.}%
+     {Avinash}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Malik}{M.}%
+     {Prashant}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{LAMP1}
+  \strng{fullhash}{LAMP1}
+  \field{sortinit}{L}
+  \verb{doi}
+  \verb 10.1145/1773912.1773922
+  \endverb
+  \field{issn}{0163-5980}
+  \field{number}{2}
+  \field{pages}{35\bibrangedash 40}
+  \field{title}{Cassandra: A Decentralized Structured Storage System}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/1773912.1773922
+  \endverb
+  \field{volume}{44}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{SIGOPS Oper. Syst. Rev.}
+  \field{month}{04}
+  \field{year}{2010}
+\endentry
+
+\entry{categorizatie-pop10b}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Popescu}{P.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PA1}
+  \strng{fullhash}{PA1}
+  \field{sortinit}{P}
+  \field{title}{Presentation: NoSQL at CodeMash – An Interesting NoSQL
+  categoriza- tion.}
+  \verb{url}
+  \verb http://nosql.mypopescu.com/post/396337069/presentation-nosql-codemash-a
+  \verb n-interesting-nosql
+  \endverb
+  \field{month}{02}
+  \field{year}{2010}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{postgresql-clustering}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Postgresql}{P.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{P1}
+  \strng{fullhash}{P1}
+  \field{sortinit}{P}
+  \field{title}{PostgreSQL - Replication, Clustering, and Connection Pooling}
+  \verb{url}
+  \verb http://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection
+  \verb _Pooling
+  \endverb
+  \field{month}{10}
+  \field{year}{2013}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2013}
+\endentry
+
+\entry{mongodb-replicaset}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Replication Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/replication-introduction/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{categorizatie-sco10}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Scofield}{S.}%
+     {Ben}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SB1}
+  \strng{fullhash}{SB1}
+  \field{sortinit}{S}
+  \field{title}{NoSQL – Death to Relational Databases(?)}
+  \verb{url}
+  \verb http://www.slideshare.net/bscofield/nosql-codemash-2010
+  \endverb
+  \field{month}{01}
+  \field{year}{2010}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2013}
+\endentry
+
+\entry{mongodb-shard}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Sharding Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/sharding-introduction/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{Strauch.NoSQL}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Strauch}{S.}%
+     {Christof}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{CAP theorem, NoSQL database, cloud computing, horizontal data
+  distribution, horizontal scaling, vertical scaling, weak consistency}
+  \strng{namehash}{SC1}
+  \strng{fullhash}{SC1}
+  \field{sortinit}{S}
+  \field{title}{NoSQL Databases}
+  \verb{url}
+  \verb http://www.christof-strauch.de/nosqldbs.pdf
+  \endverb
+  \field{year}{2010}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

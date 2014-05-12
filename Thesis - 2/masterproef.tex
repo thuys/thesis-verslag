@@ -1,0 +1,110 @@
+\documentclass[master=cws,masteroption=gs]{kulemt}
+
+\setup{title={Automatisch uitrol van database systemen en vergelijking van beschikbaarheid},
+  author={Thomas Uyttendaele},
+  promotor={Prof.\,dr.\,ir.\ Wouter Joosen},
+  assessor={Ir.},
+  assistant={Ir.\ B. Vanbrabant}}
+% De volgende \setup mag verwijderd worden als geen fiche gewenst is.
+\setup{filingcard,
+  translatedtitle={Automatisch uitrol van database systemen en vergelijking van beschikbaarheid},
+  udc=621.3,
+  shortabstract={Hier komt een heel bondig abstract van hooguit 500
+      woorden. \LaTeX\ commando's mogen hier gebruikt worden. Blanco lijnen
+   (of het commando \texttt{\string\pa r}) zijn wel niet
+   toegelaten!
+  \endgraf \lipsum[2]}}
+% Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
+%\setup{coverpageonly}
+% Verwijder de "%" op de volgende lijn als je enkel de eerste pagina's wil
+% afdrukken en de rest bv. via Word aanmaken.
+%\setup{frontpagesonly}
+
+% Kies de fonts voor de gewone tekst, bv. Latin Modern
+\setup{font=lm}
+
+% Hier kun je dan nog andere pakketten laden of eigen definities voorzien
+
+% Tenslotte wordt hyperref gebruikt voor pdf bestanden.
+% Dit mag verwijderd worden voor de af te drukken versie.
+\usepackage[pdfusetitle,colorlinks,plainpages=false]{hyperref}
+\usepackage[dutch]{babel}
+\usepackage{lipsum} % for dummy text only
+\usepackage{todonotes}
+\usepackage{csquotes}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[acronym]{glossaries}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\include{overige/glossary}
+\bibliography{overige/referenties}
+%%%%%%%
+% Om wat tekst te genereren wordt hier het lipsum pakket gebruikt.
+% Bij een echte masterproef heb je dit natuurlijk nooit nodig!
+\IfFileExists{lipsum.sty}%
+ {\usepackage{lipsum}\setlipsumdefault{11-13}}%
+ {\newcommand{\lipsum}[1][11-13]{\par Hier komt wat tekst: lipsum ##1.\par}}
+%%%%%%%
+
+%\includeonly{hfdst-n}
+\begin{document}
+
+\begin{preface}
+\todo{Voorwoord schrijven}
+\lipsum
+  
+\end{preface}
+
+\tableofcontents*
+\listoftodos
+\begin{abstract}
+\todo{Abstract schrijven}
+
+  In dit \texttt{abstract} environment wordt een al dan niet uitgebreide
+  samenvatting van het werk gegeven. De bedoeling is wel dat dit tot
+  1~bladzijde beperkt blijft.
+  \lipsum
+\end{abstract}
+
+% Een lijst van figuren en tabellen is optioneel
+%\listoffigures
+%\listoftables
+% Bij een beperkt aantal figuren en tabellen gebruik je liever het volgende:
+\listoffiguresandtables
+% De lijst van symbolen is eveneens optioneel.
+% Deze lijst moet wel manueel aangemaakt worden, bv. als volgt:
+\include{overige/afkortingen}
+
+% Nu begint de eigenlijke tekst
+\mainmatter
+
+\include{hoofdstukken/1.inleiding}
+\include{hoofdstukken/2.overzichtvandetechnologie}
+\include{hoofdstukken/3.methodiekvandetesten}
+\include{hoofdstukken/4.implementatie}
+\include{hoofdstukken/5.observaties}
+\include{hoofdstukken/6.analysevanderesultaten}
+\include{hoofdstukken/7.conclusie}
+
+
+% Indien er bijlagen zijn:
+\appendixpage*          % indien gewenst
+\appendix
+%\include{appendix/app-A}
+% ... en zo verder tot
+%\include{appendix/app-n}
+
+\backmatter
+% Na de bijlagen plaatst men nog de bibliografie.
+% Je kan de  standaard "abbrv" bibliografiestijl vervangen door een andere.
+\printglossary
+
+\printbibliography
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
