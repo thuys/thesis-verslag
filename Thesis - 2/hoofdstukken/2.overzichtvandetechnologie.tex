@@ -1,8 +1,69 @@
 \chapter{Overzicht van de technologie}
 
-\section{Inleiding en de benodigdheden van de systemen}
+\section{Geschiedenis van de databasemanagementsystemen}
+Doorheen de geschiedenis, heeft de mens verschillende manieren gebruikt om data op te slaan en nadien terug te vinden. Doorheen de geschiedenis zijn er verschillende stappen van data management geweest, tot voor het ontstaan van de computer ging dit met pen en papier of met ponskaarten\cite{gray2007data}. Met de opkomst van de computer, werden nieuwe methodes gebruikt die doorheen de tijd zijn mee geëvolueerd met de vooruitgang in de technologie en de veranderingen in het gebruik van de data. De hiervoor ontwikkelde software wordt gecategoriseerd onder het \textbf{databasemanagementsysteem}(DBMS). De ontwikkeling en opkomst van de DBMS kan in verschillende fasen opgedeeld worden.  
+
+De eerste DBMS zijn er gekomen met de introductie van de mainframes zoals UNIVAC1 en de ontwikkeling van specifieke programmeertalen voor het werken met deze data, onder andere conferenties zoals CODASYL hebben de ontwikkeling van COBOL en andere standaarden mee ontwikkeld\cite{gray2007data}. \todo{Mss ook het toevoegen van IBM hier + (IDS)?}   
+
+De volgende grote verandering in DBMS is er gekomen door het artikel van E. Codd over het relationele model in 1969 \cite{codd1970relational}. Het relationele model is gebaseerd op theoretische wiskundige principes zoals de set-theorie en eerste-orde predicaten logica. Dit organiseert de data in relaties, een relatie kan gezien worden als een tabel waar een rij een collectie van gerelateerde datawaardes zijn. Een belangrijke eigenschap in dit model is dat de relaties genormaliseerd wordt, database normalisatie is een proces waarbij de redundantie in de data wordt geminimaliseerd. 
+Voorbeelden van populaire DBMS die het relationele model implementeren zijn Oracle, MySQL en PostgreSQL. \todo{Relationeel model basis}
+
+De laatste nieuwe generatie zijn NoSQL databases die sinds 2000 zijn begonnen, NoSQL staat voor '\textit{Not only SQL}'. Deze systemen zijn er gekomen als reactie op het relationele model voor een meer flexibele database, lagere complexiteit, hogere doorvoer van data, horizontale schaalbaarheid en het draaien op commodity hardware.  Verschillende voorbeelden van NoSQL systemen zijn Google BigTable, Amazon Dynamo, HBase, MongoDB, ... \cite{Strauch.NoSQL} Meer informatie en een vergelijking met relationele databases komt aanbod in de volgende sectie. 
+
+\section{Relationele vs NoSQL databases} 
+
+\section{}
+Wat en waarom NoSQL en wat zijn de belangrijkste elementen.
+
+\section{Vereisten van de systemen}
+\begin{itemize}
+\item Persistentie
+\item Distributie
+\item Replicatie
+\item Open-source
+\end{itemize}
 
 \section{Bestudeerde database systemen}
+\begin{itemize}
+\item Column database
+\item Document database
+\item Graph database
+\item Key-Value database
+\item Relationele database
+\end{itemize}
+
+\subsection{Column database}
+\begin{itemize}
+\item Cassandra
+\item HBase
+\end{itemize}
+
+\subsection{Document database}
+\begin{itemize}
+\item Apache CoucheDB
+\item MongoDB
+\end{itemize}
+
+\subsection{Graph database}
+
+\subsection{Key-Value database}
+\begin{itemize}
+\item Lightcloud (Tokyo)
+\item MemCache
+\item Redis
+\item Riak
+\end{itemize}
+
+\subsection{Relationele database}
+\begin{itemize}
+\item MySQL
+\item Pgpool-II (PostgreSQL)
+\end{itemize}
+
+\subsection{Gekozen systemen}
+\subsubsection{HBase}
+\subsubsection{MongoDB}
+\subsubsection{Pgpool-II (PostgreSQL)}
 
 \section{Verschillen in database systemen}
 

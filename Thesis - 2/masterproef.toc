@@ -26,31 +26,55 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {2}Overzicht van de technologie}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Inleiding en de benodigdheden van de systemen}{3}{section.2.1}
+\contentsline {section}{\numberline {2.1}Geschiedenis van de databasemanagementsystemen}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Bestudeerde database systemen}{3}{section.2.2}
+\contentsline {section}{\numberline {2.2}Relationele vs NoSQL databases}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Verschillen in database systemen}{3}{section.2.3}
+\contentsline {section}{\numberline {2.3}}{4}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Selectie van database systemen}{3}{section.2.4}
+\contentsline {section}{\numberline {2.4}Vereisten van de systemen}{4}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Methodiek van de testen}{5}{chapter.3}
+\contentsline {section}{\numberline {2.5}Bestudeerde database systemen}{4}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Implementatie}{7}{chapter.4}
+\contentsline {subsection}{\numberline {2.5.1}Column database}{4}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Doelstelling}{7}{section.4.1}
+\contentsline {subsection}{\numberline {2.5.2}Document database}{5}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Gebruik IMP}{7}{section.4.2}
+\contentsline {subsection}{\numberline {2.5.3}Graph database}{5}{subsection.2.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Gebruik YCSB}{7}{section.4.3}
+\contentsline {subsection}{\numberline {2.5.4}Key-Value database}{5}{subsection.2.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Observaties}{9}{chapter.5}
+\contentsline {subsection}{\numberline {2.5.5}Relationele database}{5}{subsection.2.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{11}{chapter.6}
+\contentsline {subsection}{\numberline {2.5.6}Gekozen systemen}{5}{subsection.2.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusie}{13}{chapter.7}
+\contentsline {subsubsection}{HBase}{5}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{18}{section*.13}
+\contentsline {subsubsection}{MongoDB}{5}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{5}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Verschillen in database systemen}{5}{section.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.7}Selectie van database systemen}{5}{section.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Methodiek van de testen}{7}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Implementatie}{9}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Doelstelling}{9}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Gebruik IMP}{9}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Gebruik YCSB}{9}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Observaties}{11}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{13}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Conclusie}{15}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{20}{section*.18}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 
