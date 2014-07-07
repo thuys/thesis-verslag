@@ -16,6 +16,33 @@
   {}
 \endgroup
 
+\entry{bermbach2011eventual}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Bermbach}{B.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tai}{T.}%
+     {Stefan}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{BDTS1}
+  \strng{fullhash}{BDTS1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the 6th Workshop on Middleware for Service
+  Oriented Computing}
+  \field{pages}{1}
+  \field{title}{Eventual consistency: How soon is eventual? An evaluation of
+  Amazon S3's consistency behavior}
+  \field{year}{2011}
+\endentry
+
 \entry{bollacker2008freebase}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
@@ -247,6 +274,48 @@
   \field{year}{2010}
 \endentry
 
+\entry{golab2014eventually}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Golab}{G.}%
+     {Wojciech}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rahman}{R.}%
+     {Muntasir~R}{M.~R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {AuYoung}{A.}%
+     {Alvin}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Keeton}{K.}%
+     {Kimberly}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Xiaozhou~Steve}{X.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{GW+1}
+  \strng{fullhash}{GWRMRAAKKLXS1}
+  \field{sortinit}{G}
+  \field{number}{3}
+  \field{pages}{38\bibrangedash 44}
+  \field{title}{Eventually consistent: not what you were expecting?}
+  \field{volume}{57}
+  \field{journaltitle}{Communications of the ACM}
+  \field{year}{2014}
+\endentry
+
 \entry{gray2007data}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -279,6 +348,32 @@
   \verb http://voltdb.com/blog/voltdb-benchmarks/key-value-benchmarking/
   \endverb
   \field{year}{2010}
+  \field{urlday}{06}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{kalantzisnetflix}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kalantzis}{K.}%
+     {Christos}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {Planet Cassandra}%
+  }
+  \strng{namehash}{KC1}
+  \strng{fullhash}{KC1}
+  \field{sortinit}{K}
+  \field{title}{A Netflix Experiment: Eventual Consistency != Hopeful
+  Consistency}
+  \verb{url}
+  \verb http://planetcassandra.org/blog/post/a-netflix-experiment-eventual-cons
+  \verb istency-hopeful-consistency-by-christos-kalantzis/
+  \endverb
+  \field{year}{2013}
   \field{urlday}{06}
   \field{urlmonth}{07}
   \field{urlyear}{2014}
@@ -337,6 +432,85 @@
   \field{journaltitle}{Design Patterns for Distributed Non-Relational
   Databases}
   \field{year}{2009}
+\endentry
+
+\entry{millsap2003optimizing}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Millsap}{M.}%
+     {Cary}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {" O'Reilly Media, Inc."}%
+  }
+  \strng{namehash}{MC1}
+  \strng{fullhash}{MC1}
+  \field{sortinit}{M}
+  \field{title}{Optimizing Oracle Performance}
+  \field{year}{2003}
+\endentry
+
+\entry{patil2011ycsb++}{inproceedings}{}
+  \name{author}{9}{}{%
+    {{}%
+     {Patil}{P.}%
+     {Swapnil}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Polte}{P.}%
+     {Milo}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ren}{R.}%
+     {Kai}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tantisiriroj}{T.}%
+     {Wittawat}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xiao}{X.}%
+     {Lin}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {L{\'o}pez}{L.}%
+     {Julio}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gibson}{G.}%
+     {Garth}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fuchs}{F.}%
+     {Adam}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rinaldi}{R.}%
+     {Billie}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{PS+1}
+  \strng{fullhash}{PSPMRKTWXLLJGGFARB1}
+  \field{sortinit}{P}
+  \field{booktitle}{Proceedings of the 2nd ACM Symposium on Cloud Computing}
+  \field{pages}{9}
+  \field{title}{YCSB++: benchmarking and performance debugging advanced
+  features in scalable table stores}
+  \field{year}{2011}
 \endentry
 
 \entry{pirzadeh2011performance}{inproceedings}{}
@@ -552,6 +726,45 @@
   \field{pages}{1\bibrangedash 5}
   \field{title}{A comparison between several NoSQL databases with comments and
   notes}
+  \field{year}{2011}
+\endentry
+
+\entry{wada2011data}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Wada}{W.}%
+     {Hiroshi}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fekete}{F.}%
+     {Alan}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhao}{Z.}%
+     {Liang}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lee}{L.}%
+     {Kevin}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Liu}{L.}%
+     {Anna}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WH+1}
+  \strng{fullhash}{WHFAZLLKLA1}
+  \field{sortinit}{W}
+  \field{booktitle}{CIDR}
+  \field{pages}{134\bibrangedash 143}
+  \field{title}{Data Consistency Properties and the Trade-offs in Commercial
+  Cloud Storage: the Consumers' Perspective.}
+  \field{volume}{11}
   \field{year}{2011}
 \endentry
 

@@ -1,5 +1,5 @@
 \chapter{Overzicht van de technologie}
-
+\todo{Inleiding}
 \section{Geschiedenis van de databasemanagementsystemen}
 Doorheen de geschiedenis, heeft de mens verschillende manieren gebruikt om data op te slaan en nadien terug te vinden. Doorheen de geschiedenis zijn er verschillende stappen van data management geweest, tot voor het ontstaan van de computer ging dit met pen en papier of met ponskaarten\cite{gray2007data}. Met de opkomst van de computer, werden nieuwe methodes gebruikt die doorheen de tijd zijn mee geëvolueerd met de vooruitgang in de technologie en de veranderingen in het gebruik van de data. De hiervoor ontwikkelde software wordt gecategoriseerd onder het \textbf{databasemanagementsysteem}(DBMS). De ontwikkeling en opkomst van de DBMS kan in verschillende fasen opgedeeld worden.  
 
@@ -36,7 +36,7 @@ Een belangrijk concept in een relationele database is ACID tussen verschillende 
 	\paragraph{Duurzaam (\underline{D}urability)} Een voltooide transactie kan later niet ongedaan gemaakt worden.
 Deze verschillende concepten bieden de gebruiker van het RDBMS garanties die de programmeur van de database kan gebruiken voor zijn systeem. Daartegen over staat wel dat dit de complexiteit van de RDBMS groeit, ook indien dit voor bepaalde toepassingen misschien niet nodig is.
 
-\subsection{NoSQL database}
+\subsection{NoSQL database}\label{sec:eventualconsistency}
 NoSQL DBMS zijn ontstaan als reactie op 'one size fits all'-gedachte die RDBMS volgt. Dit is ook zichtbaar in de verschillende NoSQL systemen, ze bestaan in verschillende variëteiten, elk voor met hun eigen eigenschappen en toepassingsgebied, toch is er een rode draad te vinden tussen de verschillende systemen vergeleken met RDBMS: 
 \begin{itemize}
 	\item \textbf{Lagere complexiteit}: NoSQL systemen bieden minder opties en features aan dan de RDBMS omdat veel applicaties die nu eenmaal niet nodig hebben. Bijvoorbeeld in een sociale netwerk moet een post niet onmiddellijk beschikbaar zijn voor al de vrienden van een persoon, maar dit mag even duren.
@@ -207,7 +207,33 @@ In deze categorie vallen ook de resultaten die meestal getoond worden op de webs
 
 Als laatste categorie, zijn er de \textbf{resultaten van verschillende DMBS} waar zeer verscheidene systemen met elkaar getest worden. De belangrijkste voordeel is dat er resultaten zijn die verschillende soorten met elkaar vergelijken en waardoor niet alleen verschillen in het datamodel kunnen vergeleken worden in toekomstige studies maar ook performantie verschillen. Het nadeel is ook hier dat er een gemeenschappelijke subset gevonden moet worden, hierdoor kunnen bepaalde databases hun kracht net niet laten zien. Verschillende van deze onderzoeken zijn \cite{tudorica2011comparison} en \cite{rabl2012solving}. Deze laatste maakt gebruik van de YCSB tool die hierboven besproken was. 
 
-\subsection{Beschikbaarheids- en consistentie testen}
+
+\subsection{Consistentie testen}
 Zoals besproken in het vorige gedeelte, is er al relatief veel onderzoek gebeurd naar de performantie van de verschillende systemen. Maar de NoSQL systemen zijn gebouwd naar \gls{base}, maar wat betekenen die basis beschikbaarheid, eventuele consistentie nu in de praktijk, hoe lang duurt de soft state van inconsistentie?
 
-  
+Een recent artikel \cite{golab2014eventually} (maart 2014), begint met het stellen dat er momenteel nauwelijks gequantificeerde methodes bestaan om de eventuele consistente te meten. In hun artikel stellen zijn mogelijke methoden voor: de actieve of passieve analyse. \\
+De \textit{actieve} analyse bestaat het wegschrijven van data in een database waarna 1 of meerdere andere gebruikers meten hoe lang het duurt vooraleer zij de nieuwe waarde lezen. 
+De \textit{passieve} analyse wordt er gekeken hoe de gebruiker interageert met het systeem en hoe de data updates zich gedragen. Leest deze altijd de laatste waarde (=strikte consistentie)? Is het mogelijk dat een nieuwe waarde al wordt gelezen voor de schrijfactie voltooid is? \\
+Beide systemen hebben hun eigenschappen, de actieve analyse kan gezien worden als een systeem georiënteerde analyse en test hoe lang het duurt voor de data beschikbaar is over de verschillende systemen en heeft als uitkomst hoe DBMS zich verschillend gedragen ten opzichte van elkaar of in verschillende netwerk- en hardwareomgevingen. 
+Bij de passieve analyse is georiënteerd naar de gebruiker toe, hoe moet deze zijn toepassingen aanpassen, wat zijn specifieke eigenschappen van het systeem? 
+
+Voor beide analyse methodes is er al onderzoek gebeurd, maar het meeste is gebeurd naar de actieve analyse. Onder andere Duitse onderzoekers hebben op het Amazon S3 platform getest hoe lang het duurt vooraleer data geschreven in MiniStorage, een database systeem, beschikbaar is voor alle gebruikers. \cite{bermbach2011eventual}. \\
+Daarnaast zijn er ook 2 interessante resultaten gevonden: allereerst heeft het Amazon S3 systeem geen monotone lees consistentie, daarnaast bleek het inconsistentie interval voor een bepaald record periodiek verloop te hebben. 
+
+De YCSB software van hierboven is door onderzoekers in de VS uitgebreid naar YCSB++\cite{patil2011ycsb++} waardoor deze meer ondersteuning heeft om het meten van systeembelasting maar ook voor de eventuele consistentie. Hoewel enkele van de systemen die zij testen in principe strikt consistent zijn zoals HBase, worden deze eventueel consistent door het gebruiken van buffers bij de gebruiker. Vervolgens testen zij hoe lang het duurt voor de data ook gelezen kan worden. Een probleem met deze methode is dat deze vertraging sterk afhankelijk is van het aantal acties van de schrijvende gebruiker: indien er meer geschreven wordt, zal de buffer sneller verzonden worden en dus sneller beschikbaar zijn. \\
+Hoewel zij stellen dat er ook zijn gedaan naar eventuele consistentie voor Cassandra en MongoDB, zijn de resultaten niet beschikbaar in het artikel of op de website. \todo{Deze paper? \cite{wada2011data}}
+
+Bij Netflix heeft men aan passieve analyse gedaan op hun Cassandra systeem \cite{kalantzisnetflix} waar zij in hun testen geen consistentie problemen vonden naar de gebruiker toe. Er is geen vermelding hoeveel vertraging er zit tussen beide transacties. Volgens hun gaat het meer om de perceptie dat data verkeerd kan gelezen worden en de angst van het middle management. 
+
+\subsection{Beschikbaarheidstesten} \todo{Uitleggen failure handling en automatic recovery}
+Een derde verschilpunt is hoe de systemen omgaan met het falen van een enkele server en dit onder verschillende opties: Het is mogelijk dat deze tijdelijk uitgeschakeld wordt wegens onderhoudt, het kan om een onverwachte crash van het DBMS gaan of zelfs een hele server, tenslotte kunnen er ook nog netwerkproblemen optreden waardaar deze (tijdelijk) niet beschikbaar is. 
+
+Nu hoe gaan deze systemen om het falen en terug online brengen van de systemen: zijn er geen acties mogelijk op de server, worden de connecties tijdelijk verbroken, is er een verhoogde of verlaagde vertraging op de transacties? En detecteert het systeem automatisch wanneer de oorspronkelijke server terug online komt of moet gemeld worden? In een NoSQL DBMS waar gewerkt wordt commodity hardware, kunnen zulke zaken regelmatig gebeuren en systemen reageren verschillend op deze acties. 
+
+Voor informatie over hoe de verschillende systemen reageren, is het momenteel uitzoeken op de website van de software verdeler en zelf uittesten van het gedrag. Naar mijn onderzoek, bestaat er nog geen vergelijkende studie tussen de verschillende systemen. 
+
+\section{Conclusie}
+Na het artikel van E. Codd \cite{Codd:1970:RMD:362384.362685} in 1969, heeft het relationele model een dominante rol gespeeld in het database model. Met de opkomst van het internet, grotere hoeveelheden data en een steeds complexere RDBMS, is er een nieuwe stroming gekomen in de database wereld, de NoSQL DBMS. Deze beloven betere schaalbaarheid, hogere performantie en dit op commodity hardware ten aanzien van de \gls{acid} eigenschappen naar \gls{base}: een hogere beschikbaarheid en eventuele consistentie.  
+
+In deze thesis zal er eerst een algemene methode voorgesteld worden om verschillende systemen te testen naar de eventuele consistentie, behandelen van storingen (failure handling) en (automatisch) herstel (automatic recovery).  \\
+Daarna zal deze methode uitgevoerd worden op verschillende databases waar duidelijk verschillende resultaten en opvattingen gezien kunnen worden. Deze leiden tot enkele initiële conclusies die in de toekomst verder kunnen worden onderzocht. 
