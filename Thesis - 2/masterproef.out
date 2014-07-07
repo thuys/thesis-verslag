@@ -5,18 +5,16 @@
 \BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 5
 \BOOKMARK [0][-]{chapter.2}{Overzicht van de technologie}{}% 6
 \BOOKMARK [1][-]{section.2.1}{Geschiedenis van de databasemanagementsystemen}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Relationele vs NoSQL databases}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.4}{Vereisten van de systemen}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.5}{Bestudeerde database systemen}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.6}{Verschillen in database systemen}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.7}{Selectie van database systemen}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Methodiek van de testen}{}% 14
-\BOOKMARK [0][-]{chapter.4}{Implementatie}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Doelstelling}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Gebruik IMP}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Gebruik YCSB}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Observaties}{}% 19
-\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 20
-\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 21
-\BOOKMARK [0][-]{section*.18}{Bibliografie}{}% 22
+\BOOKMARK [1][-]{section.2.2}{Relationele en NoSQL databases}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Bespreking van verschillende DBMS}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Conclusie}{chapter.2}% 10
+\BOOKMARK [0][-]{chapter.3}{Methodiek van de testen}{}% 11
+\BOOKMARK [1][-]{section.3.1}{Vereisten van de systemen}{chapter.3}% 12
+\BOOKMARK [0][-]{chapter.4}{Implementatie}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Doelstelling}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Gebruik IMP}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.3}{Gebruik YCSB}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{Observaties}{}% 17
+\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 18
+\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 19
+\BOOKMARK [0][-]{section*.42}{Bibliografie}{}% 20

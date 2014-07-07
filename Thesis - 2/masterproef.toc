@@ -28,53 +28,95 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Geschiedenis van de databasemanagementsystemen}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Relationele vs NoSQL databases}{4}{section.2.2}
+\contentsline {section}{\numberline {2.2}Relationele en NoSQL databases}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}}{4}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.1}Relationele database}{4}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Vereisten van de systemen}{4}{section.2.4}
+\contentsline {paragraph}{Atomair (\relax $\@@underline {\hbox {A}}\mathsurround \z@ $\relax tomicity)}{4}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Bestudeerde database systemen}{4}{section.2.5}
+\contentsline {paragraph}{Consistent (\relax $\@@underline {\hbox {C}}\mathsurround \z@ $\relax onsistency)}{5}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}Column database}{4}{subsection.2.5.1}
+\contentsline {paragraph}{Ge\IeC {\"\i }soleerd (\relax $\@@underline {\hbox {I}}\mathsurround \z@ $\relax solation)}{5}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.2}Document database}{5}{subsection.2.5.2}
+\contentsline {paragraph}{Duurzaam (\relax $\@@underline {\hbox {D}}\mathsurround \z@ $\relax urability)}{5}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.3}Graph database}{5}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.2.2}NoSQL database}{5}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.4}Key-Value database}{5}{subsection.2.5.4}
+\contentsline {subsubsection}{Classificatie van NoSQL systemen}{6}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.5}Relationele database}{5}{subsection.2.5.5}
+\contentsline {paragraph}{Column Model}{6}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.6}Gekozen systemen}{5}{subsection.2.5.6}
+\contentsline {paragraph}{Graph Model}{7}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{HBase}{5}{section*.14}
+\contentsline {paragraph}{Document Model}{7}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{MongoDB}{5}{section*.15}
+\contentsline {paragraph}{Key/Value Model}{7}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{5}{section*.16}
+\contentsline {section}{\numberline {2.3}Bespreking van verschillende DBMS}{7}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Verschillen in database systemen}{5}{section.2.6}
+\contentsline {subsection}{\numberline {2.3.1}Column database}{7}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Selectie van database systemen}{5}{section.2.7}
+\contentsline {subsubsection}{Cassandra}{7}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Methodiek van de testen}{7}{chapter.3}
+\contentsline {subsubsection}{HBase}{8}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Implementatie}{9}{chapter.4}
+\contentsline {subsection}{\numberline {2.3.2}Document database}{8}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Doelstelling}{9}{section.4.1}
+\contentsline {subsubsection}{Apache CoucheDB}{8}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Gebruik IMP}{9}{section.4.2}
+\contentsline {subsubsection}{MongoDB}{9}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Gebruik YCSB}{9}{section.4.3}
+\contentsline {subsection}{\numberline {2.3.3}Key-Value database}{9}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Observaties}{11}{chapter.5}
+\contentsline {subsubsection}{LightCloud (Tokyo)}{9}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{13}{chapter.6}
+\contentsline {subsubsection}{MemCache}{9}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusie}{15}{chapter.7}
+\contentsline {subsubsection}{Redis}{10}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{20}{section*.18}
+\contentsline {subsubsection}{Riak}{10}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Project Voldemort}{10}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}Relationele database}{11}{subsection.2.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{MySQL}{11}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{11}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Conclusie}{12}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Performantie benchmarking}{12}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Beschikbaarheids en consistentie testen}{13}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Methodiek van de testen}{15}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Vereisten van de systemen}{15}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Gekozen systemen}{15}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{HBase}{15}{section*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{MongoDB}{15}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{15}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Implementatie}{17}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Doelstelling}{17}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Gebruik IMP}{17}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Gebruik YCSB}{17}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Observaties}{19}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{21}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Conclusie}{23}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{28}{section*.42}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

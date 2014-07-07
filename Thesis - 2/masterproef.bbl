@@ -16,6 +16,147 @@
   {}
 \endgroup
 
+\entry{bollacker2008freebase}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Bollacker}{B.}%
+     {Kurt}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Evans}{E.}%
+     {Colin}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Paritosh}{P.}%
+     {Praveen}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sturge}{S.}%
+     {Tim}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Taylor}{T.}%
+     {Jamie}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{BK+1}
+  \strng{fullhash}{BKECPPSTTJ1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the 2008 ACM SIGMOD international conference
+  on Management of data}
+  \field{pages}{1247\bibrangedash 1250}
+  \field{title}{Freebase: a collaboratively created graph database for
+  structuring human knowledge}
+  \field{year}{2008}
+\endentry
+
+\entry{chang2008bigtable}{article}{}
+  \name{author}{9}{}{%
+    {{}%
+     {Chang}{C.}%
+     {Fay}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Dean}{D.}%
+     {Jeffrey}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ghemawat}{G.}%
+     {Sanjay}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hsieh}{H.}%
+     {Wilson~C}{W.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wallach}{W.}%
+     {Deborah~A}{D.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Burrows}{B.}%
+     {Mike}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Chandra}{C.}%
+     {Tushar}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fikes}{F.}%
+     {Andrew}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gruber}{G.}%
+     {Robert~E}{R.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{CF+1}
+  \strng{fullhash}{CFDJGSHWCWDABMCTFAGRE1}
+  \field{sortinit}{C}
+  \field{number}{2}
+  \field{pages}{4}
+  \field{title}{Bigtable: A distributed storage system for structured data}
+  \field{volume}{26}
+  \field{journaltitle}{ACM Transactions on Computer Systems (TOCS)}
+  \field{year}{2008}
+\endentry
+
+\entry{Codd:1970:RMD:362384.362685}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Codd}{C.}%
+     {E.~F.}{E.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \keyw{composition, consistency, data bank, data base, data integrity, data
+  organization, data structure, derivability, hierarchies of data, join,
+  networks of data, predicate calculus, redundancy, relations, retrieval
+  language, security}
+  \strng{namehash}{CEF1}
+  \strng{fullhash}{CEF1}
+  \field{sortinit}{C}
+  \verb{doi}
+  \verb 10.1145/362384.362685
+  \endverb
+  \field{issn}{0001-0782}
+  \field{number}{6}
+  \field{pages}{377\bibrangedash 387}
+  \field{title}{A Relational Model of Data for Large Shared Data Banks}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/362384.362685
+  \endverb
+  \field{volume}{13}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{Commun. ACM}
+  \field{month}{06}
+  \field{year}{1970}
+\endentry
+
 \entry{codd1970relational}{article}{}
   \name{author}{1}{}{%
     {{}%
@@ -27,8 +168,8 @@
   \list{publisher}{1}{%
     {ACM}%
   }
-  \strng{namehash}{CEF1}
-  \strng{fullhash}{CEF1}
+  \strng{namehash}{CEF2}
+  \strng{fullhash}{CEF2}
   \field{sortinit}{C}
   \field{number}{6}
   \field{pages}{377\bibrangedash 387}
@@ -36,6 +177,74 @@
   \field{volume}{13}
   \field{journaltitle}{Communications of the ACM}
   \field{year}{1970}
+\endentry
+
+\entry{cooper2010benchmarking}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Cooper}{C.}%
+     {Brian~F}{B.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Silberstein}{S.}%
+     {Adam}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tam}{T.}%
+     {Erwin}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ramakrishnan}{R.}%
+     {Raghu}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sears}{S.}%
+     {Russell}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{CBF+1}
+  \strng{fullhash}{CBFSATERRSR1}
+  \field{sortinit}{C}
+  \field{booktitle}{Proceedings of the 1st ACM symposium on Cloud computing}
+  \field{pages}{143\bibrangedash 154}
+  \field{title}{Benchmarking cloud serving systems with YCSB}
+  \field{year}{2010}
+\endentry
+
+\entry{Elmasri:2010:FDS:1855347}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Elmasri}{E.}%
+     {Ramez}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Navathe}{N.}%
+     {Shamkant}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Addison-Wesley Publishing Company}%
+  }
+  \strng{namehash}{ERNS1}
+  \strng{fullhash}{ERNS1}
+  \field{sortinit}{E}
+  \field{edition}{6th}
+  \field{isbn}{0136086209, 9780136086208}
+  \field{title}{Fundamentals of Database Systems}
+  \list{location}{1}{%
+    {USA}%
+  }
+  \field{year}{2010}
 \endentry
 
 \entry{gray2007data}{article}{}
@@ -52,6 +261,252 @@
   \field{title}{Data Management: Past, Present, and Future}
   \field{journaltitle}{arXiv preprint cs/0701156}
   \field{year}{2007}
+\endentry
+
+\entry{huggkey}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hugg}{H.}%
+     {J}{J}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HJ1}
+  \strng{fullhash}{HJ1}
+  \field{sortinit}{H}
+  \field{title}{Key-value benchmarking}
+  \verb{url}
+  \verb http://voltdb.com/blog/voltdb-benchmarks/key-value-benchmarking/
+  \endverb
+  \field{year}{2010}
+  \field{urlday}{06}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{Lakshman:2010:CDS:1773912.1773922}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Lakshman}{L.}%
+     {Avinash}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Malik}{M.}%
+     {Prashant}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{LAMP1}
+  \strng{fullhash}{LAMP1}
+  \field{sortinit}{L}
+  \verb{doi}
+  \verb 10.1145/1773912.1773922
+  \endverb
+  \field{issn}{0163-5980}
+  \field{number}{2}
+  \field{pages}{35\bibrangedash 40}
+  \field{title}{Cassandra: A Decentralized Structured Storage System}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/1773912.1773922
+  \endverb
+  \field{volume}{44}
+  \list{location}{1}{%
+    {New York, NY, USA}%
+  }
+  \field{journaltitle}{SIGOPS Oper. Syst. Rev.}
+  \field{month}{04}
+  \field{year}{2010}
+\endentry
+
+\entry{lipcon2009design}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Lipcon}{L.}%
+     {Todd}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LT1}
+  \strng{fullhash}{LT1}
+  \field{sortinit}{L}
+  \field{title}{Design Patterns for Distributed Non-Relational Databases}
+  \field{journaltitle}{Design Patterns for Distributed Non-Relational
+  Databases}
+  \field{year}{2009}
+\endentry
+
+\entry{pirzadeh2011performance}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Pirzadeh}{P.}%
+     {Pouria}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Tatemura}{T.}%
+     {Junichi}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hacigumus}{H.}%
+     {Hakan}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{PPTJHH1}
+  \strng{fullhash}{PPTJHH1}
+  \field{sortinit}{P}
+  \field{booktitle}{Parallel and Distributed Processing Workshops and Phd Forum
+  (IPDPSW), 2011 IEEE International Symposium on}
+  \field{pages}{1092\bibrangedash 1101}
+  \field{title}{Performance evaluation of range queries in key value stores}
+  \field{year}{2011}
+\endentry
+
+\entry{PopescuBenchmarkOverview}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Popescu}{P.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PA1}
+  \strng{fullhash}{PA1}
+  \field{sortinit}{P}
+  \field{title}{NoSQL benchmarks and performance evaluations}
+  \verb{url}
+  \verb http://nosql.mypopescu.com/post/734816227/nosql-benchmarks-and-performa
+  \verb nce-evaluations
+  \endverb
+  \field{year}{2010}
+  \field{urlday}{06}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{categorizatie-pop10b}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Popescu}{P.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PA2}
+  \strng{fullhash}{PA2}
+  \field{sortinit}{P}
+  \field{title}{Presentation: NoSQL at CodeMash – An Interesting NoSQL
+  categoriza- tion.}
+  \verb{url}
+  \verb http://nosql.mypopescu.com/post/396337069/presentation-nosql-codemash-a
+  \verb n-interesting-nosql
+  \endverb
+  \field{month}{02}
+  \field{year}{2010}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{postgresql-clustering}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Postgresql}{P.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{P1}
+  \strng{fullhash}{P1}
+  \field{sortinit}{P}
+  \field{title}{PostgreSQL - Replication, Clustering, and Connection Pooling}
+  \verb{url}
+  \verb http://wiki.postgresql.org/wiki/Replication,_Clustering,_and_Connection
+  \verb _Pooling
+  \endverb
+  \field{month}{10}
+  \field{year}{2013}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2013}
+\endentry
+
+\entry{rabl2012solving}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Rabl}{R.}%
+     {Tilmann}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {G{\'o}mez-Villamor}{G.-V.}%
+     {Sergio}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sadoghi}{S.}%
+     {Mohammad}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Munt{\'e}s-Mulero}{M.-M.}%
+     {Victor}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jacobsen}{J.}%
+     {Hans-Arno}{H.-A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mankovskii}{M.}%
+     {Serge}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {VLDB Endowment}%
+  }
+  \strng{namehash}{RT+1}
+  \strng{fullhash}{RTGVSSMMMVJHAMS1}
+  \field{sortinit}{R}
+  \field{number}{12}
+  \field{pages}{1724\bibrangedash 1735}
+  \field{title}{Solving big data challenges for enterprise application
+  performance management}
+  \field{volume}{5}
+  \field{journaltitle}{Proceedings of the VLDB Endowment}
+  \field{year}{2012}
+\endentry
+
+\entry{categorizatie-sco10}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Scofield}{S.}%
+     {Ben}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SB1}
+  \strng{fullhash}{SB1}
+  \field{sortinit}{S}
+  \field{title}{NoSQL – Death to Relational Databases(?)}
+  \verb{url}
+  \verb http://www.slideshare.net/bscofield/nosql-codemash-2010
+  \endverb
+  \field{month}{01}
+  \field{year}{2010}
+  \field{urlday}{03}
+  \field{urlmonth}{02}
+  \field{urlyear}{2013}
 \endentry
 
 \entry{Strauch.NoSQL}{book}{}
@@ -72,6 +527,32 @@
   \verb http://www.christof-strauch.de/nosqldbs.pdf
   \endverb
   \field{year}{2010}
+\endentry
+
+\entry{tudorica2011comparison}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Tudorica}{T.}%
+     {Bogdan~George}{B.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bucur}{B.}%
+     {Cristian}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{TBGBC1}
+  \strng{fullhash}{TBGBC1}
+  \field{sortinit}{T}
+  \field{booktitle}{Roedunet International Conference (RoEduNet), 2011 10th}
+  \field{pages}{1\bibrangedash 5}
+  \field{title}{A comparison between several NoSQL databases with comments and
+  notes}
+  \field{year}{2011}
 \endentry
 
 \lossort
