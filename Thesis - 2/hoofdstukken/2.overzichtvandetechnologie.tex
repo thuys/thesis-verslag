@@ -1,23 +1,23 @@
 \chapter{Overzicht van de technologie}
 \todo{Inleiding}
 \section{Geschiedenis van de databasemanagementsystemen}
-Doorheen de geschiedenis, heeft de mens verschillende manieren gebruikt om data op te slaan en nadien terug te vinden. Doorheen de geschiedenis zijn er verschillende stappen van data management geweest, tot voor het ontstaan van de computer ging dit met pen en papier of met ponskaarten\cite{gray2007data}. Met de opkomst van de computer, werden nieuwe methodes gebruikt die doorheen de tijd zijn mee geëvolueerd met de vooruitgang in de technologie en de veranderingen in het gebruik van de data. De hiervoor ontwikkelde software wordt gecategoriseerd onder het \textbf{databasemanagementsysteem}(DBMS). De ontwikkeling en opkomst van de DBMS kan in verschillende fasen opgedeeld worden.  
+Doorheen de geschiedenis, heeft de mens verschillende manieren gebruikt om data op te slaan en nadien terug te vinden. Doorheen de geschiedenis zijn er verschillende stappen van data management geweest, tot voor het ontstaan van de computer ging dit met pen en papier of met ponskaarten\cite{gray2007data}. Met de opkomst van de computer, werden nieuwe methodes gebruikt die doorheen de tijd zijn mee geëvolueerd met de vooruitgang in de technologie en de veranderingen in het gebruik van de data. De hiervoor ontwikkelde software wordt gecategoriseerd onder het \textbf{databasemanagementsysteem}(\glspl{DBMS}). De ontwikkeling en opkomst van de \glspl{DBMS} kan in verschillende fasen opgedeeld worden.  
 
-De eerste DBMS zijn er gekomen met de introductie van de mainframes zoals UNIVAC1 en de ontwikkeling van specifieke programmeertalen voor het werken met deze data, onder andere conferenties zoals CODASYL hebben de ontwikkeling van COBOL en andere standaarden mee ontwikkeld\cite{gray2007data}. \todo{Mss ook het toevoegen van IBM hier + (IDS)?}   
+De eerste \glspl{DBMS} zijn er gekomen met de introductie van de mainframes zoals UNIVAC1 en de ontwikkeling van specifieke programmeertalen voor het werken met deze data, onder andere conferenties zoals CODASYL hebben de ontwikkeling van COBOL en andere standaarden mee ontwikkeld\cite{gray2007data}. \todo{Mss ook het toevoegen van IBM hier + (IDS)?}   
 
-De volgende grote verandering in DBMS is er gekomen door het artikel van E. Codd over het relationele model in 1969 \cite{codd1970relational}. De sleutel concepten van het relationele model is dat de data georganiseerd is in relaties (tabellen) die gekoppeld zijn door middel van keys (constraints) waarbij redundante data wordt vermeden. 
-Voorbeelden van populaire RDBMS (relationele DBMS) die het model implementeren zijn Oracle, MySQL en PostgreSQL. Meer informatie komt aanbod in de volgende sectie. 
+De volgende grote verandering in \glspl{DBMS} is er gekomen door het artikel van E. Codd over het relationele model in 1969 \cite{codd1970relational}. De sleutel concepten van het relationele model is dat de data georganiseerd is in relaties (tabellen) die gekoppeld zijn door middel van keys (constraints) waarbij redundante data wordt vermeden. 
+Voorbeelden van populaire \glspl{DBMS} (relationele \glspl{DBMS}) die het model implementeren zijn Oracle, MySQL en PostgreSQL. Meer informatie komt aanbod in de volgende sectie. 
 
 De laatste nieuwe generatie zijn NoSQL databases die sinds 2000 zijn begonnen, NoSQL staat voor '\textit{Not only SQL}'. Deze systemen zijn er gekomen als reactie op het relationele model voor een meer flexibele database, lagere complexiteit, hogere doorvoer van data, horizontale schaalbaarheid en het draaien op commodity hardware.  Verschillende voorbeelden van NoSQL systemen zijn Google BigTable, Amazon Dynamo, HBase, MongoDB, ... \cite{Strauch.NoSQL} Meer informatie en een vergelijking met relationele databases komt aanbod in de volgende sectie. 
 
 \section{Relationele en NoSQL databases} 
 \todo{Yeaah}
 \subsection{Relationele database}
-Een RDBMS is een DBMS gebaseerd op relationele model voor het structuren van de database.
+Een R\gls{DBMS} is een \gls{DBMS} gebaseerd op relationele model voor het structuren van de database.
 
 Het relationele model is gebaseerd op theoretische wiskundige principes zoals de set-theorie en eerste-orde predicaten logica. Het model organiseert de data in tabellen en relaties tussen de relaties. De tabel heeft kolommen die verschillende velden voorstellen en elke rij een collectie van gerelateerde datawaardes is. De relaties tussen de verschillende tabellen toont mogelijke connecties. Een belangrijke eigenschap is dat de tabellen en relaties genormaliseerd worden, hiermee wordt redundante informatie verwijderd. Dit zorgt voor een hogere data integriteit en een vermindering in data anomalieën die kunnen optreden bij een update.\cite{Elmasri:2010:FDS:1855347} \\
 Dit kan geïllustreerd worden met het korte voorbeeld in figuur \ref{fig:Relationeel-Model-Normalisatie}: de professor voor een vak zal bij elke student hetzelfde zijn, het veranderen van een professor voor een vak zou in het eerste geval een update van alle ingeschreven studenten inhouden, in het tweede geval is dit maar één enkel record, hetzelfde geldt voor de student. \\
-Interactie met de RDBMS gebeurt op basis van SQL (Structured Query Language), een taal gebaseerd op de relationele logica geeft uitgebreide query mogelijkheden aan de gebruiker van de software.   
+Interactie met de R\gls{DBMS} gebeurt op basis van SQL (Structured Query Language), een taal gebaseerd op de relationele logica geeft uitgebreide query mogelijkheden aan de gebruiker van de software.   
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\linewidth]{img/Relationeel-Model-Normalisatie.png}
@@ -34,17 +34,17 @@ Een belangrijk concept in een relationele database is ACID tussen verschillende 
 	\paragraph{Geïsoleerd (\underline{I}solation)} Een transactie moet uitgevoerd worden alsof ze geïsoleerd is van andere transacties, die eventueel gelijktijdig uitgevoerd worden. 
 	
 	\paragraph{Duurzaam (\underline{D}urability)} Een voltooide transactie kan later niet ongedaan gemaakt worden.
-Deze verschillende concepten bieden de gebruiker van het RDBMS garanties die de programmeur van de database kan gebruiken voor zijn systeem. Daartegen over staat wel dat dit de complexiteit van de RDBMS groeit, ook indien dit voor bepaalde toepassingen misschien niet nodig is.
+Deze verschillende concepten bieden de gebruiker van het R\gls{DBMS} garanties die de programmeur van de database kan gebruiken voor zijn systeem. Daartegen over staat wel dat dit de complexiteit van de RDBMS groeit, ook indien dit voor bepaalde toepassingen misschien niet nodig is.
 
 \subsection{NoSQL database}\label{sec:eventualconsistency}
-NoSQL DBMS zijn ontstaan als reactie op 'one size fits all'-gedachte die RDBMS volgt. Dit is ook zichtbaar in de verschillende NoSQL systemen, ze bestaan in verschillende variëteiten, elk voor met hun eigen eigenschappen en toepassingsgebied, toch is er een rode draad te vinden tussen de verschillende systemen vergeleken met RDBMS: 
+NoSQL DBMS zijn ontstaan als reactie op 'one size fits all'-gedachte die R\glspl{DBMS} volgen. Dit is ook zichtbaar in de verschillende NoSQL systemen, ze bestaan in verschillende variëteiten, elk voor met hun eigen eigenschappen en toepassingsgebied, toch is er een rode draad te vinden tussen de verschillende systemen vergeleken met R\gls{DBMS}: 
 \begin{itemize}
-	\item \textbf{Lagere complexiteit}: NoSQL systemen bieden minder opties en features aan dan de RDBMS omdat veel applicaties die nu eenmaal niet nodig hebben. Bijvoorbeeld in een sociale netwerk moet een post niet onmiddellijk beschikbaar zijn voor al de vrienden van een persoon, maar dit mag even duren.
+	\item \textbf{Lagere complexiteit}: NoSQL systemen bieden minder opties en features aan dan de R\gls{DBMS} omdat veel applicaties die nu eenmaal niet nodig hebben. Bijvoorbeeld in een sociale netwerk moet een post niet onmiddellijk beschikbaar zijn voor al de vrienden van een persoon, maar dit mag even duren.
 	\item \textbf{Hogere doorvoer}: Talrijke NoSQL systemen bieden een hogere doorvoer van data aan, meestal gecombineerd met een lagere complexiteit. 
-	\item \textbf{Horizontale schaalbaarheid en werkend op commodity hardware}: Waar grote RDBMS draaien op dure high-end systemen, was het bedoeling van NoSQL databases om te werken met eenvoudige machines (commodity hardware). \\
+	\item \textbf{Horizontale schaalbaarheid en werkend op commodity hardware}: Waar grote R\glspl{DBMS} draaien op dure high-end systemen, was het bedoeling van NoSQL databases om te werken met eenvoudige machines (commodity hardware). \\
 	Horizontale schaalbaarheid staat voor het toevoegen extra machines aan een systeem voor extra resources, in tegenstelling tot verticale schaalbaarheid waar krachtigere machines worden gebruikt. In horizontale opschaling wordt de data van een enkele database verspreid over verschillende machines die elk maar een deel opslaan.\\
 	NoSQL systemen combineert deze twee elementen en biedt hierdoor een schaalbaar systeem aan met basis componenten.
-	\item \textbf{Datamodel dichter bij objecten}: De meeste NoSQL systemen zijn zodanig ontworpen dat deze de vertaling van objecten naar opslag eenvoudiger of meer gelijkend maken dan RDBMS.  
+	\item \textbf{Datamodel dichter bij objecten}: De meeste NoSQL systemen zijn zodanig ontworpen dat deze de vertaling van objecten naar opslag eenvoudiger of meer gelijkend maken dan R\glspl{DBMS}.  
 \end{itemize}  \noindent
 Deze verschillende argumenten, leiden vervolgens tot een tegenreactie op ACID: BASE. \noindent
 \begin{itemize}
@@ -72,7 +72,7 @@ Er zijn vele NoSQL systemen ontworpen gedurende de laatste jaren, elk met hun ei
 			Key-Value & hoog & hoog & hoog & geen & variabel (geen) \\
 		\end{tabular}
 	}
-	\caption{Classificatie en categorisatie van NoSQL DBMS door Scofield en Popescu. \cite{categorizatie-sco10} \cite{categorizatie-pop10b} }
+	\caption{Classificatie en categorisatie van NoSQL \glspl{DBMS} door Scofield en Popescu. \cite{categorizatie-sco10} \cite{categorizatie-pop10b} }
 	\label{table:selectie-classificatie}
 \end{table} 
 
@@ -87,13 +87,13 @@ Een document moet geen vaste structuur hebben maar elk document op zich kan vers
 Met dit eenvoudig model en functionaliteit die weinig complexiteit introduceren, kan er gestreefd worden naar een hoge performantie, schaalbaarheid en flexibiliteit. \cite{Strauch.NoSQL}
 
 \todo{extra conclusion text?}
-\section{Bespreking van verschillende DBMS}
-De verschillende categorieën databases zijn besproken, voor deze thesis zullen enkele relationele en NoSQL DBMS in meer detail worden besproken. Databases uit de volgende 4 categorieën komen verder aanbod, er is gekozen om de Graph NoSQL DBMS niet te bespreken omdat deze een heel andere dataset ondersteunen als de overige categorieën. 
+\section{Bespreking van verschillende \glspl{DBMS}}\label{sec:BesprekingDBMS}
+De verschillende categorieën databases zijn besproken, voor deze thesis zullen enkele relationele en NoSQL \glspl{DBMS} in meer detail worden besproken. Databases uit de volgende 4 categorieën komen verder aanbod, er is gekozen om de Graph NoSQL \glspl{DBMS} niet te bespreken omdat deze een heel andere dataset ondersteunen als de overige categorieën. 
 \begin{itemize}
-\item Column NoSQL DBMS: Cassandra, HBase
-\item Document NoSQL DBMS: Apache CoucheDB, MongoDB
-\item Key-Value NoSQL DBMS: LightCloud (Tokyo), MemCache, Redis, Riak, Project Voldemort
-\item Relationele NoSQL DBMS: MySQL, Pgpool-II (PostgreSQL)
+\item Column NoSQL \glspl{DBMS}: Cassandra, HBase
+\item Document NoSQL \glspl{DBMS}: Apache CoucheDB, MongoDB
+\item Key-Value NoSQL \glspl{DBMS}: LightCloud (Tokyo), MemCache, Redis, Riak, Project Voldemort
+\item Relationele NoSQL \glspl{DBMS}: MySQL, Pgpool-II (PostgreSQL)
 \end{itemize}
 
 \subsection{Column database}\todo{Nalezen}
@@ -189,23 +189,23 @@ Pgpool-II heeft verschillende mode, maar aangezien er de nood was voor replicati
 Andere configuraties zijn mogelijk, onder andere met het opzetten van caching en nog andere elementen. 
 
 \section{Objectieve vergelijking van de verschillende systemen}
-De databasemanagementsystemen zijn voor meer dan 40 jaar actief. Met de opkomst van het relationele model in 1969 door E. Codd \cite{Codd:1970:RMD:362384.362685}, zijn gedurende vele jaren de relationele DMBS de leidende technologie geweest. Maar de afgelopen 10 jaar is er in het landschap veel veranderd met de opkomst van de NoSQL DBMS die afstappen van het ACID naar BASE, meer gefocust op het werken op grote data in een gedistribueerde omgeving. 
+De databasemanagementsystemen zijn voor meer dan 40 jaar actief. Met de opkomst van het relationele model in 1969 door E. Codd \cite{Codd:1970:RMD:362384.362685}, zijn gedurende vele jaren de relationele DMBS de leidende technologie geweest. Maar de afgelopen 10 jaar is er in het landschap veel veranderd met de opkomst van de NoSQL \glspl{DBMS} die afstappen van het ACID naar BASE, meer gefocust op het werken op grote data in een gedistribueerde omgeving. 
 Er worden talrijke assumpties gemaakt over NoSQL, ze zouden een hogere performantie leveren, een hogere beschikbaarheid (availability) en zouden leiden onder het principe van eventuele consistentie (eventual consistency). 
 
 \subsection{Performantie benchmarking} \todo{Nog is bekijken binnenkort}
 Indien men verschillende DBMS wilt vergelijken bestaan er al enkele tools en studies om de performance te kunnen vergelijken, een blogpost van A. Popescu \cite{PopescuBenchmarkOverview} geeft een overzicht van verschillende benchmarking tools. 
 
-Als eerste hebben vele DBMS interne benchmarking tools, waarmee de database op verschillende configuraties kan getest worden en vergeleken worden. Deze resultaten zijn nuttig indien het DBMS al gekozen is en men bezig is met het aanpassen van de parameters of om te onderzoeken wat net de bottleneck is in een bepaald systeem. Een voorbeeld hiervan is mongoperf\footnote{\url{http://docs.mongodb.org/manual/reference/program/mongoperf/}} voor MongoDB. 
+Als eerste hebben vele DBMS interne benchmarking tools, waarmee de database op verschillende configuraties kan getest worden en vergeleken worden. Deze resultaten zijn nuttig indien het \gls{DBMS} al gekozen is en men bezig is met het aanpassen van de parameters of om te onderzoeken wat net de bottleneck is in een bepaald systeem. Een voorbeeld hiervan is mongoperf\footnote{\url{http://docs.mongodb.org/manual/reference/program/mongoperf/}} voor MongoDB. 
 
-Andere studies focussen op het testen van verschillende systemen en daarbij kunnen verschillende doelstellingen zijn: het ontwikkelen van een breed toepasbare tool, het testen van een grote verscheidenheid van DBMS of het testen van een specifieke categorie van systemen. Elke van deze benchmarking brengt extra kennis bij maar heeft ook zijn beperkingen. Het totaal pakket van al de testen kan een gebruiker een overzicht geven. 
+Andere studies focussen op het testen van verschillende systemen en daarbij kunnen verschillende doelstellingen zijn: het ontwikkelen van een breed toepasbare tool, het testen van een grote verscheidenheid van \glspl{DBMS} of het testen van een specifieke categorie van systemen. Elke van deze benchmarking brengt extra kennis bij maar heeft ook zijn beperkingen. Het totaal pakket van al de testen kan een gebruiker een overzicht geven. 
 
-De eerste categorie, het \textbf{ontwikkelen van een tool}, heeft als grote voordeel dat andere gebruikers nadien de testen opnieuw kunnen uitvoeren met de huidige systemen. Het is namelijk niet gegarandeerd dat het resultaat van een jaar geleden met de nieuwste versie nog te vergelijken is. Het grootste nadeel is het soort testen dat kan uitgevoerd worden, er is een grote variëteit aan systemen elk met hun eigen datastructuur en query mogelijkheden. De tool moet dus een gemeenschappelijke subset zoeken en enkel dit soort queries kunnen getest worden. Een voorbeeld van zulk een tool de opensource tool YCSB\cite{cooper2010benchmarking}. In deze tool kan elk DBMS getest worden zolang een basisset van 5 queries kan implementeren: het invoegen, updaten, verwijderen en opvragen van een enkel record met daarnaast ook de mogelijkheid tot \glspl{rangequery}, met behulp van 1 query een verzameling van records tegelijk op te vragen. \\
+De eerste categorie, het \textbf{ontwikkelen van een tool}, heeft als grote voordeel dat andere gebruikers nadien de testen opnieuw kunnen uitvoeren met de huidige systemen. Het is namelijk niet gegarandeerd dat het resultaat van een jaar geleden met de nieuwste versie nog te vergelijken is. Het grootste nadeel is het soort testen dat kan uitgevoerd worden, er is een grote variëteit aan systemen elk met hun eigen datastructuur en query mogelijkheden. De tool moet dus een gemeenschappelijke subset zoeken en enkel dit soort queries kunnen getest worden. Een voorbeeld van zulk een tool de opensource tool YCSB\cite{cooper2010benchmarking}. In deze tool kan elk \glspl{DBMS} getest worden zolang een basisset van 5 queries kan implementeren: het invoegen, updaten, verwijderen en opvragen van een enkel record met daarnaast ook de mogelijkheid tot \glspl{rangequery}, met behulp van 1 query een verzameling van records tegelijk op te vragen. \\
 Sommige systemen ondersteunen bepaalde queries niet onmiddellijk maar bevatten wel de functionaliteit om deze via via te implementeren, bijvoorbeeld een update kan geïmplementeerd worden door het opvragen, verwijderen en vervolgen invoegen van de geüpdatete record. 
 
-Een volgende categorie zijn de \textbf{resultaten van gerelateerde DBMS}, in deze categorie zijn er voornamelijk resultaten te vinden van systemen met hetzelfde datamodel. Het grote voordeel hieraan is dat deze systemen in de meeste gevallen een vrij gelijkaardige set aan query mogelijkheden bevatten waardoor er meer diepgang is dan tussen meer verschillende systemen. Een voorbeeld van zulk onderzoek is gedaan door P. Pirzadeh et al\cite{pirzadeh2011performance} voor de key-value systemen, meer specifiek is er gefocust op het uitvoeren van \glspl{rangequery} tussen Cassandra, HBase en Voldemort. Hoewel in de categorisatie van deze thesis de eerste twee onder column DBMS vallen, zijn deze nog vrij gelijklopend. \\
-In deze categorie vallen ook de resultaten die meestal getoond worden op de website van de DBMS, een vergelijkende benchmark met andere soortgelijke systemen. Hoewel de resultaten niet altijd volledig objectief zijn, kan de gevolgde methode wel interessant zijn. Een voorbeeld van deze studie is de key-value benchmarking van VoltDB\cite{huggkey} waar Cassandra en VoltDB vergeleken worden, een belangrijke kanttekening is dat de auteur zelf al aanhaalt dat de systemen vrij verschillend zijn zoals appels en appelsienen.  \todo{GLS check} 
+Een volgende categorie zijn de \textbf{resultaten van gerelateerde \glspl{DBMS}}, in deze categorie zijn er voornamelijk resultaten te vinden van systemen met hetzelfde datamodel. Het grote voordeel hieraan is dat deze systemen in de meeste gevallen een vrij gelijkaardige set aan query mogelijkheden bevatten waardoor er meer diepgang is dan tussen meer verschillende systemen. Een voorbeeld van zulk onderzoek is gedaan door P. Pirzadeh et al\cite{pirzadeh2011performance} voor de key-value systemen, meer specifiek is er gefocust op het uitvoeren van \glspl{rangequery} tussen Cassandra, HBase en Voldemort. Hoewel in de categorisatie van deze thesis de eerste twee onder column NoSQL vallen, zijn deze nog vrij gelijklopend. \\
+In deze categorie vallen ook de resultaten die meestal getoond worden op de website van de \glspl{DBMS}, een vergelijkende benchmark met andere soortgelijke systemen. Hoewel de resultaten niet altijd volledig objectief zijn, kan de gevolgde methode wel interessant zijn. Een voorbeeld van deze studie is de key-value benchmarking van VoltDB\cite{huggkey} waar Cassandra en VoltDB vergeleken worden, een belangrijke kanttekening is dat de auteur zelf al aanhaalt dat de systemen vrij verschillend zijn zoals appels en appelsienen.  \todo{GLS check} 
 
-Als laatste categorie, zijn er de \textbf{resultaten van verschillende DMBS} waar zeer verscheidene systemen met elkaar getest worden. De belangrijkste voordeel is dat er resultaten zijn die verschillende soorten met elkaar vergelijken en waardoor niet alleen verschillen in het datamodel kunnen vergeleken worden in toekomstige studies maar ook performantie verschillen. Het nadeel is ook hier dat er een gemeenschappelijke subset gevonden moet worden, hierdoor kunnen bepaalde databases hun kracht net niet laten zien. Verschillende van deze onderzoeken zijn \cite{tudorica2011comparison} en \cite{rabl2012solving}. Deze laatste maakt gebruik van de YCSB tool die hierboven besproken was. 
+Als laatste categorie, zijn er de \textbf{resultaten van verschillende \glspl{DBMS}} waar zeer verscheidene systemen met elkaar getest worden. De belangrijkste voordeel is dat er resultaten zijn die verschillende soorten met elkaar vergelijken en waardoor niet alleen verschillen in het datamodel kunnen vergeleken worden in toekomstige studies maar ook performantie verschillen. Het nadeel is ook hier dat er een gemeenschappelijke subset gevonden moet worden, hierdoor kunnen bepaalde databases hun kracht net niet laten zien. Verschillende van deze onderzoeken zijn \cite{tudorica2011comparison} en \cite{rabl2012solving}. Deze laatste maakt gebruik van de YCSB tool die hierboven besproken was. 
 
 
 \subsection{Consistentie testen}
@@ -214,7 +214,7 @@ Zoals besproken in het vorige gedeelte, is er al relatief veel onderzoek gebeurd
 Een recent artikel \cite{golab2014eventually} (maart 2014), begint met het stellen dat er momenteel nauwelijks gequantificeerde methodes bestaan om de eventuele consistente te meten. In hun artikel stellen zijn mogelijke methoden voor: de actieve of passieve analyse. \\
 De \textit{actieve} analyse bestaat het wegschrijven van data in een database waarna 1 of meerdere andere gebruikers meten hoe lang het duurt vooraleer zij de nieuwe waarde lezen. 
 De \textit{passieve} analyse wordt er gekeken hoe de gebruiker interageert met het systeem en hoe de data updates zich gedragen. Leest deze altijd de laatste waarde (=strikte consistentie)? Is het mogelijk dat een nieuwe waarde al wordt gelezen voor de schrijfactie voltooid is? \\
-Beide systemen hebben hun eigenschappen, de actieve analyse kan gezien worden als een systeem georiënteerde analyse en test hoe lang het duurt voor de data beschikbaar is over de verschillende systemen en heeft als uitkomst hoe DBMS zich verschillend gedragen ten opzichte van elkaar of in verschillende netwerk- en hardwareomgevingen. 
+Beide systemen hebben hun eigenschappen, de actieve analyse kan gezien worden als een systeem georiënteerde analyse en test hoe lang het duurt voor de data beschikbaar is over de verschillende systemen en heeft als uitkomst hoe \glspl{DBMS} zich verschillend gedragen ten opzichte van elkaar of in verschillende netwerk- en hardwareomgevingen. 
 Bij de passieve analyse is georiënteerd naar de gebruiker toe, hoe moet deze zijn toepassingen aanpassen, wat zijn specifieke eigenschappen van het systeem? 
 
 Voor beide analyse methodes is er al onderzoek gebeurd, maar het meeste is gebeurd naar de actieve analyse. Onder andere Duitse onderzoekers hebben op het Amazon S3 platform getest hoe lang het duurt vooraleer data geschreven in MiniStorage, een database systeem, beschikbaar is voor alle gebruikers. \cite{bermbach2011eventual}. \\
@@ -226,14 +226,14 @@ Hoewel zij stellen dat er ook zijn gedaan naar eventuele consistentie voor Cassa
 Bij Netflix heeft men aan passieve analyse gedaan op hun Cassandra systeem \cite{kalantzisnetflix} waar zij in hun testen geen consistentie problemen vonden naar de gebruiker toe. Er is geen vermelding hoeveel vertraging er zit tussen beide transacties. Volgens hun gaat het meer om de perceptie dat data verkeerd kan gelezen worden en de angst van het middle management. 
 
 \subsection{Beschikbaarheidstesten} \todo{Uitleggen failure handling en automatic recovery}
-Een derde verschilpunt is hoe de systemen omgaan met het falen van een enkele server en dit onder verschillende opties: Het is mogelijk dat deze tijdelijk uitgeschakeld wordt wegens onderhoudt, het kan om een onverwachte crash van het DBMS gaan of zelfs een hele server, tenslotte kunnen er ook nog netwerkproblemen optreden waardaar deze (tijdelijk) niet beschikbaar is. 
+Een derde verschilpunt is hoe de systemen omgaan met het falen van een enkele server en dit onder verschillende opties: Het is mogelijk dat deze tijdelijk uitgeschakeld wordt wegens onderhoudt, het kan om een onverwachte crash van het \glspl{DBMS} gaan of zelfs een hele server, tenslotte kunnen er ook nog netwerkproblemen optreden waardaar deze (tijdelijk) niet beschikbaar is. 
 
-Nu hoe gaan deze systemen om het falen en terug online brengen van de systemen: zijn er geen acties mogelijk op de server, worden de connecties tijdelijk verbroken, is er een verhoogde of verlaagde vertraging op de transacties? En detecteert het systeem automatisch wanneer de oorspronkelijke server terug online komt of moet gemeld worden? In een NoSQL DBMS waar gewerkt wordt commodity hardware, kunnen zulke zaken regelmatig gebeuren en systemen reageren verschillend op deze acties. 
+Nu hoe gaan deze systemen om het falen en terug online brengen van de systemen: zijn er geen acties mogelijk op de server, worden de connecties tijdelijk verbroken, is er een verhoogde of verlaagde vertraging op de transacties? En detecteert het systeem automatisch wanneer de oorspronkelijke server terug online komt of moet gemeld worden? In een NoSQL \gls{DBMS} waar gewerkt wordt commodity hardware, kunnen zulke zaken regelmatig gebeuren en systemen reageren verschillend op deze acties. 
 
 Voor informatie over hoe de verschillende systemen reageren, is het momenteel uitzoeken op de website van de software verdeler en zelf uittesten van het gedrag. Naar mijn onderzoek, bestaat er nog geen vergelijkende studie tussen de verschillende systemen. 
 
 \section{Conclusie}
-Na het artikel van E. Codd \cite{Codd:1970:RMD:362384.362685} in 1969, heeft het relationele model een dominante rol gespeeld in het database model. Met de opkomst van het internet, grotere hoeveelheden data en een steeds complexere RDBMS, is er een nieuwe stroming gekomen in de database wereld, de NoSQL DBMS. Deze beloven betere schaalbaarheid, hogere performantie en dit op commodity hardware ten aanzien van de \gls{acid} eigenschappen naar \gls{base}: een hogere beschikbaarheid en eventuele consistentie.  
+Na het artikel van E. Codd \cite{Codd:1970:RMD:362384.362685} in 1969, heeft het relationele model een dominante rol gespeeld in het database model. Met de opkomst van het internet, grotere hoeveelheden data en steeds complexere R\glspl{DBMS}, is er een nieuwe stroming gekomen in de database wereld, de NoSQL \glspl{DBMS}. Deze beloven betere schaalbaarheid, hogere performantie en dit op commodity hardware ten aanzien van de \gls{acid} eigenschappen naar \gls{base}: een hogere beschikbaarheid en eventuele consistentie.  
 
 In deze thesis zal er eerst een algemene methode voorgesteld worden om verschillende systemen te testen naar de eventuele consistentie, behandelen van storingen (failure handling) en (automatisch) herstel (automatic recovery).  \\
 Daarna zal deze methode uitgevoerd worden op verschillende databases waar duidelijk verschillende resultaten en opvattingen gezien kunnen worden. Deze leiden tot enkele initiële conclusies die in de toekomst verder kunnen worden onderzocht. 

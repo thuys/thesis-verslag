@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  8 JUL 2014 15:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  10 JUL 2014 15:43
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tex"
@@ -1687,10 +1687,10 @@ ns\pgflibrarydecorations.shapes.code.tex)))
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/glossary.tex"
 \glswrite=\write6
 \glo@main@file=\write7
-Package glossaries Info: Writing glossary file masterproef.glo on input line 50
+Package glossaries Info: Writing glossary file masterproef.glo on input line 61
 .
 \glo@acronym@file=\write8
-Package glossaries Info: Writing glossary file masterproef.acn on input line 50
+Package glossaries Info: Writing glossary file masterproef.acn on input line 61
 .
 )
 Package csquotes Info: Checking for multilingual support...
@@ -1829,7 +1829,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `kulemtfpf' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- <logokuleng.pdf, id=114, 159.33528pt x 85.358pt>
+ <logokuleng.pdf, id=118, 159.33528pt x 85.358pt>
 File: logokuleng.pdf Graphic file (type pdf)
 
 <use logokuleng.pdf>
@@ -1907,13 +1907,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tdo") [3
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tdo"
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
-[4
+ [3
+
+])
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+[4] [5
 
 ] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lof")
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot") [5
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot") [6
 
 
 ]
@@ -1927,14 +1934,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 []|\T1/lmr/m/n/10.95 (+20) Range
  []
 
-) [6
+) [7
+
+
+] [8
 
 
 ]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/1.inleiding.te
 x") [1
-
-
 
 
 ]
@@ -1944,19 +1952,57 @@ detechnologie.tex" [2
 
 
 ] [3]
-<img/Relationeel-Model-Normalisatie.png, id=262, 570.933pt x 143.0946pt>
+<img/Relationeel-Model-Normalisatie.png, id=315, 570.933pt x 143.0946pt>
 File: img/Relationeel-Model-Normalisatie.png Graphic file (type png)
 
 <use img/Relationeel-Model-Normalisatie.png>
 Package pdftex.def Info: img/Relationeel-Model-Normalisatie.png used on input l
 ine 23.
 (pdftex.def)             Requested size: 398.0pt x 99.75504pt.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
  [4 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Relationeel-Model-No
 rmalisatie.png (PNG copy)>]
-[5] [6] [7] [8] [9] [10] [11]
+[5] [6]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\glspl' on input line 90.
+
+
+Overfull \hbox (47.32964pt too wide) has occurred while \output is active
+ \T1/lmr/m/n/10.95 (-20) main]\glossaryentryDBMS?\glossentryDBMS|setentrycounte
+r[]page\glsnumberformat7[][]DBMS's[][]|
+ []
+
+
+Class memoir Warning: The material used in the headers is too large
+(27.2pt) for the given head height (13.6pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 103.
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[7] [8]
+Overfull \hbox (47.32964pt too wide) has occurred while \output is active
+ \T1/lmr/m/n/10.95 (-20) main]\glossaryentryDBMS?\glossentryDBMS|setentrycounte
+r[]page\glsnumberformat9[][]DBMS's[][]|
+ []
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[9] [10]
+Overfull \hbox (52.69513pt too wide) has occurred while \output is active
+ \T1/lmr/m/n/10.95 (-20) main]\glossaryentryDBMS?\glossentryDBMS|setentrycounte
+r[]page\glsnumberformat11[][]DBMS's[][]|
+ []
+
+
+Overfull \vbox (13.59999pt too high) has occurred while \output is active []
+
+
+[11]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 198.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1968,14 +2014,14 @@ detesten.tex" [16
 
 
 ] [17]
-<img/hockey-stick.png, id=434, 253.69781pt x 173.89969pt>
+<img/hockey-stick.png, id=517, 253.69781pt x 173.89969pt>
 File: img/hockey-stick.png Graphic file (type png)
 
 <use img/hockey-stick.png>
 Package pdftex.def Info: img/hockey-stick.png used on input line 31.
 (pdftex.def)             Requested size: 179.09879pt x 122.7691pt.
 
-<img/connecties-gebruikers.png, id=436, 480.29437pt x 154.32657pt>
+<img/connecties-gebruikers.png, id=521, 480.29437pt x 154.32657pt>
 File: img/connecties-gebruikers.png Graphic file (type png)
 
 <use img/connecties-gebruikers.png>
@@ -1996,36 +2042,70 @@ e.tex" [24
 
 
 
-] [25])
+] [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
-[27]
+<img/Hbase-structure.png, id=631, 685.8122pt x 366.61969pt>
+File: img/Hbase-structure.png Graphic file (type png)
+
+<use img/Hbase-structure.png>
+Package pdftex.def Info: img/Hbase-structure.png used on input line 50.
+(pdftex.def)             Requested size: 398.0pt x 212.76823pt.
+ [27 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Hbase-structure.png
+>] [28]
+<img/mongodb-replica-set-primary-with-two-secondaries.png, id=665, 595.1647pt x
+ 225.31235pt>
+File: img/mongodb-replica-set-primary-with-two-secondaries.png Graphic file (ty
+pe png)
+ <use img/mongodb-replica-set-primary-with-two-secondaries.png>
+Package pdftex.def Info: img/mongodb-replica-set-primary-with-two-secondaries.p
+ng used on input line 78.
+(pdftex.def)             Requested size: 159.19757pt x 60.26787pt.
+
+<img/mongo-sharded-cluster-production-architecture.png, id=666, 563.14285pt x 3
+85.75285pt>
+File: img/mongo-sharded-cluster-production-architecture.png Graphic file (type 
+png)
+ <use img/mongo-sharded-cluster-production-architecture.png>
+Package pdftex.def Info: img/mongo-sharded-cluster-production-architecture.png 
+used on input line 80.
+(pdftex.def)             Requested size: 199.0pt x 136.31046pt.
+
+Overfull \hbox (44.77536pt too wide) in paragraph at lines 85--86
+\T1/lmr/m/n/10.95 (-20) con-fi-gu-ra-tie tus-sen ver-schil-lende \T1/lmr/bx/n/1
+0.95 Mon-goD \T1/lmr/m/n/10.95 (-20) in-stan-ties, of in hun ter-men pri-mary/s
+econdundaries.
+ []
+
+[29 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/mongodb-replica-set-
+primary-with-two-secondaries.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesi
+s - 2/img/mongo-sharded-cluster-production-architecture.png>]) [30]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/5.observaties.
-tex" [28
+tex") [31
 
 
 
-]) [29]
+]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/6.analysevande
-resultaten.tex" [30
+resultaten.tex" [32
 
 
 
-]) [31]
+]) [33]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.te
-x" [32
+x" [34
 
 
 
-]) [33] [34
+]) [35] [36
 
 
-] [35] [36]
+] [37] [38]
 No file masterproef.gls.
-[37
+[39
 
-] [38
+] [40
 
 ]
 Overfull \hbox (0.61989pt too wide) in paragraph at lines 110--110
@@ -2034,7 +2114,14 @@ Overfull \hbox (0.61989pt too wide) in paragraph at lines 110--110
 ation ,[] _Clustering ,[]$
  []
 
-[39] [40
+[41]
+
+Class memoir Warning: The material used in the headers is too large
+(27.2pt) for the given head height (13.6pt), it is recommended to
+either increase the head height or redesign the header
+(in both cases you will find help in the memoir manual). on input line 112.
+
+[42] [43
 
 ]
 \tf@toc=\write10
@@ -2062,20 +2149,23 @@ x"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: 3E46AEC825FA076D584783226C3FE910;1888.
+(rerunfilecheck)             Checksum: 5AD871262F20581B5E58F233778BD68C;1994.
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 32655 strings out of 493921
- 588627 string characters out of 3147279
- 1080936 words of memory out of 3000000
- 34926 multiletter control sequences out of 15000+200000
- 89463 words of font info for 126 fonts, out of 3000000 for 9000
+ 32816 strings out of 493921
+ 591938 string characters out of 3147279
+ 1084396 words of memory out of 3000000
+ 35039 multiletter control sequences out of 15000+200000
+ 89896 words of font info for 130 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  68i,12n,78p,1764b,4177s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:yum} has been referenced but does not exist, 
-replaced by a fixed one
+pdfTeX warning (dest): name{glo:HDFS} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:yum} has been referenced but does not exist, re
+placed by a fixed one
 
 pdfTeX warning (dest): name{glo:apt-get} has been referenced but does not exist
 , replaced by a fixed one
@@ -2088,6 +2178,9 @@ eplaced by a fixed one
 
 pdfTeX warning (dest): name{glo:rangequery} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:DBMS} has been referenced but does not exist, r
+eplaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
 TeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
@@ -2107,9 +2200,9 @@ ic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
 MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/hel
 vetic/uhvr8a.pfb>
-Output written on masterproef.pdf (48 pages, 654181 bytes).
+Output written on masterproef.pdf (53 pages, 904774 bytes).
 PDF statistics:
- 719 PDF objects out of 1000 (max. 8388607)
- 212 named destinations out of 1000 (max. 500000)
- 25337 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 901 PDF objects out of 1000 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
+ 25360 words of extra memory for PDF output out of 29859 (max. 10000000)
 

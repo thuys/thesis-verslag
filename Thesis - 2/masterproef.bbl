@@ -85,6 +85,46 @@
   \field{year}{2008}
 \endentry
 
+\entry{borthakur2007hadoop}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Borthakur}{B.}%
+     {Dhruba}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BD1}
+  \strng{fullhash}{BD1}
+  \field{sortinit}{B}
+  \field{pages}{21}
+  \field{title}{The hadoop distributed file system: Architecture and design}
+  \field{volume}{11}
+  \field{journaltitle}{Hadoop Project Website}
+  \field{year}{2007}
+\endentry
+
+\entry{burrows2006chubby}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Burrows}{B.}%
+     {Mike}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {USENIX Association}%
+  }
+  \strng{namehash}{BM1}
+  \strng{fullhash}{BM1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the 7th symposium on Operating systems
+  design and implementation}
+  \field{pages}{335\bibrangedash 350}
+  \field{title}{The Chubby lock service for loosely-coupled distributed
+  systems}
+  \field{year}{2006}
+\endentry
+
 \entry{chang2008bigtable}{article}{}
   \name{author}{9}{}{%
     {{}%
@@ -274,6 +314,56 @@
   \field{year}{2010}
 \endentry
 
+\entry{george2011hbase}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {George}{G.}%
+     {Lars}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {" O'Reilly Media, Inc."}%
+  }
+  \strng{namehash}{GL1}
+  \strng{fullhash}{GL1}
+  \field{sortinit}{G}
+  \field{title}{HBase: the definitive guide}
+  \field{year}{2011}
+\endentry
+
+\entry{ghemawat2003google}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Ghemawat}{G.}%
+     {Sanjay}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gobioff}{G.}%
+     {Howard}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Leung}{L.}%
+     {Shun-Tak}{S.-T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{GSGHLST1}
+  \strng{fullhash}{GSGHLST1}
+  \field{sortinit}{G}
+  \field{booktitle}{ACM SIGOPS Operating Systems Review}
+  \field{number}{5}
+  \field{pages}{29\bibrangedash 43}
+  \field{title}{The Google file system}
+  \field{volume}{37}
+  \field{year}{2003}
+\endentry
+
 \entry{golab2014eventually}{article}{}
   \name{author}{5}{}{%
     {{}%
@@ -349,6 +439,60 @@
   \endverb
   \field{year}{2010}
   \field{urlday}{06}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{hunt2010zookeeper}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Hunt}{H.}%
+     {Patrick}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Konar}{K.}%
+     {Mahadev}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Junqueira}{J.}%
+     {Flavio~Paiva}{F.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Reed}{R.}%
+     {Benjamin}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HP+1}
+  \strng{fullhash}{HPKMJFPRB1}
+  \field{sortinit}{H}
+  \field{booktitle}{USENIX Annual Technical Conference}
+  \field{pages}{9}
+  \field{title}{ZooKeeper: Wait-free Coordination for Internet-scale Systems.}
+  \field{volume}{8}
+  \field{year}{2010}
+\endentry
+
+\entry{ChinHBaseComprehensive}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {James~Chin}{J.~C.}%
+     {ZikaiWang}{Z.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JCZ1}
+  \strng{fullhash}{JCZ1}
+  \field{sortinit}{J}
+  \field{title}{HBase: A Comprehensive Introduction}
+  \verb{url}
+  \verb http://cs.brown.edu/courses/cs227/archives/2011/slides/mar14-hbase.pdf
+  \endverb
+  \field{year}{2011}
+  \field{urlday}{10}
   \field{urlmonth}{07}
   \field{urlyear}{2014}
 \endentry
@@ -661,6 +805,36 @@
   \field{year}{2012}
 \endentry
 
+\entry{mongodb-replicaset}{online}{}
+  \field{sortinit}{R}
+  \field{title}{Replication Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/replication-introduction/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{thesisArnaud}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Schoonjans}{S.}%
+     {Arnaud}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SA1}
+  \strng{fullhash}{SA1}
+  \field{sortinit}{S}
+  \field{title}{Een critische evaluatie van beschikbaarheid in gedistribueerde
+  opslag systemen}
+  \list{institution}{1}{%
+    {KU Leuven}%
+  }
+  \field{year}{2014}
+\endentry
+
 \entry{categorizatie-sco10}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -681,6 +855,17 @@
   \field{urlday}{03}
   \field{urlmonth}{02}
   \field{urlyear}{2013}
+\endentry
+
+\entry{mongodb-shard}{online}{}
+  \field{sortinit}{S}
+  \field{title}{Sharding Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/sharding-introduction/
+  \endverb
+  \field{urlday}{04}
+  \field{urlmonth}{02}
+  \field{urlyear}{2014}
 \endentry
 
 \entry{Strauch.NoSQL}{book}{}

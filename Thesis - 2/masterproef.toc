@@ -16,11 +16,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Voorwoord}{i}{chapter*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Samenvatting}{iv}{chapter*.4}
+\contentsline {chapter}{Samenvatting}{v}{chapter*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{L"yst van figuren en tabellen}{v}{chapter*.6}
+\contentsline {chapter}{L"yst van figuren en tabellen}{vi}{chapter*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Lijst van afkortingen en symbolen}{vi}{chapter*.9}
+\contentsline {chapter}{Lijst van afkortingen en symbolen}{vii}{chapter*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Inleiding}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -52,7 +52,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Key/Value Model}{7}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Bespreking van verschillende DBMS}{7}{section.2.3}
+\contentsline {section}{\numberline {2.3}Bespreking van verschillende \glspl {DBMS}}{7}{section.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Column database}{7}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
@@ -172,9 +172,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {4}Implementatie}{25}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Selectie van de DBMS}{25}{section.4.1}
+\contentsline {section}{\numberline {4.1}Selectie van de DBMS's}{25}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Selectiecriteria voor DBMS}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Selectiecriteria voor \glspl {DBMS}}{25}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Vrije software}{25}{section*.77}
 \defcounter {refsection}{0}\relax 
@@ -186,41 +186,67 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Ondersteuning voor verschillende query methodes}{26}{section*.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Vergelijking van de DBMS}{27}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Gedetailleerde bespreking van de geselecteerde DBMS's}{27}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Architectuur geselecteerde DBMS}{27}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.2.1}HBase}{27}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{HBase}{27}{section*.82}
+\contentsline {subsubsection}{Aangeboden API}{27}{section*.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{MongoDB}{27}{section*.83}
+\contentsline {subsubsection}{Architectuur}{27}{section*.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{27}{section*.84}
+\contentsline {paragraph}{Hadoop\cite {borthakur2007hadoop}}{28}{section*.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Selectie en uitwerking van de testsoftware}{27}{section.4.2}
+\contentsline {paragraph}{Zookeeper\cite {hunt2010zookeeper}}{28}{section*.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Installatie van de DBMS en testsoftware}{27}{section.4.3}
+\contentsline {paragraph}{HBase\cite {george2011hbase}}{28}{section*.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Automatische installatie met IMP}{27}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.2.2}MongoDB}{29}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{YCSB!}{27}{section*.85}
+\contentsline {subsubsection}{Aangeboden API}{29}{section*.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{HBase}{27}{section*.86}
+\contentsline {subsubsection}{Architectuur}{29}{section*.91}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{MongoDB}{27}{section*.87}
+\contentsline {paragraph}{Replicatie\cite {mongodb-replicaset}}{29}{section*.92}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{27}{section*.88}
+\contentsline {paragraph}{Data distributie\cite {mongodb-shard}}{29}{section*.93}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Uitvoeren van de calibratie en testen}{27}{section.4.4}
+\contentsline {subparagraph}{Shards}{30}{section*.94}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Verzamelen en analyse van de testresultaten}{27}{section.4.5}
+\contentsline {subparagraph}{Configuratie servers}{30}{section*.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Observaties}{29}{chapter.5}
+\contentsline {subparagraph}{Toegangsserver}{30}{section*.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{31}{chapter.6}
+\contentsline {subsection}{\numberline {4.2.3}Pgpool-II (PostgreSQL)}{30}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusie}{33}{chapter.7}
+\contentsline {subsubsection}{Aangeboden API}{30}{section*.97}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{38}{section*.90}
+\contentsline {subsubsection}{Architectuur}{30}{section*.99}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Selectie en uitwerking van de testsoftware}{30}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Installatie van de DBMS's en testsoftware}{30}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Automatische installatie met IMP}{30}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{YCSB!}{30}{section*.100}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{HBase}{30}{section*.101}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{MongoDB}{30}{section*.102}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{30}{section*.103}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Uitvoeren van de calibratie en testen}{30}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Verzamelen en analyse van de testresultaten}{30}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Observaties}{31}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{33}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Conclusie}{35}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{40}{section*.105}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 
