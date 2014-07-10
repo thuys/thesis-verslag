@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  10 JUL 2014 15:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  10 JUL 2014 20:12
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tex"
@@ -1646,6 +1646,63 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen227
 )
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count389
+\lst@gtempboxa=\box48
+\lst@token=\toks55
+\lst@length=\count390
+\lst@currlwidth=\dimen228
+\lst@column=\count391
+\lst@pos=\count392
+Normal \dimen register pool exhausted, switching to extended pool.
+\lst@lostspace=\dimen256
+\lst@width=\dimen257
+\lst@newlines=\count393
+\lst@lineno=\count394
+\lst@maxwidth=\dimen258
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count395
+\lst@skipnumbers=\count396
+\lst@framebox=\box49
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+
+Class memoir Warning: You are using the caption package with the memoir class. 
+To prepare we will now reset all captioning macros and configurations to kernel
+ defaults, and then let the caption package take over. Please remember to use t
+he caption package interfaces in order to configure your captions. .
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen259
+\captionmargin@=\dimen260
+\captionwidth=\dimen261
+\caption@tempdima=\dimen262
+\caption@indent=\dimen263
+\caption@parindent=\dimen264
+\caption@hangindent=\dimen265
+)
+\c@ContinuedFloat=\count397
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
+Package caption Info: subfigure package is loaded.
+Package caption Info: supertabular package is loaded.
+)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
 libraries\tikzlibrarysnakes.code.tex
 File: tikzlibrarysnakes.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.7)
@@ -1661,17 +1718,16 @@ libraries\tikzlibrarydecorations.pathmorphing.code.tex
 libraries\tikzlibrarydecorations.code.tex
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulede
 corations.code.tex
-\pgfdecoratedcompleteddistance=\dimen228
-Normal \dimen register pool exhausted, switching to extended pool.
-\pgfdecoratedremainingdistance=\dimen256
-\pgfdecoratedinputsegmentcompleteddistance=\dimen257
-\pgfdecoratedinputsegmentremainingdistance=\dimen258
-\pgf@decorate@distancetomove=\dimen259
-\pgf@decorate@repeatstate=\count389
-\pgfdecorationsegmentamplitude=\dimen260
-\pgfdecorationsegmentlength=\dimen261
+\pgfdecoratedcompleteddistance=\dimen266
+\pgfdecoratedremainingdistance=\dimen267
+\pgfdecoratedinputsegmentcompleteddistance=\dimen268
+\pgfdecoratedinputsegmentremainingdistance=\dimen269
+\pgf@decorate@distancetomove=\dimen270
+\pgf@decorate@repeatstate=\count398
+\pgfdecorationsegmentamplitude=\dimen271
+\pgfdecorationsegmentlength=\dimen272
 )
-\tikz@lib@dec@box=\box48
+\tikz@lib@dec@box=\box50
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\decoratio
 ns\pgflibrarydecorations.pathmorphing.code.tex))
@@ -1687,10 +1743,10 @@ ns\pgflibrarydecorations.shapes.code.tex)))
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/glossary.tex"
 \glswrite=\write6
 \glo@main@file=\write7
-Package glossaries Info: Writing glossary file masterproef.glo on input line 61
+Package glossaries Info: Writing glossary file masterproef.glo on input line 67
 .
 \glo@acronym@file=\write8
-Package glossaries Info: Writing glossary file masterproef.acn on input line 61
+Package glossaries Info: Writing glossary file masterproef.acn on input line 67
 .
 )
 Package csquotes Info: Checking for multilingual support...
@@ -1719,37 +1775,37 @@ aux")
 resultaten.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.au
 x"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 56.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count390
-\scratchdimen=\dimen262
-\scratchbox=\box49
-\nofMPsegments=\count391
-\nofMParguments=\count392
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count393
-\MPscratchDim=\dimen263
-\MPnumerator=\count394
-\makeMPintoPDFobject=\count395
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count399
+\scratchdimen=\dimen273
+\scratchbox=\box51
+\nofMPsegments=\count400
+\nofMParguments=\count401
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count402
+\MPscratchDim=\dimen274
+\MPnumerator=\count403
+\makeMPintoPDFobject=\count404
+\everyMPtoPDFconversion=\toks57
 )
 
 ******************************************************
@@ -1771,7 +1827,7 @@ Sidefoothsep and sidefootwidth: 7pt and 101pt
 Sidefootvsep and sidefootheight: 13.6pt and 594.32022pt
 ******************************************************
 
-LaTeX Info: Redefining \microtypecontext on input line 54.
+LaTeX Info: Redefining \microtypecontext on input line 56.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1785,8 +1841,8 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring ON on input line 54.
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring ON on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1794,14 +1850,14 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count396
+\c@section@level=\count405
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 54.
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.out")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.out")
 \@outlinefile=\write9
@@ -1817,14 +1873,23 @@ Package biblatex Warning: Data encoding is 'utf8'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'masterproef.bbl' found.
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.bbl")
-Package biblatex Info: Reference section=0 on input line 54.
-Package biblatex Info: Reference segment=0 on input line 54.
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.bbl"
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'KULeuven-453199':
+(biblatex)                - Invalid format of field 'month'.
+
+)
+Package biblatex Info: Reference section=0 on input line 56.
+Package biblatex Info: Reference segment=0 on input line 56.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\dict\glossarie
 s-dictionary-English.dict
 Dictionary: glossaries-dictionary, Language: English 
 )
+\c@lstlisting=\count406
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `kulemtfpf' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1833,7 +1898,7 @@ Package microtype Info: Loading generic settings for font family
 File: logokuleng.pdf Graphic file (type pdf)
 
 <use logokuleng.pdf>
-Package pdftex.def Info: logokuleng.pdf used on input line 54.
+Package pdftex.def Info: logokuleng.pdf used on input line 56.
 (pdftex.def)             Requested size: 159.33542pt x 85.3617pt.
  [-1
 
@@ -1847,20 +1912,20 @@ Package pdftex.def Info: logokuleng.pdf used on input line 54.
 
 {C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Schoolj
 aar 2013-2014/Thesis/verslag/Thesis - 2/logokuleng.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 56.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 54.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 54.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 56.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 56.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1874,7 +1939,7 @@ Package microtype Info: Loading generic settings for font family
 
 ]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 60.
+ine 62.
  [1
 
 
@@ -1952,7 +2017,7 @@ detechnologie.tex" [2
 
 
 ] [3]
-<img/Relationeel-Model-Normalisatie.png, id=315, 570.933pt x 143.0946pt>
+<img/Relationeel-Model-Normalisatie.png, id=324, 570.933pt x 143.0946pt>
 File: img/Relationeel-Model-Normalisatie.png Graphic file (type png)
 
 <use img/Relationeel-Model-Normalisatie.png>
@@ -2014,14 +2079,14 @@ detesten.tex" [16
 
 
 ] [17]
-<img/hockey-stick.png, id=517, 253.69781pt x 173.89969pt>
+<img/hockey-stick.png, id=526, 253.69781pt x 173.89969pt>
 File: img/hockey-stick.png Graphic file (type png)
 
 <use img/hockey-stick.png>
 Package pdftex.def Info: img/hockey-stick.png used on input line 31.
 (pdftex.def)             Requested size: 179.09879pt x 122.7691pt.
 
-<img/connecties-gebruikers.png, id=521, 480.29437pt x 154.32657pt>
+<img/connecties-gebruikers.png, id=530, 480.29437pt x 154.32657pt>
 File: img/connecties-gebruikers.png Graphic file (type png)
 
 <use img/connecties-gebruikers.png>
@@ -2046,90 +2111,128 @@ e.tex" [24
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
-<img/Hbase-structure.png, id=631, 685.8122pt x 366.61969pt>
+<img/Hbase-structure.png, id=640, 685.8122pt x 366.61969pt>
 File: img/Hbase-structure.png Graphic file (type png)
 
 <use img/Hbase-structure.png>
-Package pdftex.def Info: img/Hbase-structure.png used on input line 50.
+Package pdftex.def Info: img/Hbase-structure.png used on input line 53.
 (pdftex.def)             Requested size: 398.0pt x 212.76823pt.
- [27 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Hbase-structure.png
->] [28]
-<img/mongodb-replica-set-primary-with-two-secondaries.png, id=665, 595.1647pt x
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[27] [28 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Hbase-structure
+.png>]
+<img/mongodb-replica-set-primary-with-two-secondaries.png, id=676, 595.1647pt x
  225.31235pt>
 File: img/mongodb-replica-set-primary-with-two-secondaries.png Graphic file (ty
 pe png)
  <use img/mongodb-replica-set-primary-with-two-secondaries.png>
 Package pdftex.def Info: img/mongodb-replica-set-primary-with-two-secondaries.p
-ng used on input line 78.
+ng used on input line 83.
 (pdftex.def)             Requested size: 159.19757pt x 60.26787pt.
 
-<img/mongo-sharded-cluster-production-architecture.png, id=666, 563.14285pt x 3
+<img/mongo-sharded-cluster-production-architecture.png, id=677, 563.14285pt x 3
 85.75285pt>
 File: img/mongo-sharded-cluster-production-architecture.png Graphic file (type 
 png)
  <use img/mongo-sharded-cluster-production-architecture.png>
 Package pdftex.def Info: img/mongo-sharded-cluster-production-architecture.png 
-used on input line 80.
+used on input line 85.
 (pdftex.def)             Requested size: 199.0pt x 136.31046pt.
 
-Overfull \hbox (44.77536pt too wide) in paragraph at lines 85--86
-\T1/lmr/m/n/10.95 (-20) con-fi-gu-ra-tie tus-sen ver-schil-lende \T1/lmr/bx/n/1
-0.95 Mon-goD \T1/lmr/m/n/10.95 (-20) in-stan-ties, of in hun ter-men pri-mary/s
-econdundaries.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[29] [30 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/mongodb-replica
+-set-primary-with-two-secondaries.png> <D:/Schooljaar 2013-2014/Thesis/verslag/
+Thesis - 2/img/mongo-sharded-cluster-production-architecture.png>]
+<img/Pgpool-structuur.png, id=713, 246.4407pt x 189.3474pt>
+File: img/Pgpool-structuur.png Graphic file (type png)
+
+<use img/Pgpool-structuur.png>
+Package pdftex.def Info: img/Pgpool-structuur.png used on input line 113.
+(pdftex.def)             Requested size: 199.0pt x 152.89671pt.
+ [31 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Pgpool-structuur.pn
+g (PNG copy)>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 140.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 155.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 133--158
+[][]  [] 
  []
 
-[29 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/mongodb-replica-set-
-primary-with-two-secondaries.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesi
-s - 2/img/mongo-sharded-cluster-production-architecture.png>]) [30]
+[32]
+Overfull \hbox (405.71803pt too wide) in paragraph at lines 162--176
+[][] 
+ []
+
+
+Overfull \hbox (53.78464pt too wide) in paragraph at lines 210--231
+ [][] 
+ []
+
+
+Underfull \vbox (badness 6016) has occurred while \output is active []
+
+ [33])
+[34]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/5.observaties.
-tex") [31
+tex") [35
 
 
 
 ]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/6.analysevande
-resultaten.tex" [32
+resultaten.tex" [36
 
 
 
-]) [33]
+]) [37]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.te
-x" [34
+x" [38
 
 
 
-]) [35] [36
+]) [39] [40
 
 
-] [37] [38]
+] [41] [42]
 No file masterproef.gls.
-[39
+[43
 
-] [40
+] [44
 
-]
-Overfull \hbox (0.61989pt too wide) in paragraph at lines 110--110
+] [45]
+Overfull \hbox (0.61989pt too wide) in paragraph at lines 112--112
 \T1/lmr/m/n/10.95 (-20) 2013. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-2
 0) : [][]$\T1/lmtt/m/n/10.95 http : / / wiki . postgresql . org / wiki / Replic
 ation ,[] _Clustering ,[]$
  []
 
-[41]
 
 Class memoir Warning: The material used in the headers is too large
 (27.2pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 112.
+(in both cases you will find help in the memoir manual). on input line 114.
 
-[42] [43
+[46] [47
 
 ]
 \tf@toc=\write10
 \tf@tdo=\write11
 \tf@lof=\write12
 \tf@lot=\write13
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 114.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
  ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.aux"
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/afkortingen.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/1.inleiding.au
@@ -2146,23 +2249,29 @@ aux")
 resultaten.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.au
 x"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: 5AD871262F20581B5E58F233778BD68C;1994.
+(rerunfilecheck)             Checksum: 86C7158B418F4B1F96B6AD968A260136;1999.
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
  ) 
 Here is how much of TeX's memory you used:
- 32816 strings out of 493921
- 591938 string characters out of 3147279
- 1084396 words of memory out of 3000000
- 35039 multiletter control sequences out of 15000+200000
- 89896 words of font info for 130 fonts, out of 3000000 for 9000
+ 35217 strings out of 493921
+ 630950 string characters out of 3147279
+ 1121037 words of memory out of 3000000
+ 37401 multiletter control sequences out of 15000+200000
+ 90084 words of font info for 131 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 68i,12n,78p,1764b,4177s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:HDFS} has been referenced but does not exist,
- replaced by a fixed one
+ 68i,12n,92p,1764b,4177s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{glo:IMP} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:eventsupport} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:HDFS} has been referenced but does not exist, r
+eplaced by a fixed one
 
 pdfTeX warning (dest): name{glo:yum} has been referenced but does not exist, re
 placed by a fixed one
@@ -2200,9 +2309,9 @@ ic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
 MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/hel
 vetic/uhvr8a.pfb>
-Output written on masterproef.pdf (53 pages, 904774 bytes).
+Output written on masterproef.pdf (57 pages, 984576 bytes).
 PDF statistics:
- 901 PDF objects out of 1000 (max. 8388607)
- 249 named destinations out of 1000 (max. 500000)
- 25360 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 959 PDF objects out of 1000 (max. 8388607)
+ 264 named destinations out of 1000 (max. 500000)
+ 25365 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -40,7 +40,10 @@ Voor elk van de geselecteerde systemen zal de aangeboden API besproken worden me
 
 \subsection{HBase}
 
-\subsubsection{Aangeboden API} \todo{}
+\subsubsection{Data structuur}
+De data in HBase is gestructureerd in tabellen, die aangemaakt worden door middel van de API. Op het moment van aanmaak wordt er een schema van de tabel gemaakt. Voor elke tabel kunnen de kolommen meegegeven worden samen met een \textit{kolom familie} voor elke kolom, maar de kolommen kunnen ook gespecificeerd worden bij het schrijven van data. De gegevens per \textit{kolom familie} hebben dezelfde prefix en zullen fysisch samen opgeslagen worden. Indien verschillende kolommen tegelijk worden gelezen of geschreven, is het aangeraden om deze dezelfde \textit{kolom familie} te geven. 
+
+De operaties beschikbaar in dit systeem zijn: get (verkrijgen), put (invoegen), scan (range) en delete (verwijderen). Het aanpassen van gegevens wordt uitgevoerd via een get waarbij een enkele kolom waarde van een record kan aanpast worden. Daarnaast zal er bij een scan een optimalisatie gedaan worden naar de cache grootte. Doordat er geweten is hoe groot een record ongeveer is in zijn geheel én hoeveel records er opgevraagd worden, kan de cache grootte berekend worden zodat er maar een enkele datacommunicatie nodig is. 
 
 \subsubsection{Architectuur}
 De gedistribueerde versie van HBase\cite{george2011hbase} is afhankelijk van 2 andere software systemen, namelijk Zookeeper\cite{hunt2010zookeeper} en Hadoop\cite{borthakur2007hadoop}, en volgt hiermee de structuur van Google's BigTable\cite{chang2008bigtable} die op zijn beurt afhankelijk is van Chubby\cite{burrows2006chubby} en Google File System\cite{ghemawat2003google}. Een overzicht van de architectuur bevindt zich in figuur \ref{fig:Hbase-structure}. Deze 3 systemen zullen kort besproken worden, van Hadoop tot Zookeeper en HBase. 
@@ -65,10 +68,12 @@ Dit is de globale structuur van het HBase systeem, in het totaal zijn er 5 versc
 
 De configuratie van de verschillende systemen gebeurt door middel van configuratiebestanden voor elke service waarna de volledige configuratie door het systeem zelf wordt gedaan, uitgezonderd het aanmaken van een tabel welke door de API wordt opgezet. 
 
-\subsection{MongoDB}
+\subsection{MongoDB\cite{mongodb-manual}}
 
-\subsubsection{Aangeboden API} \todo{}
-Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het voltooien van de actie, startende met de actie is over het netwerk verstuurd, de primary heeft de data geschreven tot een meerderheid van de secundaries heeft de data weg geschreven. \\Bij het lezen kan men kiezen om de data te lezen van de primary, secundary of de dichtstbijzijnde node. Afhankelijk van de gekozen acties, kan er verondersteld worden dat er een verschillende consistentie garantie zal zijn.
+\subsubsection{Datastructuur}
+De data in MongoDB is opgeslagen in een database, die op zijn beurt een collectie bevat. Een database en collectie moeten niet aangemaakt worden op voorhand maar kunnen worden aangemaakt bij het wegschrijven van data. Een record is in un benaming een document en kan verschillende soorten velden hebben. Er zijn uitgebreide query mogelijkheden om data in te voegen, aan te passen, te verwijderen of een range aan te maken. Er is ook ondersteuning voor MapReduce\cite{dean2008mapreduce}. 
+
+Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het voltooien van de actie, startende met de actie is over het netwerk verstuurd, de primary heeft de data geschreven tot een meerderheid van de secundaries heeft de data weg geschreven. \\ Bij het lezen kan men kiezen om de data te lezen van de primary, secundary of de dichtstbijzijnde node. Afhankelijk van de gekozen acties, kan er verondersteld worden dat er een verschillende consistentie garantie zal zijn.
 
 \subsubsection{Architectuur}
 MongoDB is een \gls{DBMS} dat de vereisten van replicatie en data distributie op een gelaagde manier garandeert. In eerste instantie zal deze de replicatie vereisten invullen, daarna zal hierop horizontale schaalbaarheid ondersteund worden. 
@@ -91,19 +96,107 @@ MongoDB is een \gls{DBMS} dat de vereisten van replicatie en data distributie op
 
 De configuratie van de verschillende delen gebeurt op verschillende manieren. Bij replicatie krijgt elke set een naam die in de configuratiebestanden van elke configuratie wordt gezet, nadien wordt via één instantie de verschillende instanties toegevoegd via de API. Bij de cluster worden bij het opstarten van de toegangsservers de set van configuratieservers meegegeven, het opzetten van de verschillende shards gebeurt via een toegangsserver m.b.v. de API. 
 
-\subsection{Pgpool-II (PostgreSQL)}
+\subsection{Pgpool-II (PostgreSQL)\cite{pgpool-doc}}
+Pgpool-II kan op 4 verschillende manieren werken, in deze opstelling is er gekozen voor de replicatie mode omdat deze zowel replicatie, belastingsverdeling, failover en online recovery aanbiedt. Er is de mogelijkheid om ook data distributie aan te bieden maar dit is niet getest. 
 
-\subsubsection{Aangeboden API} \todo{}
+Vervolgens zal de datastructuur en de architectuur besproken worden.  
+\subsubsection{Datastructuur}
+De data structuur en query mogelijkheden van Pgpool-II zijn gelijklopend aan deze van PostgreSQL. Net zoals in PostgreSQL bestaat het systeem uit een schema die verschillende databases kan bevatten. In een database zijn vervolgens verschillende tabellen die de records bevatten. Voor het opslaan van de data dient de volledige tabel met al de kolommen gespecificeerd zijn. 
+
+Pgpool-II ondersteunt bijna de volledige query mogelijkheden die in de testen nodig zijn, er zijn enkele restricties die beschreven zijn op in de sectie \textit{Restrictions} van de documentatie\cite{pgpool-doc}. De query mogelijkheden zijn uitgebreid en ondersteunen naast de benodigde 5 queries, nog join acties. 
 
 \subsubsection{Architectuur}
+Een Pgpool-II infrastructuur bestaat uit 2 delen, een data niveau en een routing niveau, een overzicht is gegeven in figuur \ref{fig:Pgpool-structure}. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{img/Pgpool-structuur.png}
+\caption{Systeemarchitectuur van Pgpool-II.}
+\label{fig:Pgpool-structure}
+\end{figure}
+
+Op data niveau bestaat een individuele service uit een PostgreSQL installatie waarbij enkele extra functies en bestanden worden geïnstalleerd met een aanpassing aan de configuratie bestanden.  Daarnaast moet er voor de online recovery ook ssh toegang voorzien worden tot al de PostgreSQL servers. De verschillende data machines hebben een master/slave structuur waar al de schrijfacties naar de master worden gestuurd en de rest verdeeld over al de machines. De master doet aan synchronisatie met behulp van de \textit{Write-ahead-log} van PostgreSQL waar al de schrijfactie worden gelogd. 
+
+Op routing niveau draait een Pgpool-II service die als management service dient, hij bepaalt wie master en slave is, volgt de status op van de data services en doet aan online recovery. Bij het aanmaken van een database connectie naar welke service de leesoperaties zullen gaan, zo wordt de leesbelasting verdeeld. 
+
+Pgpool-II kan ook in de parallel mode werken zodat er de mogelijkheid is tot horizontale schaalbaarheid, ook is er de mogelijkheid om caching aan te zetten en een integratie met Memcache is ondersteund. 
 
 \section{Selectie en uitwerking van de testsoftware}
+De testen zijn geïmplementeerd als een uitbreiding van YCSB\cite{cooper2010benchmarking} omwille van verschillende redenen. Allereerst is de broncode publiek beschikbaar onder Apache 2.0, daarnaast is dit een uitgebreid systeem voor het uitvoeren van performantie benchmarking aan de hand van de vertraging op \gls{DBMS}. Hierdoor heeft deze al een uitgebreide ondersteuning voor tal van systemen, waaronder al de gekozen systemen. Wel is deze ondersteuning zo veel mogelijk geoptimaliseerd voor de systemen zodat er maximaal gebruikt wordt van de functionaliteiten van het systeem, dit houdt in dat er bijvoorbeeld bij het opstellen van de range queries rekening gehouden wordt met het aantal records dat nodig is. 
+
+De 2 testen, beschikbaarheidstest en consistentie test, worden op verschillende manieren geïmplementeerd. 
+
+\paragraph{Beschikbaarheidstest} De beschikbaarheidstest wordt geïmplementeerd door middel van \gls{eventsupport}, hiermee kan er op vooraf gedefinieerde momenten een bepaald Unix commando uitgevoerd worden. De configuratie gebeurt met behulp van een XML bestand met de parameters van \ref{table:beschikbaarheidinput} die meegegeven wordt aan de parameter $eventFile$, de output komt in het logbestand met de elementen van tabel \ref{table:beschikbaarheidoutput}. 
+
+Met behulp van deze uitbreiding zullen de beschikbaarheidstesten nadien uitgevoerd kunnen worden. Er zal gekeken worden naar de verandering in vertraging op een query waarmee kan bekeken worden of het systeem nog beschikbaar is. 
+
+\begin{minipage}[b]{0.5\textwidth}
+		\begin{tabular}{l|l}
+			\textbf{Naam} & \textbf{eenheid} \\ 
+			\hline ID & String \\ 
+			Starttijdstip & milliseconden \\ 
+			Commando & String \\ 
+		\end{tabular} 
+	\captionof{table}{Configuratie van event support}
+	\label{table:beschikbaarheidinput}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.5\textwidth}
+
+\begin{tabular}{l|l}
+\textbf{Naam} & \textbf{eenheid} \\ 
+\hline ID & String \\ 
+Starttijdstip & milliseconden \\ 
+Duur van de actie & microseconden \\
+Gestart? & Boolean \\
+Beëindigd? & Boolean \\
+Exit code & Integer 
+\end{tabular}
+\captionof{table}{Uitvoer van event support}
+\label{table:beschikbaarheidoutput}
+\end{minipage}
+
+\paragraph{Consistentie testen} Voor de consistentie testen is er een extra module geïmplementeerd die dit gedrag uitvoert. In deze uitwerking leest de schrijver niet zijn eigen data, al zou dit eenvoudig mee geïmplementeerd kunnen worden, dit is niet getest omdat het niet nodig was in deze testen. De testen kunnen uitgebreid geconfigureerd worden om enkel te testen wat nodig is: een overzicht van de configuratie parameters, uitgezonderd de locatie van de logbestanden, is te vinden in tabel \ref{table:consistentieinput}. Voor elke uitgevoerde query, wordt een record aangemaakt met de data van tabel \ref{table:consistentieuitvoer}. 
+
+\begin{table}[t]
+		\begin{tabular}{l|l|l}
+			\textbf{Naam} & \textbf{eenheid} & \textbf{Omschrijving} \\ 
+			\hline consistencyTest & Boolean & Het activeren van de consistentie test\\ 
+			addSeparateWorkload & Boolean & Het toevoegen van een een extra belasting \\ 
+			starttime & Milliseconden & Het moment dat de consistentie testen beginnen \\
+			readThreads & Integer & Het aantal lees gebruikers \\ 
+			consistencyDelayMillis & Milliseconden & Het interval waarin een lees gebruiker opnieuw het record leest \\ 
+			newrequestperiodMillis & Milliseconden & Het interval waarin een schrijf gebruiker opnieuw een record schrijft \\ 
+			readProportionConsistencyCheck & Float ($0\leq x \leq 1)$ & Het percentage van schrijfacties schrijven is \\ 
+			updateProportionConsistencyCheck & Float ($0\leq x \leq 1)$ & Het percentage van schrijfacties updaten is \\ 
+			stopOnFirstConsistency & Boolean & Stoppen zodra de eerste keer een correct record is gelezen \\ 
+			maxDelayConsistencyBeforeDropInMicros & Microseconden & De maximale afwijking dat de eigenlijke start van de query mag hebben t.o.v. het geplande moment \\ 
+			timeoutConsistencyBeforeDropInMicro & Microseconden & De maximale tijd dat een leesactie opnieuw geprobeerd wordt\\
+		\end{tabular} 
+	\captionof{table}{Configuratie van de consistentie testen}
+	\label{table:consistentieinput}
+\end{table}
+\hfill
 
 
-\section{Installatie van de DBMS's en testsoftware}
+\begin{table}[t]
+\centering
+		\begin{tabular}{l|l|l}
+			\textbf{Naam} & \textbf{eenheid} & \textbf{Omschrijving} \\ 
+			\hline Tijd & Microseconden & Het moment dat de schrijfactie moest starten\\ 
+			GebruikersID & R/W-Integer & Het id van de gebruiker (W-0, R-0, R-1, ..) \\ 
+			Start & Microseconden & Het moment dat actie is begonnen \\
+			Vertraging & Microseconden & De tijd dat de actie heeft geduurd \\ 
+			Waarde & String & De gelezen of geschreven waarde \\ 
+		\end{tabular} 
+	\captionof{table}{Uitvoer van een enkel query in de consistentie testen}
+	\label{table:consistentieuitvoer}
+\end{table}
 
-%Uitleggen van gebruik van YCSB
-\subsection{Automatische installatie met IMP}
+De code van deze testen is beschikbaar op GitHub in \url{https://github.com/thuys/ycsb} en te gebruiken onder Apache 2.0 licentie. \todo{Check}
+
+\section{IMP: Installatie van de DBMS's en YCSB}
+Voor de installatie van de verschillende systemen, is gekozen om te automatiseren met Integrated configuration Management Platform (\gls{IMP}) beschreven in \cite{KULeuven-453199}. Met behulp 
 
 \subsubsection{YCSB!}
 \subsubsection{HBase}
@@ -111,5 +204,32 @@ De configuratie van de verschillende delen gebeurt op verschillende manieren. Bi
 \subsubsection{Pgpool-II (PostgreSQL)}
 
 \section{Uitvoeren van de calibratie en testen}
+
+\begin{table}[t]
+	\centering
+		\begin{tabular}{l|l}
+			\multicolumn{2}{c}{\textbf{Stoppen}} \\
+			\textbf{Wat} & \textbf{Commando} \\ 
+			\hline
+			Zachte stop & service \{\{service-name\}\} stop \\ 
+			Harde stop & kill -KILL \{\{process Id\}\} \\ 
+			Netwerk onderbreken & iptables -A OUTPUT -d 0.0.0.0/0 -j DROP  \\ 
+			\multicolumn{2}{c}{} \\
+			\multicolumn{2}{c}{\textbf{Heropstarten}} \\
+			\textbf{Wat} & \textbf{Commando} \\ 
+			\hline
+			Zachte start & service \{\{service-name\}\} restart \\ 
+			Harde start & service \{\{service-name\}\} restart \\ 
+			Netwerk herstellen & iptables -D OUTPUT 1  \\ 
+			\multicolumn{2}{c}{} \\
+			\multicolumn{2}{c}{\textbf{Speciale commando's}} \\
+			\textbf{Wat} & \textbf{Commando} \\ 
+			\hline
+			Pgpool-II & /usr/local/bin/pcp\_recovery\_node -d 10 \{\{pgpool host\}\} \{\{port\}\} \\
+			\hspace*{0.5cm} (Online recovery) &  \hspace*{0.5cm} \{\{gebruikersnaam\}\} \{\{wachtwoord\}\}  \{\{node nummer\}\} \\
+		\end{tabular} 
+	\captionof{table}{Commando's voor het stoppen en starten in de verschillende modes van de beschikbaarheidstesten. }
+	\label{table:beschikbaarheidcommandos}
+\end{table}
 
 \section{Verzamelen en analyse van de testresultaten}

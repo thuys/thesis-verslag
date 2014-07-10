@@ -286,6 +286,33 @@
   \field{year}{2010}
 \endentry
 
+\entry{dean2008mapreduce}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dean}{D.}%
+     {Jeffrey}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ghemawat}{G.}%
+     {Sanjay}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{DJGS1}
+  \strng{fullhash}{DJGS1}
+  \field{sortinit}{D}
+  \field{number}{1}
+  \field{pages}{107\bibrangedash 113}
+  \field{title}{MapReduce: simplified data processing on large clusters}
+  \field{volume}{51}
+  \field{journaltitle}{Communications of the ACM}
+  \field{year}{2008}
+\endentry
+
 \entry{Elmasri:2010:FDS:1855347}{book}{}
   \name{author}{2}{}{%
     {{}%
@@ -596,6 +623,39 @@
   \field{year}{2003}
 \endentry
 
+\entry{mongodb-manual}{online}{}
+  \field{sortinit}{M}
+  \field{title}{MongoDB Manual}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/
+  \endverb
+  \field{urlday}{10}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{mongodb-replicaset}{online}{}
+  \field{sortinit}{M}
+  \field{title}{MongoDB: Replication Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/replication-introduction/
+  \endverb
+  \field{urlday}{10}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
+\entry{mongodb-shard}{online}{}
+  \field{sortinit}{M}
+  \field{title}{MongoDB: Sharding Introduction}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/core/sharding-introduction/
+  \endverb
+  \field{urlday}{10}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
 \entry{patil2011ycsb++}{inproceedings}{}
   \name{author}{9}{}{%
     {{}%
@@ -655,6 +715,17 @@
   \field{title}{YCSB++: benchmarking and performance debugging advanced
   features in scalable table stores}
   \field{year}{2011}
+\endentry
+
+\entry{pgpool-doc}{online}{}
+  \field{sortinit}{P}
+  \field{title}{Pgpool-III: User manuel}
+  \verb{url}
+  \verb http://www.pgpool.net/docs/latest/pgpool-en.html
+  \endverb
+  \field{urlday}{10}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
 \endentry
 
 \entry{pirzadeh2011performance}{inproceedings}{}
@@ -754,7 +825,7 @@
   \field{year}{2013}
   \field{urlday}{03}
   \field{urlmonth}{02}
-  \field{urlyear}{2013}
+  \field{urlyear}{2014}
 \endentry
 
 \entry{rabl2012solving}{article}{}
@@ -805,17 +876,6 @@
   \field{year}{2012}
 \endentry
 
-\entry{mongodb-replicaset}{online}{}
-  \field{sortinit}{R}
-  \field{title}{Replication Introduction}
-  \verb{url}
-  \verb http://docs.mongodb.org/manual/core/replication-introduction/
-  \endverb
-  \field{urlday}{04}
-  \field{urlmonth}{02}
-  \field{urlyear}{2014}
-\endentry
-
 \entry{thesisArnaud}{thesis}{}
   \name{author}{1}{}{%
     {{}%
@@ -853,17 +913,6 @@
   \field{month}{01}
   \field{year}{2010}
   \field{urlday}{03}
-  \field{urlmonth}{02}
-  \field{urlyear}{2013}
-\endentry
-
-\entry{mongodb-shard}{online}{}
-  \field{sortinit}{S}
-  \field{title}{Sharding Introduction}
-  \verb{url}
-  \verb http://docs.mongodb.org/manual/core/sharding-introduction/
-  \endverb
-  \field{urlday}{04}
   \field{urlmonth}{02}
   \field{urlyear}{2014}
 \endentry
@@ -912,6 +961,28 @@
   \field{title}{A comparison between several NoSQL databases with comments and
   notes}
   \field{year}{2011}
+\endentry
+
+\entry{KULeuven-453199}{thesis}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Vanbrabant}{V.}%
+     {Bart}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{VB1}
+  \strng{fullhash}{VB1}
+  \field{sortinit}{V}
+  \field{title}{A Framework for Integrated Configuration Management of
+  Distributed Systems (Een raamwerk voor ge\"integreerd configuratiebeheer van
+  gedistribueerde systemen)}
+  \verb{url}
+  \verb https://lirias.kuleuven.be/handle/123456789/453199
+  \endverb
+  \field{type}{phdthesis}
+  \field{year}{2014}
+  \warn{\item Invalid format of field 'month'}
 \endentry
 
 \entry{wada2011data}{inproceedings}{}
