@@ -1,7 +1,54 @@
 \chapter{Implementatie}
 
-\section{Doelstelling}
+\section{Selectie van de DBMS}
 
-\section{Gebruik IMP}
+\subsection{Selectiecriteria voor DBMS}
+Bij de selectie van de systemen of een systeem een bepaalde eigenschap al dan niet ondersteunt. In het totaal zijn er 5 verschillende eigenschappen waarop wordt geselecteerd. 
 
-\section{Gebruik YCSB}
+\paragraph{Vrije software} Om testen tussen verschillende DBMS te kunnen vergelijken op een gelijkaardige infrastructuur, is het nodig dat deze software kan geïnstalleerd worden op de eigen infrastructuur. Daarnaast is er in dit onderzoek gekozen voor gratis beschikbare software. 
+
+\paragraph{Persistentie} Voor het testen van de beschikbaarheid van de data, is het een voordeel dat de data op harde schijf aanwezig is: bij herstel dient er minder data over het netwerk gestuurd te worden. Om deze reden hebben deze systemen een voorkeur op systemen die de data enkel in geheugen houden. 
+
+\paragraph{Replicatie} Eén van de testen is de beschikbaarheidstest, indien de data maar op een enkele server opgeslagen is, zal de data op de uitgeschakelde server niet langer beschikbaar zijn. Met replicatie zal de data op verschillende servers opgeslagen worden en zal de data nog steeds beschikbaar zijn in het geval van een enkele uitgeschakelde server. 
+
+\paragraph{Data distributie} Het is de bedoeling om systemen te testen die een grote hoeveelheid data kunnen opslaan. Om aan deze vereiste te voldoen, is het nodig dat elke server niet al de data opslaat bij een voldoende hoog aantal servers (bij weinig servers, is elke server nodig om aan de replicatie vereiste te voldoen)
+
+\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en opvragen van een individueel record en het opvragen van meerdere queries. De DBMS moet ondersteuning voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries is in bepaalde systemen niet mogelijk en deze worden om deze reden niet behandeld. 
+
+
+\begin{table}
+    \begin{tabular}{lll|l|l|l|l|l|l|l|l|l}
+    ~                & ~         & \multicolumn{2}{l}{ \rotatebox[origin=c]{90}{Column database}} & \multicolumn{2}{l}{\rotatebox[origin=c]{90}{Document database}} & \multicolumn{4}{l}{\rotatebox[origin=c]{90}{Key-Value database}} & \multicolumn{2}{l}{\rotatebox[origin=c]{90}{Relationele database}} \\
+    ~                & ~         & \rotatebox[origin=c]{90}{Cassandra} & \rotatebox[origin=c]{90}{HBase} & \rotatebox[origin=c]{90}{Apache CouchDB} & \rotatebox[origin=c]{90}{MongoDB} & \rotatebox[origin=c]{90}{Lightcloud (Tokyo)} & \rotatebox[origin=c]{90}{Memcache} & \rotatebox[origin=c]{90}{Riak} & \rotatebox[origin=c]{90}{Voldemort} & \rotatebox[origin=c]{90}{MySQL} & \rotatebox[origin=c]{90}{Pgpool-II (PostgreSQL)} \\
+    \multicolumn{2}{l}{Persistentie} & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
+    \multicolumn{2}{l}{Replicatie} & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
+    \multicolumn{2}{l}{Data distributie} & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
+    Query soort      & Aanpassen & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
+    ~                & Range     & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
+    \end{tabular}
+    \caption{Ondersteuning van de besproken DBMS naar de selectie criteria}
+\end{table}
+\subsection{Vergelijking van de DBMS}
+% A table for each category
+
+\subsection{Architectuur geselecteerde DBMS}
+\subsubsection{HBase}
+\subsubsection{MongoDB}
+\subsubsection{Pgpool-II (PostgreSQL)}
+
+\section{Selectie en uitwerking van de testsoftware}
+
+
+\section{Installatie van de DBMS en testsoftware}
+
+%Uitleggen van gebruik van YCSB
+\subsection{Automatische installatie met IMP}
+
+\subsubsection{YCSB!}
+\subsubsection{HBase}
+\subsubsection{MongoDB}
+\subsubsection{Pgpool-II (PostgreSQL)}
+
+\section{Uitvoeren van de calibratie en testen}
+
+\section{Verzamelen en analyse van de testresultaten}

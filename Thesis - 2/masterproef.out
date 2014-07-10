@@ -10,13 +10,18 @@
 \BOOKMARK [1][-]{section.2.4}{Objectieve vergelijking van de verschillende systemen}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.5}{Conclusie}{chapter.2}% 11
 \BOOKMARK [0][-]{chapter.3}{Methodiek van de testen}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Algemeen overzicht van de methodiek}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Vereisten van de systemen}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Implementatie}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Doelstelling}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Gebruik IMP}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.3}{Gebruik YCSB}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Observaties}{}% 19
-\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 20
-\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 21
-\BOOKMARK [0][-]{section*.75}{Bibliografie}{}% 22
+\BOOKMARK [1][-]{section.3.1}{Stap 1: Opstellen van de testomgeving}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Stap 2: Calibratie van de testomgeving}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Stap 3: Testen van de systemen}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Stap 4: Verzamelen en analyseren van de testdata}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.5}{Conclusie}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Implementatie}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Selectie van de DBMS}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Selectie en uitwerking van de testsoftware}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Installatie van de DBMS en testsoftware}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Uitvoeren van de calibratie en testen}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{Verzamelen en analyse van de testresultaten}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Observaties}{}% 24
+\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 25
+\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 26
+\BOOKMARK [0][-]{section*.90}{Bibliografie}{}% 27
