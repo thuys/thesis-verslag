@@ -20,7 +20,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{L"yst van figuren en tabellen}{vi}{chapter*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Lijst van afkortingen en symbolen}{vii}{chapter*.9}
+\contentsline {chapter}{Lijst van afkortingen en symbolen}{viii}{chapter*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Inleiding}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -228,27 +228,35 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Consistentie testen}{33}{section*.105}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}IMP: Installatie van de DBMS's en testsoftware}{33}{section.4.4}
+\contentsline {section}{\numberline {4.4}Installatie en opstelling van de DBMS's en YCSB}{33}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{YCSB!}{34}{section*.109}
+\contentsline {paragraph}{HBase}{34}{section*.111}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{HBase}{34}{section*.110}
+\contentsline {paragraph}{Pgpool-II}{34}{section*.112}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{MongoDB}{34}{section*.111}
+\contentsline {paragraph}{MongoDB}{34}{section*.113}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pgpool-II (PostgreSQL)}{34}{section*.112}
+\contentsline {paragraph}{YCSB!}{35}{section*.115}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Uitvoeren van de calibratie en testen}{34}{section.4.5}
+\contentsline {section}{\numberline {4.5}Uitvoeren van de calibratie en testen}{35}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Verzamelen en analyse van de testresultaten}{34}{section.4.6}
+\contentsline {paragraph}{Calibratie testen}{35}{section*.118}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Observaties}{35}{chapter.5}
+\contentsline {paragraph}{Beschikbaarheidstesten}{36}{section*.122}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{37}{chapter.6}
+\contentsline {paragraph}{Consistentietesten}{37}{section*.127}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusie}{39}{chapter.7}
+\contentsline {section}{\numberline {4.6}Verzamelen en analyse van de testresultaten}{37}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{44}{section*.115}
+\contentsline {chapter}{\chapternumberline {5}Observaties}{39}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{41}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Conclusie}{43}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {appendix}{\chapternumberline {A}Uitwerking IMP}{47}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{50}{section*.130}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

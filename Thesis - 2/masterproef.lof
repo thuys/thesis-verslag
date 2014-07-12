@@ -48,6 +48,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{31}{figure.caption.103}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Deployment van de verschillende \glspl {DBMS} en de testomgeving.\relax }}{35}{figure.caption.116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 6 instanties. }}}{35}{figure.caption.116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{35}{figure.caption.116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 5 instanties. }}}{35}{figure.caption.116}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{35}{figure.caption.116}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}

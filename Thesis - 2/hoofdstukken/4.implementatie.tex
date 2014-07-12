@@ -110,7 +110,7 @@ Een Pgpool-II infrastructuur bestaat uit 2 delen, een data niveau en een routing
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.5\linewidth]{img/Pgpool-structuur.png}
+\includegraphics[width=0.5\linewidth]{img/Pgpool-structuur}
 \caption{Systeemarchitectuur van Pgpool-II.}
 \label{fig:Pgpool-structure}
 \end{figure}
@@ -195,16 +195,124 @@ Exit code & Integer
 
 De code van deze testen is beschikbaar op GitHub in \url{https://github.com/thuys/ycsb} en te gebruiken onder Apache 2.0 licentie. \todo{Check}
 
-\section{IMP: Installatie van de DBMS's en YCSB}
-Voor de installatie van de verschillende systemen, is gekozen om te automatiseren met Integrated configuration Management Platform (\gls{IMP}) beschreven in \cite{KULeuven-453199}. Met behulp 
+\section{Installatie en opstelling van de DBMS's en YCSB}
+Het uitvoeren van de testen vereist het opstellen van het volledige systeem en configuratie van de verschillende \glspl{DBMS}. Voor het uitvoeren van de verschillende testen is het slechts nodig om het systeem een enkele keer op te zetten. Maar om de testen eenvoudiger te kunnen uitvoeren op verschillende infrastructuren en andere de resultaten te laten controleren, is de installatie en configuratie van het systeem geautomatiseerd. 
 
-\subsubsection{YCSB!}
-\subsubsection{HBase}
-\subsubsection{MongoDB}
-\subsubsection{Pgpool-II (PostgreSQL)}
+De automatisatie gebeurt met het Integrated configuration Management Platform (\gls{IMP}) beschreven in \cite{KULeuven-453199}. Dit modulair framework is uitgebreid met de 3 \glspl{DBMS} en YCSB! waardoor de configuratie als een declaratief gewenste staat wordt uitgedrukt. \gls{IMP} zal deze staat toepassen op de verschillende systemen bij het uitrollen. 
+
+Een uitgebreidere bespreking van de uitwerking in IMP kan gevonden worden in appendix \ref{app:IMP}. 
+
+Voor de uitvoering van de testen, is er voor elk \gls{DBMS} gekozen voor een minimaal aantal instantie die datadistributie én replicatie ondersteunt, voor de laatste eigenschap zou de data beschikbaar moeten zijn bij het uitvallen van 1 server. In de testen is er enkel gefocust op het uitvallen van dataservers, niet naar configuratieservers. Om deze reden zijn minimaal opgezet. 
+
+De opstelling van de systemen is getoond in figuur \ref{fig:deployment-testomgeving}, elk van de systemen zal in meer detail besproken worden. Elk van de systemen wordt opgesteld op een machine waarvan er verschillende configuraties mogelijk zijn, voor een overzicht, zie tabel \ref{table:systeemconfiguraties}. 
+\todo{Uitleggen wat Ephemeral Disk is}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l| l l l l}
+	\textbf{Naam} & \textbf{Processor(s)} & \textbf{RAM} & \textbf{Harde schijf} & \textbf{Extra} \\
+	\hline
+	Normal.fs & 2 & 2GB &  10 GB & 30GB Ephemeral Disk \\ 
+	Large & 2 & 4GB &  10 GB & \\
+	Large.fs & 2 & 4GB &  10 GB & 50GB Ephemeral Disk\\
+	\end{tabular}
+	\caption{Overzicht mogelijke systeemconfiguraties}
+	\label{table:systeemconfiguraties}
+\end{table}
+
+\paragraph{HBase} Voor HBase wordt de data standaard 3 maal gerepliceerd en zijn er voor datadistributie dus 4 data instanties nodig die elk een HBaseRegionServer en Hadoop datanode zijn. Verder is er nog de nood aan een HMaster (1 instantie), Zookeeper en Hadoop namenode (1 instantie). Dit brengt het totaal op 6 instanties. Een overzicht is getoond in figuur \ref{fig:HBase-deployment}. 
+
+\paragraph{Pgpool-II} Bij Pgpool-II is er ondersteuning voor horizontale schaalbaarheid in de parallel mode maar dit is niet getest. Om deze reden is er enkel replicatie toegepast waarvoor er 3 instanties zijn: een Pgpool-II instantie en twee PostgreSQL instanties. Een overzicht is getoond in figuur \ref{fig:pgpool-deployment}. 
+
+\paragraph{MongoDB} MongoDB heeft ondersteuning in replicatie en datadistributie. Voor het beschikbaar zijn van de data bij het uitzetten van een enkele instantie, zijn er 3 MongoDB datanodes nodig in een replicaset. De data wordt verdeeld over 2 replicaset met behulp van sharding. Omdat de toegangsserver en configuratie instanties niet veel resources innemen, zijn deze verspreid over de verschillende data instanties. Om deze reden zijn er in totaal 6 instanties nodig. Deze zijn beschreven in \ref{fig:MongoDB-deployment}. \todo{Check dat het er 6 zijn!}
+
+\paragraph{YCSB!} YCSB! kan naar meerdere instanties uitgerold worden. Bij de calibratietesten zullen er 2 instanties gebruikt worden, maar er zal blijken dat dit niet een limiterende factor is. Voor het uitvoeren van de eigenlijke testen, zal er gebruik gemaakt worden van een enkele YCSB! instantie, namelijk VM-1.  Een overzicht is getoond in figuur \ref{fig:YCSB-deployment}. 
+
+\begin{figure}[h!]
+\centering
+\subfigure[Deployment van HBase met 6 instanties. ]{\label{fig:HBase-deployment}\includegraphics[width=0.55\textwidth]{img/HBase-deployment}}
+\subfigure[Deployment van Pgpool-II met 3 instanties. ]{\label{fig:pgpool-deployment}\includegraphics[width=0.35\textwidth]{img/Pgpool-II-deployment}}
+\subfigure[Deployment van MongoDB met 5 instanties. ]{\label{fig:MongoDB-deployment}\includegraphics[width=0.65\textwidth]{img/MongoDB-deployment}}
+\subfigure[Deployment van de testomgeving met 2 YCSB instanties. ]{\label{fig:YCSB-deployment}\includegraphics[width=0.25\textwidth]{img/YCSB-deployment}}
+\caption{Deployment van de verschillende \glspl{DBMS} en de testomgeving.}\label{fig:deployment-testomgeving}
+\end{figure}
+
 
 \section{Uitvoeren van de calibratie en testen}
+Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de type queries gespecificeerd worden, deze zijn voor alle verschillende systemen gelijk. Een overzicht van deze parameters kunnen gevonden worden in tabel \ref{table:calibratiequeries}. \todo{Verklaring toevoegen} 
 
+\paragraph{Calibratie testen} Voor de calibratie van de omgeving zijn er 2 soorten testen gedraaid, de parameters voor het aantal connecties kunnen gevonden worden in tabel \ref{table:calibratiegebruikers}. De parameters voor het aantal queries per second zijn te vinden in tabel \ref{table:calibratiequeriesperseconde}, in dit geval is het aantal gebruikers afhankelijk van de vorige test. 
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l| l }
+	\textbf{Naam} & \textbf{Waarde} \\
+	\hline
+	Aantal velden & 10 (1 key veld) \\
+	Record grootte & 1KB (100byte/veld) \\
+	Lees alle velden & true \\
+	Invoeg queries (\textit{insert}) & 20\%\\
+	Lees queries (\textit{select}) & 40\%\\
+	Aanpas queries (\textit{update}) & 20\%\\
+	Range queries (\textit{scan}) & 20\%\\
+	Opvraag verdeling & zipfian (\textit{bepaalde records worden} \\
+	& \textit{veel gelezen, andere weinig}) \\
+	Maximale range grootte & 100 \\
+	Verdeling range grootte & uniform \\
+	\end{tabular}
+	\caption{Overzicht van de query parameters}
+	\label{table:calibratiequeries}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l| l}
+	\textbf{Naam} & \textbf{Waarde}  \\
+	\hline
+	Ingeladen records  & 300 000 \\
+	Pauze & 50s \\
+	Executie tijd & 600s \\
+	Aantal gebruikers & 1, 2, 3, 4, 5, 7, 10, 15, \\
+	& 20, 30, 40, 50, 75, 100\\
+	\end{tabular}
+	\caption{Calibratie: Overzicht van de parameters voor het testen van het aantal gebruikers}
+	\label{table:calibratiegebruikers}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l| l l }
+		\textbf{Naam} & \multicolumn{2}{c}{\textbf{Waarde}}  \\
+		
+		& \textbf{HBase en MongoDB} & \textbf{Pgpool-II} \\
+		\hline
+		Ingeladen records  & 300 000 & 300 000 \\
+		Pauze & 50s & 50s \\
+		Executie tijd & 600s & 600s\\
+		Theoretisch aantal records  & 50, 100, 200, 300,   & 20, 50, 100, 150,   \\
+		per seconde & 400, 500, 600, 700, & 200, 250, 300, 400,  \\
+		& 800, 900, 1000, 1500,  & 500, 600, 700, 800,  \\
+		& 2000, 3000, 4000 &  900, 1000 \\
+	\end{tabular}
+	\caption{Calibratie: Overzicht van de parameters voor het testen van het aantal records per seconde}
+	\label{table:calibratiequeriesperseconde}
+\end{table}
+
+\paragraph{Beschikbaarheidstesten} Bij het uitvoeren van de testen op beschikbaarheid van de verschillende systemen zijn de parameters in tabel \ref{table:beschikbaarheidstesten-parameters} gebruikt. De commando's voor het stoppen en starten van de systemen zijn te vinden in tabel \ref{table:beschikbaarheidstesten-commandos}.  Voor Pgpool-II is er een extra commando toegevoegd dat na het herstarten van de systemen wordt uitgevoerd, dit komt omdat er geen automatische recovery in Pgpool-II is. Tenslotte worden deze testen uitgevoerd op al de datanodes, een overzicht hiervan met de overeenkomstige service is te vinden in tabel \ref{table:beschikbaarheidstesten-nodes}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l| l }
+		\textbf{Naam} & \textbf{Waarde}  \\
+		\hline
+		Ingeladen records  & 300 000 \\
+		Pauze & 50s \\
+		Executie tijd & 900s \\
+		Stoppen & Op 300s \\
+		Starten & Op 600s \\
+	\end{tabular}
+	\caption{Beschikbaarheidstesten: Overzicht van de parameters}
+	\label{table:beschikbaarheidstesten-parameters}
+\end{table}
 \begin{table}[t]
 	\centering
 		\begin{tabular}{l|l}
@@ -228,8 +336,49 @@ Voor de installatie van de verschillende systemen, is gekozen om te automatisere
 			Pgpool-II & /usr/local/bin/pcp\_recovery\_node -d 10 \{\{pgpool host\}\} \{\{port\}\} \\
 			\hspace*{0.5cm} (Online recovery) &  \hspace*{0.5cm} \{\{gebruikersnaam\}\} \{\{wachtwoord\}\}  \{\{node nummer\}\} \\
 		\end{tabular} 
-	\captionof{table}{Commando's voor het stoppen en starten in de verschillende modes van de beschikbaarheidstesten. }
-	\label{table:beschikbaarheidcommandos}
+	\captionof{table}{Beschikbaarheidstesten: Overzicht van de commando's voor het stoppen en starten in de verschillende modes. }
+	\label{table:beschikbaarheidstesten-commandos}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l| l l }
+		\textbf{Naam} & \textbf{Instanties} & \textbf{Service naam} \\
+		\hline
+		\multirow{2}{*}{HBase}  & \multirow{2}{*}{HB3, HB4, HB5, HB6} & hbase-regionserver \\
+		& & hadoop-hdfs-datanode \\
+		\multirow{2}{*}{MongoDB}  & MDB1, MDB2, MDB3, & \multirow{2}{*}{mongodb-dataserver}\\
+		& MDB4, MDB5, MDB6 & \\
+		Pgpool-II  & PG1, PG2 & postgresql \\
+	\end{tabular}
+	\caption{Beschikbaarheidstesten: Overzicht van de instanties naar figuur \ref{fig:deployment-testomgeving}}
+	\label{table:beschikbaarheidstesten-nodes}
+\end{table}\todo{Check of het er nu echt 6 zijn}
+
+\paragraph{Consistentie testen} Voor de consistentie testen moeten de parameters van tabel \ref{table:consistentieinput} geconfigureerd worden, de parameters zijn te vinden in tabel \ref{table:consistentie-testen-parameters}. Deze test wordt uitgevoerd op HBase en MongoDB, om de analyse van de gegevens eenvoudiger te maken is er bij MongoDB gekozen om de test enkel uit te voeren op een replicaset en niet op een volledige cluster. Er is een aanname gedaan dat het consistentie venster bepaald is door de tijd dat het duurt dat de gegevens beschikbaar zijn op al de verschillende instanties van een replicaset, het testen van een cluster voegt zo extra complexiteit toe. Deze test zou in de toekomst ook uitgevoerd kunnen worden op een cluster maar is in dit geval niet gedaan.  
+
+\begin{table}[t]
+	\centering
+		\begin{tabular}{l|l}
+			\textbf{Naam} & \textbf{Waarde} \\ \hline
+			Ingeladen records  & 300 000 \\
+			Pauze & 50s \\
+			Executie tijd & 900s \\	
+			starttime & 10s \\
+			readThreads & 30 \\ 
+			consistencyDelayMillis & 60ms \\ 
+			newrequestperiodMillis & 500ms \\ 
+			readProportionConsistencyCheck & 50\% \\ 
+			updateProportionConsistencyCheck & 50\% \\ 
+			stopOnFirstConsistency & True \\ 
+			maxDelayConsistencyBeforeDropInMicros & 300ms \\ 
+			timeoutConsistencyBeforeDropInMicro & 300ms \\
+		\end{tabular} 
+	\captionof{table}{Consistentie testen: Overzicht van de parameters}
+	\label{table:consistentie-testen-parameters}
 \end{table}
 
 \section{Verzamelen en analyse van de testresultaten}
+\todo{Te schrijven}
+
+
