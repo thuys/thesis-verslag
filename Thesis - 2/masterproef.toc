@@ -16,11 +16,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Voorwoord}{i}{chapter*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Samenvatting}{v}{chapter*.4}
+\contentsline {chapter}{Samenvatting}{vi}{chapter*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{L"yst van figuren en tabellen}{vi}{chapter*.6}
+\contentsline {chapter}{L"yst van figuren en tabellen}{vii}{chapter*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Lijst van afkortingen en symbolen}{viii}{chapter*.9}
+\contentsline {chapter}{Lijst van afkortingen en symbolen}{ix}{chapter*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Inleiding}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -244,19 +244,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Beschikbaarheidstesten}{36}{section*.122}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Consistentietesten}{37}{section*.127}
+\contentsline {paragraph}{Consistentie testen}{37}{section*.127}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Verzamelen en analyse van de testresultaten}{37}{section.4.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {5}Observaties}{39}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{41}{chapter.6}
+\contentsline {section}{\numberline {5.1}Calibratie}{39}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusie}{43}{chapter.7}
+\contentsline {section}{\numberline {5.2}Testdata}{39}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {A}Uitwerking IMP}{47}{appendix.A}
+\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{45}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{50}{section*.130}
+\contentsline {chapter}{\chapternumberline {7}Conclusie}{47}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {appendix}{\chapternumberline {A}Uitwerking IMP}{51}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{54}{section*.139}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 
