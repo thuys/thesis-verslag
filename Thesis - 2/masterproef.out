@@ -5,9 +5,9 @@
 \BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 5
 \BOOKMARK [0][-]{chapter.2}{Overzicht van de technologie}{}% 6
 \BOOKMARK [1][-]{section.2.1}{Geschiedenis van de databasemanagementsystemen}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Relationele en NoSQL databases}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{Bespreking van verschillende DBMS}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.4}{Objectieve vergelijking van de verschillende systemen}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Relationele en NoSQL DBMS's}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Bespreking van verschillende DBMS's}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Objectieve vergelijking van de verschillende systemen volgens CAP}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.5}{Conclusie}{chapter.2}% 11
 \BOOKMARK [0][-]{chapter.3}{Methodiek van de testen}{}% 12
 \BOOKMARK [1][-]{section.3.1}{Stap 1: Opstellen van de testomgeving}{chapter.3}% 13
@@ -24,8 +24,12 @@
 \BOOKMARK [1][-]{section.4.6}{Verzamelen en analyse van de testresultaten}{chapter.4}% 24
 \BOOKMARK [0][-]{chapter.5}{Observaties}{}% 25
 \BOOKMARK [1][-]{section.5.1}{Calibratie}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Testdata}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 28
-\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 29
-\BOOKMARK [0][-]{appendix.A}{Uitwerking IMP}{}% 30
-\BOOKMARK [0][-]{section*.139}{Bibliografie}{}% 31
+\BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Consistentie test}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Calibratie}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.2}{Beschikbaarheidstest}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.3}{Consistentie test}{chapter.6}% 32
+\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 33
+\BOOKMARK [0][-]{appendix.A}{Uitwerking IMP}{}% 34
+\BOOKMARK [0][-]{section*.155}{Bibliografie}{}% 35

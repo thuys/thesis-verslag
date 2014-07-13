@@ -1,1 +1,97 @@
 \chapter{Analyse van de resultaten}
+
+\section{Calibratie}
+Over de calibratie testen valt in het algemeen niet veel af te leiden, deze testen zijn niet uitgevoerd op een volledig dezelfde infrastructuur zo heeft Pgpool-II slechts 3 instanties t.o.v. 6 voor HBase. Wel is er een interessante observatie bij het aantal queries per seconde.  
+
+\paragraph{Aantal queries per second} Bij verdere analyse van de testresultaten van het aantal queries per seconde, blijkt dat elk van testen afvlakt door de beperkte netwerk bandbreedte, 100MB/s volgens iftop\footnote{Een bandbreedte monitoring tool}, en niet door een beperking van schrijftoegang of CPU. 
+
+Een berekening van de gemiddelde kost per query zoals getoond in tabel \ref{table:calibratie-analyse-netwerk}, kan deze afvlakking niet onmiddellijk verklaren. Met 2000 queries per seconde voor HBase, wordt er slecht 20MB/s aan data over het werk verstuurd. Maar in deze analyse is er enkel rekening gehouden met de data, noch met het resultaat van een query, noch met overhead van HBase en het netwerk protocol. 
+
+\todo{Check}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|l l}
+	\textbf{Soort}  & \textbf{Uitgaand verkeer} & \textbf{Inkomend verkeer} \\ \hline
+	Invoeg queries (20\%) & 200 byte  & \\
+	Lees queries (40\%) & & 400 byte\\
+	Aanpas queries (20\%) & 200 byte & \\
+	Range queries (20\%) & & 10 000 byte\\ \hline
+	Totaal & 400 byte & 10 400 byte \\
+\end{tabular}
+\caption{Gemiddeld netwerk verkeer per query enkel voor het overbrengen van data}\label{table:calibratie-analyse-netwerk}
+\end{table}
+
+\section{Beschikbaarheidstest}
+Bij de beschikbaarheidstesten lijkt er uit de resultaten dat de verschillende systemen een andere aanpak hebben genomen. Deze zullen nu verder in detail besproken worden. Belangrijk  is dat er hier verschillende queries uitgevoerd worden, waardoor er data van de verschillende datadistributies gelezen zal worden. 
+
+\paragraph{HBase} Bij HBase heeft een bepaalde RegionServer de verantwoordelijkheid over een Regio voor een bepaalde tijd. Dit is een sessie dit door HMaster uitgedeeld wordt en bijgehouden wordt in Zookeeper. Deze sessie kan vroegtijdig beëindigd worden of er moet gewacht worden tot deze verlopen is, enkel op dat moment kan er een nieuwe RegionServer aangeduid worden. Dit zorgt voor een duidelijk verschil tussen een zachte stop, een harde stop of netwerk probleem. 
+
+De duur van een sessie kan geconfigureerd worden in Zookeeper met behulp \textit{tickTime} \todo{updten}
+
+\subparagraph{HBase: Zachte stop} Bij een zachte stop, is er slechts af en toe sprake dat dit merkbaar is, de verklaring hiervoor is dat dit enkel wordt opgemerkt als de RegionServer die op dat moment verantwoordelijke is voor de Region wordt stopgezet. \\
+Indien deze RegionServer wordt stopgezet, is er geen onderbreking in de queries maar nemen deze tijdelijk meer tijd in beslag, tot 600ms in plaats van gemiddeld genomen rond de 10ms.  Het terug online brengen van de server heeft geen invloed op de snelheid een query wordt uitgevoerd . Na het stopzetten van de RegionServer is er een verhoogde vertraging in beide leesoperaties (range en lees). \\
+Zodra er een herverdeling is van de Regions over de aanwezige Regionservers, verdwijnt deze verhoogde vertraging. Wel heeft dit als gevolg dat er tijdelijk opnieuw een verhoogde vertraging is gelijkend aan deze bij het zacht uitschakelen van een instantie, zoals te zien rond tijdstip 500. 
+
+\subparagraph{HBase: Harde stop} Bij een harde stop, is er opnieuw slechts in enkele gevallen sprake dat dit merkbaar is. Dit heeft ook hier te maken dat dit enkel wordt opgemerkt als de stopgezette RegionServer verantwoordelijk is voor een Region. \\
+Op dat moment worden alle queries stopgezet tot de sessie van de RegionServer op die Region verlopen is en een nieuwe RegionServer is gekozen. 
+
+\subparagraph{Hadoop: Zachte stop} Bij het zacht stoppen van een Hadoop Datanode, is er tijdelijk een hogere vertraging in een query, van 10ms tot meer dan 100ms. Dit effect neemt binnen de seconde terug af waarna er geen effect meer zichtbaar is op de vertraging van de queries. Dit wordt veroorzaakt omdat bij het wegschrijven dit wordt geregistreerd en er een andere datanode moet gevonden worden. 
+
+\subparagraph{Hadoop: Harde stop} Het effect is gelijk aan deze van een zachte stop, het wegschrijven naar de een datanode lukt niet en er wordt dus een andere gezocht. 
+
+\subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking, worden de queries tijdelijk stopgezet en in veel gevallen is er zelfs sprake van 2 keer een onderbreking. Deze onderbreking kan lange tijd duren en is opnieuw afhankelijk van Zookeeper. 
+
+\paragraph{MongoDB} Bij MongoDB is er tussen de leden van een Replicaset een heartbeat protocol. Indien er gedurende 10 seconden geen antwoord op een een heartbeat komt, wordt een server als offline bestempelt. Dit heeft opnieuw zijn invloed op de verschillende soorten stopzetten. 
+
+Bij MongoDB is het zo dat de vertraging zeer onregelmatig is, dit heeft te maken met het gebruik van locking in MongoDB. Bij het parallel uitvoeren van verschillende lees- en schrijfacties, worden er locks gelegd op de volledige database. Door een reeks van lees queries, kunnen de schrijfacties tijdelijk uitgesteld worden, wat voor een grotere vertraging zorgt. \cite{mongodb-concurrency}. 
+
+\subparagraph{Zachte stop} Bij een zachte stop is er een kans van 1 op 3 dat het uitvallen van een instantie zichtbaar is, dit is te verklaren doordat enkel het uitschakelen van de primary een invloed zal hebben op de vertraging \todo{vertraing toevoegen}, in de standaard modus werd er enkel gelezen naar en geschreven van de primary. Nadien is er geen invloed bij de verschillende queries naar de vertraging. 
+
+\subparagraph{Harde stop} Bij een harde stop is er een kans van 1 op 3 dat het uitvallen van een instantie zichtbaar is, net zoals bij een zachte stop. \todo{vertraing toevoegen}
+
+\subparagraph{Netwerk onderbreking}\subparagraph{Check met data}
+
+\paragraph{Pgpool-II} Bij Pgpool-II wordt er bij het hebben van een connectie naar Pgpool-II, de connecties naar de verschillende PostgreSQL instanties gecontroleerd. Bij het uitvallen van een instantie en opnieuw opstarten terwijl er geen gebruiker verbonden is met Pgpool-II, zal dit niet opgemerkt worden. Daarnaast zijn er wel verschillende interactie reacties op de verschillende problemen. 
+
+Een vereiste bij het herstellen van een instantie is dat er op dat moment geen enkele gebruiker actief is. 
+
+\subparagraph{Zachte stop} Bij een zachte stop van een data instantie worden alle verbinden met Pgpool-II verbroken, nadien kan er terug verbonden worden met Pgpool-II. In deze omgeving gaan nadien de verschillende schrijfoperaties sneller omdat deze niet meer gerepliceerd moeten worden, bij een grote hoeveelheid data instanties zal dit effect kleiner worden. Zodra de recovery gestart wordt, zal deze eerst op de huidige master de data verzamelen en vervolgens dit doorsturen naar de te herstellen database. Om ervoor te zorgen dat de te herstellen database dezelfde data heeft, wordt er hiervoor gewacht op een moment dat er geen connecties zijn. In de testen blijven er gebruikers actief waardoor het herstel niet lukt. Wel is effect van de poging tot herstel zichtbaar op de belasting van het systeem na tijdstip 600. 
+
+\subparagraph{Harde stop} Een harde stop reageert hetzelfde als een zachte stop, dit omdat ook in deze wijze de verbindingen worden gebroken. 
+
+\subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking is er een ander gedrag, de queries wachten op een antwoord maar krijgen dit niet. Hierdoor wordt er gewacht op de time-out die hier \todo{}
+
+\paragraph{Conclusie} Hoewel er verschillende reacties zijn tussen HBase en MongoDB, ligt de interne werking vrij dicht bij elkaar, de status wordt beide opgevolgd. Bij MongoDB gebeurt dit wel door de data instanties zelf en kan de parameter niet aangepast worden. Bij HBase is er een extern systeem voor gebruikt waarbij de parameter geconfigureerd worden. Pgpool-II heeft een heel ander systeem door enkel de instanties te controleren op het moment dat er een verbinding is. 
+Daarnaast ondersteunt Pgpool-II ook niet de automatische herstel en komt de handmatige herstel niet tot voltooiing onder constant gebruik, hiervoor zijn beide andere systemen automatischer. 
+
+\section{Consistentie test}
+\paragraph{HBase} HBase garandeert strikte consistentie op een enkel record en hoe deze garantie tot uitvoering wordt gebracht, is duidelijk zichtbaar. Een lees query wordt namelijk op wacht gezet tot de schrijf query voltooid is. In figuur \ref{fig:consistency-hbase-uitleg} wordt het lees- en schrijfmodel van HBase uitgelegd naar Lars Hofhansl\cite{hbase-acid}. Samen met het gebruik van sessies voor een bepaalde Region, is het eenvoudig om de locking te doen. 
+
+In enkele gevallen zal de oude waarde nog gelezen worden, op dit moment wordt het oude leespunt dus gelezen en is de data nog niet beschikbaar. 
+
+\begin{figure}[h!]
+	\begin{minipage}{0.5\textwidth} 
+	\textbf{Schrijven}
+	\begin{enumerate}
+	\item Lock de rij(en), om te beschermen tegen concurrente schrijfacties. 
+	\item Haal het huidige schrijfnummer op
+	\item Voeg aanpassingen toe aan WAL (Write Ahead Log)
+	\item Pas aanpassing toe op de Memstore (cache geheugen)
+	\item Commit de transactie, m.a.w. zet het leespunt op het nieuwe schrijfnummer
+	\item Unlock de rijen
+	\end{enumerate}
+	\end{minipage} \hfill
+	\begin{minipage}{0.3\textwidth} 
+	\textbf{Lezen}
+	\begin{enumerate}
+	\item Open de lezer
+	\item Ga naar het huidige leespunt
+	\item Filter al de KeyValues paren met schrijfnummer > leespunt
+	\item Sluit de lezer
+	\end{enumerate}
+	\end{minipage}
+	\caption{HBase: Het vereenvoudigde lees- en schrijfmodel voor strikte consistentie in HBase naar Lars Hofhansl\cite{hbase-acid}}\label{fig:consistency-hbase-uitleg}
+\end{figure}
+
+\paragraph{MongoDB} MongoDB biedt strikte consistentie aan als er van de primary gelezen wordt. Maar er zijn ook andere schrijf methodes zoals voordien besproken. 

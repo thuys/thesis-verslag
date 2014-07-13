@@ -103,6 +103,38 @@
   \field{year}{2007}
 \endentry
 
+\entry{Brewer:2000:TRD:343477.343502}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Brewer}{B.}%
+     {Eric~A.}{E.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{BEA1}
+  \strng{fullhash}{BEA1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the Nineteenth Annual ACM Symposium on
+  Principles of Distributed Computing}
+  \verb{doi}
+  \verb 10.1145/343477.343502
+  \endverb
+  \field{isbn}{1-58113-183-6}
+  \field{pages}{7\bibrangedash }
+  \field{series}{PODC '00}
+  \field{title}{Towards Robust Distributed Systems (Abstract)}
+  \verb{url}
+  \verb http://doi.acm.org/10.1145/343477.343502
+  \endverb
+  \list{location}{1}{%
+    {Portland, Oregon, USA}%
+  }
+  \field{year}{2000}
+\endentry
+
 \entry{burrows2006chubby}{inproceedings}{}
   \name{author}{1}{}{%
     {{}%
@@ -449,6 +481,28 @@
   \field{year}{2007}
 \endentry
 
+\entry{hbase-acid}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hofhansl}{H.}%
+     {Lars}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HL1}
+  \strng{fullhash}{HL1}
+  \field{sortinit}{H}
+  \field{title}{HBase: Acid in HBase}
+  \verb{url}
+  \verb http://hadoop-hbase.blogspot.be/2012/03/acid-in-hbase.html
+  \endverb
+  \field{year}{2012}
+  \field{urlday}{10}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+  \warn{\item Invalid format of field 'month'}
+\endentry
+
 \entry{huggkey}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -623,6 +677,17 @@
   \field{year}{2003}
 \endentry
 
+\entry{mongodb-concurrency}{online}{}
+  \field{sortinit}{M}
+  \field{title}{MongoDB Concurrency}
+  \verb{url}
+  \verb http://docs.mongodb.org/manual/faq/concurrency/
+  \endverb
+  \field{urlday}{10}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
 \entry{mongodb-manual}{online}{}
   \field{sortinit}{M}
   \field{title}{MongoDB Manual}
@@ -719,7 +784,7 @@
 
 \entry{pgpool-doc}{online}{}
   \field{sortinit}{P}
-  \field{title}{Pgpool-III: User manuel}
+  \field{title}{Pgpool-II: User manuel}
   \verb{url}
   \verb http://www.pgpool.net/docs/latest/pgpool-en.html
   \endverb

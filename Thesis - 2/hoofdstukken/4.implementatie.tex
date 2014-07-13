@@ -2,10 +2,10 @@
 
 \section{Selectie van de DBMS's}
 
-\subsection{Selectiecriteria voor \glspl{DBMS}}
+\subsection{Selectiecriteria voor DBMS's}
 Bij de selectie van de systemen of een systeem een bepaalde eigenschap al dan niet ondersteunt. In het totaal zijn er 5 verschillende eigenschappen waarop wordt geselecteerd. 
 
-\paragraph{Vrije software} Om testen tussen verschillende \glspl{DBMS} te kunnen vergelijken op een gelijkaardige infrastructuur, is het nodig dat deze software kan geïnstalleerd worden op de eigen infrastructuur. Daarnaast is er in dit onderzoek gekozen voor gratis beschikbare software. 
+\paragraph{Vrije software} Om testen tussen verschillende DBMS's te kunnen vergelijken op een gelijkaardige infrastructuur, is het nodig dat deze software kan geïnstalleerd worden op de eigen infrastructuur. Daarnaast is er in dit onderzoek gekozen voor gratis beschikbare software. 
 
 \paragraph{Persistentie} Voor het testen van de beschikbaarheid van de data, is het een voordeel dat de data op harde schijf aanwezig is: bij herstel dient er minder data over het netwerk gestuurd te worden. Om deze reden hebben deze systemen een voorkeur op systemen die de data enkel in geheugen houden. 
 
@@ -13,7 +13,7 @@ Bij de selectie van de systemen of een systeem een bepaalde eigenschap al dan ni
 
 \paragraph{Data distributie} Het is de bedoeling om systemen te testen die een grote hoeveelheid data kunnen opslaan. Om aan deze vereiste te voldoen, is het nodig dat elke server niet al de data opslaat bij een voldoende hoog aantal servers (bij weinig servers, is elke server nodig om aan de replicatie vereiste te voldoen)
 
-\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en opvragen van een individueel record en het opvragen van meerdere queries. De \gls{DBMS} moet ondersteuning voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries is in bepaalde systemen niet mogelijk en deze worden om deze reden niet behandeld. 
+\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en opvragen van een individueel record en het opvragen van meerdere queries. De DBMS moet ondersteuning voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries is in bepaalde systemen niet mogelijk en deze worden om deze reden niet behandeld. 
 
 Voor elk van de systemen besproken in sectie \ref{sec:BesprekingDBMS}, is het eerste criterium voldaan voor al deze systemen. De overige 4 criteria zijn samengevat in tabel \ref{table:vergelijkingNosql}. Naast de 4 criteria, is er gekozen om systemen van verschillende klassen te hebben met uitzondering van Key-Value. Samen met mijn collega Arnaud Schoonjans \cite{thesisArnaud}, zijn er in verschillende systemen verder onderzocht. In deze thesis zijn  HBase, MongoDB en Pgpool-II verder onderzocht, in de thesis van mijn collega zijn Cassandra, Apache CouchDB, Riak en MySQL verder onderzocht.  
  
@@ -28,13 +28,13 @@ Voor elk van de systemen besproken in sectie \ref{sec:BesprekingDBMS}, is het ee
     Query soort      & Aanpassen & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
     ~                & Range     & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
     \end{tabular}
-    \caption{Ondersteuning van de besproken \glspl{DBMS} naar de selectie criteria met de gekozen systemen geaccentueerd.}
+    \caption{Ondersteuning van de besproken DBMS's naar de selectie criteria met de gekozen systemen geaccentueerd.}
     \label{table:vergelijkingNosql}
 \end{table}
 
 
 \section{Gedetailleerde bespreking van de geselecteerde DBMS's}
-In dit gedeelte zal elk geselecteerd systemen in meer detail uitgelegd worden, met een focus op de systeem structuur. Een gemeenschappelijk element bij al deze systemen is dat niet alle noden dezelfde functie hebben, in andere \glspl{DBMS} hebben allen dezelfde taak wat de installatie kan vereenvoudigen. 
+In dit gedeelte zal elk geselecteerd systemen in meer detail uitgelegd worden, met een focus op de systeem structuur. Een gemeenschappelijk element bij al deze systemen is dat niet alle noden dezelfde functie hebben, in andere DBMS's hebben allen dezelfde taak wat de installatie kan vereenvoudigen. 
 
 Voor elk van de geselecteerde systemen zal de aangeboden API besproken worden met een blik op de datastructuur, daarna zal de systeem architectuur besproken worden. 
 
@@ -76,7 +76,7 @@ De data in MongoDB is opgeslagen in een database, die op zijn beurt een collecti
 Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het voltooien van de actie, startende met de actie is over het netwerk verstuurd, de primary heeft de data geschreven tot een meerderheid van de secundaries heeft de data weg geschreven. \\ Bij het lezen kan men kiezen om de data te lezen van de primary, secundary of de dichtstbijzijnde node. Afhankelijk van de gekozen acties, kan er verondersteld worden dat er een verschillende consistentie garantie zal zijn.
 
 \subsubsection{Architectuur}
-MongoDB is een \gls{DBMS} dat de vereisten van replicatie en data distributie op een gelaagde manier garandeert. In eerste instantie zal deze de replicatie vereisten invullen, daarna zal hierop horizontale schaalbaarheid ondersteund worden. 
+MongoDB is een DBMS dat de vereisten van replicatie en data distributie op een gelaagde manier garandeert. In eerste instantie zal deze de replicatie vereisten invullen, daarna zal hierop horizontale schaalbaarheid ondersteund worden. 
 
 \begin{figure}[h!] 
 \centering
@@ -122,7 +122,7 @@ Op routing niveau draait een Pgpool-II service die als management service dient,
 Pgpool-II kan ook in de parallel mode werken zodat er de mogelijkheid is tot horizontale schaalbaarheid, ook is er de mogelijkheid om caching aan te zetten en een integratie met Memcache is ondersteund. 
 
 \section{Selectie en uitwerking van de testsoftware}
-De testen zijn geïmplementeerd als een uitbreiding van YCSB\cite{cooper2010benchmarking} omwille van verschillende redenen. Allereerst is de broncode publiek beschikbaar onder Apache 2.0, daarnaast is dit een uitgebreid systeem voor het uitvoeren van performantie benchmarking aan de hand van de vertraging op \gls{DBMS}. Hierdoor heeft deze al een uitgebreide ondersteuning voor tal van systemen, waaronder al de gekozen systemen. Wel is deze ondersteuning zo veel mogelijk geoptimaliseerd voor de systemen zodat er maximaal gebruikt wordt van de functionaliteiten van het systeem, dit houdt in dat er bijvoorbeeld bij het opstellen van de range queries rekening gehouden wordt met het aantal records dat nodig is. 
+De testen zijn geïmplementeerd als een uitbreiding van YCSB\cite{cooper2010benchmarking} omwille van verschillende redenen. Allereerst is de broncode publiek beschikbaar onder Apache 2.0, daarnaast is dit een uitgebreid systeem voor het uitvoeren van performantie benchmarking aan de hand van de vertraging op DBMS. Hierdoor heeft deze al een uitgebreide ondersteuning voor tal van systemen, waaronder al de gekozen systemen. Wel is deze ondersteuning zo veel mogelijk geoptimaliseerd voor de systemen zodat er maximaal gebruikt wordt van de functionaliteiten van het systeem, dit houdt in dat er bijvoorbeeld bij het opstellen van de range queries rekening gehouden wordt met het aantal records dat nodig is. 
 
 De 2 testen, beschikbaarheidstest en consistentie test, worden op verschillende manieren geïmplementeerd. 
 
@@ -196,13 +196,13 @@ Exit code & Integer
 De code van deze testen is beschikbaar op GitHub in \url{https://github.com/thuys/ycsb} en te gebruiken onder Apache 2.0 licentie. \todo{Check}
 
 \section{Installatie en opstelling van de DBMS's en YCSB}
-Het uitvoeren van de testen vereist het opstellen van het volledige systeem en configuratie van de verschillende \glspl{DBMS}. Voor het uitvoeren van de verschillende testen is het slechts nodig om het systeem een enkele keer op te zetten. Maar om de testen eenvoudiger te kunnen uitvoeren op verschillende infrastructuren en andere de resultaten te laten controleren, is de installatie en configuratie van het systeem geautomatiseerd. 
+Het uitvoeren van de testen vereist het opstellen van het volledige systeem en configuratie van de verschillende DBMS's. Voor het uitvoeren van de verschillende testen is het slechts nodig om het systeem een enkele keer op te zetten. Maar om de testen eenvoudiger te kunnen uitvoeren op verschillende infrastructuren en andere de resultaten te laten controleren, is de installatie en configuratie van het systeem geautomatiseerd. 
 
-De automatisatie gebeurt met het Integrated configuration Management Platform (\gls{IMP}) beschreven in \cite{KULeuven-453199}. Dit modulair framework is uitgebreid met de 3 \glspl{DBMS} en YCSB! waardoor de configuratie als een declaratief gewenste staat wordt uitgedrukt. \gls{IMP} zal deze staat toepassen op de verschillende systemen bij het uitrollen. 
+De automatisatie gebeurt met het Integrated configuration Management Platform (\gls{IMP}) beschreven in \cite{KULeuven-453199}. Dit modulair framework is uitgebreid met de 3 DBMS's en YCSB! waardoor de configuratie als een declaratief gewenste staat wordt uitgedrukt. \gls{IMP} zal deze staat toepassen op de verschillende systemen bij het uitrollen. 
 
 Een uitgebreidere bespreking van de uitwerking in IMP kan gevonden worden in appendix \ref{app:IMP}. 
 
-Voor de uitvoering van de testen, is er voor elk \gls{DBMS} gekozen voor een minimaal aantal instantie die datadistributie én replicatie ondersteunt, voor de laatste eigenschap zou de data beschikbaar moeten zijn bij het uitvallen van 1 server. In de testen is er enkel gefocust op het uitvallen van dataservers, niet naar configuratieservers. Om deze reden zijn minimaal opgezet. 
+Voor de uitvoering van de testen, is er voor elk DBMS gekozen voor een minimaal aantal instantie die datadistributie én replicatie ondersteunt, voor de laatste eigenschap zou de data beschikbaar moeten zijn bij het uitvallen van 1 server. In de testen is er enkel gefocust op het uitvallen van dataservers, niet naar configuratieservers. Om deze reden zijn minimaal opgezet. 
 
 De opstelling van de systemen is getoond in figuur \ref{fig:deployment-testomgeving}, elk van de systemen zal in meer detail besproken worden. Elk van de systemen wordt opgesteld op een machine waarvan er verschillende configuraties mogelijk zijn, voor een overzicht, zie tabel \ref{table:systeemconfiguraties}. 
 \todo{Uitleggen wat Ephemeral Disk is}
@@ -233,7 +233,7 @@ De opstelling van de systemen is getoond in figuur \ref{fig:deployment-testomgev
 \subfigure[Deployment van Pgpool-II met 3 instanties. ]{\label{fig:pgpool-deployment}\includegraphics[width=0.35\textwidth]{img/Pgpool-II-deployment}}
 \subfigure[Deployment van MongoDB met 5 instanties. ]{\label{fig:MongoDB-deployment}\includegraphics[width=0.65\textwidth]{img/MongoDB-deployment}}
 \subfigure[Deployment van de testomgeving met 2 YCSB instanties. ]{\label{fig:YCSB-deployment}\includegraphics[width=0.25\textwidth]{img/YCSB-deployment}}
-\caption{Deployment van de verschillende \glspl{DBMS} en de testomgeving.}\label{fig:deployment-testomgeving}
+\caption{Deployment van de verschillende DBMS's en de testomgeving.}\label{fig:deployment-testomgeving}
 \end{figure}
 
 

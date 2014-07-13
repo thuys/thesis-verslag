@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  12 JUL 2014 19:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  14 JUL 2014 00:24
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tex"
@@ -1879,6 +1879,11 @@ Package biblatex Info: ... file 'masterproef.bbl' found.
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.bbl"
 
 Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'hbase-acid':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                with 'KULeuven-453199':
 (biblatex)                - Invalid format of field 'month'.
 
@@ -1897,7 +1902,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `kulemtfpf' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- <logokuleng.pdf, id=130, 159.33528pt x 85.358pt>
+ <logokuleng.pdf, id=146, 159.33528pt x 85.358pt>
 File: logokuleng.pdf Graphic file (type pdf)
 
 <use logokuleng.pdf>
@@ -1972,10 +1977,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 17.
-) [2
+ [2
 
 
-]
+])
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1989,7 +1994,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [5] [6
 
 ] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lof")
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot" [7
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot"
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
 
 
 ])
@@ -2027,75 +2035,47 @@ File: img/Relationeel-Model-Normalisatie.png Graphic file (type png)
 
 <use img/Relationeel-Model-Normalisatie.png>
 Package pdftex.def Info: img/Relationeel-Model-Normalisatie.png used on input l
-ine 23.
+ine 27.
 (pdftex.def)             Requested size: 398.0pt x 99.75504pt.
- [4 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Relationeel-Model-No
-rmalisatie.png (PNG copy)>]
-[5] [6]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\glspl' on input line 90.
 
 
-Overfull \hbox (42.56079pt too wide) has occurred while \output is active
- \T1/lmr/m/n/10.95 (-20) ting]\glossaryentryDBMS?\glossentryDBMS|setentrycounte
-r[]page\glsnumberformat7[][]DBMS's[][]|
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Class memoir Warning: The material used in the headers is too large
-(27.2pt) for the given head height (13.6pt), it is recommended to
-either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 103.
-
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[7] [8]
-Overfull \hbox (42.56079pt too wide) has occurred while \output is active
- \T1/lmr/m/n/10.95 (-20) ting]\glossaryentryDBMS?\glossentryDBMS|setentrycounte
-r[]page\glsnumberformat9[][]DBMS's[][]|
- []
-
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[9] [10]
-Overfull \hbox (47.92628pt too wide) has occurred while \output is active
- \T1/lmr/m/n/10.95 (-20) ting]\glossaryentryDBMS?\glossentryDBMS|setentrycounte
-r[]page\glsnumberformat11[][]DBMS's[][]|
- []
-
-
-Overfull \vbox (13.59999pt too high) has occurred while \output is active []
-
-
-[11]
+[4] [5 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Relationeel-Model
+-Normalisatie.png (PNG copy)>] [6] [7] [8] [9] [10] [11] [12]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 198.
+(Font)              <9> on input line 204.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 198.
- [12] [13] [14]) [15]
+(Font)              <5> on input line 204.
+ [13] [14]
+[15]) [16]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/3.methodiekvan
-detesten.tex" [16
+detesten.tex" <img/Test-Process-Overview.png, id=559, 633.0852pt x 33.2442pt>
+File: img/Test-Process-Overview.png Graphic file (type png)
+
+<use img/Test-Process-Overview.png>
+Package pdftex.def Info: img/Test-Process-Overview.png used on input line 16.
+(pdftex.def)             Requested size: 398.0pt x 20.89981pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17
 
 
 
-] [17]
-<img/hockey-stick.png, id=605, 253.69781pt x 173.89969pt>
+] <img/hockey-stick.png, id=572, 253.69781pt x 173.89969pt>
 File: img/hockey-stick.png Graphic file (type png)
 
 <use img/hockey-stick.png>
-Package pdftex.def Info: img/hockey-stick.png used on input line 31.
+Package pdftex.def Info: img/hockey-stick.png used on input line 37.
 (pdftex.def)             Requested size: 179.09879pt x 122.7691pt.
 
-<img/connecties-gebruikers.png, id=609, 480.29437pt x 154.32657pt>
+<img/connecties-gebruikers.png, id=574, 480.29437pt x 154.32657pt>
 File: img/connecties-gebruikers.png Graphic file (type png)
 
 <use img/connecties-gebruikers.png>
-Package pdftex.def Info: img/connecties-gebruikers.png used on input line 33.
+Package pdftex.def Info: img/connecties-gebruikers.png used on input line 39.
 (pdftex.def)             Requested size: 179.09879pt x 57.54733pt.
 
 
@@ -2104,19 +2084,33 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Marginpar on page 18 moved by 1.98636pt.
 
-[18] [19 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/hockey-stick.pn
-g> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/connecties-gebruikers
-.png>] [20] [21] [22]) [23]
+[18 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Test-Process-Overvie
+w.png (PNG copy)>] [19 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/h
+ockey-stick.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/connect
+ies-gebruikers.png>] [20] [21] [22]
+<img/Test-Process-Detailed-Overview.png, id=636, 666.3294pt x 244.2726pt>
+File: img/Test-Process-Detailed-Overview.png Graphic file (type png)
+
+<use img/Test-Process-Detailed-Overview.png>
+Package pdftex.def Info: img/Test-Process-Detailed-Overview.png used on input l
+ine 123.
+(pdftex.def)             Requested size: 398.0pt x 145.90495pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [23] [24 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Test-Process-
+Detailed-Overview.png (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/4.implementati
-e.tex" [24
+e.tex" [25
 
 
 
-] [25]
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
-<img/Hbase-structure.png, id=720, 685.8122pt x 366.61969pt>
+<img/Hbase-structure.png, id=674, 685.8122pt x 366.61969pt>
 File: img/Hbase-structure.png Graphic file (type png)
 
 <use img/Hbase-structure.png>
@@ -2128,7 +2122,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [27] [28 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Hbase-structure
 .png>]
-<img/mongodb-replica-set-primary-with-two-secondaries.png, id=755, 595.1647pt x
+<img/mongodb-replica-set-primary-with-two-secondaries.png, id=708, 595.1647pt x
  225.31235pt>
 File: img/mongodb-replica-set-primary-with-two-secondaries.png Graphic file (ty
 pe png)
@@ -2137,7 +2131,7 @@ Package pdftex.def Info: img/mongodb-replica-set-primary-with-two-secondaries.p
 ng used on input line 83.
 (pdftex.def)             Requested size: 159.19757pt x 60.26787pt.
 
-<img/mongo-sharded-cluster-production-architecture.png, id=756, 563.14285pt x 3
+<img/mongo-sharded-cluster-production-architecture.png, id=709, 563.14285pt x 3
 85.75285pt>
 File: img/mongo-sharded-cluster-production-architecture.png Graphic file (type 
 png)
@@ -2152,7 +2146,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [29] [30 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/mongodb-replica
 -set-primary-with-two-secondaries.png> <D:/Schooljaar 2013-2014/Thesis/verslag/
 Thesis - 2/img/mongo-sharded-cluster-production-architecture.png>]
-<img/Pgpool-structuur.png, id=792, 246.4407pt x 189.3474pt>
+<img/Pgpool-structuur.png, id=745, 246.4407pt x 189.3474pt>
 File: img/Pgpool-structuur.png Graphic file (type png)
 
 <use img/Pgpool-structuur.png>
@@ -2180,28 +2174,28 @@ Overfull \hbox (405.71803pt too wide) in paragraph at lines 162--176
 [][] 
  []
 
-[33] [34] <img/HBase-deployment.png, id=844, 315.0972pt x 170.5572pt>
+[33] [34] <img/HBase-deployment.png, id=793, 315.0972pt x 170.5572pt>
 File: img/HBase-deployment.png Graphic file (type png)
 
 <use img/HBase-deployment.png>
 Package pdftex.def Info: img/HBase-deployment.png used on input line 232.
 (pdftex.def)             Requested size: 218.90121pt x 118.48875pt.
 
-<img/Pgpool-II-deployment.png, id=845, 257.2812pt x 192.2382pt>
+<img/Pgpool-II-deployment.png, id=794, 257.2812pt x 192.2382pt>
 File: img/Pgpool-II-deployment.png Graphic file (type png)
 
 <use img/Pgpool-II-deployment.png>
 Package pdftex.def Info: img/Pgpool-II-deployment.png used on input line 233.
 (pdftex.def)             Requested size: 139.30243pt x 104.08867pt.
 
-<img/MongoDB-deployment.png, id=846, 546.3612pt x 300.6432pt>
+<img/MongoDB-deployment.png, id=795, 546.3612pt x 300.6432pt>
 File: img/MongoDB-deployment.png Graphic file (type png)
 
 <use img/MongoDB-deployment.png>
 Package pdftex.def Info: img/MongoDB-deployment.png used on input line 234.
 (pdftex.def)             Requested size: 258.69757pt x 142.35284pt.
 
-<img/YCSB-deployment.png, id=847, 148.8762pt x 177.7842pt>
+<img/YCSB-deployment.png, id=796, 148.8762pt x 177.7842pt>
 File: img/YCSB-deployment.png Graphic file (type png)
 
 <use img/YCSB-deployment.png>
@@ -2226,7 +2220,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) [37] [38]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/5.observaties.
-tex" <img/Observaties/threads-MongoDB.png, id=888, 975.1632pt x 493.3632pt>
+tex" <img/Observaties/threads-MongoDB.png, id=832, 975.1632pt x 493.3632pt>
 File: img/Observaties/threads-MongoDB.png Graphic file (type png)
 
 <use img/Observaties/threads-MongoDB.png>
@@ -2234,7 +2228,7 @@ Package pdftex.def Info: img/Observaties/threads-MongoDB.png used on input line
  21.
 (pdftex.def)             Requested size: 318.40121pt x 161.08643pt.
 
-<img/Observaties/threads-postgresql.png, id=889, 975.1632pt x 493.3632pt>
+<img/Observaties/threads-postgresql.png, id=833, 975.1632pt x 493.3632pt>
 File: img/Observaties/threads-postgresql.png Graphic file (type png)
 
 <use img/Observaties/threads-postgresql.png>
@@ -2242,7 +2236,7 @@ Package pdftex.def Info: img/Observaties/threads-postgresql.png used on input l
 ine 22.
 (pdftex.def)             Requested size: 318.40121pt x 161.08643pt.
 
-<img/Observaties/threads-HBase.png, id=890, 975.1632pt x 493.3632pt>
+<img/Observaties/threads-HBase.png, id=834, 975.1632pt x 493.3632pt>
 File: img/Observaties/threads-HBase.png Graphic file (type png)
 
 <use img/Observaties/threads-HBase.png>
@@ -2253,7 +2247,7 @@ Package pdftex.def Info: img/Observaties/threads-HBase.png used on input line 2
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/Observaties/loadbalance-db-HBase.png, id=898, 975.1632pt x 493.3632pt>
+<img/Observaties/loadbalance-db-HBase.png, id=839, 975.1632pt x 493.3632pt>
 File: img/Observaties/loadbalance-db-HBase.png Graphic file (type png)
 
 <use img/Observaties/loadbalance-db-HBase.png>
@@ -2261,7 +2255,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-db-HBase.png used on input
  line 45.
 (pdftex.def)             Requested size: 318.40121pt x 161.08643pt.
 
-<img/Observaties/loadbalance-realthroughput-db-HBase.png, id=899, 975.1632pt x 
+<img/Observaties/loadbalance-realthroughput-db-HBase.png, id=840, 975.1632pt x 
 493.3632pt>
 File: img/Observaties/loadbalance-realthroughput-db-HBase.png Graphic file (typ
 e png)
@@ -2273,7 +2267,7 @@ g used on input line 46.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/Observaties/loadbalance-db-MongoDB.png, id=900, 975.1632pt x 493.3632pt>
+<img/Observaties/loadbalance-db-MongoDB.png, id=841, 975.1632pt x 493.3632pt>
 File: img/Observaties/loadbalance-db-MongoDB.png Graphic file (type png)
 
 <use img/Observaties/loadbalance-db-MongoDB.png>
@@ -2281,7 +2275,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-db-MongoDB.png used on inp
 ut line 53.
 (pdftex.def)             Requested size: 318.40121pt x 161.08643pt.
 
-<img/Observaties/loadbalance-realthroughput-db-MongoDB.png, id=901, 975.1632pt 
+<img/Observaties/loadbalance-realthroughput-db-MongoDB.png, id=842, 975.1632pt 
 x 493.3632pt>
 File: img/Observaties/loadbalance-realthroughput-db-MongoDB.png Graphic file (t
 ype png)
@@ -2294,7 +2288,7 @@ png used on input line 54.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<img/Observaties/loadbalance-db-PostgreSQL.png, id=902, 975.1632pt x 493.3632pt
+<img/Observaties/loadbalance-db-PostgreSQL.png, id=843, 975.1632pt x 493.3632pt
 >
 File: img/Observaties/loadbalance-db-PostgreSQL.png Graphic file (type png)
  <use img/Observaties/loadbalance-db-PostgreSQL.png>
@@ -2302,7 +2296,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-db-PostgreSQL.png used on
 input line 61.
 (pdftex.def)             Requested size: 318.40121pt x 161.08643pt.
 
-<img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png, id=903, 975.1632
+<img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png, id=844, 975.1632
 pt x 493.3632pt>
 File: img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png Graphic file
  (type png)
@@ -2336,43 +2330,50 @@ resultaten.tex" [44
 
 
 
-]) [45]
+] [45] [46] [47]
+Underfull \hbox (badness 1215) in paragraph at lines 90--91
+[]\T1/lmr/m/n/10.95 (+20) Filter al de Key-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+\T1/lmr/m/n/10.95 (+20) schrijf-num-mer >
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [48] [49]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.te
-x" [46
+x" [50
 
 
 
-]) [47] [48
+]) [51] [52
 
 
-] [49] [50]
+] [53] [54]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.tex")
-[51
+[55
 
 
-] [52
+] [56
 
 
 ]
 No file masterproef.gls.
 No file masterproef.acr.
 No file masterproef.el.
-[53] [54
+[57] [58
 
-] [55]
+] [59]
 Overfull \hbox (0.61989pt too wide) in paragraph at lines 113--113
 \T1/lmr/m/n/10.95 (-20) 2013. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-2
 0) : [][]$\T1/lmtt/m/n/10.95 http : / / wiki . postgresql . org / wiki / Replic
 ation ,[] _Clustering ,[]$
  []
 
-
-Class memoir Warning: The material used in the headers is too large
-(27.2pt) for the given head height (13.6pt), it is recommended to
-either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 115.
-
-[56] [57
+[60] [61
 
 ]
 \tf@toc=\write11
@@ -2400,15 +2401,15 @@ x") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: 744F18B8F2F7A86E2D36B0761B454802;2166.
+(rerunfilecheck)             Checksum: A4460CB72B988B63FA7DE135CB715714;2445.
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 35440 strings out of 493921
- 637578 string characters out of 3147279
- 1124210 words of memory out of 3000000
- 37544 multiletter control sequences out of 15000+200000
+ 35462 strings out of 493921
+ 637608 string characters out of 3147279
+ 1124208 words of memory out of 3000000
+ 37527 multiletter control sequences out of 15000+200000
  90173 words of font info for 132 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  68i,12n,92p,1764b,4177s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2427,16 +2428,10 @@ placed by a fixed one
 pdfTeX warning (dest): name{glo:apt-get} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{glo:acid} has been referenced but does not exist, r
-eplaced by a fixed one
-
 pdfTeX warning (dest): name{glo:base} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{glo:rangequery} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:DBMS} has been referenced but does not exist, r
+pdfTeX warning (dest): name{glo:acid} has been referenced but does not exist, r
 eplaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
@@ -2457,9 +2452,9 @@ ic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
 MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/hel
 vetic/uhvr8a.pfb>
-Output written on masterproef.pdf (69 pages, 1730782 bytes).
+Output written on masterproef.pdf (73 pages, 2091415 bytes).
 PDF statistics:
- 1163 PDF objects out of 1200 (max. 8388607)
- 316 named destinations out of 1000 (max. 500000)
- 25454 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1174 PDF objects out of 1200 (max. 8388607)
+ 353 named destinations out of 1000 (max. 500000)
+ 25496 words of extra memory for PDF output out of 29859 (max. 10000000)
 

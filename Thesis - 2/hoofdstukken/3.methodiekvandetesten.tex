@@ -10,7 +10,13 @@ De methodiek kan opgedeeld worden in 4 grote stappen: het opstellen, kalibreren,
 
 \paragraph{Verzamelen en analyseren van de testdata} In de laatste stap wordt de data van de vorige stappen verzameld en de resultaten worden visueel voorgesteld. Met behulp van de uitgebreide testdata, is het ook mogelijk om bepaalde conclusies te maken over een passieve analyse van eventuele consistentie. 
 
-In de volgende secties komen de verschillende stappen in meer detail aanbod.  \todo{figuur met overzicht}
+In de volgende secties komen de verschillende stappen in meer detail aanbod.  Een overzicht van de procedure kan gevonden worden in figuur \ref{fig:test-process-overview}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/Test-Process-Overview}
+\caption{Overzicht testproces}
+\label{fig:test-process-overview}
+\end{figure}
 
 \section{Stap 1: Opstellen van de testomgeving}
 Het installeren en configureren een softwarepakket op een enkel systeem, is in Unix systemen veelvuldig geautomatiseerd met behulp van tools zoals \gls{apt-get} en \gls{yum}. Voor een systeem in een gedistribueerde omgeving, is de situatie iets ingewikkelder. Naast de lokale installatie en configuratie, is er ook een gedistribueerde configuratie stap.  
@@ -21,14 +27,14 @@ In deze gedistribueerde configuratie stap, worden de verschillende systemen van 
 \paragraph{Centrale configuratie} Bij een centrale configuratie, worden de systemen lokaal opgestart zonder enige lokale configuratie. Vervolgens wordt via een console, webinterface, ... connectie gemaakt met een node. Deze krijgt configuratie informatie hoe deze zich moet gedragen en volgt deze informatie op. In deze systemen is de configuratie tijdens installatie gelijk en wordt de configuratie verspreid wanneer de systemen al draaien.  
 
 
-Deze stap is gelijk aan het opzetten van het systeem in een productie omgeving, na het uitvoeren van deze stap, zou het \gls{DBMS} immers succesvol moeten werken. 
+Deze stap is gelijk aan het opzetten van het systeem in een productie omgeving, na het uitvoeren van deze stap, zou het DBMS immers succesvol moeten werken. 
 
 \section{Stap 2: Calibratie van de testomgeving}
-Afhankelijk van de onderliggende infrastructuur en het soort \gls{DBMS}, kan het systeem een verschillend gedrag hebben onder dezelfde configuratie. Voor de eigenlijk testen is het de bedoeling om een middelmatige belasting te hebben. De queuing theory geeft de eigenschap dat $R = S + W$ waar R de totale vertraging is, S de processing time en W de tijd in de wachtrij \cite{millsap2003optimizing}\todo{Betere referentie dan Oracle?}. Dit verband is visueel voorgesteld ten opzichte van de belasting in figuur \ref{fig:hockey-stick}. 
+Afhankelijk van de onderliggende infrastructuur en het soort DBMS, kan het systeem een verschillend gedrag hebben onder dezelfde configuratie. Voor de eigenlijk testen is het de bedoeling om een middelmatige belasting te hebben. De queuing theory geeft de eigenschap dat $R = S + W$ waar R de totale vertraging is, S de processing time en W de tijd in de wachtrij \cite{millsap2003optimizing}\todo{Betere referentie dan Oracle?}. Dit verband is visueel voorgesteld ten opzichte van de belasting in figuur \ref{fig:hockey-stick}. 
 
 \begin{figure}[h!] 
 \centering
-	\subfigure[Verband vertraging ten opzicht van de belasting van een \gls{DBMS}.]{\label{fig:hockey-stick} \includegraphics[width=0.45\textwidth]{img/hockey-stick}}
+	\subfigure[Verband vertraging ten opzicht van de belasting van een DBMS.]{\label{fig:hockey-stick} \includegraphics[width=0.45\textwidth]{img/hockey-stick}}
 	\hfill
 	\subfigure[Verband vertraging ten opzicht van het aantal gebruikers.]{\label{fig:connecties-gebruikers} \includegraphics[width=0.45\textwidth]{img/connecties-gebruikers}}
 	\caption{}
@@ -38,7 +44,7 @@ Deze belasting kan afhankelijk zijn verschillende elementen, er worden 5 verschi
 
 \paragraph{Hoeveelheid data per gegevensrecord} Elke record in de database kan bestaan uit verschillende kolommen en per kolom een waarde. Het is belangrijk om te definiëren hoe groot een gemiddeld record is, aangezien dit een invloed heeft op het schijfgebruik en het netwerkverkeer.   
 
-\paragraph{Type van queries} De opgeslagen data kan opgevraagd worden op verschillende wijze: data kan ingevoegd, aangepast, opgevraagd of verwijderd worden. Daarnaast kan dit gebeuren voor 1 of meerdere records tegelijk. Afhankelijk van de relatieve verhouding van deze soorten, kan een ander resultaat bekomen worden: sommige \glspl{DBMS} zijn meer geschikt voor veelvuldig lezen dan schrijven en vice versa. 
+\paragraph{Type van queries} De opgeslagen data kan opgevraagd worden op verschillende wijze: data kan ingevoegd, aangepast, opgevraagd of verwijderd worden. Daarnaast kan dit gebeuren voor 1 of meerdere records tegelijk. Afhankelijk van de relatieve verhouding van deze soorten, kan een ander resultaat bekomen worden: sommige DBMS's zijn meer geschikt voor veelvuldig lezen dan schrijven en vice versa. 
 
 \paragraph{Query specificatie} Bij het opvragen of verwijderen van een record, kan er een verschil zijn naar processing tijd afhankelijk van hoe lang geleden de record geschreven is en of naburige data onlangs gelezen is. Vandaar dat ook het datadistributie gekozen moet worden. Voorbeelden van verschillende technieken zijn: voornamelijk de laatste data lezen, een uniforme kans voor alle data of bepaalde records regelmatig lezen.
 
@@ -51,17 +57,17 @@ Met de parameters afkomstig uit de calibratie, kunnen de testen opgestart en uit
 \section{Stap 3: Testen van de systemen}
 In deze thesis zullen er 2 verschillende soort testen uitgevoerd worden, de beschikbaarheid en consistentie testen, welke beide dezelfde algemene stappen volgen, elk met hun eigen specifieke parameters. Er zijn de 6 deelstappen: 
 
-\paragraph{Opstellen van de database} In stap 2 was er gekozen voor een bepaalde datastructuur, deze structuur wordt zo goed mogelijk meegegeven aan de \gls{DBMS} zodat deze optimale allocatie kan doen.
+\paragraph{Opstellen van de database} In stap 2 was er gekozen voor een bepaalde datastructuur, deze structuur wordt zo goed mogelijk meegegeven aan de DBMS zodat deze optimale allocatie kan doen.
 
-\paragraph{Inladen van de data} Een bepaalde hoeveel data wordt vooraf ingeladen. Dit wordt gedaan om een basis dataset te hebben die nodig is voor sharding, het opsplitsen van de data over verschillende servers. In bepaalde \glspl{DBMS} wordt dit automatisch toegepast, maar enkel bij een bepaald hoeveelheid data. Dit gebeurt op maximale snelheid. 
+\paragraph{Inladen van de data} Een bepaalde hoeveel data wordt vooraf ingeladen. Dit wordt gedaan om een basis dataset te hebben die nodig is voor sharding, het opsplitsen van de data over verschillende servers. In bepaalde DBMS's wordt dit automatisch toegepast, maar enkel bij een bepaald hoeveelheid data. Dit gebeurt op maximale snelheid. 
 
-\paragraph{Pauze} Na het inladen van de data wordt enige tijd gewacht. Zoals aangetoond in YCSB++\cite[Figuur 9]{patil2011ycsb++}, is er hogere vertraging in de \glspl{DBMS} onmiddellijk na het inlezen. Dit kan onder andere te wijten zijn doordat data nog weggeschreven moet worden naar schijf of in bepaalde systemen zou het kunnen dat de sharding gebeurt op momenten met weinig belasting. Om deze piek niet te hebben, wordt er enige tijd gewacht. 
+\paragraph{Pauze} Na het inladen van de data wordt enige tijd gewacht. Zoals aangetoond in YCSB++\cite[Figuur 9]{patil2011ycsb++}, is er hogere vertraging in de DBMS's onmiddellijk na het inlezen. Dit kan onder andere te wijten zijn doordat data nog weggeschreven moet worden naar schijf of in bepaalde systemen zou het kunnen dat de sharding gebeurt op momenten met weinig belasting. Om deze piek niet te hebben, wordt er enige tijd gewacht. 
 
 \paragraph{Opstarten van de test (opstart kost)} De test wordt opgestart en de begint te lopen. In veel gevallen is er in het begin een opwarmfase nodig omdat de vertraging net hoger of lager is als na enige tijd. Deze hogere tijd is onder andere te verklaren doordat de connectie opgezet moet worden en caches worden gevuld. Soms is deze lager doordat de schijf nog niet belast is of de er nog veel schrijfbuffers leeg zijn. Om dit gedrag te vermijden, start de data van de eigenlijke test pas na deze stap. 
 
 \paragraph{Uitvoeren van de test} De eigenlijke test wordt uitgevoerd en de data wordt verzameld en opgeslagen. De details van de beide testen volgen achteraf. 
 
-\paragraph{Terugbrengen naar beginstatus} Na het uitvoeren van de test, wordt het \gls{DBMS} terug naar de beginstatus gebracht. Onder andere de database en de data wordt volledig verwijderd. Belangrijk in dit geval is het controleren of de data volledig verwijderd is, in bepaalde gevallen wordt er nog ergens een veiligheidskopie bijgehouden dat herstelt wordt bij een mogelijke volgende batch. 
+\paragraph{Terugbrengen naar beginstatus} Na het uitvoeren van de test, wordt het DBMS terug naar de beginstatus gebracht. Onder andere de database en de data wordt volledig verwijderd. Belangrijk in dit geval is het controleren of de data volledig verwijderd is, in bepaalde gevallen wordt er nog ergens een veiligheidskopie bijgehouden dat herstelt wordt bij een mogelijke volgende batch. 
 
 De twee verschillende testmethodes zullen nu in meer detail behandeld worden. 
 \subsection{Beschikbaarheidstest}
@@ -76,7 +82,7 @@ Bij de beschikbaarheidstest wordt er gekeken hoe het systeem reageert op tijdeli
 Een zelfde systeem kan sterk verschillend reageren op de verschillende situaties: waar de eerste situatie nog eenvoudig is te behandelen doordat men op de hoogte is, is de tweede situatie al moeilijker alhoewel men wel antwoord krijgt dat de service niet beschikbaar is bij het contacteren. De derde situatie is het moeilijkste te behandelen omdat men niet weet of de berichten naar de server niet aankomen of de antwoorden verloren gaan. 
  
 \subsection{Consistentie test}
-In de consistentie test wordt onderzocht welke consistentie de \gls{DBMS} ondersteund. Zoals voordien besproken in deel \ref{sec:eventualconsistency}, bestaan er verschillende soorten. 
+In de consistentie test wordt onderzocht welke consistentie de DBMS ondersteund. Zoals voordien besproken in deel \ref{sec:eventualconsistency}, bestaan er verschillende soorten. 
 
 In deze testen is er gekozen om caching bij de gebruiker \textbf{uit te schakelen}, dit om de reden dat dit gedrag zeer onvoorspelbaar is en afhankelijk van andere acties van de lezer en schrijver. Een andere reden is dat eventueel consistentie alleen een probleem is voor data die onmiddellijk beschikbaar moet zijn, met andere woorden data die men niet mag cachen. Dit heeft als gevolg dat de belasting op de server hoger kan zijn. 
 
@@ -94,7 +100,7 @@ Het is belangrijk dat er een exacte synchronisatie in tijd is tussen de verschil
 
 \subparagraph{Strikte consistentie} Een systeem is niet strikt consistent indien één van de lezers het nieuwe record of de update niet lezen \textit{indien de leesactie gestart is na het voltooien van de schrijfactie}. In bepaalde gevallen is zelfs mogelijk om deze garantie strikter te maken tot \textit{indien de leesactie \underline{voltooid} is na het voltooien van de schrijfactie}. 
 
-\subparagraph{Read your own writes consistentie} Deze eventuele consistentie kan ontkracht worden indien een schrijver onmiddellijk na het voltooien zijn eigen data opvraagt en niet de nieuwe waarde leest. Dit kan enkel getest worden indien de \gls{DBMS} het mogelijk maakt om met een gebruiker te verbinden naar meerdere servers.  In onze methode is dit niet geïmplementeerd omdat de data van de testen zonder dit al de mogelijkheid tot het maken van een conclusie.  
+\subparagraph{Read your own writes consistentie} Deze eventuele consistentie kan ontkracht worden indien een schrijver onmiddellijk na het voltooien zijn eigen data opvraagt en niet de nieuwe waarde leest. Dit kan enkel getest worden indien de DBMS het mogelijk maakt om met een gebruiker te verbinden naar meerdere servers.  In onze methode is dit niet geïmplementeerd omdat de data van de testen zonder dit al de mogelijkheid tot het maken van een conclusie.  
 
 \subparagraph{Session consistentie} Aangezien er al conclusies getrokken kunnen worden over de vorige en deze nog een zwakkere eis heeft, is dit niet geïmplementeerd. Maar opnieuw kan dit ontkracht worden door met de zelfde connectie als de schrijver te lezen. 
 
@@ -110,4 +116,11 @@ Na het uitvoeren van de testen, dient de informatie die verschillende schrijver 
 Tenslotte worden er in de testen nog grafieken gegenereerd van de aanwezige data, dit met de voor de hand liggende reden dat een figuur veel meer duidelijkheid brengt over de data dan duizenden getallen.  
 
 \section{Conclusie}
-\todo{Todo}
+Een overzicht van de test methode kan gevonden worden in figuur \ref{fig:test-process-detailed}. Deze testmethode geeft de mogelijkheid om in verschillende database systemen zowel de beschikbaarheid als de consistentie te testen op een gelijkaardige manier. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{img/Test-Process-Detailed-Overview}
+\caption{Overzicht testproces}
+\label{fig:test-process-detailed}
+\end{figure}
