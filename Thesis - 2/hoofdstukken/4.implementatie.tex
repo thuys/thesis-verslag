@@ -1,40 +1,72 @@
 \chapter{Implementatie}
+In het vorige hoofdstuk is uitgelegd wat de methode is voor het testen, maar hoe mappen deze vereisten naar een werkende test programma? In dit hoofdstuk zal deze vertaling uitgelegd worden die op deze thesis is toegepast. 
 
+Vooraleer met de eigenlijke uitwerking kon gebeuren, wordt eerst uitgelegd welke systemen gekozen zijn en waarom. 
+Vervolgens zullen de gekozen systemen in meer detail besproken worden, waarna de uitwerking van de testsoftware aanbod komt. Tenslotte zullen de verschillende stappen van de testprocedure overlopen worden met hun gedetailleerde parameters.  
 \section{Selectie van de DBMS's}
+Voor de selectie van de systemen is er onderzocht of een systeem een bepaalde eigenschap al dan niet ondersteunt. In het totaal zijn er 5 verschillende eigenschappen waarop de selectie is gebaseerd. 
 
-\subsection{Selectiecriteria voor DBMS's}
-Bij de selectie van de systemen of een systeem een bepaalde eigenschap al dan niet ondersteunt. In het totaal zijn er 5 verschillende eigenschappen waarop wordt geselecteerd. 
+\paragraph{Vrije software} Om testen tussen verschillende DBMS's te kunnen vergelijken op een gelijkaardige infrastructuur, is het nodig dat deze software kan geïnstalleerd worden op de eigen infrastructuur, een extra selectie criteria is dat de systemen gratis aangeboden worden. 
 
-\paragraph{Vrije software} Om testen tussen verschillende DBMS's te kunnen vergelijken op een gelijkaardige infrastructuur, is het nodig dat deze software kan geïnstalleerd worden op de eigen infrastructuur. Daarnaast is er in dit onderzoek gekozen voor gratis beschikbare software. 
+\paragraph{Persistentie} Voor het testen van de beschikbaarheid van de data, is het een voordeel dat de data op harde schijf aanwezig is: bij een herstel dient er minder data over het netwerk gestuurd te worden. Om deze reden hebben persistente systemen een voorkeur op deze die de data enkel in geheugen houden. 
 
-\paragraph{Persistentie} Voor het testen van de beschikbaarheid van de data, is het een voordeel dat de data op harde schijf aanwezig is: bij herstel dient er minder data over het netwerk gestuurd te worden. Om deze reden hebben deze systemen een voorkeur op systemen die de data enkel in geheugen houden. 
+\paragraph{Replicatie} Eén van de testen is de beschikbaarheidstest, indien de data maar op een enkele server opgeslagen is, zal de data op de uitgeschakelde server niet langer beschikbaar zijn. Met replicatie zal de data op verschillende servers opgeslagen worden en zal de data in theorie nog beschikbaar zijn in het geval van een enkele uitgeschakelde server. 
 
-\paragraph{Replicatie} Eén van de testen is de beschikbaarheidstest, indien de data maar op een enkele server opgeslagen is, zal de data op de uitgeschakelde server niet langer beschikbaar zijn. Met replicatie zal de data op verschillende servers opgeslagen worden en zal de data nog steeds beschikbaar zijn in het geval van een enkele uitgeschakelde server. 
+\paragraph{Data distributie} Het is de bedoeling om systemen te testen die een grote hoeveelheid data kunnen opslaan. Om aan deze vereiste te voldoen, is het nodig dat elke server niet al de data opslaat bij een grote dataset. Hiervoor zijn er wel voldoende aantal servers nodig, bij te weinig servers is elke server nodig om aan de replicatie vereiste te voldoen. 
 
-\paragraph{Data distributie} Het is de bedoeling om systemen te testen die een grote hoeveelheid data kunnen opslaan. Om aan deze vereiste te voldoen, is het nodig dat elke server niet al de data opslaat bij een voldoende hoog aantal servers (bij weinig servers, is elke server nodig om aan de replicatie vereiste te voldoen)
+\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en het opvragen van een individueel of meerdere record. De DBMS moet ondersteuning voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries, een range query, is in bepaalde systemen niet ondersteund. Deze range query is een query waar de begin sleutel is gedefinieerd en het aantal records dat hierop volgt, het is \textit{niet} een begin en eind sleutel. 
 
-\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en opvragen van een individueel record en het opvragen van meerdere queries. De DBMS moet ondersteuning voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries is in bepaalde systemen niet mogelijk en deze worden om deze reden niet behandeld. 
+Voor alle systemen besproken in sectie \ref{sec:BesprekingDBMS}, is het eerste criterium voldaan. De overige 4 criteria zijn samengevat in tabel \ref{table:vergelijkingNosql}. \todo{Check table :-) en tekst hieronder}
 
-Voor elk van de systemen besproken in sectie \ref{sec:BesprekingDBMS}, is het eerste criterium voldaan voor al deze systemen. De overige 4 criteria zijn samengevat in tabel \ref{table:vergelijkingNosql}. Naast de 4 criteria, is er gekozen om systemen van verschillende klassen te hebben met uitzondering van Key-Value. Samen met mijn collega Arnaud Schoonjans \cite{thesisArnaud}, zijn er in verschillende systemen verder onderzocht. In deze thesis zijn  HBase, MongoDB en Pgpool-II verder onderzocht, in de thesis van mijn collega zijn Cassandra, Apache CouchDB, Riak en MySQL verder onderzocht.  
+Een korte verklaring bij enkele van de waarden uit de tabel. Bij \textit{Redis} is er sprake van een snapshot of een log voor de persistentie, de eigenlijke database wordt enkel in het geheugen gehouden. Hierdoor is er maar half sprake , hierdoor kan de database herstelt worden maar is deze niet in het geheugen. \\
+Bij \textit{replicatie} zijn er 2 mogelijke configuraties: master-slave waarbij er verschillende instanties verschillende functies hebben en één de baas is, of Master-master waarbij ze allemaal gelijk zijn. \\
+Bij \textit{aanpassen} zijn er systemen die voor een update al de verschillende kolom waarden nodig hebben of maar 1 kolom per waarde ondersteunen. \\
+Bij \textit{range} is er bij enkele systemen enkel ondersteuning voor het lezen tussen 2 verschillende sleutels. Met het iteratief opvragen van elementen tussen 2 sleutels en het lezen van een beperkte hoeveelheid data, is het mogelijk om een range query uit te voeren, maar dit is maar halve ondersteuning. 
+
+Bij de selectie is er naast de 4 criteria, ook gekozen voor systemen van verschillende datamodellen. Samen met mijn collega Arnaud Schoonjans \cite{thesisArnaud}, zijn er in 7 verschillende systemen verder onderzocht. In deze thesis zijn  HBase, MongoDB en Pgpool-II verder onderzocht, in de thesis van mijn collega zijn dit Cassandra, Apache CouchDB, Riak en MySQL.  
  
-\todo{Update table :-)}
-\begin{table}
-    \begin{tabular}{lll|l|l|l|l|l|l|l|l|l}
-    ~                & ~         & \multicolumn{2}{l}{ \rotatebox[origin=c]{90}{Column database}} & \multicolumn{2}{l}{\rotatebox[origin=c]{90}{Document database}} & \multicolumn{4}{l}{\rotatebox[origin=c]{90}{Key-Value database}} & \multicolumn{2}{l}{\rotatebox[origin=c]{90}{Relationele database}} \\
-    ~                & ~         & \rotatebox[origin=c]{90}{Cassandra} & \rotatebox[origin=c]{90}{HBase} & \rotatebox[origin=c]{90}{Apache CouchDB} & \rotatebox[origin=c]{90}{MongoDB} & \rotatebox[origin=c]{90}{Lightcloud (Tokyo)} & \rotatebox[origin=c]{90}{Memcache} & \rotatebox[origin=c]{90}{Riak} & \rotatebox[origin=c]{90}{Voldemort} & \rotatebox[origin=c]{90}{MySQL} & \rotatebox[origin=c]{90}{Pgpool-II (PostgreSQL)} \\
-    \multicolumn{2}{l}{Persistentie} & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
-    \multicolumn{2}{l}{Replicatie} & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
-    \multicolumn{2}{l}{Data distributie} & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
-    Query soort      & Aanpassen & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
-    ~                & Range     & ~               & ~     & ~                 & ~       & ~                  & ~        & ~    & ~         & ~                    & ~                      \\
-    \end{tabular}
-    \caption{Ondersteuning van de besproken DBMS's naar de selectie criteria met de gekozen systemen geaccentueerd.}
-    \label{table:vergelijkingNosql}
-\end{table}
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[htbp]
+  \centering
+  \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{ll|lllll}
+          &       & \multirow{2}[1]{*}{Persistentie} & \multirow{2}[1]{*}{Replicatie} & \multirow{2}[1]{*}{Datadistributie} & \multicolumn{2}{c}{Query soort} \\
+    
+          &       &       &       &       & Aanpassen & Range \\ \hline
+    \multirow{2}[1]{*}{Column} & Cassandra & Ja    & Master-Master & Ja    & Ja    & Half \\
+          & HBase & Ja    & Master-Slave & Ja    & Ja    & Ja \\
+          
+          \hline
+    \multirow{3}[0]{*}{Document} & Apache  & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Master-Master}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Nee}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} \\
+          & CoucheDB & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+          & MongoDB & Ja    & Master-Slave & Ja    & Ja    & Ja \\
+          
+          \hline
+    \multirow{6}[0]{*}{Key-Value} & LightCloud & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Master-Master}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Nee}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} \\
+          & (Tokyo) & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+          & MemcacheDB & Ja    & Master-Slave    & Nee   & Nee   & Ja \\
+          & Redis & Half & Master-Slave & Nee  & Ja    & Half \\
+          & Riak  & Ja    & Master-Master & Ja    & Nee   & Half \\
+          & Voldemort & Ja    & Master-Master & Ja    & Nee   & Nee \\
+          
+          \hline
+    \multirow{3}[0]{*}{Relationeel} & MySQL & Ja    & Master-Slave & Nee   & Ja    & Ja \\
+          & Pgpool-II & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Master-Slave}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} & \multicolumn{1}{l}{\multirow{2}[0]{*}{Ja}} \\
+          & (PostgreSQL) & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+    \end{tabular}%
+    }
+    \caption{Ondersteuning van de besproken DBMS's naar de selectie criteria. }
+  \label{table:vergelijkingNosql}%
+\end{table}%
+
+
+
 
 
 \section{Gedetailleerde bespreking van de geselecteerde DBMS's}
-In dit gedeelte zal elk geselecteerd systemen in meer detail uitgelegd worden, met een focus op de systeem structuur. Een gemeenschappelijk element bij al deze systemen is dat niet alle noden dezelfde functie hebben, in andere DBMS's hebben allen dezelfde taak wat de installatie kan vereenvoudigen. 
+In dit gedeelte zal elk geselecteerd systemen in meer detail uitgelegd worden. Een gemeenschappelijk element bij al deze systemen is dat niet alle instanties dezelfde functie hebben (Master - Slave systemen), in andere DBMS's hebben allen dezelfde functie bij het wat de installatie kan vereenvoudigen (Master-Master). 
 
 Voor elk van de geselecteerde systemen zal de aangeboden API besproken worden met een blik op de datastructuur, daarna zal de systeem architectuur besproken worden. 
 
@@ -43,7 +75,7 @@ Voor elk van de geselecteerde systemen zal de aangeboden API besproken worden me
 \subsubsection{Data structuur}
 De data in HBase is gestructureerd in tabellen, die aangemaakt worden door middel van de API. Op het moment van aanmaak wordt er een schema van de tabel gemaakt. Voor elke tabel kunnen de kolommen meegegeven worden samen met een \textit{kolom familie} voor elke kolom, maar de kolommen kunnen ook gespecificeerd worden bij het schrijven van data. De gegevens per \textit{kolom familie} hebben dezelfde prefix en zullen fysisch samen opgeslagen worden. Indien verschillende kolommen tegelijk worden gelezen of geschreven, is het aangeraden om deze dezelfde \textit{kolom familie} te geven. 
 
-De operaties beschikbaar in dit systeem zijn: get (verkrijgen), put (invoegen), scan (range) en delete (verwijderen). Het aanpassen van gegevens wordt uitgevoerd via een get waarbij een enkele kolom waarde van een record kan aanpast worden. Daarnaast zal er bij een scan een optimalisatie gedaan worden naar de cache grootte. Doordat er geweten is hoe groot een record ongeveer is in zijn geheel én hoeveel records er opgevraagd worden, kan de cache grootte berekend worden zodat er maar een enkele datacommunicatie nodig is. 
+De operaties beschikbaar in dit systeem zijn: get (verkrijgen), put (invoegen), scan (range) en delete (verwijderen). Het aanpassen van gegevens wordt uitgevoerd via een put waarbij een enkele kolom waarde van een record kan aanpast worden. Een scan operatie heeft geen optie om het aantal op te halen records te bepalen maar er kan wel bepaald worden in welke batch grootte (bytes) de records opgehaald moeten worden. Doordat er geweten is hoe groot een record ongeveer is in zijn geheel én hoeveel records er opgevraagd worden, kan de cache grootte bepaald worden zodat er maar een enkele datacommunicatie nodig is. 
 
 \subsubsection{Architectuur}
 De gedistribueerde versie van HBase\cite{george2011hbase} is afhankelijk van 2 andere software systemen, namelijk Zookeeper\cite{hunt2010zookeeper} en Hadoop\cite{borthakur2007hadoop}, en volgt hiermee de structuur van Google's BigTable\cite{chang2008bigtable} die op zijn beurt afhankelijk is van Chubby\cite{burrows2006chubby} en Google File System\cite{ghemawat2003google}. Een overzicht van de architectuur bevindt zich in figuur \ref{fig:Hbase-structure}. Deze 3 systemen zullen kort besproken worden, van Hadoop tot Zookeeper en HBase. 
@@ -55,8 +87,8 @@ De gedistribueerde versie van HBase\cite{george2011hbase} is afhankelijk van 2 a
 \label{fig:Hbase-structure}
 \end{figure}
 
-\paragraph{Hadoop\cite{borthakur2007hadoop}} HBase maakt gebruik van het Hadoop Distributed File System \gls{HDFS}, een gedistribueerd file systeem ontworpen om te werken op commodity hardware met een hoge fout tolerantie. \gls{HDFS} heeft een master/slave architectuur en bestaat uit een enkele \textbf{namenode}, de master server, die de naamruimte en toegangscontrole onderhoudt, en \textbf{datanode}s. De data wordt opgedeeld in blokken die in een verzameling van datanodes wordt opgeslagen, op deze manier is er data distributie en asynchrone replicatie. Deze master/slave configuratie zijn verschillende soorten van services en dient door de gebruiker zelf geconfigureerd te worden. \\
-In de configuratie die hier gebruikt wordt, is \gls{HDFS} de methode de data in op te slaan in HBase met automatische replicatie en data distributie. Er is ook nog ondersteuning om dit lokaal op de harde schijf te doen bij een niet distribueerde installatie en om dit weg te schrijven naar S3.\cite{george2011hbase}
+\paragraph{Hadoop\cite{borthakur2007hadoop}} HBase maakt gebruik van het Hadoop Distributed File System HDFS, een gedistribueerd file systeem ontworpen om te werken op commodity hardware met een hoge fout tolerantie. HDFS heeft een master/slave architectuur en bestaat uit een enkele \textbf{namenode}, de master server, die de naamruimte en toegangscontrole onderhoudt, en \textbf{datanode}s. De data wordt opgedeeld in blokken die in een verzameling van datanodes wordt opgeslagen, op deze manier is er data distributie en asynchrone replicatie. Deze master/slave configuratie zijn verschillende soorten van services en dient door de gebruiker zelf geconfigureerd te worden. \\
+In de configuratie die hier gebruikt wordt, is HDFS de methode de data in op te slaan in HBase met automatische replicatie en data distributie. Er is ook nog ondersteuning om dit lokaal op de harde schijf te doen bij een niet distribueerde installatie en om dit weg te schrijven naar S3.\cite{george2011hbase}
 
 \paragraph{Zookeeper\cite{hunt2010zookeeper}} Zookeeper is een service voor het coördineren van gedistribueerde applicatie processen, met deze service biedt primitieven aan om synchronisatie, configuratie onderhoud en groepen en benaming te doen. Zookeeper is op zijn beurt een gedistribueerd master/slave systeem dat ontworpen is om snel te zijn bij dominantie van leesoperaties. De master/slave \\
 HBase gebruikt Zookeeper onder andere voor het bijhouden van de status van regio server en hun locatie. \cite{george2011hbase}

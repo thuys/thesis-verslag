@@ -496,11 +496,11 @@
   \verb{url}
   \verb http://hadoop-hbase.blogspot.be/2012/03/acid-in-hbase.html
   \endverb
+  \field{month}{03}
   \field{year}{2012}
   \field{urlday}{10}
   \field{urlmonth}{07}
   \field{urlyear}{2014}
-  \warn{\item Invalid format of field 'month'}
 \endentry
 
 \entry{huggkey}{online}{}
@@ -1046,8 +1046,8 @@
   \verb https://lirias.kuleuven.be/handle/123456789/453199
   \endverb
   \field{type}{phdthesis}
+  \field{month}{06}
   \field{year}{2014}
-  \warn{\item Invalid format of field 'month'}
 \endentry
 
 \entry{wada2011data}{inproceedings}{}
