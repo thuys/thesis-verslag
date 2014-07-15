@@ -46,23 +46,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Volledige systeemarchitectuur van HBase met Hadoop en Zookeeper. Bron \cite {ChinHBaseComprehensive}\relax }}{28}{figure.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB Architectuur voor replicatie en datadistributie. Bron figuur \ref {fig:mongodb-replicaset}: \cite {mongodb-replicaset}, figuur \ref {fig:mongodb-sharding}: \cite {mongodb-shard}\relax }}{30}{figure.caption.86}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB Architectuur voor replicatie en datadistributie. Bron figuur \ref {fig:mongodb-replicaset}: \cite {mongodb-replicaset}, figuur \ref {fig:mongodb-sharding}: \cite {mongodb-shard}\relax }}{31}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drie leden van een replica set met een primary en 2 secundaries. }}}{30}{figure.caption.86}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drie leden van een replica set met een primary en 2 secundaries. }}}{31}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers.}}}{30}{figure.caption.86}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers.}}}{31}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{32}{figure.caption.94}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{32}{figure.caption.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Deployment van de verschillende DBMS's en de testomgeving.\relax }}{36}{figure.caption.107}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Deployment van de verschillende DBMS's en de testomgeving.\relax }}{37}{figure.caption.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 6 instanties. }}}{36}{figure.caption.107}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 7 instanties. }}}{37}{figure.caption.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{36}{figure.caption.107}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{37}{figure.caption.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 5 instanties. }}}{36}{figure.caption.107}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 6 instanties. }}}{37}{figure.caption.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{36}{figure.caption.107}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{37}{figure.caption.107}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
