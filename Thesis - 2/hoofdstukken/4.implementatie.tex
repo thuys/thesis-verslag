@@ -80,7 +80,7 @@ De operaties beschikbaar in dit systeem zijn: get (verkrijgen), put (invoegen), 
 \subsubsection{Architectuur\cite{george2011hbase}}
 De gedistribueerde versie van HBase is afhankelijk van 2 andere software systemen, namelijk Zookeeper\cite{hunt2010zookeeper} en Hadoop\cite{borthakur2007hadoop}, en volgt hiermee de structuur van Google's BigTable\cite{chang2008bigtable} die op zijn beurt afhankelijk is van Chubby\cite{burrows2006chubby} en Google File System\cite{ghemawat2003google}. Een overzicht van de architectuur bevindt zich in figuur \ref{fig:Hbase-structure}. De 3 systemen van HBase zullen kort besproken worden, van HBase naar Zookeeper en Hadoop. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=\linewidth]{img/Hbase-structure.png}
 \caption{Volledige systeemarchitectuur van HBase met Hadoop en Zookeeper. Bron \cite{ChinHBaseComprehensive}}
@@ -142,7 +142,7 @@ Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het v
 \subsubsection{Architectuur}
 MongoDB is een DBMS dat de vereisten van replicatie en data distributie op een gelaagde manier tot uitvoering brengt. In eerste instantie zal deze de replicatie vereisten invullen, hierboven zal horizontale schaalbaarheid ondersteund worden. 
 
-\begin{figure}[h!] 
+\begin{figure}[ht!] 
 \centering
 	\subfigure[Drie leden van een replica set met een primary en 2 secundaries. ]{\label{fig:mongodb-replicaset} \includegraphics[width=0.40\textwidth]{img/mongodb-replica-set-primary-with-two-secondaries}}
 	\hfill
@@ -173,7 +173,7 @@ Pgpool-II ondersteunt de volledige query mogelijkheden die in de testen nodig zi
 \subsubsection{Architectuur}
 Een Pgpool-II infrastructuur bestaat uit 2 delen, een data en routing niveau, een overzicht is gegeven in figuur \ref{fig:Pgpool-structure}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \includegraphics[width=0.5\linewidth]{img/Pgpool-structuur}
 \caption{Systeemarchitectuur van Pgpool-II.}
@@ -284,7 +284,7 @@ De testinfrastructuur is een IaaS (Infrastructure as a Service) gebaseerd op Ope
 
 \paragraph{YCSB!} YCSB! kan naar meerdere instanties uitgerold worden. Bij de calibratietesten zullen er 2 instanties gebruikt worden, maar er zal blijken dat dit niet een limiterende factor is. Voor het uitvoeren van de eigenlijke testen, zal er gebruik gemaakt worden van een enkele YCSB! instantie, namelijk VM-1.  Een overzicht is getoond in figuur \ref{fig:YCSB-deployment}. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 \centering
 \subfigure[Deployment van HBase met 7 instanties. ]{\label{fig:HBase-deployment}\includegraphics[width=0.55\textwidth]{img/HBase-deployment}}
 \subfigure[Deployment van Pgpool-II met 3 instanties. ]{\label{fig:pgpool-deployment}\includegraphics[width=0.35\textwidth]{img/Pgpool-II-deployment}}
@@ -297,9 +297,11 @@ De testinfrastructuur is een IaaS (Infrastructure as a Service) gebaseerd op Ope
 \section{Uitvoeren van de calibratie en testen}
 Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de type queries gespecificeerd worden, deze zijn voor alle verschillende systemen gelijk. Een overzicht van deze parameters kunnen gevonden worden in tabel \ref{table:calibratiequeries}. 40\% van de uitgevoerde queries past de database aan, er is dus een dynamische database. Bij het lezen wordt er de helft van de keren in batch gelezen met gemiddeld gezien 50 records per keer. Er wordt zo veel sequentiële records gelezen. Tenslotte wordt er met \textit{zipfian} gekozen om regelmatig dezelfde records te lezen waardoor er uit cache gelezen worden. 
 
+Voor later de data optimaal te kunnen analyseren, wordt er elke second de gemiddelde vertraging voor de verschillende queries uitgevoerd in alle mogelijk testen. 
+
 \paragraph{Calibratie testen} Voor de calibratie van de omgeving zijn er 2 soorten testen gedraaid, de parameters voor het aantal connecties kunnen gevonden worden in tabel \ref{table:calibratiegebruikers}. De parameters voor het aantal queries per second zijn te vinden in tabel \ref{table:calibratiequeriesperseconde}, in dit geval is het aantal gebruikers afhankelijk van de vorige test. 
 
-\begin{table}[h!]
+\begin{table}[htb!]
 	\centering
 	\begin{tabular}{l| l }
 	\textbf{Naam} & \textbf{Waarde} \\
@@ -320,7 +322,7 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 	\label{table:calibratiequeries}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[htb!]
 	\centering
 	\begin{tabular}{l| l}
 	\textbf{Naam} & \textbf{Waarde}  \\
@@ -335,7 +337,7 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 	\label{table:calibratiegebruikers}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[htb!]
 	\centering
 	\begin{tabular}{l| l l }
 		\textbf{Naam} & \multicolumn{2}{c}{\textbf{Waarde}}  \\
@@ -357,7 +359,7 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 \todo{Check of tabel nog correct}
 \paragraph{Beschikbaarheidstesten} Bij het uitvoeren van de testen op beschikbaarheid van de verschillende systemen zijn de parameters in tabel \ref{table:beschikbaarheidstesten-parameters} gebruikt. Het aantal vooringeladen records is op 300 000 geplaatst zodat zowel HBase als MongoDB aan sharding doen. De commando's voor het stoppen en starten van de systemen zijn te vinden in tabel \ref{table:beschikbaarheidstesten-commandos}.  Voor Pgpool-II is er een extra commando toegevoegd dat na het herstarten van de systemen wordt uitgevoerd, dit komt omdat er geen automatische recovery in Pgpool-II is. Tenslotte worden deze testen uitgevoerd op al de datanodes, een overzicht hiervan met de overeenkomstige service is te vinden in tabel \ref{table:beschikbaarheidstesten-nodes}. De testen voor MongoDB zijn enkel uitgevoerd op een enkele ReplicaSet aangezien de verspreiding van de data zo is dat beiden een deel hebben, deze assumptie is eerst geverifieerd en deze klopte uit de testresultaten. Daarna is enkel getest op een enkele replicaset. 
 
-\begin{table}[h!]
+\begin{table}[ht!]
 	\centering
 	\begin{tabular}{l| l }
 		\textbf{Naam} & \textbf{Waarde}  \\
@@ -372,7 +374,7 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 	\caption{Beschikbaarheidstesten: Overzicht van de parameters}
 	\label{table:beschikbaarheidstesten-parameters}
 \end{table}
-\begin{table}[t]
+\begin{table}[htb!]
 	\centering
 		\begin{tabular}{l|l}
 			\multicolumn{2}{c}{\textbf{Stoppen}} \\
@@ -381,14 +383,14 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 			Zachte stop & service \{\{service-name\}\} stop \\ 
 			Harde stop & kill -KILL \{\{process Id\}\} \\ 
 			Netwerk onderbreken & iptables -A OUTPUT -d 0.0.0.0/0 -j DROP  \\ 
-			\multicolumn{2}{c}{} & \\
+			\multicolumn{2}{c}{~} \\
 			\multicolumn{2}{c}{\textbf{Heropstarten}} \\
 			\textbf{Wat} & \textbf{Commando} \\ 
 			\hline
 			Zachte start & service \{\{service-name\}\} restart \\ 
 			Harde start & service \{\{service-name\}\} restart \\ 
 			Netwerk herstellen & iptables -D OUTPUT 1  \\ 
-			\multicolumn{2}{c}{} & \\
+			\multicolumn{2}{c}{~}  \\
 			\multicolumn{2}{c}{\textbf{Speciale commando's}} \\
 			\textbf{Wat} & \textbf{Commando} \\ 
 			\hline
@@ -399,7 +401,7 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 	\label{table:beschikbaarheidstesten-commandos}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[ht!]
 	\centering
 	\begin{tabular}{l| l l }
 		\textbf{Naam} & \textbf{Instanties} & \textbf{Service naam} \\
@@ -415,7 +417,7 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 
 \paragraph{Consistentie testen} Voor de consistentie testen moeten de parameters van tabel \ref{table:consistentieinput} geconfigureerd worden, de parameters zijn te vinden in tabel \ref{table:consistentie-testen-parameters}. Deze test wordt uitgevoerd op HBase en MongoDB, om de analyse van de gegevens eenvoudiger te maken is er bij MongoDB gekozen om de test enkel uit te voeren op een replicaset en niet op een volledige cluster. Er is een aanname gedaan dat het consistentie venster bepaald is door de tijd dat het duurt dat de gegevens beschikbaar zijn op al de verschillende instanties van een replicaset, het testen van een cluster voegt zo extra complexiteit toe. Deze test zou in de toekomst ook uitgevoerd kunnen worden op een cluster maar is in dit geval niet gedaan.  
 
-\begin{table}[t]
+\begin{table}[htb!]
 	\centering
 		\begin{tabular}{l|l}
 			\textbf{Naam} & \textbf{Waarde} \\ \hline
@@ -437,6 +439,14 @@ Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de
 \end{table}
 
 \section{Verzamelen en analyse van de testresultaten}
-\todo{Te schrijven}
+De analyse van de data gebeurd aan de hand van de informatie die gelogd wordt tijdens de executie van de testen. Voor alle mogelijke testen maakt R code de data visueel in verschillende grafieken. Voor elke test kan de data op een andere wijze voorgesteld worden. 
 
+De uitleg en voorbeelden van deze grafieken zullen getoond worden in het volgende hoofdstuk bij het presenteren van de resultaten zodat er onmiddellijk een beeld gevormd kan worden.
+
+De R code kan gevonden worden op GitHub \url{https://github.com/thuys/YCSB-R-Scripts}.  
+
+\section{Conclusie}
+In dit hoofdstuk is de vertaling gemaakt van een theoretisch testmodel tot de implementatie. Daarbij zijn keuzes gemaakt en bepaalde mogelijkheden zijn (nog) niet geïmplementeerd, dit is onder meer het geval voor lezen na het schrijven in de consistentie test, controleren of een waarde beschikbaar is in andere instanties na het platleggen van een instantie in de beschikbaarheidstest, ...
+
+Maar de basis testmogelijkheden zijn geïmplementeerd en hiermee zijn al veel testen uit te voeren en conclusies te trekken op basis hiervan. In de volgende twee hoofdstukken zullen eerst de resultaten getoond worden en vervolgens een analyse van de resultaten op basis van de uitgevoerde testen.
 

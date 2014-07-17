@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter*.1}{Voorwoord}{}% 1
-\BOOKMARK [0][-]{chapter*.4}{Samenvatting}{}% 2
-\BOOKMARK [0][-]{chapter*.6}{Lijst van figuren en tabellen}{}% 3
-\BOOKMARK [0][-]{chapter*.9}{Lijst van afkortingen en symbolen}{}% 4
+\BOOKMARK [0][-]{chapter*.5}{Samenvatting}{}% 2
+\BOOKMARK [0][-]{chapter*.7}{Lijst van figuren en tabellen}{}% 3
+\BOOKMARK [0][-]{chapter*.10}{Lijst van afkortingen en symbolen}{}% 4
 \BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 5
 \BOOKMARK [0][-]{chapter.2}{Overzicht van de technologie}{}% 6
 \BOOKMARK [1][-]{section.2.1}{Geschiedenis van de databasemanagementsystemen}{chapter.2}% 7
@@ -22,14 +22,20 @@
 \BOOKMARK [1][-]{section.4.4}{Installatie en opstelling van de DBMS's en YCSB}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.5}{Uitvoeren van de calibratie en testen}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.6}{Verzamelen en analyse van de testresultaten}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Observaties}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Calibratie}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{Consistentie test}{chapter.5}% 28
-\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 29
-\BOOKMARK [1][-]{section.6.1}{Calibratie}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.2}{Beschikbaarheidstest}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.3}{Consistentie test}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 33
-\BOOKMARK [0][-]{appendix.A}{Uitwerking IMP}{}% 34
-\BOOKMARK [0][-]{section*.156}{Bibliografie}{}% 35
+\BOOKMARK [1][-]{section.4.7}{Conclusie}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Observaties}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Calibratie}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{Consistentie test}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Calibratie}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.2}{Beschikbaarheidstest}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.3}{Consistentie test}{chapter.6}% 33
+\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 34
+\BOOKMARK [0][-]{appendix.A}{Uitwerking IMP}{}% 35
+\BOOKMARK [1][-]{section.A.1}{HBase}{appendix.A}% 36
+\BOOKMARK [1][-]{section.A.2}{MongoDB}{appendix.A}% 37
+\BOOKMARK [1][-]{section.A.3}{Pgpool-II}{appendix.A}% 38
+\BOOKMARK [1][-]{section.A.4}{YCSB}{appendix.A}% 39
+\BOOKMARK [0][-]{appendix.B}{Paper}{}% 40
+\BOOKMARK [0][-]{section*.189}{Bibliografie}{}% 41

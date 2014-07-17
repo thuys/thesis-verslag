@@ -26,65 +26,75 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Relationeel datamodel (a) zonder en (b) met normalisatie}}{5}{figure.caption.12}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Relationeel datamodel (a) zonder en (b) met normalisatie}}{5}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overzicht testproces\relax }}{18}{figure.caption.39}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overzicht testproces\relax }}{18}{figure.caption.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Verbanden voor de calibratie\relax }}{19}{figure.caption.42}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Verbanden voor de calibratie\relax }}{19}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Verband vertraging ten opzicht van de belasting van een DBMS.}}}{19}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Verband vertraging ten opzicht van de belasting van een DBMS.}}}{19}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Verband aantal requests/seconde ten opzicht van het aantal gebruikers.}}}{19}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Verband aantal requests/seconde ten opzicht van het aantal gebruikers.}}}{19}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Testen: Consistentie test met \IeC {\'e}\IeC {\'e}n periode. Er is 1 schrijver, 4 lezers. De lezers stoppen zodra deze de data correct hebben gelezen. De rode lijn geeft aan vanaf wanneer de data consistent is voor alle queries gestart na dit tijdstip. \relax }}{23}{figure.caption.61}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Testen: Consistentie test met \IeC {\'e}\IeC {\'e}n periode. Er is 1 schrijver, 4 lezers. De lezers stoppen zodra deze de data correct hebben gelezen. De rode lijn geeft aan vanaf wanneer de data consistent is voor alle queries gestart na dit tijdstip. \relax }}{23}{figure.caption.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Overzicht testproces\relax }}{24}{figure.caption.70}
-\defcounter {refsection}{0}\relax 
-\addvspace {10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Volledige systeemarchitectuur van HBase met Hadoop en Zookeeper. Bron \cite {ChinHBaseComprehensive}\relax }}{28}{figure.caption.80}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB Architectuur voor replicatie en datadistributie. Bron figuur \ref {fig:mongodb-replicaset}: \cite {mongodb-replicaset}, figuur \ref {fig:mongodb-sharding}: \cite {mongodb-shard}\relax }}{31}{figure.caption.88}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drie leden van een replica set met een primary en 2 secundaries. }}}{31}{figure.caption.88}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers.}}}{31}{figure.caption.88}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{32}{figure.caption.96}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Deployment van de verschillende DBMS's en de testomgeving.\relax }}{37}{figure.caption.107}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 7 instanties. }}}{37}{figure.caption.107}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{37}{figure.caption.107}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 6 instanties. }}}{37}{figure.caption.107}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{37}{figure.caption.107}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Overzicht testproces\relax }}{24}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Calibratie: Overzicht van het aantal requests tot de gemiddelde vertraging voor verschillend aantal gebruikers. Elk datapunt stelt een gebruiker voor met het aantal in het punt. \relax }}{42}{figure.caption.123}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Volledige systeemarchitectuur van HBase met Hadoop en Zookeeper. Bron \cite {ChinHBaseComprehensive}\relax }}{28}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MongoDB}}}{42}{figure.caption.123}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MongoDB Architectuur voor replicatie en datadistributie. Bron figuur \ref {fig:mongodb-replicaset}: \cite {mongodb-replicaset}, figuur \ref {fig:mongodb-sharding}: \cite {mongodb-shard}\relax }}{31}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pgpool-II}}}{42}{figure.caption.123}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drie leden van een replica set met een primary en 2 secundaries. }}}{31}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {HBase}}}{42}{figure.caption.123}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers.}}}{31}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor HBase. \relax }}{43}{figure.caption.126}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{32}{figure.caption.97}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor MongoDB. \relax }}{44}{figure.caption.127}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Deployment van de verschillende DBMS's en de testomgeving.\relax }}{37}{figure.caption.108}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor Pgpool-II. \relax }}{45}{figure.caption.128}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 7 instanties. }}}{37}{figure.caption.108}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{37}{figure.caption.108}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 6 instanties. }}}{37}{figure.caption.108}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{37}{figure.caption.108}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces HBase: Het vereenvoudigde lees- en schrijfmodel voor strikte consistentie in HBase naar Lars Hofhansl\cite {hbase-acid}\relax }}{51}{figure.caption.153}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Calibratie: Overzicht van het aantal requests tot de gemiddelde vertraging voor verschillend aantal gebruikers. Elk datapunt stelt een verschillend aantal gebruikers voor met het aantal rechtsboven het punt. \relax }}{45}{figure.caption.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MongoDB}}}{45}{figure.caption.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pgpool-II}}}{45}{figure.caption.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {HBase}}}{45}{figure.caption.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor HBase. \relax }}{46}{figure.caption.128}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor MongoDB. \relax }}{47}{figure.caption.129}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor Pgpool-II. \relax }}{48}{figure.caption.130}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces HBase: Het vereenvoudigde lees- en schrijfmodel voor strikte consistentie in HBase naar Lars Hofhansl\cite {hbase-acid}\relax }}{53}{figure.caption.161}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces HBase: Domeinmodel HBase in IMP\relax }}{61}{figure.caption.169}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces MongoDB: Domeinmodel MongoDB in IMP\relax }}{63}{figure.caption.182}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Pgpool-II: Domeinmodel Pgpool-II in IMP\relax }}{66}{figure.caption.186}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces YCSB: Domeinmodel YCSB in IMP\relax }}{68}{figure.caption.187}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 

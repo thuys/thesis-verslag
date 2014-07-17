@@ -1,8 +1,40 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{brewer2000towards}
+E.~A. Brewer, Towards robust distributed systems, in: PODC, 2000, p.~7.
+
+\bibitem{brewer2012cap}
+E.~Brewer, Cap twelve years later: How the" rules" have changed, Computer
+  45~(2) (2012) 23--29.
+
+\bibitem{hbase-doc}
+\href{https://hbase.apache.org/}{Hbase, apache hbase}.
+\newline\urlprefix\url{https://hbase.apache.org/}
+
+\bibitem{chang2008bigtable}
+F.~Chang, J.~Dean, S.~Ghemawat, W.~C. Hsieh, D.~A. Wallach, M.~Burrows,
+  T.~Chandra, A.~Fikes, R.~E. Gruber, Bigtable: A distributed storage system
+  for structured data, ACM Transactions on Computer Systems (TOCS) 26~(2)
+  (2008) 4.
+
+\bibitem{hbase-acid}
+L.~Hofhansl,
+  \href{http://hadoop-hbase.blogspot.be/2012/03/acid-in-hbase.html}{Hbase: Acid
+  in hbase} (3 2012).
+\newline\urlprefix\url{http://hadoop-hbase.blogspot.be/2012/03/acid-in-hbase.html}
+
+\bibitem{mongodb-doc}
+\href{http://docs.mongodb.org/manual/}{The mongodb 2.6 manuel}.
+\newline\urlprefix\url{http://docs.mongodb.org/manual/}
+
+\bibitem{cooper2010benchmarking}
+B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, R.~Sears, Benchmarking
+  cloud serving systems with ycsb, in: Proceedings of the 1st ACM symposium on
+  Cloud computing, ACM, 2010, pp. 143--154.
 
 \end{thebibliography}

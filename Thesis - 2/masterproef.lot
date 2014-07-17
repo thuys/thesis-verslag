@@ -26,47 +26,49 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.1}{\ignorespaces Classificatie en categorisatie van NoSQL DBMS's door Scofield en Popescu. \cite {categorizatie-sco10} \cite {categorizatie-pop10b} \relax }}{7}{table.caption.18}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Classificatie en categorisatie van NoSQL DBMS's door Scofield en Popescu. \cite {categorizatie-sco10} \cite {categorizatie-pop10b} \relax }}{7}{table.caption.19}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Ondersteuning van de besproken DBMS's naar de selectie criteria. \relax }}{27}{table.caption.77}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Ondersteuning van de besproken DBMS's naar de selectie criteria. \relax }}{27}{table.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces MongoDB: Mogelijke opties bij lees- en schrijfqueries\relax }}{30}{table.caption.86}
+\contentsline {table}{\numberline {4.2}{\ignorespaces MongoDB: Mogelijke opties bij lees- en schrijfqueries\relax }}{30}{table.caption.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.3}{\ignorespaces Configuratie van event support\relax }}{34}{figure.caption.98}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Configuratie van event support\relax }}{34}{figure.caption.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.4}{\ignorespaces Uitvoer van event support\relax }}{34}{figure.caption.98}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Uitvoer van event support\relax }}{34}{figure.caption.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.5}{\ignorespaces Configuratie van de consistentie testen\relax }}{34}{table.caption.100}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Configuratie van de consistentie testen\relax }}{34}{table.caption.101}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.6}{\ignorespaces Uitvoer van een enkel query in de consistentie testen\relax }}{35}{table.caption.101}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Uitvoer van een enkel query in de consistentie testen\relax }}{35}{table.caption.102}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.7}{\ignorespaces Overzicht van de query parameters\relax }}{38}{table.caption.109}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Overzicht van de query parameters\relax }}{38}{table.caption.110}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.8}{\ignorespaces Calibratie: Overzicht van de parameters voor het testen van het aantal gebruikers\relax }}{38}{table.caption.110}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Calibratie: Overzicht van de parameters voor het testen van het aantal gebruikers\relax }}{38}{table.caption.111}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.9}{\ignorespaces Calibratie: Overzicht van de parameters voor het testen van het aantal records per seconde\relax }}{38}{table.caption.111}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Calibratie: Overzicht van de parameters voor het testen van het aantal records per seconde\relax }}{38}{table.caption.112}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.10}{\ignorespaces Beschikbaarheidstesten: Overzicht van de parameters\relax }}{39}{table.caption.114}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Beschikbaarheidstesten: Overzicht van de parameters\relax }}{39}{table.caption.115}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.11}{\ignorespaces Beschikbaarheidstesten: Overzicht van de commando's voor het stoppen en starten in de verschillende modes. \relax }}{39}{table.caption.115}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Beschikbaarheidstesten: Overzicht van de commando's voor het stoppen en starten in de verschillende modes. \relax }}{39}{table.caption.116}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.12}{\ignorespaces Beschikbaarheidstesten: Overzicht van de instanties naar figuur \ref {fig:deployment-testomgeving}\relax }}{39}{table.caption.116}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Beschikbaarheidstesten: Overzicht van de instanties naar figuur \ref {fig:deployment-testomgeving}\relax }}{39}{table.caption.117}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.13}{\ignorespaces Consistentie testen: Overzicht van de parameters\relax }}{40}{table.caption.119}
-\defcounter {refsection}{0}\relax 
-\addvspace {10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.1}{\ignorespaces Calibratie: Aantal gebruikers per test voor de verschillende DBMS's\relax }}{41}{table.caption.122}
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Calibratie: Aantal queries per seconde per test bij een matige belasting voor de verschillende DBMS's.\relax }}{41}{table.caption.125}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Consistentie testen: Overzicht van de parameters\relax }}{40}{table.caption.120}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6.1}{\ignorespaces Gemiddeld netwerk verkeer per query enkel voor het overbrengen van data\relax }}{47}{table.caption.131}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Calibratie: Aantal gebruikers per test voor de verschillende DBMS's\relax }}{43}{table.caption.123}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Calibratie: Aantal queries per seconde per test bij een matige belasting voor de verschillende DBMS's.\relax }}{44}{table.caption.127}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {6.1}{\ignorespaces Gemiddeld netwerk verkeer per query enkel voor het overbrengen van data\relax }}{49}{table.caption.139}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
