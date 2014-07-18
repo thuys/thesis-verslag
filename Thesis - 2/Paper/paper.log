@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  17 JUL 2014 14:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  17 JUL 2014 19:46
 entering extended mode
 **paper.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.tex"
@@ -909,74 +909,111 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 129.
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 144.
+Overfull \hbox (0.42009pt too wide) in paragraph at lines 139--140
+\OT1/txr/m/n/10 new ser-vices have also dif-fer-ent re-quire-ments, an up-date 
+doesn't
+ []
 
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 148.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 144.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 148.
 
-Overfull \hbox (8.1901pt too wide) in paragraph at lines 166--167
+Overfull \hbox (8.1901pt too wide) in paragraph at lines 170--171
 []\OT1/txr/m/n/10 In prac-tice, sys-tems like Mon-goDB, HBase and Re-dis choose
 s
- []
-
-
-Overfull \hbox (3.68008pt too wide) in paragraph at lines 177--178
-[]\OT1/txr/m/n/10 HBase[[]] is an open-sourced, dis-tributed, ver-sioned databa
-se
- []
-
-
-Overfull \hbox (5.74008pt too wide) in paragraph at lines 177--178
-\OT1/txr/m/n/10 de-signed af-ter Google's BigTable [[]]. HBase re-lies on Zooke
-eper
  []
 
 [1{C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-Overfull \hbox (0.42009pt too wide) in paragraph at lines 204--205
+Overfull \hbox (3.68008pt too wide) in paragraph at lines 181--182
+[]\OT1/txr/m/n/10 HBase[[]] is an open-sourced, dis-tributed, ver-sioned databa
+se
+ []
+
+
+Overfull \hbox (5.74008pt too wide) in paragraph at lines 181--182
+\OT1/txr/m/n/10 de-signed af-ter Google's BigTable [[]]. HBase re-lies on Zooke
+eper
+ []
+
+
+Overfull \hbox (0.42009pt too wide) in paragraph at lines 208--209
 \OT1/txr/m/n/10 ded-i-cated man-age-ment servers (HMas-ter and Zookeeper) to di
 s-
  []
 
-[2]
-Overfull \hbox (0.7695pt too wide) in paragraph at lines 233--234
-[]\OT1/txr/m/n/10 (50 threads, 600 queries/second) and Mon-goDB (15 threads,
+[2] <../img/Consistency-test-period.png, id=17, 873.0216pt x 344.7279pt>
+File: ../img/Consistency-test-period.png Graphic file (type png)
+
+<use ../img/Consistency-test-period.png>
+Package pdftex.def Info: ../img/Consistency-test-period.png used on input line 
+239.
+(pdftex.def)             Requested size: 252.0pt x 99.50563pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (8.17009pt too wide) in paragraph at lines 256--257
+\OT1/txr/m/n/10 HBase is an av-er-age of 600 queries/second spread over 50 thre
+ads,
  []
 
+
+Overfull \hbox (19.62953pt too wide) in paragraph at lines 256--257
+\OT1/txr/m/n/10 for Mon-goDB there are 15 threads with a to-tal of 200 queries/
+second. 
+ []
+
+
+<../img/Observaties/HBase/Stop-07-14-Soft-3-1.png, id=18, 493.3632pt x 493.3632
+pt>
+File: ../img/Observaties/HBase/Stop-07-14-Soft-3-1.png Graphic file (type png)
+ <use ../img/Observaties/HBase/Stop-07-14-Soft-3-1.png>
+Package pdftex.def Info: ../img/Observaties/HBase/Stop-07-14-Soft-3-1.png used 
+on input line 263.
+(pdftex.def)             Requested size: 252.0pt x 251.99583pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Consistency-test-peri
+od.png (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.bbl"
-Overfull \hbox (26.35107pt too wide) in paragraph at lines 26--30
+Overfull \hbox (30.35107pt too wide) in paragraph at lines 26--30
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://hadoop-hbase.blogspot.be/2012/03/acid
 -in-hbase.html 
  []
 
-) [3
-
-] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux") ) 
+) [4 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/HBase/S
+top-07-14-Soft-3-1.png>]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux") ) 
 Here is how much of TeX's memory you used:
- 13400 strings out of 493921
- 261297 string characters out of 3147279
- 294944 words of memory out of 3000000
- 16404 multiletter control sequences out of 15000+200000
- 24757 words of font info for 63 fonts, out of 3000000 for 9000
+ 13453 strings out of 493921
+ 262349 string characters out of 3147279
+ 295038 words of memory out of 3000000
+ 16447 multiletter control sequences out of 15000+200000
+ 32990 words of font info for 86 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,9n,76p,950b,691s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Pr
-ogram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Thomas/AppData/Roaming/
-MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/Thomas/AppData/Roaming
+{C:/Prog
+ram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Thomas/AppData/Roaming/Mi
+KTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/Thomas/AppData/Roaming/M
+iKTeX/2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/Thomas/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/Thomas/AppData/Roamin
 g/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
 mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (3 pages, 72202 bytes).
+Output written on paper.pdf (4 pages, 353998 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

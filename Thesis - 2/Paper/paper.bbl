@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -36,5 +36,20 @@ L.~Hofhansl,
 B.~F. Cooper, A.~Silberstein, E.~Tam, R.~Ramakrishnan, R.~Sears, Benchmarking
   cloud serving systems with ycsb, in: Proceedings of the 1st ACM symposium on
   Cloud computing, ACM, 2010, pp. 143--154.
+
+\bibitem{golab2014eventually}
+W.~Golab, M.~R. Rahman, A.~AuYoung, K.~Keeton, X.~S. Li, Eventually consistent:
+  not what you were expecting?, Communications of the ACM 57~(3) (2014) 38--44.
+
+\bibitem{patil2011ycsb++}
+S.~Patil, M.~Polte, K.~Ren, W.~Tantisiriroj, L.~Xiao, J.~L{\'o}pez, G.~Gibson,
+  A.~Fuchs, B.~Rinaldi, Ycsb++: benchmarking and performance debugging advanced
+  features in scalable table stores, in: Proceedings of the 2nd ACM Symposium
+  on Cloud Computing, ACM, 2011, p.~9.
+
+\bibitem{mauro2004system}
+J.~Mauro, J.~Zhu, I.~Pramanick, The system recovery benchmark, in: Dependable
+  Computing, 2004. Proceedings. 10th IEEE Pacific Rim International Symposium
+  on, IEEE, 2004, pp. 271--280.
 
 \end{thebibliography}

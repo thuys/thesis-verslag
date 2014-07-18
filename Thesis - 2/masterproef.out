@@ -27,15 +27,16 @@
 \BOOKMARK [1][-]{section.5.1}{Calibratie}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 28
 \BOOKMARK [1][-]{section.5.3}{Consistentie test}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 30
-\BOOKMARK [1][-]{section.6.1}{Calibratie}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.2}{Beschikbaarheidstest}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.3}{Consistentie test}{chapter.6}% 33
-\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 34
-\BOOKMARK [0][-]{appendix.A}{Uitwerking IMP}{}% 35
-\BOOKMARK [1][-]{section.A.1}{HBase}{appendix.A}% 36
-\BOOKMARK [1][-]{section.A.2}{MongoDB}{appendix.A}% 37
-\BOOKMARK [1][-]{section.A.3}{Pgpool-II}{appendix.A}% 38
-\BOOKMARK [1][-]{section.A.4}{YCSB}{appendix.A}% 39
-\BOOKMARK [0][-]{appendix.B}{Paper}{}% 40
-\BOOKMARK [0][-]{section*.189}{Bibliografie}{}% 41
+\BOOKMARK [1][-]{section.5.4}{Conclusie}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{Analyse van de resultaten}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Calibratie}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.2}{Beschikbaarheidstest}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.3}{Consistentie test}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter.7}{Conclusie}{}% 35
+\BOOKMARK [0][-]{appendix.A}{Uitwerking IMP}{}% 36
+\BOOKMARK [1][-]{section.A.1}{HBase}{appendix.A}% 37
+\BOOKMARK [1][-]{section.A.2}{MongoDB}{appendix.A}% 38
+\BOOKMARK [1][-]{section.A.3}{Pgpool-II}{appendix.A}% 39
+\BOOKMARK [1][-]{section.A.4}{YCSB}{appendix.A}% 40
+\BOOKMARK [0][-]{appendix.B}{Paper}{}% 41
+\BOOKMARK [0][-]{section*.195}{Bibliografie}{}% 42

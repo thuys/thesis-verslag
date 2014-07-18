@@ -3,6 +3,8 @@
 \section{Calibratie}
 Over de calibratie testen valt in het algemeen niet veel af te leiden, deze testen zijn niet uitgevoerd op een volledig dezelfde infrastructuur zo heeft Pgpool-II slechts 3 instanties t.o.v. 6 voor HBase. Wel is er een interessante observatie bij het aantal queries per seconde.  
 
+oorzaak hiervan is dat MongoDB een volledige database lockt met lees en schrijf locks. Dit kan zorgen voor een zeer grote variatie in de vertraging, daarom is gekozen voor een lagere waarde.  
+
 \paragraph{Aantal queries per second} Bij verdere analyse van de testresultaten van het aantal queries per seconde, blijkt dat elk van testen afvlakt door de beperkte netwerk bandbreedte, 100MB/s volgens iftop\footnote{Een bandbreedte monitoring tool}, en niet door een beperking van schrijftoegang of CPU. 
 
 Een berekening van de gemiddelde kost per query zoals getoond in tabel \ref{table:calibratie-analyse-netwerk}, kan deze afvlakking niet onmiddellijk verklaren. Met 2000 queries per seconde voor HBase, wordt er slecht 20MB/s aan data over het werk verstuurd. Maar in deze analyse is er enkel rekening gehouden met de data, noch met het resultaat van een query, noch met overhead van HBase en het netwerk protocol. 
