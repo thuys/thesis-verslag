@@ -66,7 +66,11 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6.1}{\ignorespaces Gemiddeld netwerk verkeer per query enkel voor het overbrengen van data\relax }}{58}{table.caption.145}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Consistentie: Percentage van de queries dat van de eerste keer de juiste data leest voor HBase. \relax }}{61}{table.caption.160}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {6.2}{\ignorespaces Consistentie: Ruwe data van MongoDB test waarbij inconsistente data wordt gelezen na het lezen van consistente data op verschillende lezers met het lezen via nearest en schrijven via fsync\_safe\relax }}{62}{table.caption.163}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {6.3}{\ignorespaces Consistenti: Percentage van de queries dat van de eerste keer juist de data leest bij 0ms, 2ms, 4ms, 6ms en 8ms voor MongoDB. Met als rijen de verschillende schrijf types en als kolommen de verschillende lees types. \relax }}{62}{table.caption.164}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 

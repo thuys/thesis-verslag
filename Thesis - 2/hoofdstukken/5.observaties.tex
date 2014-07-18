@@ -100,12 +100,13 @@ Tijdens de onderbreking, is er geen significante verandering in de vertraging va
 	\label{fig:beschikbaar-hbase-1}
 \end{figure}
 
-\paragraph{MongoDB} \todo{}
+\paragraph{MongoDB}
 Ook bij MongoDB zijn er verschillende reacties op het stopzetten als men de queries onder standaard configuratie uitvoert. In het geval van zacht of hard stoppen is er geen verschil in de reactie, bij 2/3 van de keren is er geen verschil merkbaar, bij 1/3 van de keren is er tijdelijke verhoging van het aantal queries, een voorbeeld toont dat de scan operatie voor 2 seconden uitgesteld wordt. Figuur van het overzicht: \ref{fig:beschikbaar-mongodb-soft} met een zoom naar de stop \ref{fig:beschikbaar-mongodb-soft-zoom}.
 
 Bij het onderbreken van het netwerk is er in bepaalde geen significante verandering, op andere momenten is een gedrag soortgelijk aan dat bij een zachte stop te merken. In andere gevallen is het zo dat er geen queries mogelijk zijn gedurende de volledige netwerk onderbreking. Zie figuur \ref{fig:beschikbaar-mongodb-drop}. 
 
 Tijdens de onderbreking, is er geen significante verandering in de vertraging van de uitgevoerde queries gemeten. 
+ 
 \begin{figure}[ht!] 
 	\centering
 	\subfigure[Voorbeeld van een zacht stop, harde stop en netwerk onderbreking]{\label{fig:beschikbaar-mongodb-soft} \includegraphics[width=\textwidth]{img/Observaties/MongoDB/single-graph-6-1}}
@@ -122,13 +123,15 @@ In het geval van een zachte stop, is er tijdelijk een onderbreking van al de que
 Bij een netwerk onderbreking, zijn er enige tijd geen queries mogelijk en na 30 seconden was de onderbreking over in de testen.  Een voorbeeld bevindt zich in figuur \ref{fig:beschikbaar-pgpool-netwerk}.  
 
 Tijdens de onderbreking is er een verandering naar schrijf queries toe, deze nemen significant minder tijd in beslag, dit geldt niet voor lees queries. Het voorbeelden uit de testen bevinden zich in figuur \ref{fig:beschikbaar-pgpool-boxplot-read} en \ref{fig:beschikbaar-pgpool-boxplot-write} voor respectievelijk schrijf en lees queries. 
+
+De herstel van een server na deze opnieuw online gebracht hebben, lukt slechts in zeldzame keren na deze te hebben opstarten. Enkel als alle connecties zijn, verbroken lukt het herstel. 
 \begin{figure}[ht!] 
 	\centering
 	\subfigure[Voorbeeld van een zacht stop]{\label{fig:beschikbaar-pgpool-soft} \includegraphics[width=\textwidth]{img/Observaties/Pgpool/single-graph-1-2}}
 	\subfigure[Voorbeeld van een harde stop of netwerk onderbreking]{\label{fig:beschikbaar-pgpool-netwerk} \includegraphics[width=\textwidth]{img/Observaties/Pgpool/single-graph-1-drop-1}}
 	\subfigure[Boxplot met leesvertragingen]{\label{fig:beschikbaar-pgpool-boxplot-read} \includegraphics[width=0.45\textwidth]{img/Observaties/Pgpool/boxplot-graph-Node-1-READ}}
 	\subfigure[Boxplot met schrijf vertragingen]{\label{fig:beschikbaar-pgpool-boxplot-write} \includegraphics[width=0.45\textwidth]{img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE}}
-	\caption{Beschikbaarheid: Verschillende voorbeeldreacties van MongoDB op beschikbaarheidstesten }
+	\caption{Beschikbaarheid: Verschillende voorbeeldreacties van Pgpool-II op beschikbaarheidstesten }
 	\label{fig:beschikbaar-pgpool}
 \end{figure}
 
@@ -153,9 +156,9 @@ Figuur \ref{fig:consistentie-hbase-start} toont een overzicht van de verschillen
 
 \paragraph{MongoDB} Bij MongoDB zijn er 5 soorten lees- en 5 soorten schrijfconfiguraties mogelijk. Na de testen bleek het dat secondarypreferred gelijk was aan secondary en is niet getoond in de grafieken om deze reden. 
 
-Voor elk van de 5 mogelijke schrijvacties, is een overzicht gegeven in figuren \ref{fig:consistentie-mongodb-all} en \ref{fig:consistentie-mongodb-R2}. In de eerste figuur, is de data van al de lezers gecombineerd, bij de tweede wordt er enkel naar lezer 2 gekeken. De maximale waarde van de x-as is zo gekozen dat voor elke dataset minstens 97\% en 99\% van de data getoond is voor respectievelijk figuur \ref{fig:consistentie-mongodb-all} en \ref{fig:consistentie-mongodb-R2}. Er zijn telkens de update queries getoond met een vergelijking tussen de insert en update bij majority. Ook uit de andere data blijkt dat deze niet significant verschillend zijn. 
+Voor elk van de 5 mogelijke schrijvacties, is een overzicht gegeven in figuren \ref{fig:consistentie-mongodb-all} en \ref{fig:consistentie-mongodb-R2}. In de eerste figuur, is de data van al de lezers gecombineerd, bij de tweede wordt er enkel naar lezer 2 gekeken. De maximale waarde van de x-as is zo gekozen dat voor elke dataset minstens 97\% en 99\% van de leesdata is getoond inor respectievelijk figuur \ref{fig:consistentie-mongodb-all} en \ref{fig:consistentie-mongodb-R2}. Er zijn telkens de update queries getoond met een vergelijking tussen de insert en update bij majority. Ook uit de andere data blijkt dat deze niet significant verschillend zijn. 
 
-Een vergelijking van de duur van de verschillende leesoperaties kan gevonden worden in figuur \ref{fig:consistentie-mongodb-all-mongodb-write} waar er minstens 90\% van de data is getoond. 
+Een vergelijking van de duur van de verschillende leesoperaties kan gevonden worden in figuur \ref{fig:consistentie-mongodb-all-mongodb-write} waar er minstens 90\% van de leesdata is getoond. 
 
 \begin{figure}[htb!] 
 	\centering
@@ -172,7 +175,7 @@ Een vergelijking van de duur van de verschillende leesoperaties kan gevonden wor
 	\subfigure[Replica Safe Update]{\label{fig:consistentie-all-mongodb-replicasafe} \includegraphics[width=.42\textwidth]{img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2}}
 	\subfigure[Majority Update]{\label{fig:consistentie-mongodb-all-majority} \includegraphics[width=.42\textwidth]{img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2}}
 	\subfigure[Majority Insert]{\label{fig:consistentie-mongodb-all-majority-insert} \includegraphics[width=.42\textwidth]{img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2}}
-	\caption{Consistentie: Overzicht van MongoDB op de consistentie testen voor alle lezers gecombineerd met een 97-percentiel }
+	\caption{Consistentie: Overzicht van MongoDB op de consistentie testen voor alle lezers gecombineerd met een 97-percentiel  (voor de lezers) }
 	\label{fig:consistentie-mongodb-all}
 \end{figure}
 
@@ -184,9 +187,9 @@ Een vergelijking van de duur van de verschillende leesoperaties kan gevonden wor
 	\subfigure[Replica Safe Update]{\label{fig:consistentie-mongodb-R2-replicasafe} \includegraphics[width=.42\textwidth]{img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2}}
 	\subfigure[Majority Update]{\label{fig:consistentie-mongodb-R2-majority} \includegraphics[width=.42\textwidth]{img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2}}
 	\subfigure[Majority Insert]{\label{fig:consistentie-mongodb-R2-majority-insert} \includegraphics[width=.42\textwidth]{img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2}}
-	\caption{Consistentie: Overzicht van MongoDB op de consistentie testen voor lezer 2 met een 99-percentiel}
+	\caption{Consistentie: Overzicht van MongoDB op de consistentie testen voor lezer 2 met een 99-percentiel (voor de lezers)}
 	\label{fig:consistentie-mongodb-R2}
 \end{figure}
 
 \section{Conclusie}
-Uit de testen 
+Zoals uit de bespreking van de systemen al afgeleid kon worden, gedraagt elk systeem verschillend. In het volgend hoofdstuk zullen de resultaten geanalyseerd worden en mogelijke verklaringen gezocht worden. 

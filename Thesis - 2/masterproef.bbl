@@ -807,7 +807,7 @@
   \verb{url}
   \verb http://www.pgpool.net/docs/latest/pgpool-en.html
   \endverb
-  \field{urlday}{10}
+  \field{urlday}{18}
   \field{urlmonth}{07}
   \field{urlyear}{2014}
 \endentry
@@ -1019,6 +1019,17 @@
   \verb http://www.christof-strauch.de/nosqldbs.pdf
   \endverb
   \field{year}{2010}
+\endentry
+
+\entry{hbase-doc}{online}{}
+  \field{sortinit}{T}
+  \field{title}{The Apache HBase Reference Guide}
+  \verb{url}
+  \verb http://hbase.apache.org/book/book.html
+  \endverb
+  \field{urlday}{18}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
 \endentry
 
 \entry{tudorica2011comparison}{inproceedings}{}
