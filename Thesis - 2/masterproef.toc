@@ -16,389 +16,387 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Voorwoord}{i}{chapter*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Samenvatting}{v}{chapter*.5}
+\contentsline {chapter}{Samenvatting}{v}{chapter*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{L"yst van figuren en tabellen}{vi}{chapter*.7}
+\contentsline {chapter}{L"yst van figuren en tabellen}{vi}{chapter*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Lijst van afkortingen en symbolen}{ix}{chapter*.10}
+\contentsline {chapter}{Lijst van afkortingen en symbolen}{ix}{chapter*.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Inleiding}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Overzicht van de technologie}{3}{chapter.2}
+\contentsline {section}{\numberline {1.1}Relationele en NoSQL DBMS's}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Geschiedenis van de databasemanagementsystemen}{3}{section.2.1}
+\contentsline {subsection}{\numberline {1.1.1}Relationele database}{1}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Relationele en NoSQL DBMS's}{4}{section.2.2}
+\contentsline {paragraph}{Atomair (\relax $\@@underline {\hbox {A}}\mathsurround \z@ $\relax tomicity)}{2}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Relationele database}{4}{subsection.2.2.1}
+\contentsline {paragraph}{Consistent (\relax $\@@underline {\hbox {C}}\mathsurround \z@ $\relax onsistency)}{2}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Atomair (\relax $\@@underline {\hbox {A}}\mathsurround \z@ $\relax tomicity)}{4}{section*.14}
+\contentsline {paragraph}{Ge\IeC {\"\i }soleerd (\relax $\@@underline {\hbox {I}}\mathsurround \z@ $\relax solation)}{2}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Consistent (\relax $\@@underline {\hbox {C}}\mathsurround \z@ $\relax onsistency)}{5}{section*.15}
+\contentsline {paragraph}{Duurzaam (\relax $\@@underline {\hbox {D}}\mathsurround \z@ $\relax urability)}{3}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ge\IeC {\"\i }soleerd (\relax $\@@underline {\hbox {I}}\mathsurround \z@ $\relax solation)}{5}{section*.16}
+\contentsline {subsection}{\numberline {1.1.2}NoSQL database}{3}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Duurzaam (\relax $\@@underline {\hbox {D}}\mathsurround \z@ $\relax urability)}{5}{section*.17}
+\contentsline {subsubsection}{Classificatie van NoSQL systemen}{4}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}NoSQL database}{5}{subsection.2.2.2}
+\contentsline {paragraph}{Column Model}{5}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Classificatie van NoSQL systemen}{7}{section*.18}
+\contentsline {paragraph}{Graph Model}{5}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Column Model}{7}{section*.20}
+\contentsline {paragraph}{Document Model}{5}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Graph Model}{7}{section*.21}
+\contentsline {paragraph}{Key-Value Model}{5}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Document Model}{7}{section*.22}
+\contentsline {subsection}{\numberline {1.1.3}Bespreking van verschillende DBMS's}{5}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Key-Value Model}{7}{section*.23}
+\contentsline {section}{\numberline {1.2}Objectieve vergelijking van de verschillende systemen volgens CAP}{6}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Bespreking van verschillende DBMS's}{8}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {1.2.1}Performantie benchmarking}{6}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Objectieve vergelijking van de verschillende systemen volgens CAP}{8}{section.2.3}
+\contentsline {subsection}{\numberline {1.2.2}Consistentie testen}{7}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Performantie benchmarking}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {1.2.3}Beschikbaarheidstesten}{9}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Consistentie testen}{10}{subsection.2.3.2}
+\contentsline {section}{\numberline {1.3}Conclusie}{9}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Beschikbaarheidstesten}{11}{subsection.2.3.3}
+\contentsline {chapter}{\chapternumberline {2}Methodiek van de testen}{11}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Conclusie}{12}{section.2.4}
+\contentsline {paragraph}{Opstellen van de testomgeving}{11}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Methodiek van de testen}{13}{chapter.3}
+\contentsline {paragraph}{Calibratie van de testomgeving}{11}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Opstellen van de testomgeving}{13}{section*.24}
+\contentsline {paragraph}{Testen van de systemen}{11}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Calibratie van de testomgeving}{13}{section*.25}
+\contentsline {paragraph}{Verzamelen en analyseren van de testdata}{11}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Testen van de systemen}{13}{section*.26}
+\contentsline {section}{\numberline {2.1}Stap 1: Opstellen van de testomgeving}{12}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Verzamelen en analyseren van de testdata}{13}{section*.27}
+\contentsline {paragraph}{Configuratie bestanden}{12}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Stap 1: Opstellen van de testomgeving}{14}{section.3.1}
+\contentsline {paragraph}{Centrale configuratie}{12}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Configuratie bestanden}{14}{section*.29}
+\contentsline {section}{\numberline {2.2}Stap 2: Calibratie van de testomgeving}{13}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Centrale configuratie}{14}{section*.30}
+\contentsline {paragraph}{Hoeveelheid data per gegevensrecord}{13}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Stap 2: Calibratie van de testomgeving}{14}{section.3.2}
+\contentsline {paragraph}{Type van queries}{13}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Hoeveelheid data per gegevensrecord}{15}{section*.32}
+\contentsline {paragraph}{Query specificatie}{13}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Type van queries}{15}{section*.33}
+\contentsline {paragraph}{Aantal connecties of gebruikers}{14}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Query specificatie}{15}{section*.34}
+\contentsline {paragraph}{Aantal queries per seconde}{14}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Aantal connecties of gebruikers}{15}{section*.35}
+\contentsline {section}{\numberline {2.3}Stap 3: Testen van de systemen}{14}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Aantal queries per seconde}{16}{section*.36}
+\contentsline {paragraph}{Opstellen van de database}{14}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Stap 3: Testen van de systemen}{16}{section.3.3}
+\contentsline {paragraph}{Inladen van de data}{14}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Opstellen van de database}{16}{section*.37}
+\contentsline {paragraph}{Pauze}{14}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Inladen van de data}{16}{section*.38}
+\contentsline {paragraph}{Opstarten van de test (opstart kost)}{15}{section*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Pauze}{16}{section*.39}
+\contentsline {paragraph}{Uitvoeren van de test}{15}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Opstarten van de test (opstart kost)}{16}{section*.40}
+\contentsline {paragraph}{Terugbrengen naar beginstatus}{15}{section*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Uitvoeren van de test}{16}{section*.41}
+\contentsline {subsection}{\numberline {2.3.1}Beschikbaarheidstest}{15}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Terugbrengen naar beginstatus}{17}{section*.42}
+\contentsline {paragraph}{Zachte stop}{15}{section*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Beschikbaarheidstest}{17}{subsection.3.3.1}
+\contentsline {paragraph}{Harde stop}{15}{section*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Zachte stop}{17}{section*.43}
+\contentsline {paragraph}{Netwerk onderbreken}{15}{section*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Harde stop}{17}{section*.44}
+\contentsline {subsection}{\numberline {2.3.2}Consistentie test}{16}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Netwerk onderbreken}{17}{section*.45}
+\contentsline {paragraph}{Beschrijving van de test}{16}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Consistentie test}{18}{subsection.3.3.2}
+\contentsline {subparagraph}{Taak van de schrijver}{16}{section*.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Beschrijving van de test}{18}{section*.46}
+\contentsline {subparagraph}{Taak van de lezer}{16}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Taak van de schrijver}{18}{section*.47}
+\contentsline {subparagraph}{Het plannen van de lezers}{16}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Taak van de lezer}{18}{section*.48}
+\contentsline {subparagraph}{Schatten van de basisbelasting}{17}{section*.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Het plannen van de lezers}{18}{section*.49}
+\contentsline {paragraph}{Soorten eventuele consistentie}{17}{section*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Schatten van de basisbelasting}{18}{section*.51}
+\contentsline {subparagraph}{Consistentie}{17}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Soorten eventuele consistentie}{19}{section*.52}
+\contentsline {subparagraph}{Read your own writes consistentie}{17}{section*.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Strikte consistentie}{19}{section*.53}
+\contentsline {subparagraph}{Session consistentie}{18}{section*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Read your own writes consistentie}{19}{section*.55}
+\contentsline {subparagraph}{Casual consistentie}{18}{section*.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Session consistentie}{19}{section*.56}
+\contentsline {subparagraph}{Monotonic Read consistentie}{18}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Casual consistentie}{19}{section*.57}
+\contentsline {section}{\numberline {2.4}Stap 4: Verzamelen en analyseren van de testdata}{18}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Monotonic Read consistentie}{20}{section*.58}
+\contentsline {section}{\numberline {2.5}Conclusie}{18}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Stap 4: Verzamelen en analyseren van de testdata}{20}{section.3.4}
+\contentsline {chapter}{\chapternumberline {3}Implementatie}{21}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Conclusie}{20}{section.3.5}
+\contentsline {section}{\numberline {3.1}Selectie van de DBMS's}{21}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Implementatie}{21}{chapter.4}
+\contentsline {paragraph}{Vrije software}{21}{section*.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Selectie van de DBMS's}{21}{section.4.1}
+\contentsline {paragraph}{Persistentie}{21}{section*.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Vrije software}{21}{section*.60}
+\contentsline {paragraph}{Replicatie}{21}{section*.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Persistentie}{21}{section*.61}
+\contentsline {paragraph}{Data distributie}{22}{section*.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Replicatie}{21}{section*.62}
+\contentsline {paragraph}{Ondersteuning voor verschillende query methodes}{22}{section*.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Data distributie}{22}{section*.63}
+\contentsline {section}{\numberline {3.2}Gedetailleerde bespreking van de geselecteerde DBMS's}{23}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ondersteuning voor verschillende query methodes}{22}{section*.64}
+\contentsline {subsection}{\numberline {3.2.1}HBase}{23}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Gedetailleerde bespreking van de geselecteerde DBMS's}{23}{section.4.2}
+\contentsline {subsubsection}{Data structuur\cite {george2011hbase}}{23}{section*.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}HBase}{23}{subsection.4.2.1}
+\contentsline {subsubsection}{Architectuur\cite {george2011hbase}}{24}{section*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Data structuur\cite {george2011hbase}}{23}{section*.67}
+\contentsline {paragraph}{HBase\cite {george2011hbase}}{24}{section*.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Architectuur\cite {george2011hbase}}{24}{section*.68}
+\contentsline {paragraph}{Hadoop\cite {borthakur2007hadoop}}{25}{section*.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBase\cite {george2011hbase}}{24}{section*.70}
+\contentsline {paragraph}{Zookeeper\cite {hunt2010zookeeper}}{25}{section*.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Hadoop\cite {borthakur2007hadoop}}{24}{section*.71}
+\contentsline {subsection}{\numberline {3.2.2}MongoDB\cite {mongodb-manual}}{26}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Zookeeper\cite {hunt2010zookeeper}}{25}{section*.72}
+\contentsline {subsubsection}{Datastructuur}{26}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}MongoDB\cite {mongodb-manual}}{25}{subsection.4.2.2}
+\contentsline {subsubsection}{Architectuur}{27}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Datastructuur}{25}{section*.74}
+\contentsline {paragraph}{Replicatie\cite {mongodb-replicaset}}{27}{section*.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Architectuur}{26}{section*.76}
+\contentsline {paragraph}{Data distributie\cite {mongodb-shard}}{27}{section*.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Replicatie\cite {mongodb-replicaset}}{26}{section*.78}
+\contentsline {subparagraph}{Shards}{27}{section*.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Data distributie\cite {mongodb-shard}}{27}{section*.79}
+\contentsline {subparagraph}{Configuratie servers}{27}{section*.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Shards}{27}{section*.80}
+\contentsline {subparagraph}{Toegangsserver}{28}{section*.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Configuratie servers}{27}{section*.81}
+\contentsline {subsection}{\numberline {3.2.3}Pgpool-II (PostgreSQL)\cite {pgpool-doc}}{28}{subsection.3.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Toegangsserver}{27}{section*.82}
+\contentsline {subsubsection}{Datastructuur}{28}{section*.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Pgpool-II (PostgreSQL)\cite {pgpool-doc}}{28}{subsection.4.2.3}
+\contentsline {subsubsection}{Architectuur}{28}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Datastructuur}{28}{section*.83}
+\contentsline {section}{\numberline {3.3}Selectie en uitwerking van de testsoftware}{29}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Architectuur}{28}{section*.84}
+\contentsline {paragraph}{Beschikbaarheidstest}{30}{section*.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Selectie en uitwerking van de testsoftware}{29}{section.4.3}
+\contentsline {paragraph}{Consistentie testen}{30}{section*.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Beschikbaarheidstest}{29}{section*.86}
+\contentsline {section}{\numberline {3.4}Installatie en opstelling van de DBMS's en YCSB}{30}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Consistentie testen}{30}{section*.88}
+\contentsline {paragraph}{HBase}{31}{section*.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Installatie en opstelling van de DBMS's en YCSB}{31}{section.4.4}
+\contentsline {paragraph}{Pgpool-II}{31}{section*.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBase}{32}{section*.91}
+\contentsline {paragraph}{MongoDB}{31}{section*.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Pgpool-II}{32}{section*.93}
+\contentsline {paragraph}{YCSB}{32}{section*.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDB}{32}{section*.94}
+\contentsline {section}{\numberline {3.5}Uitvoeren van de calibratie en testen}{32}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{YCSB!}{32}{section*.95}
+\contentsline {paragraph}{Calibratie testen}{32}{section*.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Uitvoeren van de calibratie en testen}{32}{section.4.5}
+\contentsline {paragraph}{Beschikbaarheidstesten}{32}{section*.90}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Calibratie testen}{33}{section*.97}
+\contentsline {paragraph}{Consistentie testen}{33}{section*.93}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Beschikbaarheidstesten}{34}{section*.102}
+\contentsline {section}{\numberline {3.6}Verzamelen en analyse van de testresultaten}{34}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Consistentie testen}{36}{section*.107}
+\contentsline {section}{\numberline {3.7}Conclusie}{34}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Verzamelen en analyse van de testresultaten}{36}{section.4.6}
+\contentsline {chapter}{\chapternumberline {4}Observaties}{37}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Conclusie}{36}{section.4.7}
+\contentsline {section}{\numberline {4.1}Calibratie}{37}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Observaties}{39}{chapter.5}
+\contentsline {paragraph}{Aantal gebruikers}{37}{section*.95}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Calibratie}{39}{section.5.1}
+\contentsline {paragraph}{Aantal queries per seconde}{38}{section*.98}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Aantal gebruikers}{39}{section*.109}
+\contentsline {section}{\numberline {4.2}Beschikbaarheidstest}{39}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Aantal queries per seconde}{39}{section*.112}
+\contentsline {paragraph}{HBase}{40}{section*.103}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Beschikbaarheidstest}{41}{section.5.2}
+\contentsline {paragraph}{MongoDB}{41}{section*.105}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBase}{42}{section*.117}
+\contentsline {paragraph}{Pgpool-II}{42}{section*.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDB}{43}{section*.119}
+\contentsline {section}{\numberline {4.3}Consistentie test}{42}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Pgpool-II}{44}{section*.121}
+\contentsline {paragraph}{HBase}{42}{section*.109}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Consistentie test}{44}{section.5.3}
+\contentsline {paragraph}{MongoDB}{43}{section*.111}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBase}{44}{section*.124}
+\contentsline {section}{\numberline {4.4}Conclusie}{43}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDB}{45}{section*.126}
+\contentsline {chapter}{\chapternumberline {5}Analyse van de resultaten}{51}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Conclusie}{45}{section.5.4}
+\contentsline {section}{\numberline {5.1}Calibratie}{51}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Analyse van de resultaten}{53}{chapter.6}
+\contentsline {section}{\numberline {5.2}Beschikbaarheidstest}{51}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Calibratie}{53}{section.6.1}
+\contentsline {paragraph}{HBase}{51}{section*.115}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Beschikbaarheidstest}{53}{section.6.2}
+\contentsline {subparagraph}{HBase: Zachte stop}{52}{section*.116}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBase}{53}{section*.130}
+\contentsline {subparagraph}{Netwerk onderbreking}{52}{section*.117}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{HBase: Zachte stop}{54}{section*.131}
+\contentsline {subparagraph}{HBase: Harde stop}{52}{section*.118}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Netwerk onderbreking}{54}{section*.132}
+\contentsline {subparagraph}{Herstel van de instantie}{52}{section*.119}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{HBase: Harde stop}{54}{section*.133}
+\contentsline {paragraph}{MongoDB}{52}{section*.120}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Herstel van de instantie}{54}{section*.134}
+\contentsline {subparagraph}{Zachte stop en harde stop}{52}{section*.121}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Netwerk onderbreking}{53}{section*.123}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Herstel van de instantie}{53}{section*.124}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pgpool-II}{53}{section*.125}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Zachte stop}{53}{section*.126}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Harde stop}{53}{section*.127}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Netwerk onderbreking}{53}{section*.128}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Vermindering van leesvertraging}{54}{section*.129}
+\defcounter {refsection}{0}\relax 
+\contentsline {subparagraph}{Herstel van de instantie}{54}{section*.130}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Conclusie}{54}{section*.131}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Consistentie test}{54}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{HBase}{54}{section*.132}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{MongoDB}{54}{section*.135}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Zachte stop en harde stop}{54}{section*.136}
+\contentsline {paragraph}{Conclusie}{56}{section*.138}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Netwerk onderbreking}{55}{section*.138}
+\contentsline {section}{\numberline {5.4}Conclusie}{57}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Herstel van de instantie}{55}{section*.139}
+\contentsline {chapter}{\chapternumberline {6}Conclusie}{59}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Pgpool-II}{55}{section*.140}
+\contentsline {section}{\numberline {6.1}Verder werk}{60}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Zachte stop}{55}{section*.141}
+\contentsline {appendix}{\chapternumberline {A}Bespreking van verschillende DBMS's}{63}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Harde stop}{55}{section*.142}
+\contentsline {section}{\numberline {A.1}Column database}{63}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Netwerk onderbreking}{55}{section*.143}
+\contentsline {subsection}{\numberline {A.1.1}Cassandra}{63}{subsection.A.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Vermindering van leesvertraging}{56}{section*.144}
+\contentsline {subsection}{\numberline {A.1.2}HBase}{64}{subsection.A.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Herstel van de instantie}{56}{section*.145}
+\contentsline {section}{\numberline {A.2}Document database}{64}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Conclusie}{56}{section*.146}
+\contentsline {subsection}{\numberline {A.2.1}Apache CoucheDB}{64}{subsection.A.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Consistentie test}{56}{section.6.3}
+\contentsline {subsection}{\numberline {A.2.2}MongoDB}{64}{subsection.A.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBase}{56}{section*.147}
+\contentsline {section}{\numberline {A.3}Key-Value database}{65}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDB}{56}{section*.150}
+\contentsline {subsection}{\numberline {A.3.1}LightCloud (Tokyo)}{65}{subsection.A.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Conclusie}{58}{section*.153}
+\contentsline {subsection}{\numberline {A.3.2}MemCacheDB}{65}{subsection.A.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Conclusie}{59}{section.6.4}
+\contentsline {subsection}{\numberline {A.3.3}Redis}{65}{subsection.A.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusie}{61}{chapter.7}
+\contentsline {subsection}{\numberline {A.3.4}Riak}{66}{subsection.A.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Verder werk}{62}{section.7.1}
+\contentsline {subsection}{\numberline {A.3.5}Project Voldemort}{66}{subsection.A.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {A}Bespreking van verschillende DBMS's}{65}{appendix.A}
+\contentsline {section}{\numberline {A.4}Relationele database}{67}{section.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Column database}{65}{section.A.1}
+\contentsline {subsection}{\numberline {A.4.1}MySQL}{67}{subsection.A.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}Cassandra}{65}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.4.2}Pgpool-II (PostgreSQL)}{67}{subsection.A.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}HBase}{66}{subsection.A.1.2}
+\contentsline {appendix}{\chapternumberline {B}Overzicht van gedetailleerde implementatie keuzes}{69}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Document database}{66}{section.A.2}
+\contentsline {appendix}{\chapternumberline {C}Uitwerking IMP}{73}{appendix.C}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.1}Apache CoucheDB}{66}{subsection.A.2.1}
+\contentsline {section}{\numberline {C.1}HBase}{73}{section.C.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.2}MongoDB}{66}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {C.1.1}Domein model en uitleg}{74}{subsection.C.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Key-Value database}{67}{section.A.3}
+\contentsline {paragraph}{HBaseMaster}{74}{section*.145}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.1}LightCloud (Tokyo)}{67}{subsection.A.3.1}
+\contentsline {paragraph}{HRegion}{74}{section*.146}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.2}MemCacheDB}{67}{subsection.A.3.2}
+\contentsline {paragraph}{HadoopHDFS}{74}{section*.147}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.3}Redis}{67}{subsection.A.3.3}
+\contentsline {paragraph}{HadooDatapHDFS}{74}{section*.148}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.4}Riak}{68}{subsection.A.3.4}
+\contentsline {paragraph}{Zookeeper}{74}{section*.149}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3.5}Project Voldemort}{68}{subsection.A.3.5}
+\contentsline {paragraph}{Javahost}{74}{section*.150}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Relationele database}{69}{section.A.4}
+\contentsline {subsection}{\numberline {C.1.2}Voorbeeld configuratie}{74}{subsection.C.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.1}MySQL}{69}{subsection.A.4.1}
+\contentsline {section}{\numberline {C.2}MongoDB}{76}{section.C.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4.2}Pgpool-II (PostgreSQL)}{69}{subsection.A.4.2}
+\contentsline {subsection}{\numberline {C.2.1}Domein model en uitleg}{76}{subsection.C.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {B}Uitwerking IMP}{71}{appendix.B}
+\contentsline {paragraph}{MongoDB}{76}{section*.152}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}HBase}{71}{section.B.1}
+\contentsline {paragraph}{MonogDBServer}{76}{section*.153}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.1}Domein model en uitleg}{72}{subsection.B.1.1}
+\contentsline {paragraph}{MongoDBNode}{76}{section*.154}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HBaseMaster}{72}{section*.155}
+\contentsline {paragraph}{MongoDBReplicaSet}{76}{section*.155}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HRegion}{72}{section*.156}
+\contentsline {paragraph}{MongoDBReplicaSetController}{76}{section*.156}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HadoopHDFS}{72}{section*.157}
+\contentsline {paragraph}{MongoDBConfigServer}{77}{section*.157}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{HadooDatapHDFS}{72}{section*.158}
+\contentsline {paragraph}{MongoDBAccessServer}{77}{section*.158}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Zookeeper}{72}{section*.159}
+\contentsline {paragraph}{MongoDBShardCluster}{77}{section*.159}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Javahost}{72}{section*.160}
+\contentsline {paragraph}{MongoDBShardController}{77}{section*.160}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1.2}Voorbeeld configuratie}{72}{subsection.B.1.2}
+\contentsline {paragraph}{MongoDBDatabase}{77}{section*.161}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}MongoDB}{74}{section.B.2}
+\contentsline {paragraph}{MongoDBCollection}{77}{section*.162}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2.1}Domein model en uitleg}{74}{subsection.B.2.1}
+\contentsline {paragraph}{MongoDBKey}{77}{section*.163}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDB}{74}{section*.162}
+\contentsline {subsection}{\numberline {C.2.2}Voorbeeld configuratie}{78}{subsection.C.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MonogDBServer}{74}{section*.163}
+\contentsline {section}{\numberline {C.3}Pgpool-II}{80}{section.C.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBNode}{74}{section*.164}
+\contentsline {subsection}{\numberline {C.3.1}Domein model en uitleg}{80}{subsection.C.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBReplicaSet}{74}{section*.165}
+\contentsline {paragraph}{PgpoolMain}{80}{section*.165}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBReplicaSetController}{74}{section*.166}
+\contentsline {paragraph}{PgpoolNode}{80}{section*.166}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBConfigServer}{75}{section*.167}
+\contentsline {paragraph}{PostgresqlServer}{80}{section*.167}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBAccessServer}{75}{section*.168}
+\contentsline {subsection}{\numberline {C.3.2}Voorbeeld configuratie}{80}{subsection.C.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBShardCluster}{75}{section*.169}
+\contentsline {section}{\numberline {C.4}YCSB}{81}{section.C.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBShardController}{75}{section*.170}
+\contentsline {subsection}{\numberline {C.4.1}Domein model en uitleg}{81}{subsection.C.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBDatabase}{75}{section*.171}
+\contentsline {subsection}{\numberline {C.4.2}Voorbeeld configuratie}{82}{subsection.C.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBCollection}{75}{section*.172}
+\contentsline {appendix}{\chapternumberline {D}Paper}{83}{appendix.D}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{MongoDBKey}{75}{section*.173}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2.2}Voorbeeld configuratie}{76}{subsection.B.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Pgpool-II}{78}{section.B.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.1}Domein model en uitleg}{78}{subsection.B.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{PgpoolMain}{78}{section*.175}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{PgpoolNode}{78}{section*.176}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{PostgresqlServer}{78}{section*.177}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3.2}Voorbeeld configuratie}{78}{subsection.B.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}YCSB}{79}{section.B.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.1}Domein model en uitleg}{79}{subsection.B.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4.2}Voorbeeld configuratie}{80}{subsection.B.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {C}Paper}{81}{appendix.C}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{87}{section*.181}
+\contentsline {chapter}{Bibliografie}{89}{section*.171}
 \defcounter {refsection}{0}\relax 
 \select@language {dutch}
 \defcounter {refsection}{0}\relax 

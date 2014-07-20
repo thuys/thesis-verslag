@@ -318,6 +318,18 @@
   \field{year}{2010}
 \endentry
 
+\entry{dbengine-ranking}{online}{}
+  \field{sortinit}{D}
+  \field{title}{DB-Engines Ranking - popularity ranking of database management
+  systems}
+  \verb{url}
+  \verb http://db-engines.com/en/ranking
+  \endverb
+  \field{urlday}{20}
+  \field{urlmonth}{07}
+  \field{urlyear}{2014}
+\endentry
+
 \entry{thesisHarm}{thesis}{}
   \name{author}{1}{}{%
     {{}%
@@ -330,7 +342,7 @@
   \strng{fullhash}{DWH1}
   \field{sortinit}{D}
   \field{title}{Configuratieafhankelijkheden gebruiken om gedistribueerde
-  applicaties efficient te beheren in een hybride cloud.}
+  applicaties effici\"ent te beheren in een hybride cloud.}
   \list{institution}{1}{%
     {KU Leuven}%
   }
@@ -482,22 +494,6 @@
   \field{volume}{57}
   \field{journaltitle}{Communications of the ACM}
   \field{year}{2014}
-\endentry
-
-\entry{gray2007data}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Gray}{G.}%
-     {Jim}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{GJ1}
-  \strng{fullhash}{GJ1}
-  \field{sortinit}{G}
-  \field{title}{Data Management: Past, Present, and Future}
-  \field{journaltitle}{arXiv preprint cs/0701156}
-  \field{year}{2007}
 \endentry
 
 \entry{hbase-acid}{online}{}

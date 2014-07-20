@@ -9,11 +9,14 @@
 \setup{filingcard,
   translatedtitle={Automatisch uitrol van database systemen en vergelijking van beschikbaarheid},
   udc=681.3,
-  shortabstract={Hier komt een heel bondig abstract van hooguit 500
-      woorden. \LaTeX\ commando's mogen hier gebruikt worden. Blanco lijnen
-   (of het commando \texttt{\string\pa r}) zijn wel niet
-   toegelaten!
-  \endgraf \lipsum[2]}}
+  shortabstract={De meest gebruikte database management systemen zijn momenteel relationele of NoSQL systemen waarbij er verschillen zijn naar het ondersteunde datamodel. Daarnaast zijn er ook verschillende keuze gemaakt naar het opzetten van deze systemen in een gedistribueerde omgeving. \\ 
+  Volgens het CAP theorema, kan een systeem niet tegelijk consistentie en hoge beschikbaarheid aanbieden en partitie tolerant te zijn. Deze thesis introduceert een model om verschillende database systemen gekwantificeerd te vergelijken naar consistentie en beschikbaarheid. Bij consistentie wordt het leesgedrag vergeleken bij het invoegen of aanpassen van data: hoelang het duurt vooraleer de data beschikbaar is voor elke gebruiker en het gedrag van de query gedurende deze periode. \\
+  Voor de beschikbaarheidstesten wordt het gedrag van de queries opgevolgd terwijl database instantie stoppen en of er netwerk partities ontstaan.  
+  Dit model is praktisch uitgewerkt met behulp van YCSB en verschillende database systemen zijn getest. \\   
+  Waar zowel HBase als MongoDB stikte consistentie afleveren, is er een praktisch verschil in hun gedrag: bij HBase worden leesbewerkingen, gestart na de schrijfbewerking, uitgesteld om de nieuwe data terug te geven onmiddellijk na het voltooien van de schrijfbewerking. Bij MongoDB daarin tegen kunnen leesbewerkingen de nieuwe data al teruggeven vooraleer de schrijfbewerking is voltooid. Ook zijn er verschillend garanties bij MongoDB mogelijk voor de lees- en schrijfbewerkingen. \\   
+  Bij de beschikbaarheidstesten zijn er verschillen tussen de aanpak bij MongoDB, HBase en Pgpool-II. Bij MongoDB en HBase worden er sessies gebruikt en kan de data enige tijd onbeschikbaar zijn bij het uitvallen van een instantie. Pgpool-II verbreekt al de verbindingen als een enkele instantie offline gaat waarna onmiddellijk daarna de data al opnieuw kan gelezen worden. \\
+  De eerste twee systemen zullen een server die opnieuw online automatisch opnieuw opnemen in hun systeem, bij Pgpool-II moet dit proces handmatig opgestart worden. }
+ }
 % Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
 %\setup{coverpageonly}
 % Verwijder de "%" op de volgende lijn als je enkel de eerste pagina's wil
@@ -66,21 +69,34 @@
 \setlength{\parskip}{\baselineskip}
 
 \begin{preface}
-\todo{Voorwoord schrijven}
-\todo{Bibtex: thesisHarm}
-\lipsum
+Het afgelopen jaar heeft mijn thesis mij talrijke nieuwe ervaringen en uitdagingen gegeven. Het heeft mij kennis bijgebracht over de verschillende database systemen en de probleemwereld van het installeren, configureren, onderhouden en het gedrag van data systemen. 
+
+Deze thesis is tot stand gekomen door de hulp en steun van verschillende mensen, ik neem graag even de tijd om deze te bedanken. 
+
+Ik zou graag beginnen met mijn begeleiders Bart Vanbrabant en Bert Lagaisse voor hun permanente begeleiding en hulp bij het onderzoeken en schrijven van de thesis, klaar om met een fris oog en ander perspectief naar het werk te kijken. 
+
+Mijn promotor Wouter Joosen zou ik graag willen bedanken voor het vertrouwen en de ondersteuning doorheen het jaar. 
+
+Met mijn studiegenoot Arnaud Schoonjans heb ik gesprekken gehad over de mogelijke testmethodes, een grotere variëteit aan database systemen kunnen zien, ook hiervoor bedankt. 
+
+Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun in de thesis en het brengen van extra motivatie op momenten op de momenten dat ik het nodig vond. 
+
   
 \end{preface}
 
 \tableofcontents*
 \listoftodos
 \begin{abstract}
-\todo{Abstract schrijven}
+De meest gebruikte database management systemen zijn momenteel de relationele of NoSQL systemen waarbij er verschillen zijn naar het ondersteunde datamodel. Daarnaast zijn er ook verschillende keuze gemaakt naar het opzetten van deze systemen in een gedistribueerde omgeving. 
 
-  In dit \texttt{abstract} environment wordt een al dan niet uitgebreide
-  samenvatting van het werk gegeven. De bedoeling is wel dat dit tot
-  1~bladzijde beperkt blijft.
-  \lipsum
+Volgens het CAP theorema, kan een systeem niet tegelijk consistentie en hoge beschikbaarheid aanbieden en partitie tolerant te zijn. Deze thesis introduceert een model om verschillende database systemen gekwantificeerd te vergelijken naar consistentie en beschikbaarheid. Bij de consistentie testen wordt het leesgedrag vergeleken bij het invoegen of aanpassen van data: hoelang het duurt vooraleer de data beschikbaar is voor elke gebruiker en het gedrag van de query gedurende deze periode. \\
+Voor de beschikbaarheidstesten wordt het gedrag van de queries opgevolgd terwijl een database instantie stopt en of er netwerk partities ontstaan.  
+Dit model is praktisch uitgewerkt met behulp van YCSB en verschillende database systemen zijn getest. 
+
+Waar zowel HBase als MongoDB stikte consistentie afleveren, is er een praktisch verschil in hun gedrag: bij HBase worden leesbewerkingen, gestart na de schrijfbewerking, uitgesteld om de nieuwe data terug te geven onmiddellijk na het voltooien van de schrijfbewerking. Bij MongoDB daarin tegen kunnen leesbewerkingen de nieuwe data al teruggeven vooraleer de schrijfbewerking is voltooid. Ook zijn er verschillend garanties bij MongoDB mogelijk voor de lees- en schrijfbewerkingen. 
+
+Bij de beschikbaarheidstesten zijn er verschillen tussen de aanpak bij MongoDB, HBase en Pgpool-II. Bij MongoDB en HBase worden er sessies gebruikt en kan de data enige tijd onbeschikbaar zijn bij het uitvallen van een instantie. Pgpool-II verbreekt al de verbindingen als een enkele instantie offline gaat waarna onmiddellijk daarna de data al opnieuw kan gelezen worden. \\
+De eerste twee systemen zullen een server die opnieuw online komt, automatisch hernemen in hun systeem, bij Pgpool-II moet dit proces handmatig opgestart worden. 
 \end{abstract}
 
 % Een lijst van figuren en tabellen is optioneel
@@ -108,6 +124,7 @@
 \appendixpage*          % indien gewenst
 \appendix
 \include{appendix/app-database-beschrijving}
+\include{appendix/app-implementatie}
 \include{appendix/app-IMP}
 \include{appendix/app-paper}
 %\include{appendix/app-A}
