@@ -1,1 +1,21 @@
 \chapter{Conclusie}
+Database management systemen zijn er in veel verschillende soorten, waar er veel wordt gedacht aan hun verschil in data en query methodes, zijn er ook verschillen bij hun gedrag in een gedistribueerde omgeving.
+
+In deze thesis is een nieuwe testmethode beschreven en vervolgens uitgewerkt om de consistentie en beschikbaarheidsverschillen van verschillende systemen op een analytische manier te testen. Beide testmethodes zijn uitgewerkt voor HBase en MongoDB, een respectievelijk column en document database management systeem. Voor Pgpool-II, een gedistribueerde uitbreiding van PostgreSQL, zijn enkel de beschikbaarheidstesten uitgevoerd. 
+
+Uit de testresultaten blijkt dat hoewel op papier de consistentie tussen HBase en MongoDB gelijk is, zijn er in de praktijk verschillende resultaten. HBase stelt de data beschikbaar voor alle leesgebruikers na de voltooiing van de schrijfbewerking, in tussentijd zullen de leesbewerkingen voor dat record vertraagd worden. MongoDB heeft verschillende configuratie mogelijkheden voor lezen en schrijven, waarbij enkel strikte consistentie is bij het lezen op de primary. MongoDB kiest ervoor om zo snel een query te voltooien met indien mogelijk de nieuwe waarde, ook als de schrijfactie nog niet voltooid is. 
+
+Bij de beschikbaarheidstesten is er groot verschil tussen de werking van Pgpool-II en de andere 2 systemen. Pgpool-II zal de status het systeem controleren door tussen de router en de verschillende data instanties een data verbinding op te zetten wanneer een gebruiker verbonden is met het systeem. Het verbreken van deze achterliggende verbinding zal het onderbreken van de gebruikersverbinding als gevolg hebben. Onmiddellijk daarna is het systeem terug beschikbaar. 
+
+HBase werkt met sessies van configureerbare duur, tijdens een sessie is een bepaalde server verantwoordelijk voor een deel van de data. Bij een verwachte stop kan deze sessie stopgezet worden en zal de data kort onbereikbaar zijn, bij een onverwachte stop of netwerk onderbreking wordt er gewacht tot na het verlopen van de sessie. Bij een harde stop kan er af en toe voorkomen dat er geen data gelezen wordt als men als gebruiker niet expliciet nieuwe connecties laat aanmaken, bij de andere mogelijkheden gebeurt dit automatisch. 
+
+MongoDB werkt met een heartbeat protocol om de status van andere servers te controleren. Bij een verachte of onverwachte stop, is de data kort onbeschikbaar doordat een nieuwe verantwoordelijke moet worden aangeduid. Bij een netwerk onderbreking is, in tegenstelling tot het stoppen van een query, een nieuwe connectie met MongoDB nodig, anders zal de oude data niet gelezen worden. 
+
+\section{Verder werk}
+In deze thesistekst zijn de eerste resultaten en conclusies naar beschikbaarheid en consistentie getrokken. Maar deze test methodes kunnen op meer systemen uitgevoerd worden tot een nieuwe vergelijkingsmethode voor vele database systemen.
+
+Daarnaast kunnen de gebruikte testparameters ook aangepast worden om bepaalde assumpties te verifiëren of mathematische verbanden te zoeken. In de uitgevoerde testen hadden al de verschillende servers met een ping tijd rond de 0.5ms, maar wat is bijvoorbeeld de invloed van deze parameter in de testen, hetzelfde geldt voor het aantal instanties van het DBMS en de belasting op de systemen (verkleint of vergroot het inconsistentie interval bij een hogere belasting?). 
+
+Daarnaast kunnen ook de testmethode aangepast worden zoals bij de consistentie test de lezer en schrijver fysiek scheiden. De beschikbaarheidstesten kunnen ook getest worden met verschillende fysieke gebruikers en te onderzoeken of deze hetzelfde gedrag meten. 
+
+Als laatste mogelijke uitbreiding, kunnen beide testen gecombineerd worden: verdwijnt er data als een instantie crasht en dit zowel vanuit het perspectief van de schrijver als de lezen. In MongoDB zou het mogelijk kunnen zijn dat een schrijfbewerking nog niet gerepliceerd was naar een secondary maar al wel gelezen was op de primary. Komt dit voor of zijn er mechanismen die dit voorkomen?  
