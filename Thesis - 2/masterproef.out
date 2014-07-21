@@ -38,10 +38,11 @@
 \BOOKMARK [1][-]{section.A.3}{Key-Value database}{appendix.A}% 38
 \BOOKMARK [1][-]{section.A.4}{Relationele database}{appendix.A}% 39
 \BOOKMARK [0][-]{appendix.B}{Overzicht van gedetailleerde implementatie keuzes}{}% 40
-\BOOKMARK [0][-]{appendix.C}{Uitwerking IMP}{}% 41
-\BOOKMARK [1][-]{section.C.1}{HBase}{appendix.C}% 42
-\BOOKMARK [1][-]{section.C.2}{MongoDB}{appendix.C}% 43
-\BOOKMARK [1][-]{section.C.3}{Pgpool-II}{appendix.C}% 44
-\BOOKMARK [1][-]{section.C.4}{YCSB}{appendix.C}% 45
-\BOOKMARK [0][-]{appendix.D}{Paper}{}% 46
-\BOOKMARK [0][-]{section*.171}{Bibliografie}{}% 47
+\BOOKMARK [0][-]{appendix.C}{Figuren van de observaties}{}% 41
+\BOOKMARK [0][-]{appendix.D}{Uitwerking IMP}{}% 42
+\BOOKMARK [1][-]{section.D.1}{HBase}{appendix.D}% 43
+\BOOKMARK [1][-]{section.D.2}{MongoDB}{appendix.D}% 44
+\BOOKMARK [1][-]{section.D.3}{Pgpool-II}{appendix.D}% 45
+\BOOKMARK [1][-]{section.D.4}{YCSB}{appendix.D}% 46
+\BOOKMARK [0][-]{appendix.E}{Paper}{}% 47
+\BOOKMARK [0][-]{section*.171}{Bibliografie}{}% 48

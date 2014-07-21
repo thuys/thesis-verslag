@@ -1,5 +1,6 @@
 \chapter{Bespreking van verschillende DBMS's}\label{sec:BesprekingDBMS}
-
+In dit hoofdstuk worden verschillende DBMS's in meer detail besproken. RDMBS's en systemen van  van NoSQL met uitzondering van graph databases komen aanbod. De besproken systemen zijn: 
+ 
 \begin{itemize}
 \item Column NoSQL DBMS's: Cassandra, HBase
 \item Document NoSQL DBMS's: Apache CoucheDB, MongoDB
@@ -7,7 +8,8 @@
 \item Relationele DBMS's: MySQL, Pgpool-II (PostgreSQL)
 \end{itemize}
 
-Deze keuze van deze systemen is gebaseerd op de paper van Christophe Strauch \cite{Strauch.NoSQL}. Een korte bespreking van de verschillende systemen kan gevonden worden in appendix 
+Deze keuze van deze systemen is gebaseerd op de paper van Christophe Strauch \cite{Strauch.NoSQL}, Elk van de systemen wordt kort hieronder besproken. 
+
 \section{Column database}
 \subsection{Cassandra}
 \textit{Website: \url{http://cassandra.apache.org/}}\\
@@ -52,9 +54,9 @@ De query taal is gelimiteerd tot 5 operaties: get, put, delete, add en een itera
 
 LightCloud levert een gedistribueerde database met master-master synchronisatie. Met behulp van een consistent hashing algoritme en 2 hash rings, wordt de data verdeeld over verschillende instanties met de nodige redundantie. De eerste ring is verantwoordelijk voor de lookups oftewel het lokaliseren van de keys, de storage ring is verantwoordelijk voor het opslaan van de verschillende waarden. 
 
-\subsection{MemCacheDB}\todo{Updaten}
+\subsection{MemCacheDB}
 \textit{Website: \url{http://memcachedb.org/}}\\
-MemCacheDB is een veel gebruikt systeem waarin al de data in RAM geheugen wordt gehouden en alhoewel er ondersteuning is met behulp van MemCacheDB voor persistentie is deze database niet bedoeld voor persistente opslag. 
+MemCacheDB is een database systeem dat gebaseerd is op MemCache met de aanpassing dat het geen caching systeem meer is maar een systeem met permanente opslag gebouw op de berkeley database. Het data model is eenvoudig en heeft voor elke key een enkele waarde, verschilllende kolommen worden niet ondersteund bij een enkele waarde. 
 
 De query mogelijkheden zijn beperkt tot get, put en delete van een waarde. In het geval een key meerdere keren geschreven wordt, zal de laatste waarde teruggegeven worden. 
 

@@ -1,14 +1,16 @@
 \chapter{Analyse van de resultaten}
-In dit hoofdstuk zullen de resultaten van het vorige hoofdstuk besproken worden en redenen voor gezocht worden. 
+In dit hoofdstuk zullen de resultaten van het vorige hoofdstuk aanbod komen en de mogelijke oorzaken besproken worden. 
 
-Daarnaast kunnen de verschillende systemen ook naast elkaar gelegd worden. 
+Daarnaast worden de verschillende systemen met elkaar vergeleken wat bepaalde keuzes . 
 \section{Calibratie}
-Over de calibratie testen valt in het algemeen niet veel af te leiden, deze testen zijn niet uitgevoerd op een volledig dezelfde infrastructuur zo heeft Pgpool-II slechts 3 instanties t.o.v. 6 voor MongoDB. 
+Over de calibratie testen valt in het algemeen niet veel af te leiden, deze testen zijn niet uitgevoerd op een volledig dezelfde infrastructuur, zo heeft Pgpool-II slechts 3 instanties t.o.v. 6 voor MongoDB, maar dat was ook niet het doel. 
 
-Enkel de groeiende variatie in MongoDB zal uitgelegd worden. De reden hiervoor is een schrijver/lezers locking systeem op een gehele database\cite{mongodb-concurrency}. . Hierdoor zorgt een leesactie voor de blokkering van een schrijfactie en vice versa. Naar mate er meer gebruikers zijn, kunnen er meer opeenvolgende schrijfoperaties zijn, dit zal de leesacties langer blokkeren. Maar indien alle gebruikers samen lezen, kan dit parallel gebeuren. Een grotere variatie in de vertraging treedt hierdoor op. 
+Enkel op de groeiende variatie in MongoDB zal dieper ingegaan worden. De reden hiervoor is een lezers/schrijving locking systeem op een gehele database\cite{mongodb-concurrency}. Hierdoor zorgt een leesactie voor de blokkering van alle schrijfactie op de database en vice versa. Naar mate er meer gebruikers zijn, kunnen er meer opeenvolgende schrijfoperaties zijn, dit zal de leesacties langer blokkeren. Maar indien alle gebruikers samen lezen, kan dit parallel gebeuren, een grotere variatie in de vertraging treedt hierdoor op. 
+
+De netwerkinfrastructuur heeft een gemiddelde ping van 0.4ms naar elke node ($\sigma = 0.2$ bij 10 000 ping's). 
 
 \section{Beschikbaarheidstest}
-Bij de beschikbaarheidstesten lijkt er uit de resultaten dat de verschillende systemen een andere aanpak hebben genomen. Deze zullen nu verder in detail besproken worden. Belangrijk  is dat er hier verschillende queries uitgevoerd worden, waardoor er data van de verschillende datadistributies gelezen zal worden. 
+Bij de beschikbaarheidstesten blijkt er uit de resultaten dat de verschillende systemen een andere aanpak hebben genomen. Deze zullen nu verder in detail besproken worden. Belangrijk  is dat er hier bewerking aan de basisbelasting uitgevoerd worden, waardoor er data van de verschillende datadistributies gelezen zal worden. 
 
 \paragraph{HBase} Bij HBase heeft een bepaalde RegionServer de verantwoordelijkheid over een Regio voor een bepaalde tijd. Dit is een sessie dit door HMaster uitgedeeld wordt en bijgehouden wordt in Zookeeper. Deze sessie kan vroegtijdig beëindigd worden of er moet gewacht worden tot deze verlopen is, enkel op dat moment kan er een nieuwe RegionServer aangeduid worden. Dit zorgt voor een duidelijk verschil tussen een zachte stop, een harde stop of netwerk probleem. 
 
@@ -20,37 +22,67 @@ Zodra er een herverdeling is van de Regions over de aanwezige Regionservers, ver
 
 \subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking, worden de queries tijdelijk stopgezet en falen de queries in tussentijd. Deze onderbreking duurt significant langer dan in het geval van een zachte stop. Dit komt doordat de regio's pas kunnen toegewezen worden na het verlopen van hun sessie.  
 
-\subparagraph{HBase: Harde stop} Bij het stopzetten van een instantie op de harde manier, zijn er 2 gedragen, het eerste is gelijk aan deze van een netwerk onderbreking. De andere geeft pas queries in het geval van het opnieuw toelaten van netwerk verkeer. Een verklaring is hiervoor niet gevonden. 
+\subparagraph{HBase: Harde stop} Bij het stopzetten van een instantie op de harde manier, zijn er 2 gedragen, het eerste is gelijk aan deze van een netwerk onderbreking. De andere geeft pas queries in het geval van het opnieuw toelaten van netwerk verkeer. In een manuele test bleek dit opgelost te zijn na het verbreken van de connectie en het opnieuw verbinden, maar de oorzaak waarom dit slecht af en toe voorkomt, is niet gevonden. 
 
-\subparagraph{Herstel van de instantie} Het herstel van de server zal automatisch op een asynchrone manier gebeuren. Er valt ook te configureren hoeveel data er maximaal per seconde zal worden gesynchroniseerd. Dit is niet merkbaar voor de gebruiker in de meeste gevallen. In het geval van de zachte stop verdwijnen de lange vertragingen. Dit gedrag kn niet verklaard worden. 
+\subparagraph{Herstel van de instantie} Het herstel van de server zal automatisch op een asynchrone manier gebeuren. Er valt ook te configureren hoeveel data er maximaal per seconde zal worden gesynchroniseerd. Het herstel is niet merkbaar voor de gebruiker bij de testen. In het geval van de zachte stop verdwijnen de lange vertragingen. Dit gedrag kan niet verklaard worden. 
 
 \paragraph{MongoDB} Bij MongoDB is er tussen de leden van een Replicaset een heartbeat protocol. Indien er gedurende 10 seconden geen antwoord op een een heartbeat komt, wordt een server als offline bestempelt. Dit heeft opnieuw zijn invloed op de verschillende soorten stopzetten. \cite{mongodb-manual}. 
 
-\subparagraph{Zachte stop en harde stop} Bij een zachte of harde stop is er een kans van 1 op 3 dat het uitvallen van een instantie zichtbaar is, dit is te verklaren doordat enkel het uitschakelen van de primary een invloed zal hebben op de vertraging, in de standaard modus werd er enkel gelezen naar en geschreven van de primary. Nadien is er geen invloed bij de verschillende queries naar de vertraging. De reden dat beide gelijk zijn, is te verklaren \todo{}
+\subparagraph{Zachte stop en harde stop} Bij een zachte of harde stop is er een kans van 1 op 3 dat het uitvallen van een instantie zichtbaar is, dit is te verklaren doordat enkel het uitschakelen van de primary een invloed zal hebben op de vertraging, in de standaard modus werd er enkel gelezen naar en geschreven van de primary. Nadien is er geen invloed bij de verschillende queries naar de vertraging. De reden dat een harde stop op dezelfde manier reageert kan verklaard worden op 2 wijzen: bij een harde stop wordt de sessie nog altijd vrijgegeven, of er zijn verkiezingen voor een nieuwe primary voordat de sessie van de oude primary is afgelopen. 
 
-\subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking zou het te verwachten zijn dat na 10 seconde een primary zou veranderen. Hoewel dit gedrag handmatig gevolgd wordt, blijkt onder de aangelegde belasting de database heel de tijd onbeschikbaar tot het opnieuw beschikbaar maken van de data. Een reden hiervoor is niet gevonden. 
+\subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking zou het te verwachten zijn dat na 10 seconde een primary zou veranderen. Hoewel dit gedrag handmatig gevolgd wordt, blijkt onder de aangelegde belasting de database heel de tijd onbeschikbaar tot het opnieuw beschikbaar maken van de data. Bij het manueel testen blijkt dat er dezelfde foutmelding gegeven wordt als bij de stops, maar dat de data onbeschikbaar is. Het volstaat om de verbindingen af te sluiten en opnieuw aan te maken om het probleem op te lossen.
 
-\subparagraph{Herstel van de instantie} Het herstel van de server zal automatisch op een asynchrone manier gebeuren. Er valt ook te configureren hoeveel data er maximaal per seconde zal worden gesynchroniseerd. Dit is niet merkbaar voor de gebruiker in de meeste gevallen. 
+\subparagraph{Herstel van de instantie} Het herstel van de server zal automatisch op een asynchrone manier gebeuren. Dit is niet merkbaar voor de gebruiker gevallen. 
 
 \paragraph{Pgpool-II} Bij Pgpool-II wordt er bij het hebben van een connectie naar Pgpool-II, de connecties naar de verschillende PostgreSQL instanties gecontroleerd. Bij het uitvallen van een instantie en opnieuw opstarten terwijl er geen gebruiker verbonden is met Pgpool-II, zal dit niet opgemerkt worden. Daarnaast zijn er wel verschillende interactie reacties op de verschillende problemen. 
 
 Een vereiste bij het herstellen van een instantie is dat er op dat moment geen enkele gebruiker actief is. 
 
-\subparagraph{Zachte stop} Bij een zachte stop van een data instantie worden alle verbinden met Pgpool-II verbroken, nadien kan er terug verbonden worden met Pgpool-II. In deze omgeving gaan nadien de verschillende schrijfoperaties sneller omdat deze niet meer gerepliceerd moeten worden, bij een grote hoeveelheid data instanties zal dit effect kleiner worden. Zodra de recovery gestart wordt, zal deze eerst op de huidige master de data verzamelen en vervolgens dit doorsturen naar de te herstellen database. Om ervoor te zorgen dat de te herstellen database dezelfde data heeft, wordt er hiervoor gewacht op een moment dat er geen connecties zijn. In de testen blijven er gebruikers actief waardoor het herstel niet lukt. Wel is effect van de poging tot herstel zichtbaar op de belasting van het systeem na tijdstip 600. 
+\subparagraph{Zachte stop} Bij een zachte stop van een data instantie worden alle verbinden met Pgpool-II verbroken, nadien kan er terug verbonden worden met Pgpool-II. In deze omgeving gaan nadien de verschillende schrijfoperaties sneller omdat deze niet meer gerepliceerd moeten worden, bij een grote hoeveelheid data instanties zal dit effect kleiner worden.  
 
 \subparagraph{Harde stop} Een harde stop reageert hetzelfde als een zachte stop, dit omdat ook hier de connecties onmiddellijk verbroken zijn, de data instantie zal antwoorden dat er geen service op de poort an het luisteren is. 
 
-\subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking is er een ander gedrag, de queries wachten op een antwoord maar krijgen dit niet. Hierdoor wordt er gewacht op de time-out die standaard 30 seconde is. Na deze tijd worden connecties verbroken en opnieuw verbonden. \\
+\subparagraph{Netwerk onderbreking} Bij een netwerk onderbreking is er een ander gedrag, de queries wachten op een antwoord maar krijgen dit niet. Hierdoor wordt er gewacht op de time-out die standaard 30 seconde is. Na deze tijd worden connecties verbroken en kan er opnieuw verbonden worden. \\
 
-\subparagraph{Vermindering van leesvertraging} De reden tot de vermindering van leesvertraging is te vinden in de manier dat Pgpool de replicatie van de queries doet. Deze zullen eerst op de master uitgevoerd worden en vervolgens op de slaves. Bij het wegvallen van een instantie is er nog maar een enkele data server over, hierdoor duurt een schrijfactie maar half zo lang. De leesacties duren ongeveer even lang aangezien dezelfde acties nog steeds genomen worden. 
+\subparagraph{Vermindering van leesvertraging} De reden tot de vermindering van leesvertraging is te vinden in de manier dat Pgpool-II de replicatie van de queries doet. Deze zullen eerst op de master uitgevoerd worden en vervolgens op de slaves. Bij het wegvallen van een instantie is er nog maar een enkele data server over, hierdoor duurt een schrijfactie maar half zo lang. De leesacties duren ongeveer even lang aangezien dezelfde acties nog steeds genomen worden. 
 
 \subparagraph{Herstel van de instantie} Bij het opnieuw inschakelen van een instantie dient in Pgpool-II het herstel handmatig in gang gezet te worden. De data zal van de master naar de instantie gesynchroniseerd worden. In het geval van een grote achterstand zal dit merkbaar zijn omdat het proces aan maximale snelheid wordt uitgevoerd, een grote belasting op de CPU, harde schijf en het netwerk kunnen dus voorkomen. Om het herstel te voltooien moeten alle connecties naar d emaster op een gegeven moment gesloten worden. In de testen die werden uitgevoerd waren er steeds actief en hierdoor slaagde het herstel niet. 
 
 \paragraph{Conclusie} Hoewel er verschillende reacties zijn tussen HBase en MongoDB, ligt de interne werking vrij dicht bij elkaar, de status wordt beide opgevolgd. Bij MongoDB gebeurt dit wel door de data instanties zelf en kan de parameter niet aangepast worden. Bij HBase is er een extern systeem voor gebruikt waarbij de parameter geconfigureerd worden. Pgpool-II heeft een heel ander systeem door enkel de instanties te controleren op het moment dat er een verbinding is. 
-Daarnaast ondersteunt Pgpool-II ook niet de automatische herstel en komt de handmatige herstel niet tot voltooiing onder constant gebruik, hiervoor zijn beide andere systemen automatischer. 
+Daarnaast ondersteunt Pgpool-II ook niet de automatische herstel en komt de handmatige herstel niet tot voltooiing onder constant gebruik, hiervoor zijn beide andere systemen automatischer. Een overzicht van het gedrag bij het stoppen en starten van een instantie , bevinden zich in tabel \ref{table:beschikbaarheid-stop-resultaat} en \ref{table:beschikbaarheid-herstel-resultaat}.
+
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{l | lll}
+          & Zachte stop & Harde stop & Netwerk stop \\
+    \hline
+    \multirow{2}{*}{HBase} & Enkele seconden & Tiental seconden & Tiental seconden \\
+    & & of onbeperkt&  \\
+    \multirow{2}{*}{MongoDB} & 1/3 van de gevallen, & 1/3 van de gevallen, & Enkele seconden tot \\
+    & enkele seconden & enkele seconden & Onbeperkt\\
+    Pgpool-II & Enkele seconden & Enkele seconden & 30 seconden \\
+    \end{tabular}%
+    \caption{Beschikbaarheid: Overzicht van de reacties bij het stoppen van een instantie }
+  \label{table:beschikbaarheid-stop-resultaat}%
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{l|l}
+          & Automatisch herstel \\
+    \hline
+    HBase & Ja \\
+    MongoDB & Ja \\
+    Pgpool-II & Nee \\
+    \end{tabular}%
+      \caption{Beschikbaarheid: Overzicht van de ondersteuning van automatisch herstel}
+  \label{table:beschikbaarheid-herstel-resultaat}%
+\end{table}%
+
+
 
 \section{Consistentie test}
-\paragraph{HBase} HBase garandeert strikte consistentie op een enkel record en hoe deze garantie tot uitvoering wordt gebracht, is duidelijk zichtbaar in figuur \ref{fig:consistentie-hbase-R1}. Een lees query wordt namelijk op wacht gezet tot de schrijf query voltooid is, dit valt af te lezen doordat de lijn van het stoppen met schrijven een hogere waarde heeft als het stoppen met lezen en dit zo de hele tijd is. Daarnaast kan er ook de data in meer detail bekeken worden en is dit ook zichtbaar. In figuur \ref{fig:consistency-hbase-uitleg} wordt het lees- en schrijfmodel van HBase uitgelegd naar Lars Hofhansl\cite{hbase-acid}. Samen met het gebruik van sessies voor een bepaalde Region, is het eenvoudig om de locking te doen. 
+\paragraph{HBase} HBase garandeert strikte consistentie op een enkel record en hoe deze garantie tot uitvoering wordt gebracht, is duidelijk zichtbaar in figuur \ref{fig:consistentie-hbase-R1}. Een lees query wordt namelijk op wacht gezet tot de schrijf query voltooid is, dit valt af te lezen doordat de lijn van het stoppen met schrijven een hogere waarde heeft als het stoppen met lezen en dit zo de hele tijd is. Daarnaast kan er ook de data in meer detail bekeken worden en is dit ook zichtbaar. In figuur \ref{fig:consistency-hbase-uitleg} wordt het lees- en schrijfmodel van HBase uitgelegd met de uitleg van Lars Hofhansl\cite{hbase-acid}. Dit model toont dat deze methode atomaire acties op een enkel record kan ondersteunen.  
 
 Uit de testresultaten blijkt dat indien de leesbewerking te snel verstuurd wordt, er nog geen blokkering van de bewerking zal plaats vinden. Het percentage van de queries dat vanaf de eerste keer al de juist data zal lezen, bevindt zich in tabel \ref{table:consistentie-hbase-correct}.
 
@@ -72,7 +104,7 @@ Uit de testresultaten blijkt dat indien de leesbewerking te snel verstuurd wordt
 	9 &  24 ms & 97\%\\
 	10 & 27 ms & 97\% 
 \end{tabular}
-\caption{Consistentie: Percentage van de queries dat van de eerste keer de juiste data leest voor HBase. }
+\caption{Consistentie: Percentage van de queries dat van de eerste keer de juiste data leest voor HBase. De gemiddelde leesvertraging op een willekeurig record is ongeveer 6ms. }
 \label{table:consistentie-hbase-correct}
 \end{table}
 
@@ -100,21 +132,25 @@ Uit de testresultaten blijkt dat indien de leesbewerking te snel verstuurd wordt
 	\caption{HBase: Het vereenvoudigde lees- en schrijfmodel voor strikte consistentie in HBase naar Lars Hofhansl\cite{hbase-acid}}\label{fig:consistency-hbase-uitleg}
 \end{figure}
 
-\paragraph{MongoDB} MongoDB biedt strikte consistentie aan als er van de primary gelezen wordt maar er zijn ook andere schrijf- en leesmethodes. Een verschil met HBase is dat het bij alle mogelijke lees- en schrijfmethodes mogelijk is om de nieuwe data al te lezen vooraleer de schrijfbewerking beëindigd is. Een schrijf query wacht op de server nog na het schrijven en vrijgeven van zijn schrijf lock. Een mogelijk verklaring hiervoor is de journaling die bij MongoDB standaard aanstaat voor een 64-bit versie \cite{mongodb-manual}. 
+\paragraph{MongoDB} MongoDB biedt strikte consistentie aan als er van de primary gelezen wordt maar er zijn ook andere schrijf- en leesmethodes. Een verschil met HBase is dat het bij alle mogelijke lees- en schrijfmethodes mogelijk is om de nieuwe data al te lezen vooraleer de schrijfbewerking beëindigd is. Een schrijf query wacht op de server nog na het schrijven en vrijgeven van zijn schrijf lock. Een verklaring is hiervoor niet gevonden.
 
-Een analyse van de data uit figuur \ref{fig:consistentie-mongodb-all}, kan tonen hoeveel percent kans er is dat data consistent gelezen zal worden vanaf een bepaald tijdstip, deze data is berekend als de waarde van de cumulatieve kansverdeling de start van de query als tijdstip voor de lezer die dan zijn query stuur. Voor de waarden van 0, 2, 4, 6 en 8 ms is dit berekend, respectievelijk lezer 1 tot 5,  en kunnen de waarden teruggevonden worden in \ref{table:consistentie-mongodb-correct}. Het is opvallend dat met uitzondering van het lezen van de dichtstbijzijnde, er geen groot verschil is tussen de verschillende percentages van verschillende schrijfoperaties. De schrijf configuraties geven dus geen garanties tijdens het uitvoeren maar enkel erna.  Na verder onderzoek blijkt het verschil bij nearest enkel toevallig te zijn doordat er net iets meer een primary dichterbij was. 
+Een analyse van de data uit figuur \ref{fig:consistentie-mongodb-all}, kan tonen hoeveel percent kans er is dat data consistent gelezen zal worden vanaf een bepaald tijdstip.  Voor de waarden van 0, 2, 4, 6 en 8 ms is dit berekend, respectievelijk lezer 1 tot 5,  en kunnen de waarden teruggevonden worden in \ref{table:consistentie-mongodb-correct}. Het is opvallend dat met uitzondering van het lezen van de dichtstbijzijnde, er geen groot verschil is tussen de verschillende percentages van verschillende schrijfoperaties. De schrijf configuraties geven dus geen garanties tijdens het uitvoeren maar enkel erna.  Na verder onderzoek blijkt het verschil bij nearest enkel toevallig te zijn doordat er net iets meer lezers een primary op dat moment als dichtstbijzijnde hadden. 
 
-Uit tabel \ref{table:consistentie-mongodb-inconsistency} blijkt dat het in MongoDB niet is gegarandeerd dat als een lezer de nieuwe waarde leest, dat al de overige lezers dat ook zullen doen. In dit geval was het schrijven nog niet voltooid maar een latere bewerking leest de oude waarde nog. Dit kan verklaard worden doordat het verschillende servers zijn waarop gelezen wordt. Maar aangezien de MongoDB driver periodiek controleert welke server het dichtste bij is, kan dit juist tussen deze 2 bewerkingen gebeuren als men niet de leesgarantie op primary zet. In dit geval is er géén garantie op monotone leesbewerkingen. 
+Uit tabel \ref{table:consistentie-mongodb-inconsistency} blijkt dat het in MongoDB niet is gegarandeerd dat als een lezer de nieuwe waarde leest, dat al de overige lezers dat ook zullen doen. In dit geval was het schrijven nog niet voltooid en een bepaalde lezer leest de nieuwe data al, een latere bewerking leest de oude waarde nog. Dit kan verklaard worden doordat het verschillende servers zijn waarop gelezen wordt. Maar aangezien de MongoDB driver periodiek controleert welke server het dichtste bij is, kan dit juist tussen deze 2 bewerkingen gebeuren als men niet de leesgarantie op primary zet. In dit geval is er géén garantie op monotone leesbewerkingen. 
+
+Aangezien er in de testomgeving een uniforme netwerkvertraging is naar alle instanties, volgt de data de veronderstelling dat de dichtstbijzijnde node in iets minder 1/3 van de gevallen een primary is en iets meer dan 2/3 een secondary. Met 5\% afwijking is het moeilijk te stellen dat deze significant is. 
+
+Tenslotte hebben primary en primary-preferred in deze testen geen significante verschillen. Dit komt omdat de primary heel de tijd beschikbaar is. 
 
 \begin{table}
 \centering
 \begin{tabular}{l | l l l l}
 Lezer & Start lezen (ms) & Stop lezen (ms) & Gelezen waarde & Correct? \\
 \hline
-\multirow{2}{*}{1} & 2,200 & 3,213 & 125533813315 & Nee\\
- & 13,426 & 14,279 & 125534813315 & Ja \\
- \multirow{2}{*}{3} & 17,458 & 18,834 & 125533813315 & Nee\\
- & 29,063 & 29,897 & 125533813315& Ja \\
+\multirow{2}{*}{1} & 2,200 & 3,213 & 12553\textbf{3}813315 & Nee\\
+ & 13,426 & 14,279 & 12553\textbf{4}813315 & Ja \\
+ \multirow{2}{*}{3} & 17,458 & 18,834 & 12553\textbf{3}813315 & Nee\\
+ & 29,063 & 29,897 & 12553\textbf{3}813315& Ja \\
 \end{tabular}
 \caption{Consistentie: Ruwe data van MongoDB test waarbij inconsistente data wordt gelezen na het lezen van consistente data op verschillende lezers met het lezen via nearest en schrijven via fsync\_safe}
 \label{table:consistentie-mongodb-inconsistency}
@@ -131,7 +167,7 @@ safe & \parbox[t]{2.3cm}{28, 69, 89, 91, 92} & \parbox[t]{2.3cm}{80, 98, 98, 99,
   replicas\_safe & \parbox[t]{2.3cm}{24, 74, 87, 88, 91} & \parbox[t]{2.3cm}{75, 98, 99, 99, 99} & \parbox[t]{2.3cm}{79, 98, 98, 98, 98} & \parbox[t]{2.3cm}{1, 67, 84, 87, 89 }\\ 
   majority & \parbox[t]{2.3cm}{26, 77, 91, 91, 92} & \parbox[t]{2.3cm}{73, 98, 99, 99, 99} & \parbox[t]{2.3cm}{77, 99, 99, 99, 100} & \parbox[t]{2.3cm}{0, 61, 82, 85, 89 }\\ 
 \end{tabular}
-	\caption{Consistenti: Percentage van de queries dat van de eerste keer juist de data leest bij 0ms, 2ms, 4ms, 6ms en 8ms voor MongoDB. Met als rijen de verschillende schrijf types en als kolommen de verschillende lees types.  }
+	\caption{Consistentie: Percentage van de queries dat van de eerste keer juist de data leest bij 0ms, 2ms, 4ms, 6ms en 8ms voor MongoDB. Met als rijen de verschillende schrijf types en als kolommen de verschillende lees types. De gemiddelde vertraging op een onafhankelijke leesoperatie is 1ms. }
 	\label{table:consistentie-mongodb-correct}
 \end{table}
 

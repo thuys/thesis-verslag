@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  17 JUL 2014 19:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  21 JUL 2014 12:53
 entering extended mode
 **paper.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.tex"
@@ -795,43 +795,54 @@ LaTeX Font Info:    Redeclaring math symbol \Bbbk on input line 261.
 LaTeX Font Info:    Redeclaring math symbol \hslash on input line 262.
 LaTeX Font Info:    Redeclaring math symbol \backepsilon on input line 265.
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen166
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen167
+\extrarowheight=\dimen168
+\NC@list=\toks33
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux")
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 81.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 81.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 88.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 88.
 
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 81.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 81.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 88.
 
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 81.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 81.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 88.
 
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 81.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 81.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 88.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 81.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 88.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
@@ -839,16 +850,16 @@ File: ot1txr.fd 2000/12/15 v3.1
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
-\scratchdimen=\dimen166
+\scratchdimen=\dimen169
 \scratchbox=\box41
 \nofMPsegments=\count123
 \nofMParguments=\count124
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks34
 \MPscratchCnt=\count125
-\MPscratchDim=\dimen167
+\MPscratchDim=\dimen170
 \MPnumerator=\count126
 \makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks35
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -887,65 +898,62 @@ File: ot1txr.fd 2000/12/15 v3.1
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+txmia on input line 129.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 135.
 
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 129.
+LaTeX Font Info:    Try loading font information for U+msa on input line 135.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 129.
+LaTeX Font Info:    Try loading font information for U+msb on input line 135.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 129.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 135.
 
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Overfull \hbox (0.42009pt too wide) in paragraph at lines 139--140
-\OT1/txr/m/n/10 new ser-vices have also dif-fer-ent re-quire-ments, an up-date 
-doesn't
- []
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 154.
 
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 148.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 148.
-
-Overfull \hbox (8.1901pt too wide) in paragraph at lines 170--171
-[]\OT1/txr/m/n/10 In prac-tice, sys-tems like Mon-goDB, HBase and Re-dis choose
-s
- []
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 154.
 
 [1{C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-Overfull \hbox (3.68008pt too wide) in paragraph at lines 181--182
+Overfull \hbox (3.68008pt too wide) in paragraph at lines 187--188
 []\OT1/txr/m/n/10 HBase[[]] is an open-sourced, dis-tributed, ver-sioned databa
 se
  []
 
 
-Overfull \hbox (5.74008pt too wide) in paragraph at lines 181--182
+Overfull \hbox (5.74008pt too wide) in paragraph at lines 187--188
 \OT1/txr/m/n/10 de-signed af-ter Google's BigTable [[]]. HBase re-lies on Zooke
 eper
  []
 
 
-Overfull \hbox (0.42009pt too wide) in paragraph at lines 208--209
-\OT1/txr/m/n/10 ded-i-cated man-age-ment servers (HMas-ter and Zookeeper) to di
-s-
+Overfull \hbox (2.20888pt too wide) in paragraph at lines 202--204
+[]\OT1/txr/m/n/10 A Repli-caSet ex-ists out of dif-fer-ent Mon-goDB servers who
+m
+ []
+
+
+Overfull \hbox (2.58014pt too wide) in paragraph at lines 205--206
+[]\OT1/txr/m/n/10 In a Repli-caSet, there is at least half of the Repli-caSet n
+eeded
  []
 
 [2] <../img/Consistency-test-period.png, id=17, 873.0216pt x 344.7279pt>
@@ -953,67 +961,58 @@ File: ../img/Consistency-test-period.png Graphic file (type png)
 
 <use ../img/Consistency-test-period.png>
 Package pdftex.def Info: ../img/Consistency-test-period.png used on input line 
-239.
+245.
 (pdftex.def)             Requested size: 252.0pt x 99.50563pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (8.17009pt too wide) in paragraph at lines 256--257
-\OT1/txr/m/n/10 HBase is an av-er-age of 600 queries/second spread over 50 thre
-ads,
+Overfull \hbox (7.84015pt too wide) in paragraph at lines 253--254
+[]\OT1/txr/m/n/10 Before the test, there are 30 000 records stored in the datab
+ase,
  []
-
-
-Overfull \hbox (19.62953pt too wide) in paragraph at lines 256--257
-\OT1/txr/m/n/10 for Mon-goDB there are 15 threads with a to-tal of 200 queries/
-second. 
- []
-
-
-<../img/Observaties/HBase/Stop-07-14-Soft-3-1.png, id=18, 493.3632pt x 493.3632
-pt>
-File: ../img/Observaties/HBase/Stop-07-14-Soft-3-1.png Graphic file (type png)
- <use ../img/Observaties/HBase/Stop-07-14-Soft-3-1.png>
-Package pdftex.def Info: ../img/Observaties/HBase/Stop-07-14-Soft-3-1.png used 
-on input line 263.
-(pdftex.def)             Requested size: 252.0pt x 251.99583pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Consistency-test-peri
 od.png (PNG copy)>]
+<img/HBase/single-graph-2-drop-1.png, id=22, 422.88274pt x 422.88274pt>
+File: img/HBase/single-graph-2-drop-1.png Graphic file (type png)
+
+<use img/HBase/single-graph-2-drop-1.png>
+Package pdftex.def Info: img/HBase/single-graph-2-drop-1.png used on input line
+ 270.
+(pdftex.def)             Requested size: 252.0pt x 252.00227pt.
+ [4 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/Paper/img/HBase/single-g
+raph-2-drop-1.png>]
+Overfull \hbox (0.66006pt too wide) in paragraph at lines 348--349
+[]\OT1/txr/m/n/10 Thirdly, the avail-abil-ity and con-sis-tency tests could be 
+tested
+ []
+
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.bbl"
 Overfull \hbox (30.35107pt too wide) in paragraph at lines 26--30
 \OT1/txr/m/n/8 URL \OT1/cmtt/m/n/8 http://hadoop-hbase.blogspot.be/2012/03/acid
 -in-hbase.html 
  []
 
-) [4 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/HBase/S
-top-07-14-Soft-3-1.png>]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux") ) 
+) [5] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux") ) 
 Here is how much of TeX's memory you used:
- 13453 strings out of 493921
- 262349 string characters out of 3147279
- 295038 words of memory out of 3000000
- 16447 multiletter control sequences out of 15000+200000
+ 13455 strings out of 493921
+ 261769 string characters out of 3147279
+ 297976 words of memory out of 3000000
+ 16443 multiletter control sequences out of 15000+200000
  32990 words of font info for 86 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,9n,76p,950b,691s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Prog
-ram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Thomas/AppData/Roaming/Mi
-KTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/Thomas/AppData/Roaming/M
-iKTeX/2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/Thomas/AppData/Roaming
-/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/Thomas/AppData/Roamin
-g/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (4 pages, 353998 bytes).
+ 62i,12n,56p,993b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C
+:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Thomas/AppData/Roam
+ing/MiKTeX/2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/Thomas/AppData/Roa
+ming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/Thomas/AppData/R
+oaming/MiKTeX/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/Thomas/AppData/
+Roaming/MiKTeX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on paper.pdf (5 pages, 353925 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

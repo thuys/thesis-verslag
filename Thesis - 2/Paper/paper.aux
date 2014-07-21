@@ -8,11 +8,11 @@
 \newlabel{sec:CAPTheorem}{{2}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}CA}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}CP}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}AP}{1}}
 \citation{hbase-doc}
 \citation{chang2008bigtable}
 \citation{hbase-acid}
 \citation{mongodb-doc}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}AP}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Overview of HBase and MongoDB}{2}}
 \newlabel{sec:hbaseandmongodb}{{3}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}HBase}{2}}
@@ -24,9 +24,18 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Event support}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Consistency support}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example of consistency support for one write period with 1 writer and 4 readers}}{3}}
+\newlabel{fig:consistence-method}{{1}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results}{3}}
 \newlabel{sec:result}{{5}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Availability}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Availability}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example of network partition. The requests block for 110 seconds }}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Consistency}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Availability: Overview of different reaction when stopping an instance }}{4}}
+\newlabel{table:beschikbaarheid-stop-resultaat}{{1}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Consistency: Percentage of the queries started at the given time moment that will read the newest inserted data. The average latency in a random read transaction is around 6ms.}}{4}}
+\newlabel{table:consistentie-hbase-correct}{{2}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Future work}{4}}
+\newlabel{sec:futurework}{{6}{4}}
 \citation{golab2014eventually}
 \citation{patil2011ycsb++}
 \citation{mauro2004system}
@@ -43,15 +52,9 @@
 \bibcite{patil2011ycsb++}{{9}{}{{}}{{}}}
 \bibcite{mauro2004system}{{10}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example of gracefullyl shutting down a HBase node. The requests block for 90 seconds }}{4}}
-\@writefile{tdo}{\contentsline {todo}{....}{4}}
-\pgfsyspdfmark {pgfid1}{11367478}{23632600}
-\pgfsyspdfmark {pgfid2}{-392959}{23630634}
-\pgfsyspdfmark {pgfid3}{1720576}{23411417}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Consistency}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Future work}{4}}
-\newlabel{sec:futurework}{{6}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Related work}{4}}
-\newlabel{sec:related work}{{7}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{4}}
-\newlabel{sec:conclusion}{{8}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Consistency: Percentage of the queries started at 0, 2, 4 and 8ms that will read the newest inserted data with the each row for a write configuration and a column for the read configuration. The average latency on a read transaction is for all read queries around 1ms. }}{5}}
+\newlabel{table:consistentie-mongodb-correct}{{3}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Related work}{5}}
+\newlabel{sec:related work}{{7}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{5}}
+\newlabel{sec:conclusion}{{8}{5}}

@@ -48,33 +48,39 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Calibratie: Aantal gebruikers per test voor de verschillende DBMS's\relax }}{37}{table.caption.96}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Calibratie: Aantal gebruikers per test voor de verschillende DBMS's\relax }}{38}{table.caption.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Calibratie: Aantal queries per seconde per test bij een matige belasting voor de verschillende DBMS's.\relax }}{39}{table.caption.99}
-\defcounter {refsection}{0}\relax 
-\addvspace {10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.1}{\ignorespaces Consistentie: Percentage van de queries dat van de eerste keer de juiste data leest voor HBase. \relax }}{55}{table.caption.133}
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Consistentie: Ruwe data van MongoDB test waarbij inconsistente data wordt gelezen na het lezen van consistente data op verschillende lezers met het lezen via nearest en schrijven via fsync\_safe\relax }}{56}{table.caption.136}
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.3}{\ignorespaces Consistenti: Percentage van de queries dat van de eerste keer juist de data leest bij 0ms, 2ms, 4ms, 6ms en 8ms voor MongoDB. Met als rijen de verschillende schrijf types en als kolommen de verschillende lees types. \relax }}{56}{table.caption.137}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Calibratie: Aantal queries per seconde per test bij een matige belasting voor de verschillende DBMS's.\relax }}{38}{table.caption.98}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.1}{\ignorespaces Beschikbaarheid: Overzicht van de reacties bij het stoppen van een instantie \relax }}{44}{table.caption.120}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Beschikbaarheid: Overzicht van de ondersteuning van automatisch herstel\relax }}{44}{table.caption.121}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.3}{\ignorespaces Consistentie: Percentage van de queries dat van de eerste keer de juiste data leest voor HBase. \relax }}{45}{table.caption.123}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.4}{\ignorespaces Consistentie: Ruwe data van MongoDB test waarbij inconsistente data wordt gelezen na het lezen van consistente data op verschillende lezers met het lezen via nearest en schrijven via fsync\_safe\relax }}{47}{table.caption.126}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.5}{\ignorespaces Consistenti: Percentage van de queries dat van de eerste keer juist de data leest bij 0ms, 2ms, 4ms, 6ms en 8ms voor MongoDB. Met als rijen de verschillende schrijf types en als kolommen de verschillende lees types. \relax }}{47}{table.caption.127}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {B.3}{\ignorespaces Configuratie van de consistentie testen\relax }}{69}{table.caption.142}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Configuratie van de consistentie testen\relax }}{59}{table.caption.131}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {B.1}{\ignorespaces Configuratie van event support\relax }}{70}{figure.caption.141}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Configuratie van event support\relax }}{60}{figure.caption.130}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {B.2}{\ignorespaces Uitvoer van event support\relax }}{70}{figure.caption.141}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Uitvoer van event support\relax }}{60}{figure.caption.130}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {B.4}{\ignorespaces Uitvoer van een enkel query in de consistentie testen\relax }}{71}{table.caption.143}
+\contentsline {table}{\numberline {B.4}{\ignorespaces Uitvoer van een enkel query in de consistentie testen\relax }}{61}{table.caption.132}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {B.5}{\ignorespaces Beschikbaarheidstesten: Overzicht van de commando's voor het stoppen en starten in de verschillende modes. \relax }}{71}{table.caption.144}
+\contentsline {table}{\numberline {B.5}{\ignorespaces Beschikbaarheidstesten: Overzicht van de commando's voor het stoppen en starten in de verschillende modes. \relax }}{61}{table.caption.133}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 

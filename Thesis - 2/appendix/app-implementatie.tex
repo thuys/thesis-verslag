@@ -1,5 +1,6 @@
 \chapter{Overzicht van gedetailleerde implementatie keuzes}
-
+In dit hoofdstuk bevinden zich het deployment van de testomgeving en de verschillende configuratie mogelijkheden voor de testuitbreidingen en configuratie van de testen. 
+ 
 \begin{figure}[htbf]
 \centering
 \subfigure[Deployment van HBase met 5 instanties. ]{\label{fig:HBase-deployment}\includegraphics[width=0.55\textwidth]{img/HBase-deployment}}
@@ -93,8 +94,9 @@ Exit code & Integer
 			\multicolumn{2}{c}{\textbf{Speciale commando's}} \\
 			\textbf{Wat} & \textbf{Commando} \\ 
 			\hline
-			Pgpool-II & /usr/local/bin/pcp\_recovery\_node -d 10 \{\{pgpool host\}\} \{\{port\}\} \\
-			\hspace*{0.5cm} (Online recovery) &  \hspace*{0.5cm} \{\{gebruikersnaam\}\} \{\{wachtwoord\}\}  \{\{node nummer\}\} \\
+			Pgpool-II & /usr/local/bin/pcp\_recovery\_node -d 10 \\
+			\hspace*{0.5cm} (Online recovery) &  \hspace*{0.5cm} \{\{pgpool host\}\} \{\{port\}\} \{\{gebruikersnaam\}\} \\
+			& \hspace*{0.5cm} \{\{wachtwoord\}\}  \{\{node nummer\}\}
 		\end{tabular} 
 	\captionof{table}{Beschikbaarheidstesten: Overzicht van de commando's voor het stoppen en starten in de verschillende modes. }
 	\label{table:beschikbaarheidstesten-commandos}

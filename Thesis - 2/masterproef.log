@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  20 JUL 2014 19:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  20 JUL 2014 23:37
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tex"
@@ -1510,8 +1510,10 @@ x")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-database-besch
 rijving.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-implementatie.
-aux") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux"
-) ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux"))
+aux")
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-resultaten.aux
+") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux")
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
@@ -1527,6 +1529,7 @@ LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 66.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1621,7 +1624,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<logokuleng.pdf, id=194, 159.33528pt x 85.358pt>
+<logokuleng.pdf, id=198, 159.33528pt x 85.358pt>
 File: logokuleng.pdf Graphic file (type pdf)
  <use logokuleng.pdf>
 Package pdftex.def Info: logokuleng.pdf used on input line 66.
@@ -1698,13 +1701,13 @@ Package microtype Info: Character `029' is missing
 [5
 
 ] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lof"
-[6
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
 
 
-]) ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot"
-Underfull \vbox (badness 3942) has occurred while \output is active []
-
- [7])
+])
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot" [7])
 [8] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/afkortingen.tex
 "
 Overfull \hbox (5.35262pt too wide) in paragraph at lines 12--12
@@ -1725,7 +1728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 ]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/2.overzichtvan
 detechnologie.tex"
-<img/Relationeel-Model-Normalisatie.png, id=450, 570.933pt x 143.0946pt>
+<img/Relationeel-Model-Normalisatie.png, id=456, 570.933pt x 143.0946pt>
 File: img/Relationeel-Model-Normalisatie.png Graphic file (type png)
 
 <use img/Relationeel-Model-Normalisatie.png>
@@ -1803,7 +1806,7 @@ l.1 \chapter
 
 
 ]
-<img/Test-Process-Overview.png, id=552, 633.0852pt x 33.2442pt>
+<img/Test-Process-Overview.png, id=558, 633.0852pt x 33.2442pt>
 File: img/Test-Process-Overview.png Graphic file (type png)
 
 <use img/Test-Process-Overview.png>
@@ -1811,14 +1814,14 @@ Package pdftex.def Info: img/Test-Process-Overview.png used on input line 16.
 (pdftex.def)             Requested size: 398.0pt x 20.89981pt.
  [11] [12 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Test-Process-O
 verview.png (PNG copy)>]
-<img/hockey-stick.png, id=569, 493.845pt x 338.76563pt>
+<img/hockey-stick.png, id=575, 493.845pt x 338.76563pt>
 File: img/hockey-stick.png Graphic file (type png)
 
 <use img/hockey-stick.png>
 Package pdftex.def Info: img/hockey-stick.png used on input line 40.
 (pdftex.def)             Requested size: 179.09879pt x 122.85495pt.
 
-<img/connecties-gebruikers.png, id=570, 493.845pt x 338.76563pt>
+<img/connecties-gebruikers.png, id=576, 493.845pt x 338.76563pt>
 File: img/connecties-gebruikers.png Graphic file (type png)
 
 <use img/connecties-gebruikers.png>
@@ -1827,7 +1830,7 @@ Package pdftex.def Info: img/connecties-gebruikers.png used on input line 42.
  [13 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/hockey-stick.png> <
 D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/connecties-gebruikers.png
 >] [14] [15]
-<img/Consistentie-test-periode.png, id=611, 938.0646pt x 348.3414pt>
+<img/Consistentie-test-periode.png, id=617, 938.0646pt x 348.3414pt>
 File: img/Consistentie-test-periode.png Graphic file (type png)
 
 <use img/Consistentie-test-periode.png>
@@ -1836,7 +1839,7 @@ Package pdftex.def Info: img/Consistentie-test-periode.png used on input line 1
 (pdftex.def)             Requested size: 398.0pt x 147.79597pt.
  [16] [17 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Consistentie-t
 est-periode.png (PNG copy)>]
-<img/Test-Process-Detailed-Overview.png, id=630, 666.3294pt x 244.9953pt>
+<img/Test-Process-Detailed-Overview.png, id=636, 666.3294pt x 244.9953pt>
 File: img/Test-Process-Detailed-Overview.png Graphic file (type png)
 
 <use img/Test-Process-Detailed-Overview.png>
@@ -1854,7 +1857,7 @@ e.tex" [20
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
-[23] <img/Hbase-structure.png, id=679, 685.8122pt x 366.61969pt>
+[23] <img/Hbase-structure.png, id=685, 685.8122pt x 366.61969pt>
 File: img/Hbase-structure.png Graphic file (type png)
 
 <use img/Hbase-structure.png>
@@ -1868,7 +1871,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2376) has occurred while \output is active []
 
  [26]
-<img/mongodb-replica-set-primary-with-two-secondaries.png, id=717, 595.1647pt x
+<img/mongodb-replica-set-primary-with-two-secondaries.png, id=723, 595.1647pt x
  225.31235pt>
 File: img/mongodb-replica-set-primary-with-two-secondaries.png Graphic file (ty
 pe png)
@@ -1877,7 +1880,7 @@ Package pdftex.def Info: img/mongodb-replica-set-primary-with-two-secondaries.p
 ng used on input line 140.
 (pdftex.def)             Requested size: 159.19757pt x 60.26787pt.
 
-<img/mongo-sharded-cluster-production-architecture.png, id=718, 563.14285pt x 3
+<img/mongo-sharded-cluster-production-architecture.png, id=724, 563.14285pt x 3
 85.75285pt>
 File: img/mongo-sharded-cluster-production-architecture.png Graphic file (type 
 png)
@@ -1889,7 +1892,7 @@ used on input line 142.
 [27 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/mongodb-replica-set-
 primary-with-two-secondaries.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesi
 s - 2/img/mongo-sharded-cluster-production-architecture.png>]
-<img/Pgpool-structuur.png, id=741, 246.4407pt x 189.3474pt>
+<img/Pgpool-structuur.png, id=747, 246.4407pt x 189.3474pt>
 File: img/Pgpool-structuur.png Graphic file (type png)
 
 <use img/Pgpool-structuur.png>
@@ -1912,540 +1915,465 @@ tex" [36
 
 
 ]
-<img/Observaties/threads-MongoDB.png, id=836, 493.3632pt x 493.3632pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[37] [38] [39]) [40]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/6.analysevande
+resultaten.tex"
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+ [41
+
+
+
+]
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+[43] [44]
+Underfull \hbox (badness 1215) in paragraph at lines 128--129
+[]\T1/lmr/m/n/10.95 (+20) Filter al de Key-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+\T1/lmr/m/n/10.95 (+20) schrijf-num-mer >
+ []
+
+[45]
+Underfull \hbox (badness 1616) in paragraph at lines 165--165
+[]\T1/lmr/m/n/10.95 (+20) 72, 99, 100,
+ []
+
+[46] [47]) [48]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.te
+x"
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49
+
+
+
+])
+[50] [51
+
+
+] [52]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-database-besch
+rijving.tex" [53
+
+
+] [54] [55] [56]) [57]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-implementatie.
+tex" [58
+
+
+
+] <img/HBase-deployment.png, id=1050, 365.6862pt x 250.0542pt>
+File: img/HBase-deployment.png Graphic file (type png)
+
+<use img/HBase-deployment.png>
+Package pdftex.def Info: img/HBase-deployment.png used on input line 6.
+(pdftex.def)             Requested size: 218.90121pt x 149.68645pt.
+
+<img/Pgpool-II-deployment.png, id=1051, 257.2812pt x 192.2382pt>
+File: img/Pgpool-II-deployment.png Graphic file (type png)
+
+<use img/Pgpool-II-deployment.png>
+Package pdftex.def Info: img/Pgpool-II-deployment.png used on input line 7.
+(pdftex.def)             Requested size: 139.30243pt x 104.08867pt.
+
+<img/MongoDB-deployment.png, id=1052, 423.5022pt x 344.0052pt>
+File: img/MongoDB-deployment.png Graphic file (type png)
+
+<use img/MongoDB-deployment.png>
+Package pdftex.def Info: img/MongoDB-deployment.png used on input line 8.
+(pdftex.def)             Requested size: 258.69757pt x 210.13681pt.
+
+<img/YCSB-deployment.png, id=1053, 148.8762pt x 177.7842pt>
+File: img/YCSB-deployment.png Graphic file (type png)
+
+<use img/YCSB-deployment.png>
+Package pdftex.def Info: img/YCSB-deployment.png used on input line 9.
+(pdftex.def)             Requested size: 99.5pt x 118.81908pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+[]\T1/lmr/m/n/9 (+20) (d) De-ploy-ment van
+ []
+
+) [59] [60 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/HBase-deploym
+ent.png (PNG copy)> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Pgpo
+ol-II-deployment.png (PNG copy)> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis
+ - 2/img/MongoDB-deployment.png (PNG copy)> <D:/Schooljaar 2013-2014/Thesis/ver
+slag/Thesis - 2/img/YCSB-deployment.png (PNG copy)>] [61]
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-resultaten.tex
+" [62
+
+
+
+] <img/Observaties/threads-MongoDB.png, id=1072, 493.3632pt x 493.3632pt>
 File: img/Observaties/threads-MongoDB.png Graphic file (type png)
 
 <use img/Observaties/threads-MongoDB.png>
 Package pdftex.def Info: img/Observaties/threads-MongoDB.png used on input line
- 30.
+ 5.
 (pdftex.def)             Requested size: 159.19757pt x 159.19687pt.
 
-<img/Observaties/threads-postgresql.png, id=837, 493.3632pt x 493.3632pt>
+<img/Observaties/threads-postgresql.png, id=1073, 493.3632pt x 493.3632pt>
 File: img/Observaties/threads-postgresql.png Graphic file (type png)
 
 <use img/Observaties/threads-postgresql.png>
 Package pdftex.def Info: img/Observaties/threads-postgresql.png used on input l
-ine 31.
+ine 6.
 (pdftex.def)             Requested size: 159.19757pt x 159.19687pt.
 
-<img/Observaties/threads-HBase.png, id=838, 493.3632pt x 493.3632pt>
+<img/Observaties/threads-HBase.png, id=1074, 493.3632pt x 493.3632pt>
 File: img/Observaties/threads-HBase.png Graphic file (type png)
 
 <use img/Observaties/threads-HBase.png>
-Package pdftex.def Info: img/Observaties/threads-HBase.png used on input line 3
-2.
+Package pdftex.def Info: img/Observaties/threads-HBase.png used on input line 7
+.
 (pdftex.def)             Requested size: 159.19757pt x 159.19687pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37]
-Underfull \vbox (badness 4108) has occurred while \output is active []
-
- [38 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/threads
--MongoDB.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observatie
-s/threads-postgresql.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/im
-g/Observaties/threads-HBase.png>]
-<img/Observaties/loadbalance-db-HBase.png, id=861, 810.7088pt x 328.9088pt>
+<img/Observaties/loadbalance-db-HBase.png, id=1075, 810.7088pt x 328.9088pt>
 File: img/Observaties/loadbalance-db-HBase.png Graphic file (type png)
 
 <use img/Observaties/loadbalance-db-HBase.png>
 Package pdftex.def Info: img/Observaties/loadbalance-db-HBase.png used on input
- line 57.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+ line 14.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-realthroughput-db-HBase.png, id=862, 810.7088pt x 
-328.9088pt>
+<img/Observaties/loadbalance-realthroughput-db-HBase.png, id=1076, 810.7088pt x
+ 328.9088pt>
 File: img/Observaties/loadbalance-realthroughput-db-HBase.png Graphic file (typ
 e png)
  <use img/Observaties/loadbalance-realthroughput-db-HBase.png>
 Package pdftex.def Info: img/Observaties/loadbalance-realthroughput-db-HBase.pn
-g used on input line 58.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+g used on input line 15.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-Overfull \hbox (3.65pt too wide) in paragraph at lines 57--59
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 57--59
- [][] 
- []
-
-<img/Observaties/loadbalance-db-MongoDB.png, id=863, 810.7088pt x 328.9088pt>
+<img/Observaties/loadbalance-db-MongoDB.png, id=1077, 810.7088pt x 328.9088pt>
 File: img/Observaties/loadbalance-db-MongoDB.png Graphic file (type png)
 
 <use img/Observaties/loadbalance-db-MongoDB.png>
 Package pdftex.def Info: img/Observaties/loadbalance-db-MongoDB.png used on inp
-ut line 65.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+ut line 22.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-realthroughput-db-MongoDB.png, id=864, 810.7088pt 
-x 328.9088pt>
+<img/Observaties/loadbalance-realthroughput-db-MongoDB.png, id=1078, 810.7088pt
+ x 328.9088pt>
 File: img/Observaties/loadbalance-realthroughput-db-MongoDB.png Graphic file (t
 ype png)
  <use img/Observaties/loadbalance-realthroughput-db-MongoDB.png>
 Package pdftex.def Info: img/Observaties/loadbalance-realthroughput-db-MongoDB.
-png used on input line 66.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+png used on input line 23.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-Overfull \hbox (3.65pt too wide) in paragraph at lines 65--67
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 65--67
- [][] 
- []
-
-
-<img/Observaties/loadbalance-db-PostgreSQL.png, id=865, 810.7088pt x 328.9088pt
->
+<img/Observaties/loadbalance-db-PostgreSQL.png, id=1079, 810.7088pt x 328.9088p
+t>
 File: img/Observaties/loadbalance-db-PostgreSQL.png Graphic file (type png)
  <use img/Observaties/loadbalance-db-PostgreSQL.png>
 Package pdftex.def Info: img/Observaties/loadbalance-db-PostgreSQL.png used on 
-input line 73.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+input line 30.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png, id=866, 810.7088
-pt x 328.9088pt>
+<img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png, id=1080, 810.708
+8pt x 328.9088pt>
 File: img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png Graphic file
  (type png)
 
 <use img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png>
 Package pdftex.def Info: img/Observaties/loadbalance-realthroughput-db-PostgreS
-QL.png used on input line 74.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+QL.png used on input line 31.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-Overfull \hbox (3.65pt too wide) in paragraph at lines 73--75
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 73--75
- [][] 
- []
-
-[39 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/loadbala
-nce-db-HBase.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observ
-aties/loadbalance-realthroughput-db-HBase.png>] [40 <D:/Schooljaar 2013-2014/Th
-esis/verslag/Thesis - 2/img/Observaties/loadbalance-db-MongoDB.png> <D:/Schoolj
-aar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/loadbalance-realthrough
-put-db-MongoDB.png>]
-<img/Observaties/HBase/single-graph-2-1.png, id=889, 810.7088pt x 328.9088pt>
+<img/Observaties/HBase/single-graph-2-1.png, id=1081, 810.7088pt x 328.9088pt>
 File: img/Observaties/HBase/single-graph-2-1.png Graphic file (type png)
 
 <use img/Observaties/HBase/single-graph-2-1.png>
 Package pdftex.def Info: img/Observaties/HBase/single-graph-2-1.png used on inp
-ut line 96.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+ut line 39.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/HBase/single-graph-2-drop-1.png, id=890, 810.7088pt x 328.9088
-pt>
+<img/Observaties/HBase/single-graph-2-drop-1.png, id=1082, 810.7088pt x 328.908
+8pt>
 File: img/Observaties/HBase/single-graph-2-drop-1.png Graphic file (type png)
  <use img/Observaties/HBase/single-graph-2-drop-1.png>
 Package pdftex.def Info: img/Observaties/HBase/single-graph-2-drop-1.png used o
-n input line 97.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+n input line 40.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/HBase/single-graph-3-kill-1.png, id=891, 810.7088pt x 328.9088
-pt>
+<img/Observaties/HBase/single-graph-3-kill-1.png, id=1083, 810.7088pt x 328.908
+8pt>
 File: img/Observaties/HBase/single-graph-3-kill-1.png Graphic file (type png)
  <use img/Observaties/HBase/single-graph-3-kill-1.png>
 Package pdftex.def Info: img/Observaties/HBase/single-graph-3-kill-1.png used o
-n input line 98.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+n input line 41.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-Overfull \hbox (3.65pt too wide) in paragraph at lines 96--99
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 96--99
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 96--99
- [][] 
- []
-
-[41 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/loadbala
-nce-db-PostgreSQL.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/O
-bservaties/loadbalance-realthroughput-db-PostgreSQL.png>]
-<img/Observaties/MongoDB/single-graph-6-1.png, id=908, 1042.33989pt x 422.88274
-pt>
+<img/Observaties/MongoDB/single-graph-6-1.png, id=1084, 1042.33989pt x 422.8827
+4pt>
 File: img/Observaties/MongoDB/single-graph-6-1.png Graphic file (type png)
  <use img/Observaties/MongoDB/single-graph-6-1.png>
 Package pdftex.def Info: img/Observaties/MongoDB/single-graph-6-1.png used on i
-nput line 112.
-(pdftex.def)             Requested size: 398.0pt x 161.47142pt.
+nput line 48.
+(pdftex.def)             Requested size: 378.09879pt x 153.39914pt.
 
-<img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png, id=909,
- 1042.33989pt x 422.88274pt>
+<img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png, id=1085
+, 1042.33989pt x 422.88274pt>
 File: img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png Gra
 phic file (type png)
 
 <use img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png>
 Package pdftex.def Info: img/Observaties/MongoDB/multiple-graph-interrupt-Node-
-6-Shut-down.png used on input line 113.
-(pdftex.def)             Requested size: 398.0pt x 161.47142pt.
+6-Shut-down.png used on input line 49.
+(pdftex.def)             Requested size: 378.09879pt x 153.39914pt.
 
-<img/Observaties/MongoDB/single-graph-4-drop-1.png, id=910, 1042.33989pt x 422.
-88274pt>
+<img/Observaties/MongoDB/single-graph-4-drop-1.png, id=1086, 1042.33989pt x 422
+.88274pt>
 File: img/Observaties/MongoDB/single-graph-4-drop-1.png Graphic file (type png)
 
  <use img/Observaties/MongoDB/single-graph-4-drop-1.png>
 Package pdftex.def Info: img/Observaties/MongoDB/single-graph-4-drop-1.png used
- on input line 114.
-(pdftex.def)             Requested size: 398.0pt x 161.47142pt.
+ on input line 50.
+(pdftex.def)             Requested size: 378.09879pt x 153.39914pt.
 
-Overfull \hbox (3.65pt too wide) in paragraph at lines 112--115
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 112--115
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 112--115
- [][] 
- []
-
-
-<img/Observaties/Pgpool/single-graph-1-2.png, id=915, 810.7088pt x 328.9088pt>
+<img/Observaties/Pgpool/single-graph-1-2.png, id=1087, 810.7088pt x 328.9088pt>
 File: img/Observaties/Pgpool/single-graph-1-2.png Graphic file (type png)
-
 <use img/Observaties/Pgpool/single-graph-1-2.png>
 Package pdftex.def Info: img/Observaties/Pgpool/single-graph-1-2.png used on in
-put line 128.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+put line 57.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/Pgpool/single-graph-1-drop-1.png, id=916, 810.7088pt x 328.908
-8pt>
+<img/Observaties/Pgpool/single-graph-1-drop-1.png, id=1088, 810.7088pt x 328.90
+88pt>
 File: img/Observaties/Pgpool/single-graph-1-drop-1.png Graphic file (type png)
  <use img/Observaties/Pgpool/single-graph-1-drop-1.png>
 Package pdftex.def Info: img/Observaties/Pgpool/single-graph-1-drop-1.png used 
-on input line 129.
-(pdftex.def)             Requested size: 398.0pt x 161.47285pt.
+on input line 58.
+(pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png, id=917, 328.9088pt x 328
-.9088pt>
+<img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png, id=1089, 328.9088pt x 32
+8.9088pt>
 File: img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png Graphic file (type p
 ng)
  <use img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png>
 Package pdftex.def Info: img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png u
-sed on input line 130.
+sed on input line 59.
 (pdftex.def)             Requested size: 179.09879pt x 179.09866pt.
 
-<img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png, id=918, 328.9088pt x 3
-28.9088pt>
+<img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png, id=1090, 328.9088pt x 
+328.9088pt>
 File: img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png Graphic file (type
  png)
  <use img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png>
 Package pdftex.def Info: img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png
- used on input line 131.
+ used on input line 60.
 (pdftex.def)             Requested size: 179.09879pt x 179.09866pt.
 
-Overfull \hbox (3.65pt too wide) in paragraph at lines 128--132
- [][] 
- []
-
-
-Overfull \hbox (3.65pt too wide) in paragraph at lines 128--132
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 4.39412pt on input line 134.
-
-
-<img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png, id=921, 422.88274pt
- x 422.88274pt>
+<img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png, id=1091, 422.88274p
+t x 422.88274pt>
 File: img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png Graphic file (t
 ype png)
 
 <use img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png>
 Package pdftex.def Info: img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.
-png used on input line 148.
+png used on input line 67.
 (pdftex.def)             Requested size: 179.09879pt x 179.1001pt.
 
-<img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png, id=922, 422.88274pt x
- 422.88274pt>
+<img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png, id=1092, 422.88274pt 
+x 422.88274pt>
 File: img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png Graphic file (typ
 e png)
  <use img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png>
 Package pdftex.def Info: img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.pn
-g used on input line 149.
+g used on input line 68.
 (pdftex.def)             Requested size: 179.09879pt x 179.1001pt.
 
-[42]
-<img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png, id=941, 422.88274pt x
- 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png, id=1093, 422.88274pt 
+x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png Graphic file (typ
 e png)
  <use img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.pn
-g used on input line 163.
+g used on input line 76.
 (pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png, id=942, 422.88274p
-t x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png, id=1094, 422.88274
+pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png Graphic file (
 type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2
-.png used on input line 170.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+.png used on input line 83.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png, id=943, 422.88274pt 
-x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png, id=1095, 422.88274pt
+ x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png Graphic file (ty
 pe png)
  <use img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.p
-ng used on input line 171.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+ng used on input line 84.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png, id=944, 422.88
-274pt x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png, id=1096, 422.8
+8274pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png Graphic fi
 le (type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-a
-ll-2.png used on input line 172.
+ll-2.png used on input line 85.
 (pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png, id=945, 422
-.88274pt x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png, id=1097, 42
+2.88274pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png Graphic
  file (type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-replicas_saf
-e-all-2.png used on input line 173.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+e-all-2.png used on input line 86.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png, id=946, 422.8827
-4pt x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png, id=1098, 422.882
+74pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png Graphic file
  (type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-majority-all
--2.png used on input line 174.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+-2.png used on input line 87.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png, id=947, 422.8827
-4pt x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png, id=1099, 422.882
+74pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png Graphic file
  (type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-insert-majority-all
--2.png used on input line 175.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+-2.png used on input line 88.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
 
-LaTeX Warning: Float too large for page by 8.8184pt on input line 178.
+LaTeX Warning: Float too large for page by 6.50615pt on input line 91.
 
 
-<img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png, id=948, 422.88274pt 
-x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png, id=1100, 422.88274pt
+ x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png Graphic file (ty
 pe png)
  <use img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.p
-ng used on input line 182.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+ng used on input line 95.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png, id=949, 422.88274pt x 
-422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png, id=1101, 422.88274pt x
+ 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png Graphic file (type
  png)
  <use img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png
- used on input line 183.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+ used on input line 96.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png, id=950, 422.8827
-4pt x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png, id=1102, 422.882
+74pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png Graphic file
  (type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1
--2.png used on input line 184.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+-2.png used on input line 97.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png, id=951, 422.8
-8274pt x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png, id=1103, 422.
+88274pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png Graphic f
 ile (type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-replicas_saf
-e-1-2.png used on input line 185.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+e-1-2.png used on input line 98.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png, id=952, 422.88274p
-t x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png, id=1104, 422.88274
+pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png Graphic file (
 type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2
-.png used on input line 186.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
+.png used on input line 99.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png, id=953, 422.88274p
-t x 422.88274pt>
+<img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png, id=1105, 422.88274
+pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png Graphic file (
 type png)
 
 <use img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png>
 Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2
-.png used on input line 187.
-(pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
-
-
-LaTeX Warning: Float too large for page by 8.8184pt on input line 190.
-
-) [43] [44 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/H
-Base/single-graph-2-1.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/i
-mg/Observaties/HBase/single-graph-2-drop-1.png> <D:/Schooljaar 2013-2014/Thesis
-/verslag/Thesis - 2/img/Observaties/HBase/single-graph-3-kill-1.png>] [45 <D:/S
-chooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/single-gr
-aph-6-1.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties
-/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png> <D:/Schooljaar 2013-201
-4/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/single-graph-4-drop-1.png>]
-[46 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/Pgpool/s
-ingle-graph-1-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Obs
-ervaties/Pgpool/single-graph-1-drop-1.png> <D:/Schooljaar 2013-2014/Thesis/vers
-lag/Thesis - 2/img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png> <D:/School
-jaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/Pgpool/boxplot-graph-N
-ode-1-UPDATE.png>] [47 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/O
-bservaties/HBase/ECDF-plot-Start-insertRawData-5.png> <D:/Schooljaar 2013-2014/
-Thesis/verslag/Thesis - 2/img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.p
-ng> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/
-ECDF-Compare-Write-insert-1.png>] [48 <D:/Schooljaar 2013-2014/Thesis/verslag/T
-hesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png> <D:/Schoo
-ljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-up
-date-safe-all-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Obs
-ervaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png> <D:/Schooljaar 2013-20
-14/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-replicas
-_safe-all-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observa
-ties/MongoDB/ECDF-Reads-update-majority-all-2.png> <D:/Schooljaar 2013-2014/The
-sis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2
-.png>] [49 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/M
-ongoDB/ECDF-Reads-update-normal-1-2.png> <D:/Schooljaar 2013-2014/Thesis/versla
-g/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png> <D:/School
-jaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-upd
-ate-fsync_safe-1-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/
-Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png> <D:/Schooljaar 201
-3-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-majo
-rity-1-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observatie
-s/MongoDB/ECDF-Reads-insert-majority-1-2.png>]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/6.analysevande
-resultaten.tex" [50
-
-
-
-] [51]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 29.
- [52]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-[53]
-Underfull \hbox (badness 1215) in paragraph at lines 96--97
-[]\T1/lmr/m/n/10.95 (+20) Filter al de Key-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-\T1/lmr/m/n/10.95 (+20) schrijf-num-mer >
- []
-
-[54] [55]
-Underfull \hbox (badness 1616) in paragraph at lines 129--129
-[]\T1/lmr/m/n/10.95 (+20) 72, 99, 100,
- []
-
-[56]) [57]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.te
-x" [58
-
-
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [59])
-[60] [61
-
-
-] [62]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-database-besch
-rijving.tex" [63
-
-
-] [64] [65] [66]) [67]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-implementatie.
-tex" [68
-
-
-
-] <img/HBase-deployment.png, id=1173, 365.6862pt x 250.0542pt>
-File: img/HBase-deployment.png Graphic file (type png)
-
-<use img/HBase-deployment.png>
-Package pdftex.def Info: img/HBase-deployment.png used on input line 5.
-(pdftex.def)             Requested size: 218.90121pt x 149.68645pt.
-
-<img/Pgpool-II-deployment.png, id=1174, 257.2812pt x 192.2382pt>
-File: img/Pgpool-II-deployment.png Graphic file (type png)
-
-<use img/Pgpool-II-deployment.png>
-Package pdftex.def Info: img/Pgpool-II-deployment.png used on input line 6.
-(pdftex.def)             Requested size: 139.30243pt x 104.08867pt.
-
-<img/MongoDB-deployment.png, id=1175, 423.5022pt x 344.0052pt>
-File: img/MongoDB-deployment.png Graphic file (type png)
-
-<use img/MongoDB-deployment.png>
-Package pdftex.def Info: img/MongoDB-deployment.png used on input line 7.
-(pdftex.def)             Requested size: 258.69757pt x 210.13681pt.
-
-<img/YCSB-deployment.png, id=1176, 148.8762pt x 177.7842pt>
-File: img/YCSB-deployment.png Graphic file (type png)
-
-<use img/YCSB-deployment.png>
-Package pdftex.def Info: img/YCSB-deployment.png used on input line 8.
-(pdftex.def)             Requested size: 99.5pt x 118.81908pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
-[]\T1/lmr/m/n/9 (+20) (d) De-ploy-ment van
- []
-
-
-Overfull \hbox (53.78464pt too wide) in paragraph at lines 78--99
- [][] 
- []
-
-) [69] [70 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/HBase-deploym
-ent.png (PNG copy)> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Pgpo
-ol-II-deployment.png (PNG copy)> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis
- - 2/img/MongoDB-deployment.png (PNG copy)> <D:/Schooljaar 2013-2014/Thesis/ver
-slag/Thesis - 2/img/YCSB-deployment.png (PNG copy)>] [71]
+.png used on input line 100.
+(pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
+) [63] [64 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/t
+hreads-MongoDB.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Obse
+rvaties/threads-postgresql.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis 
+- 2/img/Observaties/threads-HBase.png>] [65 <D:/Schooljaar 2013-2014/Thesis/ver
+slag/Thesis - 2/img/Observaties/loadbalance-db-HBase.png> <D:/Schooljaar 2013-2
+014/Thesis/verslag/Thesis - 2/img/Observaties/loadbalance-realthroughput-db-HBa
+se.png>]
+[66 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/loadbala
+nce-db-MongoDB.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Obse
+rvaties/loadbalance-realthroughput-db-MongoDB.png>] [67 <D:/Schooljaar 2013-201
+4/Thesis/verslag/Thesis - 2/img/Observaties/loadbalance-db-PostgreSQL.png> <D:/
+Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/loadbalance-real
+throughput-db-PostgreSQL.png>] [68 <D:/Schooljaar 2013-2014/Thesis/verslag/Thes
+is - 2/img/Observaties/HBase/single-graph-2-1.png> <D:/Schooljaar 2013-2014/The
+sis/verslag/Thesis - 2/img/Observaties/HBase/single-graph-2-drop-1.png> <D:/Sch
+ooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/HBase/single-graph-
+3-kill-1.png>] [69 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Obser
+vaties/MongoDB/single-graph-6-1.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Th
+esis - 2/img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png>
+ <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/sin
+gle-graph-4-drop-1.png>] [70 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2
+/img/Observaties/Pgpool/single-graph-1-2.png> <D:/Schooljaar 2013-2014/Thesis/v
+erslag/Thesis - 2/img/Observaties/Pgpool/single-graph-1-drop-1.png> <D:/Schoolj
+aar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/Pgpool/boxplot-graph-No
+de-1-READ.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observati
+es/Pgpool/boxplot-graph-Node-1-UPDATE.png>] [71 <D:/Schooljaar 2013-2014/Thesis
+/verslag/Thesis - 2/img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png> 
+<D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/HBase/ECDF-p
+lot-R-1-insertRawData-5.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2
+/img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png>] [72 <D:/Schooljaar 2
+013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-no
+rmal-all-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observat
+ies/MongoDB/ECDF-Reads-update-safe-all-2.png> <D:/Schooljaar 2013-2014/Thesis/v
+erslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.pn
+g> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/E
+CDF-Reads-update-replicas_safe-all-2.png> <D:/Schooljaar 2013-2014/Thesis/versl
+ag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png> <D:
+/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Re
+ads-insert-majority-all-2.png>] [73 <D:/Schooljaar 2013-2014/Thesis/verslag/The
+sis - 2/img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png> <D:/Schooljaa
+r 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update
+-safe-1-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observati
+es/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png> <D:/Schooljaar 2013-2014/Thesi
+s/verslag/Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-
+2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Observaties/Mongo
+DB/ECDF-Reads-update-majority-1-2.png> <D:/Schooljaar 2013-2014/Thesis/verslag/
+Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.tex"
-[72
+[74
 
 
 
@@ -2455,7 +2383,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--21
 dera -[] content / cloudera -[] docs / CDH4 / 4 . 2 . 0 / CDH4 -[]$
  []
 
-[73] <img/HBase-Domeinmodel.png, id=1211, 443.7378pt x 271.7352pt>
+[75] <img/HBase-Domeinmodel.png, id=1228, 443.7378pt x 271.7352pt>
 File: img/HBase-Domeinmodel.png Graphic file (type png)
 
 <use img/HBase-Domeinmodel.png>
@@ -2469,10 +2397,10 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 48.
 
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-hbase.conf"
-[74]
+[76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/HBase-Domeinmodel.p
+ [77 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/HBase-Domeinmodel.p
 ng (PNG copy)>])
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 [][] [][][][][]$\T1/lmtt/m/n/9 http : / / docs . mongodb . org / manual / tutor
@@ -2486,160 +2414,160 @@ t/m/n/9 http : / / docs . mongodb . org / manual / tutorial / deploy -[] replic
 a -[] set -[] for -[]$
  []
 
-[76] <img/MongoDB-Domeinmodel.png, id=1319, 560.8152pt x 423.5022pt>
+[78] <img/MongoDB-Domeinmodel.png, id=1336, 560.8152pt x 423.5022pt>
 File: img/MongoDB-Domeinmodel.png Graphic file (type png)
 
 <use img/MongoDB-Domeinmodel.png>
 Package pdftex.def Info: img/MongoDB-Domeinmodel.png used on input line 76.
 (pdftex.def)             Requested size: 398.0pt x 300.54648pt.
- [77 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/MongoDB-Domeinmodel
+ [79 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/MongoDB-Domeinmodel
 .png (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-mongodb.conf"
-[78])
+[80])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79]
-<img/Postgres-Domeinmodel.png, id=1395, 300.6432pt x 139.4811pt>
+ [81]
+<img/Postgres-Domeinmodel.png, id=1412, 300.6432pt x 139.4811pt>
 File: img/Postgres-Domeinmodel.png Graphic file (type png)
 
 <use img/Postgres-Domeinmodel.png>
 Package pdftex.def Info: img/Postgres-Domeinmodel.png used on input line 108.
 (pdftex.def)             Requested size: 398.0pt x 184.65831pt.
- [80 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Postgres-Domeinmode
+ [82 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Postgres-Domeinmode
 l.png (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-pgpool.conf")
-<img/YCSB-Domeinmodel.png, id=1413, 510.2262pt x 185.0112pt>
+<img/YCSB-Domeinmodel.png, id=1430, 510.2262pt x 185.0112pt>
 File: img/YCSB-Domeinmodel.png Graphic file (type png)
 
 <use img/YCSB-Domeinmodel.png>
 Package pdftex.def Info: img/YCSB-Domeinmodel.png used on input line 145.
 (pdftex.def)             Requested size: 398.0pt x 144.31662pt.
- [81]
+ [83]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-ycsb.conf"))
-[82 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/YCSB-Domeinmodel.png
+[84 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/YCSB-Domeinmodel.png
  (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.tex"
-<paper/paper.pdf, id=1443, 597.50829pt x 845.0471pt>
+<paper/paper.pdf, id=1460, 597.50829pt x 845.0471pt>
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf>
-Package pdftex.def Info: paper/paper.pdf used on input line 2.
+Package pdftex.def Info: paper/paper.pdf used on input line 3.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf>
-Package pdftex.def Info: paper/paper.pdf used on input line 2.
+Package pdftex.def Info: paper/paper.pdf used on input line 3.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf>
-Package pdftex.def Info: paper/paper.pdf used on input line 2.
+Package pdftex.def Info: paper/paper.pdf used on input line 3.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf>
-Package pdftex.def Info: paper/paper.pdf used on input line 2.
+Package pdftex.def Info: paper/paper.pdf used on input line 3.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf>
-Package pdftex.def Info: paper/paper.pdf used on input line 2.
+Package pdftex.def Info: paper/paper.pdf used on input line 3.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- [83
+ [85
 
 
 
 ]
-<paper/paper.pdf, id=1453, page=1, 597.50829pt x 845.0471pt>
+<paper/paper.pdf, id=1471, page=1, 597.50829pt x 845.0471pt>
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [84 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
-<paper/paper.pdf, id=1484, page=2, 597.50829pt x 845.0471pt>
+ [86 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1502, page=2, 597.50829pt x 845.0471pt>
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 2>
-Package pdftex.def Info: paper/paper.pdf, page2 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf, page 2>
-Package pdftex.def Info: paper/paper.pdf, page2 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 2>
-Package pdftex.def Info: paper/paper.pdf, page2 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [85 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
-<paper/paper.pdf, id=1495, page=3, 597.50829pt x 845.0471pt>
+ [87 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1512, page=3, 597.50829pt x 845.0471pt>
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 3>
-Package pdftex.def Info: paper/paper.pdf, page3 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf, page 3>
-Package pdftex.def Info: paper/paper.pdf, page3 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 3>
-Package pdftex.def Info: paper/paper.pdf, page3 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [86 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
-<paper/paper.pdf, id=1506, page=4, 597.50829pt x 845.0471pt>
+ [88 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1523, page=4, 597.50829pt x 845.0471pt>
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 4>
-Package pdftex.def Info: paper/paper.pdf, page4 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf, page 4>
-Package pdftex.def Info: paper/paper.pdf, page4 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf, page 4>
-Package pdftex.def Info: paper/paper.pdf, page4 used on input line 2.
+Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [87 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]) [88
+ [89 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]) [90
 
 
-] [89
+] [91
 
-] [90]
-Overfull \hbox (0.61989pt too wide) in paragraph at lines 140--140
+] [92]
+Overfull \hbox (0.61989pt too wide) in paragraph at lines 141--141
 \T1/lmr/m/n/10.95 (-20) 2013. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-2
 0) : [][]$\T1/lmtt/m/n/10.95 http : / / wiki . postgresql . org / wiki / Replic
 ation ,[] _Clustering ,[]$
  []
 
-[91] [92
+[93] [94
 
-] [93]
+] [95]
 \tf@toc=\write7
 \tf@tdo=\write8
 \tf@lof=\write9
 \tf@lot=\write10
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
 
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.aux"
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/afkortingen.aux")
@@ -2658,21 +2586,27 @@ x")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-database-besch
 rijving.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-implementatie.
-aux") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux"
-) ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+aux")
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-resultaten.aux
+") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux")
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux"))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: F19BD93BAD75E4FABEAC7EF6DC59FF05;3123.
+(rerunfilecheck)             Checksum: DAAFCA1472B08D1264B39A2A1489F696;3187.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
  ) 
 Here is how much of TeX's memory you used:
- 32089 strings out of 493921
- 574865 string characters out of 3147279
- 1154090 words of memory out of 3000000
- 34026 multiletter control sequences out of 15000+200000
- 90794 words of font info for 137 fonts, out of 3000000 for 9000
+ 32038 strings out of 493921
+ 573954 string characters out of 3147279
+ 1151090 words of memory out of 3000000
+ 33963 multiletter control sequences out of 15000+200000
+ 90924 words of font info for 138 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  68i,18n,92p,1124b,4151s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -2700,9 +2634,9 @@ ype1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helve
 tic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on masterproef.pdf (105 pages, 5038840 bytes).
+Output written on masterproef.pdf (107 pages, 5037865 bytes).
 PDF statistics:
- 1770 PDF objects out of 2073 (max. 8388607)
- 546 named destinations out of 1000 (max. 500000)
- 25792 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1788 PDF objects out of 2073 (max. 8388607)
+ 549 named destinations out of 1000 (max. 500000)
+ 25800 words of extra memory for PDF output out of 29859 (max. 10000000)
 
