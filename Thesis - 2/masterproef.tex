@@ -1,21 +1,20 @@
 \documentclass[master=cws,masteroption=gs]{kulemt}
 
-\setup{title={Automatisch uitrol van database systemen en vergelijking van beschikbaarheid},
+\setup{title={Consistentie en beschikbaarheidstesten voor gedistribueerde database systemen},
   author={Thomas Uyttendaele},
   promotor={Prof.\,dr.\,ir.\ Wouter Joosen},
   assessor={Prof.\,dr.\,ir.\ Tias Guns, \\ Prof.\,dr.\,ir.\ Christophe Huygens},
   assistant={Dr.\ ir.\ Bart Vanbrabant \\ Dr. Bert Lagaisse}}
 % De volgende \setup mag verwijderd worden als geen fiche gewenst is.
 \setup{filingcard,
-  translatedtitle={Automatisch uitrol van database systemen en vergelijking van beschikbaarheid},
+  translatedtitle={Consistency and availability benchmarking for distributed database systems},
   udc=681.3,
   shortabstract={De meest gebruikte database management systemen zijn momenteel relationele of NoSQL systemen waarbij er verschillen zijn naar het ondersteunde datamodel. Daarnaast zijn er ook verschillende keuze gemaakt naar het opzetten van deze systemen in een gedistribueerde omgeving. \\ 
   Volgens het CAP theorema, kan een systeem niet tegelijk consistentie en hoge beschikbaarheid aanbieden en partitie tolerant te zijn. Deze thesis introduceert een model om verschillende database systemen gekwantificeerd te vergelijken naar consistentie en beschikbaarheid. Bij consistentie wordt het leesgedrag vergeleken bij het invoegen of aanpassen van data: hoelang het duurt vooraleer de data beschikbaar is voor elke gebruiker en het gedrag van de query gedurende deze periode. \\
   Voor de beschikbaarheidstesten wordt het gedrag van de queries opgevolgd terwijl database instantie stoppen en of er netwerk partities ontstaan.  
   Dit model is praktisch uitgewerkt met behulp van YCSB en verschillende database systemen zijn getest. \\   
   Waar zowel HBase als MongoDB stikte consistentie afleveren, is er een praktisch verschil in hun gedrag: bij HBase worden leesbewerkingen, gestart na de schrijfbewerking, uitgesteld om de nieuwe data terug te geven onmiddellijk na het voltooien van de schrijfbewerking. Bij MongoDB daarin tegen kunnen leesbewerkingen de nieuwe data al teruggeven vooraleer de schrijfbewerking is voltooid. Ook zijn er verschillend garanties bij MongoDB mogelijk voor de lees- en schrijfbewerkingen. \\   
-  Bij de beschikbaarheidstesten zijn er verschillen tussen de aanpak bij MongoDB, HBase en Pgpool-II. Bij MongoDB en HBase worden er sessies gebruikt en kan de data enige tijd onbeschikbaar zijn bij het uitvallen van een instantie. Pgpool-II verbreekt al de verbindingen als een enkele instantie offline gaat waarna onmiddellijk daarna de data al opnieuw kan gelezen worden. \\
-  De eerste twee systemen zullen een server die opnieuw online automatisch opnieuw opnemen in hun systeem, bij Pgpool-II moet dit proces handmatig opgestart worden. }
+  Bij de beschikbaarheidstesten zijn er verschillen tussen de aanpak bij MongoDB, HBase en Pgpool-II zowel wanneer een server onbeschikbaar of terug beschikbaar wordt.  }
  }
 % Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
 %\setup{coverpageonly}
@@ -35,7 +34,6 @@
 \usepackage[pdfusetitle,colorlinks,plainpages]{hyperref}
 \usepackage[dutch]{babel}
 \usepackage{lipsum} % for dummy text only
-\usepackage{todonotes}
 \usepackage{csquotes}
 \usepackage[backend=bibtex]{biblatex}
 %\usepackage[acronym]{glossaries}
@@ -85,7 +83,6 @@ Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun
 \end{preface}
 
 \tableofcontents*
-\listoftodos
 \begin{abstract}
 De meest gebruikte database management systemen zijn momenteel de relationele of NoSQL systemen waarbij er verschillen zijn naar het ondersteunde datamodel. Daarnaast zijn er ook verschillende keuze gemaakt naar het opzetten van deze systemen in een gedistribueerde omgeving. 
 
@@ -128,6 +125,7 @@ De eerste twee systemen zullen een server die opnieuw online komt, automatisch h
 \include{appendix/app-resultaten}
 \include{appendix/app-IMP}
 \include{appendix/app-paper}
+\include{appendix/app-poster}
 %\include{appendix/app-A}
 % ... en zo verder tot
 %\include{appendix/app-n}

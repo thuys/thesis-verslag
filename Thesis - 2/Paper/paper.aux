@@ -3,58 +3,60 @@
 \citation{brewer2012cap}
 \citation{brewer2000towards}
 \citation{brewer2012cap}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}The CAP Theorem\cite  {brewer2000towards}\cite  {brewer2012cap}}{1}}
-\newlabel{sec:CAPTheorem}{{2}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}CA}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}CP}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}The CAP Theorem\cite  {brewer2000towards}\cite  {brewer2012cap}}{1}}
+\newlabel{sec:CAPTheorem}{{II}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}CA: Consistency and availability}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}CP: Consistency and partition tolerance}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}AP: Availability and partition tolerance}{1}}
 \citation{hbase-doc}
 \citation{chang2008bigtable}
 \citation{hbase-acid}
 \citation{mongodb-doc}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}AP}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Overview of HBase and MongoDB}{2}}
-\newlabel{sec:hbaseandmongodb}{{3}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}HBase}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}MongoDB}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Differences between databases}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Overview of HBase and MongoDB}{2}}
+\newlabel{sec:hbaseandmongodb}{{III}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}HBase}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}MongoDB}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Differences between databases}{2}}
 \citation{cooper2010benchmarking}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Test method}{3}}
-\newlabel{sec:testmethod}{{4}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Event support}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Consistency support}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Test method}{3}}
+\newlabel{sec:testmethod}{{IV}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Event support}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Consistency support}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example of consistency support for one write period with 1 writer and 4 readers}}{3}}
 \newlabel{fig:consistence-method}{{1}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{3}}
-\newlabel{sec:result}{{5}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Availability}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results}{3}}
+\newlabel{sec:result}{{V}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Availability}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example of network partition. The requests block for 110 seconds }}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Consistency}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Availability: Overview of different reaction when stopping an instance }}{4}}
-\newlabel{table:beschikbaarheid-stop-resultaat}{{1}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Consistency: Percentage of the queries started at the given time moment that will read the newest inserted data. The average latency in a random read transaction is around 6ms.}}{4}}
-\newlabel{table:consistentie-hbase-correct}{{2}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Future work}{4}}
-\newlabel{sec:futurework}{{6}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Availability: Overview of different reaction when stopping an instance }}{4}}
+\newlabel{table:beschikbaarheid-stop-resultaat}{{I}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Consistency}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Consistency: Percentage of the queries started at the given time moment that will read the newest inserted data. The average latency in a random read transaction is around 6ms.}}{4}}
+\newlabel{table:consistentie-hbase-correct}{{II}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Consistency: cumulative distribution of queries that read the correct value if reading is started 3ms, 13ms, 23ms. Measurement of over 400 values.}}{4}}
+\newlabel{fig:consistentie-hbase-voorbeeld}{{3}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Future work}{4}}
+\newlabel{sec:futurework}{{VI}{4}}
 \citation{golab2014eventually}
 \citation{patil2011ycsb++}
 \citation{mauro2004system}
 \bibstyle{elsarticle-num}
 \bibdata{referenties}
-\bibcite{brewer2000towards}{{1}{}{{}}{{}}}
-\bibcite{brewer2012cap}{{2}{}{{}}{{}}}
-\bibcite{hbase-doc}{{3}{}{{}}{{}}}
-\bibcite{chang2008bigtable}{{4}{}{{}}{{}}}
-\bibcite{hbase-acid}{{5}{}{{}}{{}}}
-\bibcite{mongodb-doc}{{6}{}{{}}{{}}}
-\bibcite{cooper2010benchmarking}{{7}{}{{}}{{}}}
-\bibcite{golab2014eventually}{{8}{}{{}}{{}}}
-\bibcite{patil2011ycsb++}{{9}{}{{}}{{}}}
-\bibcite{mauro2004system}{{10}{}{{}}{{}}}
-\providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Consistency: Percentage of the queries started at 0, 2, 4 and 8ms that will read the newest inserted data with the each row for a write configuration and a column for the read configuration. The average latency on a read transaction is for all read queries around 1ms. }}{5}}
-\newlabel{table:consistentie-mongodb-correct}{{3}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Related work}{5}}
-\newlabel{sec:related work}{{7}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{5}}
-\newlabel{sec:conclusion}{{8}{5}}
+\bibcite{brewer2000towards}{1}
+\bibcite{brewer2012cap}{2}
+\bibcite{hbase-doc}{3}
+\bibcite{chang2008bigtable}{4}
+\bibcite{hbase-acid}{5}
+\bibcite{mongodb-doc}{6}
+\bibcite{cooper2010benchmarking}{7}
+\bibcite{golab2014eventually}{8}
+\bibcite{patil2011ycsb++}{9}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Consistency: Percentage of the queries started at 0, 2, 4 and 8ms that will read the newest inserted data with the each row for a write configuration and a column for the read configuration. The average latency on a read transaction is for all read queries around 1ms. }}{5}}
+\newlabel{table:consistentie-mongodb-correct}{{III}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Related work}{5}}
+\newlabel{sec:related work}{{VII}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{5}}
+\newlabel{sec:conclusion}{{VIII}{5}}
+\@writefile{toc}{\contentsline {section}{References}{5}}
+\bibcite{mauro2004system}{10}

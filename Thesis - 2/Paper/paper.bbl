@@ -23,10 +23,10 @@ F.~Chang, J.~Dean, S.~Ghemawat, W.~C. Hsieh, D.~A. Wallach, M.~Burrows,
   (2008) 4.
 
 \bibitem{hbase-acid}
-L.~Hofhansl,
-  \href{http://hadoop-hbase.blogspot.be/2012/03/acid-in-hbase.html}{Hbase: Acid
-  in hbase} (3 2012).
-\newline\urlprefix\url{http://hadoop-hbase.blogspot.be/2012/03/acid-in-hbase.html}
+L.~Hofhansl, \href{http://hadoop-hbase.blogspot.be/2012/03/
+  acid-in-hbase.html}{Hbase: Acid in hbase} (3 2012).
+\newline\urlprefix\url{http://hadoop-hbase.blogspot.be/2012/03/
+  acid-in-hbase.html}
 
 \bibitem{mongodb-doc}
 \href{http://docs.mongodb.org/manual/}{The mongodb 2.6 manuel}.

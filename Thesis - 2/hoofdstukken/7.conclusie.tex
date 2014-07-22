@@ -1,7 +1,9 @@
 \chapter{Conclusie}
 Er zijn veel verschillende database management systemen zijn, waar er veel wordt gedacht aan hun verschil in data en query methodes, zijn er ook verschillen bij hun gedrag in een gedistribueerde omgeving.
 
-In deze thesis is een nieuwe testmethode beschreven en vervolgens uitgewerkt om de consistentie en beschikbaarheidsverschillen van verschillende systemen op een analytische manier te testen. Beide testmethodes zijn uitgewerkt voor HBase en MongoDB, een respectievelijk column en document database management systeem. Voor Pgpool-II, een gedistribueerde uitbreiding van PostgreSQL, zijn enkel de beschikbaarheidstesten uitgevoerd. 
+In deze thesis is een nieuwe testmethode beschreven en vervolgens uitgewerkt om de consistentie en beschikbaarheidsverschillen van verschillende systemen op een analytische manier te testen. Er is getest naar de beschikbaarheid van de systemen bij het verwachte en onverwacht stopzetten van instantie of netwerk onderbreking. Bij consistentie is er gekeken hoe lang het duurt voor de data beschikbaar is voor de verschillende gebruikers en welke garanties er aangeleverd kunnen worden. 
+
+Beide testmethodes zijn uitgewerkt voor HBase en MongoDB, een respectievelijk column en document database management systeem. Voor Pgpool-II, een gedistribueerde uitbreiding van PostgreSQL, zijn enkel de beschikbaarheidstesten uitgevoerd. 
 
 Uit de testresultaten blijkt dat hoewel op papier de consistentie tussen HBase en MongoDB gelijk is, zijn er in de praktijk verschillende resultaten. HBase stelt de data beschikbaar voor alle leesgebruikers na de voltooiing van de schrijfbewerking, in tussentijd zullen de leesbewerkingen voor dat record vertraagd worden. MongoDB heeft verschillende configuratie mogelijkheden voor lezen en schrijven, waarbij enkel strikte consistentie is bij het lezen op de primary. MongoDB kiest ervoor om zo snel een query te voltooien met indien mogelijk de nieuwe waarde, ook als de schrijfactie nog niet voltooid is. 
 

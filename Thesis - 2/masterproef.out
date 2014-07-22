@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter*.1}{Voorwoord}{}% 1
-\BOOKMARK [0][-]{chapter*.3}{Samenvatting}{}% 2
-\BOOKMARK [0][-]{chapter*.4}{Lijst van figuren en tabellen}{}% 3
-\BOOKMARK [0][-]{chapter*.7}{Lijst van afkortingen en symbolen}{}% 4
+\BOOKMARK [0][-]{chapter*.2}{Samenvatting}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{Lijst van figuren en tabellen}{}% 3
+\BOOKMARK [0][-]{chapter*.6}{Lijst van afkortingen en symbolen}{}% 4
 \BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 5
 \BOOKMARK [1][-]{section.1.1}{Relationele en NoSQL DBMS's}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.2}{Objectieve vergelijking van de verschillende systemen volgens CAP}{chapter.1}% 7
@@ -39,10 +39,9 @@
 \BOOKMARK [1][-]{section.A.4}{Relationele database}{appendix.A}% 39
 \BOOKMARK [0][-]{appendix.B}{Overzicht van gedetailleerde implementatie keuzes}{}% 40
 \BOOKMARK [0][-]{appendix.C}{Figuren van de observaties}{}% 41
-\BOOKMARK [0][-]{appendix.D}{Uitwerking IMP}{}% 42
-\BOOKMARK [1][-]{section.D.1}{HBase}{appendix.D}% 43
-\BOOKMARK [1][-]{section.D.2}{MongoDB}{appendix.D}% 44
-\BOOKMARK [1][-]{section.D.3}{Pgpool-II}{appendix.D}% 45
-\BOOKMARK [1][-]{section.D.4}{YCSB}{appendix.D}% 46
-\BOOKMARK [0][-]{appendix.E}{Paper}{}% 47
-\BOOKMARK [0][-]{section*.171}{Bibliografie}{}% 48
+\BOOKMARK [0][-]{appendix.D}{Opstellen van de testomgeving en uitvoering van de testen}{}% 42
+\BOOKMARK [1][-]{section.D.1}{Uitwerking in IMP}{appendix.D}% 43
+\BOOKMARK [1][-]{section.D.2}{Uitvoeren testen}{appendix.D}% 44
+\BOOKMARK [0][-]{appendix.E}{Paper}{}% 45
+\BOOKMARK [0][-]{appendix.F}{Poster}{}% 46
+\BOOKMARK [0][-]{section*.177}{Bibliografie}{}% 47

@@ -24,143 +24,145 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Relationeel datamodel (a) zonder en (b) met normalisatie}}{2}{figure.caption.10}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Relationeel datamodel (a) zonder en (b) met normalisatie}}{2}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Overzicht testproces\relax }}{12}{figure.caption.25}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Overzicht testproces\relax }}{12}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Verbanden voor de calibratie\relax }}{13}{figure.caption.28}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Verbanden voor de calibratie\relax }}{13}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Verband vertraging ten opzicht van de belasting van een DBMS.}}}{13}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Verband vertraging ten opzicht van de belasting van een DBMS.}}}{13}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Verband aantal requests/seconde ten opzicht van het aantal gebruikers.}}}{13}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Verband aantal requests/seconde ten opzicht van het aantal gebruikers.}}}{13}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Consistentie test: Een enkele periode van de consistentie testen. Er is 1 schrijver, 4 lezers. De lezers stoppen zodra deze de data correct hebben gelezen. De rode lijn geeft aan vanaf wanneer de data consistent is voor alle queries gestart na dit tijdstip. \relax }}{17}{figure.caption.47}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Consistentie test: Een enkele periode van de consistentie testen. Er is 1 schrijver, 4 lezers. De lezers stoppen zodra deze de data correct hebben gelezen. De rode lijn geeft aan vanaf wanneer de data consistent is voor alle queries gestart na dit tijdstip. \relax }}{17}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Overzicht testproces\relax }}{19}{figure.caption.55}
-\defcounter {refsection}{0}\relax 
-\addvspace {10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Volledige systeemarchitectuur van HBase met Hadoop en Zookeeper. Bron \cite {ChinHBaseComprehensive}\relax }}{24}{figure.caption.64}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MongoDB Architectuur voor replicatie en datadistributie. Bron figuur link: \cite {mongodb-replicaset}, rechts: \cite {mongodb-shard}\relax }}{27}{figure.caption.71}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drie leden van een replica set met een primary en 2 secondaries. }}}{27}{figure.caption.71}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers.}}}{27}{figure.caption.71}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{29}{figure.caption.79}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Overzicht testproces\relax }}{19}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Volledige systeemarchitectuur van HBase met Hadoop en Zookeeper. Bron \cite {ChinHBaseComprehensive}\relax }}{24}{figure.caption.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces HBase: Het vereenvoudigde lees- en schrijfmodel voor strikte consistentie in HBase naar Lars Hofhansl\cite {hbase-acid}\relax }}{46}{figure.caption.124}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MongoDB Architectuur voor replicatie en datadistributie. Bron figuur link: \cite {mongodb-replicaset}, rechts: \cite {mongodb-shard}\relax }}{27}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Drie leden van een replica set met een primary en 2 secondaries. }}}{27}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Een voorbeeld cluster voor productie met 2 mongos, 3 shards en 3 configuratie servers.}}}{27}{figure.caption.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Systeemarchitectuur van Pgpool-II.\relax }}{29}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\addvspace {10pt}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Deployment van de verschillende DBMS's en de testomgeving.\relax }}{60}{figure.caption.129}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 5 instanties. }}}{60}{figure.caption.129}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{60}{figure.caption.129}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 6 instanties. }}}{60}{figure.caption.129}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{60}{figure.caption.129}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces HBase: Het vereenvoudigde lees- en schrijfmodel voor strikte consistentie in HBase naar Lars Hofhansl\cite {hbase-acid}\relax }}{46}{figure.caption.122}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Calibratie: Overzicht van het aantal queries tot de gemiddelde vertraging voor verschillend aantal gebruikers. Elk datapunt stelt een verschillend aantal gebruikers voor met het aantal rechtsboven het punt. \relax }}{64}{figure.caption.134}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MongoDB}}}{64}{figure.caption.134}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pgpool-II}}}{64}{figure.caption.134}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {HBase}}}{64}{figure.caption.134}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor HBase. \relax }}{65}{figure.caption.135}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor MongoDB. \relax }}{66}{figure.caption.136}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor Pgpool-II. \relax }}{67}{figure.caption.137}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Beschikbaarheid: Verschillende voorbeeldreacties van HBase op beschikbaarheidstesten \relax }}{68}{figure.caption.138}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Voorbeeld zacht stop}}}{68}{figure.caption.138}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Voorbeeld netwerk onderbreking en harde stop}}}{68}{figure.caption.138}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Voorbeeld hard stop}}}{68}{figure.caption.138}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Beschikbaarheid: Verschillende voorbeeldreacties van MongoDB op beschikbaarheidstesten \relax }}{69}{figure.caption.139}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Voorbeeld van een zacht stop, harde stop en netwerk onderbreking}}}{69}{figure.caption.139}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zacht stop met inzoomen op het uitschakelen}}}{69}{figure.caption.139}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Voorbeeld netwerk onderbreking }}}{69}{figure.caption.139}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Beschikbaarheid: Verschillende voorbeeldreacties van Pgpool-II op beschikbaarheidstesten \relax }}{70}{figure.caption.140}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Voorbeeld van een zacht stop}}}{70}{figure.caption.140}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Voorbeeld van een harde stop of netwerk onderbreking}}}{70}{figure.caption.140}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Boxplot met leesvertragingen}}}{70}{figure.caption.140}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Boxplot met schrijf vertragingen}}}{70}{figure.caption.140}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.8}{\ignorespaces Consistentie: Overzicht van HBase op de consistentie testen met een 99-percentiel.\relax }}{71}{figure.caption.141}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Starttijdstippen van verschillende lezers voor lezen van consistente data}}}{71}{figure.caption.141}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {De start- en stoptijdstippen voor lezer 2}}}{71}{figure.caption.141}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Consistentie: Overzicht van MongoDB's verschillende schrijfoperaties met een 90-percentiel met start en stoptijden in dezelfde kleur. \relax }}{71}{figure.caption.142}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.10}{\ignorespaces Consistentie: Overzicht van MongoDB op de consistentie testen voor alle lezers gecombineerd met een 97-percentiel (voor de lezers) met start en stoptijden in dezelfde kleur. \relax }}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal Update}}}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Safe Update}}}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Fsync Safe Update}}}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Replica Safe Update}}}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Majority Update}}}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Majority Insert}}}{72}{figure.caption.143}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.11}{\ignorespaces Consistentie: Overzicht van MongoDB op de consistentie testen voor lezer 2 met een 99-percentiel (voor de lezers) met start en stoptijden in dezelfde kleur.\relax }}{73}{figure.caption.144}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal Update}}}{73}{figure.caption.144}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Safe Update}}}{73}{figure.caption.144}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Fsync Safe Update}}}{73}{figure.caption.144}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Replica Safe Update}}}{73}{figure.caption.144}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Majority Update}}}{73}{figure.caption.144}
-\defcounter {refsection}{0}\relax 
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Majority Insert}}}{73}{figure.caption.144}
+\addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.1}{\ignorespaces HBase: Domeinmodel HBase in IMP\relax }}{77}{figure.caption.151}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Deployment van de verschillende DBMS's en de testomgeving.\relax }}{60}{figure.caption.127}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.2}{\ignorespaces MongoDB: Domeinmodel MongoDB in IMP\relax }}{79}{figure.caption.164}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Deployment van HBase met 5 instanties. }}}{60}{figure.caption.127}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Pgpool-II: Domeinmodel Pgpool-II in IMP\relax }}{82}{figure.caption.168}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deployment van Pgpool-II met 3 instanties. }}}{60}{figure.caption.127}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {D.4}{\ignorespaces YCSB: Domeinmodel YCSB in IMP\relax }}{84}{figure.caption.169}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Deployment van MongoDB met 6 instanties. }}}{60}{figure.caption.127}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Deployment van de testomgeving met 2 YCSB instanties. }}}{60}{figure.caption.127}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Calibratie: Overzicht van het aantal queries tot de gemiddelde vertraging voor verschillend aantal gebruikers. Elk datapunt stelt een verschillend aantal gebruikers voor met het aantal rechtsboven het punt. \relax }}{64}{figure.caption.132}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MongoDB}}}{64}{figure.caption.132}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pgpool-II}}}{64}{figure.caption.132}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {HBase}}}{64}{figure.caption.132}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor HBase. \relax }}{65}{figure.caption.133}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor MongoDB. \relax }}{66}{figure.caption.134}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Calibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor Pgpool-II. \relax }}{67}{figure.caption.135}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Beschikbaarheid: Verschillende voorbeeldreacties van HBase op beschikbaarheidstesten \relax }}{68}{figure.caption.136}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Voorbeeld zacht stop}}}{68}{figure.caption.136}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Voorbeeld netwerk onderbreking en harde stop}}}{68}{figure.caption.136}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Voorbeeld hard stop}}}{68}{figure.caption.136}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Beschikbaarheid: Verschillende voorbeeldreacties van MongoDB op beschikbaarheidstesten \relax }}{69}{figure.caption.137}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Voorbeeld van een zacht stop, harde stop en netwerk onderbreking}}}{69}{figure.caption.137}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zacht stop met inzoomen op het uitschakelen}}}{69}{figure.caption.137}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Voorbeeld netwerk onderbreking }}}{69}{figure.caption.137}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Beschikbaarheid: Verschillende voorbeeldreacties van Pgpool-II op beschikbaarheidstesten \relax }}{70}{figure.caption.138}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Voorbeeld van een zacht stop}}}{70}{figure.caption.138}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Voorbeeld van een harde stop of netwerk onderbreking}}}{70}{figure.caption.138}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Boxplot met leesvertragingen}}}{70}{figure.caption.138}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Boxplot met schrijf vertragingen}}}{70}{figure.caption.138}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Consistentie: Overzicht van HBase op de consistentie testen met een 99-percentiel.\relax }}{71}{figure.caption.139}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Starttijdstippen van verschillende lezers voor lezen van consistente data}}}{71}{figure.caption.139}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {De start- en stoptijdstippen voor lezer 2}}}{71}{figure.caption.139}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Consistentie: Overzicht van MongoDB's verschillende schrijfoperaties met een 90-percentiel met start en stoptijden in dezelfde kleur. \relax }}{71}{figure.caption.140}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Consistentie: Overzicht van MongoDB op de consistentie testen voor alle lezers gecombineerd met een 97-percentiel (voor de lezers) met start en stoptijden in dezelfde kleur. \relax }}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal Update}}}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Safe Update}}}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Fsync Safe Update}}}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Replica Safe Update}}}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Majority Update}}}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Majority Insert}}}{72}{figure.caption.141}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.11}{\ignorespaces Consistentie: Overzicht van MongoDB op de consistentie testen voor lezer 2 met een 99-percentiel (voor de lezers) met start en stoptijden in dezelfde kleur.\relax }}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Normal Update}}}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Safe Update}}}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Fsync Safe Update}}}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Replica Safe Update}}}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Majority Update}}}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Majority Insert}}}{73}{figure.caption.142}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {D.1}{\ignorespaces HBase: Domeinmodel HBase in IMP\relax }}{77}{figure.caption.150}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {D.2}{\ignorespaces MongoDB: Domeinmodel MongoDB in IMP\relax }}{79}{figure.caption.165}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Pgpool-II: Domeinmodel Pgpool-II in IMP\relax }}{82}{figure.caption.171}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {D.4}{\ignorespaces YCSB: Domeinmodel YCSB in IMP\relax }}{84}{figure.caption.174}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 

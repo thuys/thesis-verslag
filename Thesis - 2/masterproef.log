@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  20 JUL 2014 23:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  22 JUL 2014 16:39
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tex"
@@ -838,365 +838,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count155
 )
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\todonotes\todonotes.sty
-Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
-\XKV@depth=\count156
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 702.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.st
-y (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
-ommon.tex
-\pgfutil@everybye=\toks28
-\pgfutil@tempdima=\dimen156
-\pgfutil@tempdimb=\dimen157
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
-ommon-lists.tex))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-l
-atex.def
-\pgfutil@abb=\box29
- (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.co
-de.tex
-Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
-))
-Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.st
-y
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.st
-y
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys.
-code.tex
-Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
-ode.tex
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfi
-ltered.code.tex
-\pgfkeys@tmptoks=\toks31
-))
-\pgf@x=\dimen158
-\pgf@y=\dimen159
-\pgf@xa=\dimen160
-\pgf@ya=\dimen161
-\pgf@xb=\dimen162
-\pgf@yb=\dimen163
-\pgf@xc=\dimen164
-\pgf@yc=\dimen165
-\w@pgf@writea=\write4
-\r@pgf@reada=\read2
-\c@pgf@counta=\count157
-\c@pgf@countb=\count158
-\c@pgf@countc=\count159
-\c@pgf@countd=\count160
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.cfg
-File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
-pdftex.def
-File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
-common-pdf.def
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
-oftpath.code.tex
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count161
-\pgfsyssoftpath@bigbuffer@items=\count162
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
-rotocol.code.tex
-File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcore.
-code.tex
-Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
-ex
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.co
-de.tex
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.co
-de.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
-code.tex
-\pgfmath@dimen=\dimen166
-\pgfmath@count=\count163
-\pgfmath@box=\box30
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.code.tex
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.basic.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.trigonometric.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.random.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.comparison.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.base.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.round.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.misc.code.tex)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
-ns.integerarithmetics.code.tex)))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
-ode.tex
-\c@pgfmathroundto@lastzeros=\count164
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
-oints.code.tex
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen167
-\pgf@picmaxx=\dimen168
-\pgf@picminy=\dimen169
-\pgf@picmaxy=\dimen170
-\pgf@pathminx=\dimen171
-\pgf@pathmaxx=\dimen172
-\pgf@pathminy=\dimen173
-\pgf@pathmaxy=\dimen174
-\pgf@xx=\dimen175
-\pgf@xy=\dimen176
-\pgf@yx=\dimen177
-\pgf@yy=\dimen178
-\pgf@zx=\dimen179
-\pgf@zy=\dimen180
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
-athconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen181
-\pgf@path@lasty=\dimen182
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
-athusage.code.tex
-File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen183
-\pgf@shorten@start@additional=\dimen184
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
-copes.code.tex
-File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
-\pgfpic=\box31
-\pgf@hbox=\box32
-\pgf@layerbox@main=\box33
-\pgf@picture@serial@count=\count165
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
-raphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen185
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
-ransformations.code.tex
-File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen186
-\pgf@pt@y=\dimen187
-\pgf@pt@temp=\dimen188
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreq
-uick.code.tex
-File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreo
-bjects.code.tex
-File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
-athprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorea
-rrows.code.tex
-File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen189
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
-hade.code.tex
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen190
-\pgf@sys@shading@range@num=\count166
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
-mage.code.tex
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoree
-xternal.code.tex
-File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
-\pgfexternal@startupbox=\box34
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorel
-ayers.code.tex
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
-ransparency.code.tex
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
-atterns.code.tex
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
-)))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulesh
-apes.code.tex
-File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
-\pgfnodeparttextbox=\box35
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulepl
-ot.code.tex
-File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
--version-0-65.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen191
-\pgf@nodesepend=\dimen192
-)
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
--version-1-18.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.sty
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.sty
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
-ode.tex))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmath.sty
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
-ex))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.co
-de.tex
-Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
-ex)
-\pgffor@iter=\dimen193
-\pgffor@skip=\dimen194
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
-))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
-tikz.code.tex
-Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
-yplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count167
-\pgfplotmarksize=\dimen195
-)
-\tikz@lastx=\dimen196
-\tikz@lasty=\dimen197
-\tikz@lastxsaved=\dimen198
-\tikz@lastysaved=\dimen199
-\tikzleveldistance=\dimen200
-\tikzsiblingdistance=\dimen201
-\tikz@figbox=\box36
-\tikz@figbox@bg=\box37
-\tikz@tempbox=\box38
-\tikz@tempbox@bg=\box39
-\tikztreelevel=\count168
-\tikznumberofchildren=\count169
-\tikznumberofcurrentchild=\count170
-\tikz@fig@count=\count171
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
-trix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count172
-\pgfmatrixcurrentcolumn=\count173
-\pgf@matrix@numberofcolumns=\count174
-)
-\tikz@expandcount=\count175
-
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
-libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
-)))
-(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
-libraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count176
-\calc@Bcount=\count177
-\calc@Adimen=\dimen202
-\calc@Bdimen=\dimen203
-\calc@Askip=\skip187
-\calc@Bskip=\skip188
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count178
-\calc@Cskip=\skip189
-)
-\c@@todonotes@numberoftodonotes=\count179
-)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.sty
 Package: csquotes 2011/10/22 v5.1d context-sensitive quotations
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-\etb@tempcnta=\count180
+\etb@tempcnta=\count156
 )
-\csq@reset=\count181
-\csq@gtype=\count182
-\csq@glevel=\count183
-\csq@qlevel=\count184
-\csq@maxlvl=\count185
-\csq@tshold=\count186
-\csq@ltx@everypar=\toks40
+\csq@reset=\count157
+\csq@gtype=\count158
+\csq@glevel=\count159
+\csq@qlevel=\count160
+\csq@maxlvl=\count161
+\csq@tshold=\count162
+\csq@ltx@everypar=\toks26
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.def
 File: csquotes.def 2011/10/22 v5.1d csquotes generic definitions
@@ -1216,126 +871,129 @@ Package: biblatex1 2013/11/25 v2.8a programmable bibliographies (bibtex) (PK/JW
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count187
+\lrq@indent=\count163
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count188
-\c@listtotal=\count189
-\c@listcount=\count190
-\c@liststart=\count191
-\c@liststop=\count192
-\c@citecount=\count193
-\c@citetotal=\count194
-\c@multicitecount=\count195
-\c@multicitetotal=\count196
-\c@instcount=\count197
-\c@maxnames=\count198
-\c@minnames=\count199
-\c@maxitems=\count200
-\c@minitems=\count201
-\c@citecounter=\count202
-\c@savedcitecounter=\count203
-\c@uniquelist=\count204
-\c@uniquename=\count205
-\c@refsection=\count206
-\c@refsegment=\count207
-\c@maxextrayear=\count208
-\c@maxextraalpha=\count209
-\c@abbrvpenalty=\count210
-\c@highnamepenalty=\count211
-\c@lownamepenalty=\count212
-\c@maxparens=\count213
-\c@parenlevel=\count214
-\blx@tempcnta=\count215
-\blx@tempcntb=\count216
-\blx@tempcntc=\count217
-\blx@maxsection=\count218
-\blx@maxsegment=\count219
-\blx@notetype=\count220
-\blx@parenlevel@text=\count221
-\blx@parenlevel@foot=\count222
-\labelnumberwidth=\skip190
-\labelalphawidth=\skip191
-\shorthandwidth=\skip192
-\biblabelsep=\skip193
-\bibnamesep=\skip194
-\bibinitsep=\skip195
-\bibparsep=\skip196
-\bibhang=\skip197
-\blx@auxin=\read3
-\blx@auxout=\write5
-\c@mincomprange=\count223
-\c@maxcomprange=\count224
-\c@mincompwidth=\count225
-\c@labelname=\count226
-\c@savedlabelname=\count227
-\c@author=\count228
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count164
+\c@listtotal=\count165
+\c@listcount=\count166
+\c@liststart=\count167
+\c@liststop=\count168
+\c@citecount=\count169
+\c@citetotal=\count170
+\c@multicitecount=\count171
+\c@multicitetotal=\count172
+\c@instcount=\count173
+\c@maxnames=\count174
+\c@minnames=\count175
+\c@maxitems=\count176
+\c@minitems=\count177
+\c@citecounter=\count178
+\c@savedcitecounter=\count179
+\c@uniquelist=\count180
+\c@uniquename=\count181
+\c@refsection=\count182
+\c@refsegment=\count183
+\c@maxextrayear=\count184
+\c@maxextraalpha=\count185
+\c@abbrvpenalty=\count186
+\c@highnamepenalty=\count187
+\c@lownamepenalty=\count188
+\c@maxparens=\count189
+\c@parenlevel=\count190
+\blx@tempcnta=\count191
+\blx@tempcntb=\count192
+\blx@tempcntc=\count193
+\blx@maxsection=\count194
+\blx@maxsegment=\count195
+\blx@notetype=\count196
+\blx@parenlevel@text=\count197
+\blx@parenlevel@foot=\count198
+\labelnumberwidth=\skip187
+\labelalphawidth=\skip188
+\shorthandwidth=\skip189
+\biblabelsep=\skip190
+\bibnamesep=\skip191
+\bibinitsep=\skip192
+\bibparsep=\skip193
+\bibhang=\skip194
+\blx@auxin=\read2
+\blx@auxout=\write4
+\c@mincomprange=\count199
+\c@maxcomprange=\count200
+\c@mincompwidth=\count201
+\c@labelname=\count202
+\c@savedlabelname=\count203
+\c@author=\count204
+\c@savedauthor=\count205
+\c@shortauthor=\count206
+\c@savedshortauthor=\count207
+\c@editor=\count208
+\c@savededitor=\count209
+\c@editora=\count210
+\c@savededitora=\count211
+\c@editorb=\count212
+\c@savededitorb=\count213
+\c@editorc=\count214
+\c@savededitorc=\count215
+\c@shorteditor=\count216
+\c@savedshorteditor=\count217
+\c@bookauthor=\count218
+\c@savedbookauthor=\count219
+\c@translator=\count220
+\c@savedtranslator=\count221
+\c@annotator=\count222
+\c@savedannotator=\count223
+\c@commentator=\count224
+\c@savedcommentator=\count225
+\c@introduction=\count226
+\c@savedintroduction=\count227
+\c@foreword=\count228
 Normal \count register pool exhausted, switching to extended pool.
-\c@savedauthor=\count277
-\c@shortauthor=\count278
-\c@savedshortauthor=\count279
-\c@editor=\count280
-\c@savededitor=\count281
-\c@editora=\count282
-\c@savededitora=\count283
-\c@editorb=\count284
-\c@savededitorb=\count285
-\c@editorc=\count286
-\c@savededitorc=\count287
-\c@shorteditor=\count288
-\c@savedshorteditor=\count289
-\c@bookauthor=\count290
-\c@savedbookauthor=\count291
-\c@translator=\count292
-\c@savedtranslator=\count293
-\c@annotator=\count294
-\c@savedannotator=\count295
-\c@commentator=\count296
-\c@savedcommentator=\count297
-\c@introduction=\count298
-\c@savedintroduction=\count299
-\c@foreword=\count300
-\c@savedforeword=\count301
-\c@afterword=\count302
-\c@savedafterword=\count303
-\c@holder=\count304
-\c@savedholder=\count305
-\c@namea=\count306
-\c@savednamea=\count307
-\c@nameb=\count308
-\c@savednameb=\count309
-\c@namec=\count310
-\c@savednamec=\count311
-\c@institution=\count312
-\c@savedinstitution=\count313
-\c@language=\count314
-\c@savedlanguage=\count315
-\c@location=\count316
-\c@savedlocation=\count317
-\c@organization=\count318
-\c@savedorganization=\count319
-\c@origlocation=\count320
-\c@savedoriglocation=\count321
-\c@origpublisher=\count322
-\c@savedorigpublisher=\count323
-\c@pageref=\count324
-\c@savedpageref=\count325
-\c@publisher=\count326
-\c@savedpublisher=\count327
-\c@lista=\count328
-\c@savedlista=\count329
-\c@listb=\count330
-\c@savedlistb=\count331
-\c@listc=\count332
-\c@savedlistc=\count333
-\c@listd=\count334
-\c@savedlistd=\count335
-\c@liste=\count336
-\c@savedliste=\count337
-\c@listf=\count338
-\c@savedlistf=\count339
+\c@savedforeword=\count277
+\c@afterword=\count278
+\c@savedafterword=\count279
+\c@holder=\count280
+\c@savedholder=\count281
+\c@namea=\count282
+\c@savednamea=\count283
+\c@nameb=\count284
+\c@savednameb=\count285
+\c@namec=\count286
+\c@savednamec=\count287
+\c@institution=\count288
+\c@savedinstitution=\count289
+\c@language=\count290
+\c@savedlanguage=\count291
+\c@location=\count292
+\c@savedlocation=\count293
+\c@organization=\count294
+\c@savedorganization=\count295
+\c@origlocation=\count296
+\c@savedoriglocation=\count297
+\c@origpublisher=\count298
+\c@savedorigpublisher=\count299
+\c@pageref=\count300
+\c@savedpageref=\count301
+\c@publisher=\count302
+\c@savedpublisher=\count303
+\c@lista=\count304
+\c@savedlista=\count305
+\c@listb=\count306
+\c@savedlistb=\count307
+\c@listc=\count308
+\c@savedlistc=\count309
+\c@listd=\count310
+\c@savedlistd=\count311
+\c@liste=\count312
+\c@savedliste=\count313
+\c@listf=\count314
+\c@savedlistf=\count315
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1347,13 +1005,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
 File: biblatex.def 
-\c@textcitecount=\count340
-\c@textcitetotal=\count341
-\c@textcitemaxnames=\count342
-\c@biburlnumpenalty=\count343
-\c@biburlucpenalty=\count344
-\c@biburllcpenalty=\count345
-\c@smartand=\count346
+\c@textcitecount=\count316
+\c@textcitetotal=\count317
+\c@textcitemaxnames=\count318
+\c@biburlnumpenalty=\count319
+\c@biburlucpenalty=\count320
+\c@biburllcpenalty=\count321
+\c@smartand=\count322
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1365,8 +1023,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\standard.bbx
 File: standard.bbx 2013/11/25 v2.8a biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count347
-\c@bbx:relatedtotal=\count348
+\c@bbx:relatedcount=\count323
+\c@bbx:relatedtotal=\count324
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1392,46 +1050,356 @@ File: biblatex.cfg
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box40
+\@eurobox=\box29
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip198
-\subfigcapskip=\skip199
-\subfigcaptopadj=\dimen204
-\subfigbottomskip=\skip200
-\subfigcapmargin=\dimen205
-\subfiglabelskip=\skip201
-\c@subfigure=\count349
-\c@subtable=\count350
+\subfigtopskip=\skip195
+\subfigcapskip=\skip196
+\subfigcaptopadj=\dimen156
+\subfigbottomskip=\skip197
+\subfigcapmargin=\dimen157
+\subfiglabelskip=\skip198
+\c@subfigure=\count325
+\c@subtable=\count326
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
-\subfig@top=\skip202
-\subfig@bottom=\skip203
+\subfig@top=\skip199
+\subfig@bottom=\skip200
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen206
+\bigstrutjot=\dimen158
 )
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.st
+y (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.sty
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon.tex
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen159
+\pgfutil@tempdimb=\dimen160
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-c
+ommon-lists.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil-l
+atex.def
+\pgfutil@abb=\box30
+ (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.co
+de.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.st
+y
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.st
+y
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys.
+code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeysfi
+ltered.code.tex
+\pgfkeys@tmptoks=\toks30
+))
+\pgf@x=\dimen161
+\pgf@y=\dimen162
+\pgf@xa=\dimen163
+\pgf@ya=\dimen164
+\pgf@xb=\dimen165
+\pgf@yb=\dimen166
+\pgf@xc=\dimen167
+\pgf@yc=\dimen168
+\w@pgf@writea=\write5
+\r@pgf@reada=\read3
+\c@pgf@counta=\count327
+\c@pgf@countb=\count328
+\c@pgf@countc=\count329
+\c@pgf@countd=\count330
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsys-
+common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsyss
+oftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count331
+\pgfsyssoftpath@bigbuffer@items=\count332
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsysp
+rotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcore.
+code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.co
+de.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.co
+de.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparser.
+code.tex
+\pgfmath@dimen=\dimen169
+\pgfmath@count=\count333
+\pgfmath@box=\box31
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.basic.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.trigonometric.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.random.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.comparison.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.base.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.round.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.misc.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunctio
+ns.integerarithmetics.code.tex)))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat.c
+ode.tex
+\c@pgfmathroundto@lastzeros=\count334
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+oints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen170
+\pgf@picmaxx=\dimen171
+\pgf@picminy=\dimen172
+\pgf@picmaxy=\dimen173
+\pgf@pathminx=\dimen174
+\pgf@pathmaxx=\dimen175
+\pgf@pathminy=\dimen176
+\pgf@pathmaxy=\dimen177
+\pgf@xx=\dimen178
+\pgf@xy=\dimen179
+\pgf@yx=\dimen180
+\pgf@yy=\dimen181
+\pgf@zx=\dimen182
+\pgf@zy=\dimen183
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen184
+\pgf@path@lasty=\dimen185
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athusage.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen186
+\pgf@shorten@start@additional=\dimen187
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+copes.code.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box32
+\pgf@hbox=\box33
+\pgf@layerbox@main=\box34
+\pgf@picture@serial@count=\count335
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreg
+raphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen188
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransformations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen189
+\pgf@pt@y=\dimen190
+\pgf@pt@temp=\dimen191
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreq
+uick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoreo
+bjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+athprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorea
+rrows.code.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen192
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcores
+hade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen193
+\pgf@sys@shading@range@num=\count336
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorei
+mage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoree
+xternal.code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box35
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorel
+ayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcoret
+ransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcorep
+atterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulesh
+apes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box36
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulepl
+ot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen194
+\pgf@nodesepend=\dimen195
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfcomp
+-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.sty
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.sty
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys.c
+ode.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmath.sty
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.co
+de.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code.t
+ex)
+\pgffor@iter=\dimen196
+\pgffor@skip=\dimen197
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
+))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count337
+\pgfplotmarksize=\dimen198
+)
+\tikz@lastx=\dimen199
+\tikz@lasty=\dimen200
+\tikz@lastxsaved=\dimen201
+\tikz@lastysaved=\dimen202
+\tikzleveldistance=\dimen203
+\tikzsiblingdistance=\dimen204
+\tikz@figbox=\box37
+\tikz@figbox@bg=\box38
+\tikz@tempbox=\box39
+\tikz@tempbox@bg=\box40
+\tikztreelevel=\count338
+\tikznumberofchildren=\count339
+\tikznumberofcurrentchild=\count340
+\tikz@fig@count=\count341
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulema
+trix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count342
+\pgfmatrixcurrentcolumn=\count343
+\pgf@matrix@numberofcolumns=\count344
+)
+\tikz@expandcount=\count345
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
-\lst@mode=\count351
+\lst@mode=\count346
 \lst@gtempboxa=\box41
-\lst@token=\toks41
-\lst@length=\count352
-\lst@currlwidth=\dimen207
-\lst@column=\count353
-\lst@pos=\count354
-\lst@lostspace=\dimen208
-\lst@width=\dimen209
-\lst@newlines=\count355
-\lst@lineno=\count356
-\lst@maxwidth=\dimen210
+\lst@token=\toks39
+\lst@length=\count347
+\lst@currlwidth=\dimen205
+\lst@column=\count348
+\lst@pos=\count349
+\lst@lostspace=\dimen206
+\lst@width=\dimen207
+\lst@newlines=\count350
+\lst@lineno=\count351
+\lst@maxwidth=\dimen208
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
-\c@lstnumber=\count357
-\lst@skipnumbers=\count358
+\c@lstnumber=\count352
+\lst@skipnumbers=\count353
 \lst@framebox=\box42
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
@@ -1451,15 +1419,15 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen211
-\captionmargin@=\dimen212
-\captionwidth=\dimen213
-\caption@tempdima=\dimen214
-\caption@indent=\dimen215
-\caption@parindent=\dimen216
-\caption@hangindent=\dimen217
+\captionmargin=\dimen209
+\captionmargin@=\dimen210
+\captionwidth=\dimen211
+\caption@tempdima=\dimen212
+\caption@indent=\dimen213
+\caption@parindent=\dimen214
+\caption@hangindent=\dimen215
 )
-\c@ContinuedFloat=\count359
+\c@ContinuedFloat=\count354
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
@@ -1467,6 +1435,19 @@ Package caption Info: subfigure package is loaded.
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
 Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count355
+\calc@Bcount=\count356
+\calc@Adimen=\dimen216
+\calc@Bdimen=\dimen217
+\calc@Askip=\skip201
+\calc@Bskip=\skip202
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count357
+\calc@Cskip=\skip203
+)
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
 Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
 )
@@ -1474,8 +1455,8 @@ Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
 File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box43
-\AM@toc@title=\toks42
-\c@AM@survey=\count360
+\AM@toc@title=\toks40
+\c@AM@survey=\count358
 \AM@templatesizebox=\box44
 )
 Package csquotes Info: Checking for multilingual support...
@@ -1513,39 +1494,40 @@ rijving.aux")
 aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-resultaten.aux
 ") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux")
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 66.
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux")
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-poster.aux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count361
+\scratchcounter=\count359
 \scratchdimen=\dimen218
 \scratchbox=\box45
-\nofMPsegments=\count362
-\nofMParguments=\count363
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count364
+\nofMPsegments=\count360
+\nofMParguments=\count361
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count362
 \MPscratchDim=\dimen219
-\MPnumerator=\count365
-\makeMPintoPDFobject=\count366
-\everyMPtoPDFconversion=\toks44
+\MPnumerator=\count363
+\makeMPintoPDFobject=\count364
+\everyMPtoPDFconversion=\toks42
 )
 
 ******************************************************
@@ -1567,7 +1549,7 @@ Sidefoothsep and sidefootwidth: 7pt and 101pt
 Sidefootvsep and sidefootheight: 13.6pt and 594.32022pt
 ******************************************************
 
-LaTeX Info: Redefining \microtypecontext on input line 66.
+LaTeX Info: Redefining \microtypecontext on input line 64.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1582,7 +1564,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 66.
+Package hyperref Info: Link coloring ON on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1590,19 +1572,17 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count367
+\c@section@level=\count365
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 66.
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.out")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.out")
 \@outlinefile=\write6
-
-ABD: EveryShipout initializing macros
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1614,9 +1594,11 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'masterproef.bbl' found.
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.bbl")
-Package biblatex Info: Reference section=0 on input line 66.
-Package biblatex Info: Reference segment=0 on input line 66.
-\c@lstlisting=\count368
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
+
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count366
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package microtype Info: Loading generic settings for font family
@@ -1624,30 +1606,30 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<logokuleng.pdf, id=198, 159.33528pt x 85.358pt>
+<logokuleng.pdf, id=194, 159.33528pt x 85.358pt>
 File: logokuleng.pdf Graphic file (type pdf)
  <use logokuleng.pdf>
-Package pdftex.def Info: logokuleng.pdf used on input line 66.
+Package pdftex.def Info: logokuleng.pdf used on input line 64.
 (pdftex.def)             Requested size: 159.33542pt x 85.3617pt.
  [-1
 
 
 {C:/Users/Thomas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Schoolj
 aar 2013-2014/Thesis/verslag/Thesis - 2/logokuleng.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 64.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 66.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 66.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 64.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1687,48 +1669,41 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 17.
- [2
+
+Overfull \hbox (0.1675pt too wide) detected at line 23
+ \T1/lmr/bx/n/10.95 viii
+ []
+
+[2
 
 
 ])
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [3]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tdo") [4
-
-]
-[5
+ [3] [4
 
 ] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lof"
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6
+ [5
 
 
 ])
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot" [7])
-[8] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/afkortingen.tex
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.lot" [6])
+[7] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/afkortingen.tex
 "
-Overfull \hbox (5.35262pt too wide) in paragraph at lines 12--12
+Overfull \hbox (5.35262pt too wide) in paragraph at lines 15--15
 []|\T1/lmr/m/n/10.95 (-20) RDBMS| 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-[]|\T1/lmr/m/n/10.95 (+20) Scan
- []
-
-) [9
-
-
-] [10
+) [8
 
 
 ]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/2.overzichtvan
 detechnologie.tex"
-<img/Relationeel-Model-Normalisatie.png, id=456, 570.933pt x 143.0946pt>
+<img/Relationeel-Model-Normalisatie.png, id=445, 570.933pt x 143.0946pt>
 File: img/Relationeel-Model-Normalisatie.png Graphic file (type png)
 
 <use img/Relationeel-Model-Normalisatie.png>
@@ -1741,6 +1716,8 @@ been already used, duplicate ignored
                    \relax 
 l.26 
       [1
+
+
 
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
@@ -1789,24 +1766,14 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.147 
-       [8])pdfTeX warning (ext4): destination with the same identifier (name{pa
-ge.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.115 ...hoofdstukken/2.overzichtvandetechnologie}
-                                                   [9]
+       [8]) [9]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/3.methodiekvan
-detesten.tex"pdfTeX warning (ext4): destination with the same identifier (name{
-page.10}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Methodiek van de testen} [10
+detesten.tex" [10
 
 
 
 ]
-<img/Test-Process-Overview.png, id=558, 633.0852pt x 33.2442pt>
+<img/Test-Process-Overview.png, id=549, 633.0852pt x 33.2442pt>
 File: img/Test-Process-Overview.png Graphic file (type png)
 
 <use img/Test-Process-Overview.png>
@@ -1814,14 +1781,14 @@ Package pdftex.def Info: img/Test-Process-Overview.png used on input line 16.
 (pdftex.def)             Requested size: 398.0pt x 20.89981pt.
  [11] [12 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Test-Process-O
 verview.png (PNG copy)>]
-<img/hockey-stick.png, id=575, 493.845pt x 338.76563pt>
+<img/hockey-stick.png, id=566, 493.845pt x 338.76563pt>
 File: img/hockey-stick.png Graphic file (type png)
 
 <use img/hockey-stick.png>
 Package pdftex.def Info: img/hockey-stick.png used on input line 40.
 (pdftex.def)             Requested size: 179.09879pt x 122.85495pt.
 
-<img/connecties-gebruikers.png, id=576, 493.845pt x 338.76563pt>
+<img/connecties-gebruikers.png, id=567, 493.845pt x 338.76563pt>
 File: img/connecties-gebruikers.png Graphic file (type png)
 
 <use img/connecties-gebruikers.png>
@@ -1830,7 +1797,7 @@ Package pdftex.def Info: img/connecties-gebruikers.png used on input line 42.
  [13 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/hockey-stick.png> <
 D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/connecties-gebruikers.png
 >] [14] [15]
-<img/Consistentie-test-periode.png, id=617, 938.0646pt x 348.3414pt>
+<img/Consistentie-test-periode.png, id=608, 938.0646pt x 348.3414pt>
 File: img/Consistentie-test-periode.png Graphic file (type png)
 
 <use img/Consistentie-test-periode.png>
@@ -1839,7 +1806,7 @@ Package pdftex.def Info: img/Consistentie-test-periode.png used on input line 1
 (pdftex.def)             Requested size: 398.0pt x 147.79597pt.
  [16] [17 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Consistentie-t
 est-periode.png (PNG copy)>]
-<img/Test-Process-Detailed-Overview.png, id=636, 666.3294pt x 244.9953pt>
+<img/Test-Process-Detailed-Overview.png, id=627, 666.3294pt x 244.9953pt>
 File: img/Test-Process-Detailed-Overview.png Graphic file (type png)
 
 <use img/Test-Process-Detailed-Overview.png>
@@ -1857,7 +1824,7 @@ e.tex" [20
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
-[23] <img/Hbase-structure.png, id=685, 685.8122pt x 366.61969pt>
+[23] <img/Hbase-structure.png, id=676, 685.8122pt x 366.61969pt>
 File: img/Hbase-structure.png Graphic file (type png)
 
 <use img/Hbase-structure.png>
@@ -1871,7 +1838,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2376) has occurred while \output is active []
 
  [26]
-<img/mongodb-replica-set-primary-with-two-secondaries.png, id=723, 595.1647pt x
+<img/mongodb-replica-set-primary-with-two-secondaries.png, id=713, 595.1647pt x
  225.31235pt>
 File: img/mongodb-replica-set-primary-with-two-secondaries.png Graphic file (ty
 pe png)
@@ -1880,7 +1847,7 @@ Package pdftex.def Info: img/mongodb-replica-set-primary-with-two-secondaries.p
 ng used on input line 140.
 (pdftex.def)             Requested size: 159.19757pt x 60.26787pt.
 
-<img/mongo-sharded-cluster-production-architecture.png, id=724, 563.14285pt x 3
+<img/mongo-sharded-cluster-production-architecture.png, id=714, 563.14285pt x 3
 85.75285pt>
 File: img/mongo-sharded-cluster-production-architecture.png Graphic file (type 
 png)
@@ -1892,7 +1859,7 @@ used on input line 142.
 [27 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/mongodb-replica-set-
 primary-with-two-secondaries.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesi
 s - 2/img/mongo-sharded-cluster-production-architecture.png>]
-<img/Pgpool-structuur.png, id=747, 246.4407pt x 189.3474pt>
+<img/Pgpool-structuur.png, id=738, 246.4407pt x 189.3474pt>
 File: img/Pgpool-structuur.png Graphic file (type png)
 
 <use img/Pgpool-structuur.png>
@@ -1920,35 +1887,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [37] [38] [39]) [40]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/6.analysevande
-resultaten.tex"
-Underfull \vbox (badness 1845) has occurred while \output is active []
-
- [41
+resultaten.tex" [41
 
 
 
-]
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-[43] [44]
-Underfull \hbox (badness 1215) in paragraph at lines 128--129
+] [42] [43] [44]
+Underfull \hbox (badness 1215) in paragraph at lines 126--127
 []\T1/lmr/m/n/10.95 (+20) Filter al de Key-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 \T1/lmr/m/n/10.95 (+20) schrijf-num-mer >
  []
 
 [45]
-Underfull \hbox (badness 1616) in paragraph at lines 165--165
+Underfull \hbox (badness 1616) in paragraph at lines 163--163
 []\T1/lmr/m/n/10.95 (+20) 72, 99, 100,
  []
 
-[46] [47]) [48]
+[46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47])
+[48]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/7.conclusie.te
 x"
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1972,28 +1934,28 @@ tex" [58
 
 
 
-] <img/HBase-deployment.png, id=1050, 365.6862pt x 250.0542pt>
+] <img/HBase-deployment.png, id=1041, 365.6862pt x 250.0542pt>
 File: img/HBase-deployment.png Graphic file (type png)
 
 <use img/HBase-deployment.png>
 Package pdftex.def Info: img/HBase-deployment.png used on input line 6.
 (pdftex.def)             Requested size: 218.90121pt x 149.68645pt.
 
-<img/Pgpool-II-deployment.png, id=1051, 257.2812pt x 192.2382pt>
+<img/Pgpool-II-deployment.png, id=1042, 257.2812pt x 192.2382pt>
 File: img/Pgpool-II-deployment.png Graphic file (type png)
 
 <use img/Pgpool-II-deployment.png>
 Package pdftex.def Info: img/Pgpool-II-deployment.png used on input line 7.
 (pdftex.def)             Requested size: 139.30243pt x 104.08867pt.
 
-<img/MongoDB-deployment.png, id=1052, 423.5022pt x 344.0052pt>
+<img/MongoDB-deployment.png, id=1043, 423.5022pt x 344.0052pt>
 File: img/MongoDB-deployment.png Graphic file (type png)
 
 <use img/MongoDB-deployment.png>
 Package pdftex.def Info: img/MongoDB-deployment.png used on input line 8.
 (pdftex.def)             Requested size: 258.69757pt x 210.13681pt.
 
-<img/YCSB-deployment.png, id=1053, 148.8762pt x 177.7842pt>
+<img/YCSB-deployment.png, id=1044, 148.8762pt x 177.7842pt>
 File: img/YCSB-deployment.png Graphic file (type png)
 
 <use img/YCSB-deployment.png>
@@ -2014,7 +1976,7 @@ slag/Thesis - 2/img/YCSB-deployment.png (PNG copy)>] [61]
 
 
 
-] <img/Observaties/threads-MongoDB.png, id=1072, 493.3632pt x 493.3632pt>
+] <img/Observaties/threads-MongoDB.png, id=1062, 493.3632pt x 493.3632pt>
 File: img/Observaties/threads-MongoDB.png Graphic file (type png)
 
 <use img/Observaties/threads-MongoDB.png>
@@ -2022,7 +1984,7 @@ Package pdftex.def Info: img/Observaties/threads-MongoDB.png used on input line
  5.
 (pdftex.def)             Requested size: 159.19757pt x 159.19687pt.
 
-<img/Observaties/threads-postgresql.png, id=1073, 493.3632pt x 493.3632pt>
+<img/Observaties/threads-postgresql.png, id=1063, 493.3632pt x 493.3632pt>
 File: img/Observaties/threads-postgresql.png Graphic file (type png)
 
 <use img/Observaties/threads-postgresql.png>
@@ -2030,7 +1992,7 @@ Package pdftex.def Info: img/Observaties/threads-postgresql.png used on input l
 ine 6.
 (pdftex.def)             Requested size: 159.19757pt x 159.19687pt.
 
-<img/Observaties/threads-HBase.png, id=1074, 493.3632pt x 493.3632pt>
+<img/Observaties/threads-HBase.png, id=1064, 493.3632pt x 493.3632pt>
 File: img/Observaties/threads-HBase.png Graphic file (type png)
 
 <use img/Observaties/threads-HBase.png>
@@ -2041,7 +2003,7 @@ Package pdftex.def Info: img/Observaties/threads-HBase.png used on input line 7
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/Observaties/loadbalance-db-HBase.png, id=1075, 810.7088pt x 328.9088pt>
+<img/Observaties/loadbalance-db-HBase.png, id=1065, 810.7088pt x 328.9088pt>
 File: img/Observaties/loadbalance-db-HBase.png Graphic file (type png)
 
 <use img/Observaties/loadbalance-db-HBase.png>
@@ -2049,7 +2011,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-db-HBase.png used on input
  line 14.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-realthroughput-db-HBase.png, id=1076, 810.7088pt x
+<img/Observaties/loadbalance-realthroughput-db-HBase.png, id=1066, 810.7088pt x
  328.9088pt>
 File: img/Observaties/loadbalance-realthroughput-db-HBase.png Graphic file (typ
 e png)
@@ -2058,7 +2020,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-realthroughput-db-HBase.pn
 g used on input line 15.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-db-MongoDB.png, id=1077, 810.7088pt x 328.9088pt>
+<img/Observaties/loadbalance-db-MongoDB.png, id=1067, 810.7088pt x 328.9088pt>
 File: img/Observaties/loadbalance-db-MongoDB.png Graphic file (type png)
 
 <use img/Observaties/loadbalance-db-MongoDB.png>
@@ -2066,7 +2028,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-db-MongoDB.png used on inp
 ut line 22.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-realthroughput-db-MongoDB.png, id=1078, 810.7088pt
+<img/Observaties/loadbalance-realthroughput-db-MongoDB.png, id=1068, 810.7088pt
  x 328.9088pt>
 File: img/Observaties/loadbalance-realthroughput-db-MongoDB.png Graphic file (t
 ype png)
@@ -2075,7 +2037,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-realthroughput-db-MongoDB.
 png used on input line 23.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-db-PostgreSQL.png, id=1079, 810.7088pt x 328.9088p
+<img/Observaties/loadbalance-db-PostgreSQL.png, id=1069, 810.7088pt x 328.9088p
 t>
 File: img/Observaties/loadbalance-db-PostgreSQL.png Graphic file (type png)
  <use img/Observaties/loadbalance-db-PostgreSQL.png>
@@ -2083,7 +2045,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-db-PostgreSQL.png used on
 input line 30.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png, id=1080, 810.708
+<img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png, id=1070, 810.708
 8pt x 328.9088pt>
 File: img/Observaties/loadbalance-realthroughput-db-PostgreSQL.png Graphic file
  (type png)
@@ -2093,7 +2055,7 @@ Package pdftex.def Info: img/Observaties/loadbalance-realthroughput-db-PostgreS
 QL.png used on input line 31.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/HBase/single-graph-2-1.png, id=1081, 810.7088pt x 328.9088pt>
+<img/Observaties/HBase/single-graph-2-1.png, id=1071, 810.7088pt x 328.9088pt>
 File: img/Observaties/HBase/single-graph-2-1.png Graphic file (type png)
 
 <use img/Observaties/HBase/single-graph-2-1.png>
@@ -2101,7 +2063,7 @@ Package pdftex.def Info: img/Observaties/HBase/single-graph-2-1.png used on inp
 ut line 39.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/HBase/single-graph-2-drop-1.png, id=1082, 810.7088pt x 328.908
+<img/Observaties/HBase/single-graph-2-drop-1.png, id=1072, 810.7088pt x 328.908
 8pt>
 File: img/Observaties/HBase/single-graph-2-drop-1.png Graphic file (type png)
  <use img/Observaties/HBase/single-graph-2-drop-1.png>
@@ -2109,7 +2071,7 @@ Package pdftex.def Info: img/Observaties/HBase/single-graph-2-drop-1.png used o
 n input line 40.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/HBase/single-graph-3-kill-1.png, id=1083, 810.7088pt x 328.908
+<img/Observaties/HBase/single-graph-3-kill-1.png, id=1073, 810.7088pt x 328.908
 8pt>
 File: img/Observaties/HBase/single-graph-3-kill-1.png Graphic file (type png)
  <use img/Observaties/HBase/single-graph-3-kill-1.png>
@@ -2117,7 +2079,7 @@ Package pdftex.def Info: img/Observaties/HBase/single-graph-3-kill-1.png used o
 n input line 41.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/MongoDB/single-graph-6-1.png, id=1084, 1042.33989pt x 422.8827
+<img/Observaties/MongoDB/single-graph-6-1.png, id=1074, 1042.33989pt x 422.8827
 4pt>
 File: img/Observaties/MongoDB/single-graph-6-1.png Graphic file (type png)
  <use img/Observaties/MongoDB/single-graph-6-1.png>
@@ -2125,7 +2087,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/single-graph-6-1.png used on i
 nput line 48.
 (pdftex.def)             Requested size: 378.09879pt x 153.39914pt.
 
-<img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png, id=1085
+<img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png, id=1075
 , 1042.33989pt x 422.88274pt>
 File: img/Observaties/MongoDB/multiple-graph-interrupt-Node-6-Shut-down.png Gra
 phic file (type png)
@@ -2135,7 +2097,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/multiple-graph-interrupt-Node-
 6-Shut-down.png used on input line 49.
 (pdftex.def)             Requested size: 378.09879pt x 153.39914pt.
 
-<img/Observaties/MongoDB/single-graph-4-drop-1.png, id=1086, 1042.33989pt x 422
+<img/Observaties/MongoDB/single-graph-4-drop-1.png, id=1076, 1042.33989pt x 422
 .88274pt>
 File: img/Observaties/MongoDB/single-graph-4-drop-1.png Graphic file (type png)
 
@@ -2144,14 +2106,14 @@ Package pdftex.def Info: img/Observaties/MongoDB/single-graph-4-drop-1.png used
  on input line 50.
 (pdftex.def)             Requested size: 378.09879pt x 153.39914pt.
 
-<img/Observaties/Pgpool/single-graph-1-2.png, id=1087, 810.7088pt x 328.9088pt>
+<img/Observaties/Pgpool/single-graph-1-2.png, id=1077, 810.7088pt x 328.9088pt>
 File: img/Observaties/Pgpool/single-graph-1-2.png Graphic file (type png)
 <use img/Observaties/Pgpool/single-graph-1-2.png>
 Package pdftex.def Info: img/Observaties/Pgpool/single-graph-1-2.png used on in
 put line 57.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/Pgpool/single-graph-1-drop-1.png, id=1088, 810.7088pt x 328.90
+<img/Observaties/Pgpool/single-graph-1-drop-1.png, id=1078, 810.7088pt x 328.90
 88pt>
 File: img/Observaties/Pgpool/single-graph-1-drop-1.png Graphic file (type png)
  <use img/Observaties/Pgpool/single-graph-1-drop-1.png>
@@ -2159,7 +2121,7 @@ Package pdftex.def Info: img/Observaties/Pgpool/single-graph-1-drop-1.png used
 on input line 58.
 (pdftex.def)             Requested size: 378.09879pt x 153.3977pt.
 
-<img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png, id=1089, 328.9088pt x 32
+<img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png, id=1079, 328.9088pt x 32
 8.9088pt>
 File: img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png Graphic file (type p
 ng)
@@ -2168,7 +2130,7 @@ Package pdftex.def Info: img/Observaties/Pgpool/boxplot-graph-Node-1-READ.png u
 sed on input line 59.
 (pdftex.def)             Requested size: 179.09879pt x 179.09866pt.
 
-<img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png, id=1090, 328.9088pt x 
+<img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png, id=1080, 328.9088pt x 
 328.9088pt>
 File: img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png Graphic file (type
  png)
@@ -2177,7 +2139,7 @@ Package pdftex.def Info: img/Observaties/Pgpool/boxplot-graph-Node-1-UPDATE.png
  used on input line 60.
 (pdftex.def)             Requested size: 179.09879pt x 179.09866pt.
 
-<img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png, id=1091, 422.88274p
+<img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png, id=1081, 422.88274p
 t x 422.88274pt>
 File: img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.png Graphic file (t
 ype png)
@@ -2187,7 +2149,7 @@ Package pdftex.def Info: img/Observaties/HBase/ECDF-plot-Start-insertRawData-5.
 png used on input line 67.
 (pdftex.def)             Requested size: 179.09879pt x 179.1001pt.
 
-<img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png, id=1092, 422.88274pt 
+<img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png, id=1082, 422.88274pt 
 x 422.88274pt>
 File: img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.png Graphic file (typ
 e png)
@@ -2196,7 +2158,7 @@ Package pdftex.def Info: img/Observaties/HBase/ECDF-plot-R-1-insertRawData-5.pn
 g used on input line 68.
 (pdftex.def)             Requested size: 179.09879pt x 179.1001pt.
 
-<img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png, id=1093, 422.88274pt 
+<img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png, id=1083, 422.88274pt 
 x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.png Graphic file (typ
 e png)
@@ -2205,7 +2167,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Compare-Write-insert-1.pn
 g used on input line 76.
 (pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png, id=1094, 422.88274
+<img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png, id=1084, 422.88274
 pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2.png Graphic file (
 type png)
@@ -2215,7 +2177,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-normal-all-2
 .png used on input line 83.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png, id=1095, 422.88274pt
+<img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png, id=1085, 422.88274pt
  x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.png Graphic file (ty
 pe png)
@@ -2224,7 +2186,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-safe-all-2.p
 ng used on input line 84.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png, id=1096, 422.8
+<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png, id=1086, 422.8
 8274pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-all-2.png Graphic fi
 le (type png)
@@ -2234,7 +2196,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-a
 ll-2.png used on input line 85.
 (pdftex.def)             Requested size: 167.15927pt x 167.15622pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png, id=1097, 42
+<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png, id=1087, 42
 2.88274pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-all-2.png Graphic
  file (type png)
@@ -2244,7 +2206,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-replicas_saf
 e-all-2.png used on input line 86.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png, id=1098, 422.882
+<img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png, id=1088, 422.882
 74pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-majority-all-2.png Graphic file
  (type png)
@@ -2254,7 +2216,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-majority-all
 -2.png used on input line 87.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png, id=1099, 422.882
+<img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png, id=1089, 422.882
 74pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-insert-majority-all-2.png Graphic file
  (type png)
@@ -2268,7 +2230,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-insert-majority-all
 LaTeX Warning: Float too large for page by 6.50615pt on input line 91.
 
 
-<img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png, id=1100, 422.88274pt
+<img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png, id=1090, 422.88274pt
  x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.png Graphic file (ty
 pe png)
@@ -2277,7 +2239,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-normal-1-2.p
 ng used on input line 95.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png, id=1101, 422.88274pt x
+<img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png, id=1091, 422.88274pt x
  422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png Graphic file (type
  png)
@@ -2286,7 +2248,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-safe-1-2.png
  used on input line 96.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png, id=1102, 422.882
+<img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png, id=1092, 422.882
 74pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1-2.png Graphic file
  (type png)
@@ -2296,7 +2258,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-fsync_safe-1
 -2.png used on input line 97.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png, id=1103, 422.
+<img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png, id=1093, 422.
 88274pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-replicas_safe-1-2.png Graphic f
 ile (type png)
@@ -2306,7 +2268,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-replicas_saf
 e-1-2.png used on input line 98.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png, id=1104, 422.88274
+<img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png, id=1094, 422.88274
 pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2.png Graphic file (
 type png)
@@ -2316,7 +2278,7 @@ Package pdftex.def Info: img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2
 .png used on input line 99.
 (pdftex.def)             Requested size: 159.19757pt x 159.20009pt.
 
-<img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png, id=1105, 422.88274
+<img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png, id=1095, 422.88274
 pt x 422.88274pt>
 File: img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png Graphic file (
 type png)
@@ -2378,23 +2340,26 @@ Thesis - 2/img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2.png>]
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+ [75]
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 [][] [][][][][]$\T1/lmtt/m/n/9 http : / / www . cloudera . com / content / clou
 dera -[] content / cloudera -[] docs / CDH4 / 4 . 2 . 0 / CDH4 -[]$
  []
 
-[75] <img/HBase-Domeinmodel.png, id=1228, 443.7378pt x 271.7352pt>
+<img/HBase-Domeinmodel.png, id=1216, 443.7378pt x 271.7352pt>
 File: img/HBase-Domeinmodel.png Graphic file (type png)
 
 <use img/HBase-Domeinmodel.png>
-Package pdftex.def Info: img/HBase-Domeinmodel.png used on input line 40.
+Package pdftex.def Info: img/HBase-Domeinmodel.png used on input line 44.
 (pdftex.def)             Requested size: 398.0pt x 243.73427pt.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 48.
+nput line 52.
 
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-hbase.conf"
 [76]
@@ -2402,174 +2367,233 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/HBase-Domeinmodel.p
 ng (PNG copy)>])
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
 [][] [][][][][]$\T1/lmtt/m/n/9 http : / / docs . mongodb . org / manual / tutor
 ial / install -[] mongodb -[] on -[] red -[] hat -[] centos -[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
 $\T1/lmtt/m/n/9 or -[] fedora -[] linux/$[][]\T1/lmr/m/n/9 (+20) , [][]$\T1/lmt
 t/m/n/9 http : / / docs . mongodb . org / manual / tutorial / deploy -[] replic
 a -[] set -[] for -[]$
  []
 
-[78] <img/MongoDB-Domeinmodel.png, id=1336, 560.8152pt x 423.5022pt>
+[78] <img/MongoDB-Domeinmodel.png, id=1285, 560.8152pt x 423.5022pt>
 File: img/MongoDB-Domeinmodel.png Graphic file (type png)
 
 <use img/MongoDB-Domeinmodel.png>
-Package pdftex.def Info: img/MongoDB-Domeinmodel.png used on input line 76.
+Package pdftex.def Info: img/MongoDB-Domeinmodel.png used on input line 80.
 (pdftex.def)             Requested size: 398.0pt x 300.54648pt.
  [79 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/MongoDB-Domeinmodel
 .png (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-mongodb.conf"
 [80])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2065) has occurred while \output is active []
 
  [81]
-<img/Postgres-Domeinmodel.png, id=1412, 300.6432pt x 139.4811pt>
+<img/Postgres-Domeinmodel.png, id=1361, 300.6432pt x 139.4811pt>
 File: img/Postgres-Domeinmodel.png Graphic file (type png)
 
 <use img/Postgres-Domeinmodel.png>
-Package pdftex.def Info: img/Postgres-Domeinmodel.png used on input line 108.
+Package pdftex.def Info: img/Postgres-Domeinmodel.png used on input line 112.
 (pdftex.def)             Requested size: 398.0pt x 184.65831pt.
  [82 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Postgres-Domeinmode
 l.png (PNG copy)>]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-pgpool.conf")
-<img/YCSB-Domeinmodel.png, id=1430, 510.2262pt x 185.0112pt>
+<img/YCSB-Domeinmodel.png, id=1381, 510.2262pt x 185.0112pt>
 File: img/YCSB-Domeinmodel.png Graphic file (type png)
 
 <use img/YCSB-Domeinmodel.png>
-Package pdftex.def Info: img/YCSB-Domeinmodel.png used on input line 145.
+Package pdftex.def Info: img/YCSB-Domeinmodel.png used on input line 149.
 (pdftex.def)             Requested size: 398.0pt x 144.31662pt.
  [83]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\code/imp-ycsb.conf"))
 [84 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/YCSB-Domeinmodel.png
- (PNG copy)>]
+ (PNG copy)>] [85]
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.tex"
-<paper/paper.pdf, id=1460, 597.50829pt x 845.0471pt>
+[86
+
+
+
+] <paper/paper.pdf, id=1420, 614.295pt x 794.97pt>
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf>
 Package pdftex.def Info: paper/paper.pdf used on input line 3.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf>
 Package pdftex.def Info: paper/paper.pdf used on input line 3.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf>
 Package pdftex.def Info: paper/paper.pdf used on input line 3.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: paper/paper.pdf Graphic file (type pdf)
  <use paper/paper.pdf>
 Package pdftex.def Info: paper/paper.pdf used on input line 3.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: paper/paper.pdf Graphic file (type pdf)
 
 <use paper/paper.pdf>
 Package pdftex.def Info: paper/paper.pdf used on input line 3.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- [85
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf>
+Package pdftex.def Info: paper/paper.pdf used on input line 3.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+ [87]
+<paper/paper.pdf, id=1432, page=1, 614.295pt x 794.97pt>
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 1>
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf, page 1>
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 1>
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf, page 1>
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 1>
+Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [88 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1463, page=2, 614.295pt x 794.97pt>
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 2>
+Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf, page 2>
+Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 2>
+Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [89 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1468, page=3, 614.295pt x 794.97pt>
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 3>
+Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf, page 3>
+Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 3>
+Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [90 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1484, page=4, 614.295pt x 794.97pt>
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 4>
+Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf, page 4>
+Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 4>
+Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [91 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
+<paper/paper.pdf, id=1493, page=5, 614.295pt x 794.97pt>
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 5>
+Package pdftex.def Info: paper/paper.pdf, page5 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+ <use paper/paper.pdf, page 5>
+Package pdftex.def Info: paper/paper.pdf, page5 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: paper/paper.pdf Graphic file (type pdf)
+
+<use paper/paper.pdf, page 5>
+Package pdftex.def Info: paper/paper.pdf, page5 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [92 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>])
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-poster.tex"
+<poster/poster.pdf, id=1503, 1691.72028pt x 2393.22108pt>
+File: poster/poster.pdf Graphic file (type pdf)
+
+<use poster/poster.pdf>
+Package pdftex.def Info: poster/poster.pdf used on input line 3.
+(pdftex.def)             Requested size: 1691.71616pt x 2393.21527pt.
+File: poster/poster.pdf Graphic file (type pdf)
+ <use poster/poster.pdf>
+Package pdftex.def Info: poster/poster.pdf used on input line 3.
+(pdftex.def)             Requested size: 1691.71616pt x 2393.21527pt.
+ [93
 
 
 
 ]
-<paper/paper.pdf, id=1471, page=1, 597.50829pt x 845.0471pt>
-File: paper/paper.pdf Graphic file (type pdf)
+<poster/poster.pdf, id=1511, page=1, 1691.72028pt x 2393.22108pt>
+File: poster/poster.pdf Graphic file (type pdf)
 
-<use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: paper/paper.pdf Graphic file (type pdf)
- <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
+<use poster/poster.pdf, page 1>
+Package pdftex.def Info: poster/poster.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 1691.71616pt x 2393.21527pt.
+File: poster/poster.pdf Graphic file (type pdf)
+ <use poster/poster.pdf, page 1>
+Package pdftex.def Info: poster/poster.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.37694pt x 845.08952pt.
+File: poster/poster.pdf Graphic file (type pdf)
 
-<use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
- <use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
+<use poster/poster.pdf, page 1>
+Package pdftex.def Info: poster/poster.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.37694pt x 845.08952pt.
+File: poster/poster.pdf Graphic file (type pdf)
+ <use poster/poster.pdf, page 1>
+Package pdftex.def Info: poster/poster.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.37694pt x 845.08952pt.
+File: poster/poster.pdf Graphic file (type pdf)
 
-<use paper/paper.pdf, page 1>
-Package pdftex.def Info: paper/paper.pdf, page1 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [86 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
-<paper/paper.pdf, id=1502, page=2, 597.50829pt x 845.0471pt>
-File: paper/paper.pdf Graphic file (type pdf)
-
-<use paper/paper.pdf, page 2>
-Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
- <use paper/paper.pdf, page 2>
-Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
-
-<use paper/paper.pdf, page 2>
-Package pdftex.def Info: paper/paper.pdf, page2 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [87 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
-<paper/paper.pdf, id=1512, page=3, 597.50829pt x 845.0471pt>
-File: paper/paper.pdf Graphic file (type pdf)
-
-<use paper/paper.pdf, page 3>
-Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
- <use paper/paper.pdf, page 3>
-Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
-
-<use paper/paper.pdf, page 3>
-Package pdftex.def Info: paper/paper.pdf, page3 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [88 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]
-<paper/paper.pdf, id=1523, page=4, 597.50829pt x 845.0471pt>
-File: paper/paper.pdf Graphic file (type pdf)
-
-<use paper/paper.pdf, page 4>
-Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
- <use paper/paper.pdf, page 4>
-Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: paper/paper.pdf Graphic file (type pdf)
-
-<use paper/paper.pdf, page 4>
-Package pdftex.def Info: paper/paper.pdf, page4 used on input line 3.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [89 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/paper/paper.pdf>]) [90
+<use poster/poster.pdf, page 1>
+Package pdftex.def Info: poster/poster.pdf, page1 used on input line 3.
+(pdftex.def)             Requested size: 597.37694pt x 845.08952pt.
+ [94 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/poster/poster.pdf>]) [9
+5
 
 
-] [91
 
-] [92]
-Overfull \hbox (0.61989pt too wide) in paragraph at lines 141--141
+] [96]
+Overfull \hbox (0.61989pt too wide) in paragraph at lines 139--139
 \T1/lmr/m/n/10.95 (-20) 2013. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-2
 0) : [][]$\T1/lmtt/m/n/10.95 http : / / wiki . postgresql . org / wiki / Replic
 ation ,[] _Clustering ,[]$
  []
 
-[93] [94
+[97] [98
 
-] [95]
+]
 \tf@toc=\write7
-\tf@tdo=\write8
-\tf@lof=\write9
-\tf@lot=\write10
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
-
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.aux"
+\tf@lof=\write8
+\tf@lot=\write9
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+ ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.aux"
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\overige/afkortingen.aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\hoofdstukken/2.overzichtvan
 detechnologie.aux")
@@ -2589,54 +2613,50 @@ rijving.aux")
 aux")
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-resultaten.aux
 ") ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-IMP.aux")
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-paper.aux")
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\appendix/app-poster.aux"))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `masterproef.out' has not changed.
-(rerunfilecheck)             Checksum: DAAFCA1472B08D1264B39A2A1489F696;3187.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 72A83EEFE64CFB88B68278E7C9BE0F6B;3184.
 Package logreq Info: Writing requests to 'masterproef.run.xml'.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 32038 strings out of 493921
- 573954 string characters out of 3147279
- 1151090 words of memory out of 3000000
- 33963 multiletter control sequences out of 15000+200000
- 90924 words of font info for 138 fonts, out of 3000000 for 9000
+ 31601 strings out of 493921
+ 565174 string characters out of 3147279
+ 1056777 words of memory out of 3000000
+ 33533 multiletter control sequences out of 15000+200000
+ 91054 words of font info for 139 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 68i,18n,92p,1124b,4151s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,18n,54p,1124b,4151s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
 vips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
 .enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
-/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Users/Thomas/AppData/Roaming/MiKTeX/2
-.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Users/Thomas/AppData/Roaming/MiKTeX/
-2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Users/Thomas/AppData/Roaming/MiKTe
-X/2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Users/Thomas/AppData/Roaming/MiKT
-eX/2.9/fonts/type1/public/txfonts/txsy.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helve
-tic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on masterproef.pdf (107 pages, 5037865 bytes).
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
+/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/lm/lmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmtti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8
+a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on masterproef.pdf (108 pages, 6080564 bytes).
 PDF statistics:
- 1788 PDF objects out of 2073 (max. 8388607)
- 549 named destinations out of 1000 (max. 500000)
- 25800 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1819 PDF objects out of 2073 (max. 8388607)
+ 547 named destinations out of 1000 (max. 500000)
+ 25822 words of extra memory for PDF output out of 29859 (max. 10000000)
 

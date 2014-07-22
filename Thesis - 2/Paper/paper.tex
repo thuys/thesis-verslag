@@ -24,7 +24,8 @@
 %% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
 %%
 %%
-\documentclass[final,5p,times]{elsarticle}
+\documentclass[10pt,conference,letterpaper]{IEEEtran}
+\usepackage{times,amsmath,epsfig}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
@@ -84,32 +85,6 @@
 
 % \biboptions{}
 
-
-\begin{document}
-
-\begin{frontmatter}
-
-%% Title, authors and addresses
-
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for the associated footnote;
-%% use the fnref command within \author or \address for footnotes;
-%% use the fntext command for the associated footnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for the associated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%%
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \address{Address\fnref{label3}}
-%% \fntext[label3]{}
-
 \title{CAP in practice: HBase and MongoDB}
 
 %% use optional labels to link authors explicitly to addresses:
@@ -119,20 +94,13 @@
 
 \author{Thomas Uyttendaele}
 
-\address{}
+\begin{document}
+
+\maketitle
 
 \begin{abstract}
 This papers introduced a new, quantified method to test distributed database system in regard to their behaviour to availability in case of a failing node and consistency of data from the users perspective. This method is tested on HBase and MongoDB, two consistent and partition tolerant systems, with the most important outcomes included. 
 \end{abstract}
-
-\begin{keyword}
-%% keywords here, in the form: keyword \sep keyword
-%% MSC codes here, in the form: \MSC code \sep code
-%% or \MSC[2008] code \sep code (2000 is the default)
-
-\end{keyword}
-
-\end{frontmatter}
 
 %%
 %% Start line numbering here if you want
@@ -163,19 +131,19 @@ At first glance, it also looks like partition tolerance has to be implemented an
 
 Each of the 3 choices will be discussed in more detail, how their implementation could work, what the influences are and some examples. 
 
-\subsection{CA}
+\subsection{CA: Consistency and availability}
 When forfeiting partition tolerance, these systems provide all the time consistent data available to all nodes, except when there are one or more nodes unavailable. In that case, write requests will be not allowed. 
 
 These systems can be build around the 2 phase commit and have cache invalidation protocols. Examples of this types are the typical relational databases roll out in clusters. 
 
-\subsection{CP}
+\subsection{CP: Consistency and partition tolerance}
 A consistent system with partition tolerance will provide all the time the last data, even in the case of network splits. This comes with the loss of the availability of all nodes all the time. 
 
 The system can allow operations only on the majority partition. In case multiple splits are present and no partition has a majority of nodes, the whole system can be unavailable. These systems can be build around a master/slave principle where the operations will be directed to the master, the slaves are present to continue operation when the master fails.
 
 In practice, systems like MongoDB, HBase and Redis select CP. 
 
-\subsection{AP}
+\subsection{AP: Availability and partition tolerance}
 In a highly available systems with partition tolerance, is it possible to read inconsistent data. As read and write operations are still allowed when there are different partitions, it is possible that the database has other content depending on the used node. When the split is dissolved, a need for manual conflict resolution can be needed. In case a record is adapted in both partitions, the user will need to choose the correct version. 
 
 Example systems following AP are Cassandra, Riak and Voldemort. 
@@ -240,7 +208,7 @@ The tests are executed on each of the data nodes of HBase and MongoDB, caching a
 
 \subsection{Consistency support}
 To implement consistency support, the YCSB software is extended with an extra workload. A graphical representation of an example workload is shown in figure \ref{fig:consistence-method}. 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{../img/Consistency-test-period}
 \caption{Example of consistency support for one write period with 1 writer and 4 readers}
@@ -265,7 +233,7 @@ YCSB was deployed on a single instance and used to calibrate the load on both sy
 \subsection{Availability}
 When reading and writing in the default setting of MongoDB, both MongoDB and HBase will read and write from a leader of a set of data. Both have a lease period for the leader, which can't be set for MongoDB (10 seconds), but can be configured for HBase (default 180 seconds). 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{img/HBase/single-graph-2-drop-1}
 \caption{Example of network partition. The requests block for 110 seconds }
@@ -295,7 +263,14 @@ A short overview of all the reactions is shown in table \ref{table:beschikbaarhe
 \subsection{Consistency}
 In consistency HBase and MongoDB have a different approach, in MongoDB it is possible to configure the read and write queries, in HBase there is the choice to use cache at client side. In the tests the cache is disabled but the different options of MongoDB are tested. 
 
-HBase: If a record is read while a write query is creating or updating the value, the read query will wait till the completion of the write query and return immediately the correct value. If a read query is send too soon, it will return the old data, but each query returned after the completion of a write query, will return the new data. 
+HBase: If a record is read while a write query is creating or updating the value, the read query will wait till the completion of the write query and return immediately the correct value. If a read query is send too soon, it will return the old data, but each query returned after the completion of a write query, will return the new data. A graphical representation of this can be seen in figure \ref{fig:consistentie-hbase-voorbeeld}. The stop time of the reader follows the one of the writer, together with extra information, it can be concluded that this is coming from the blocking till the write query has finished. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{img/HBase/ECDF-plot-R-1-insertRawData-5}
+\caption{Consistency: cumulative distribution of queries that read the correct value if reading is started 3ms, 13ms, 23ms. Measurement of over 400 values.}
+\label{fig:consistentie-hbase-voorbeeld}
+\end{figure}
 
 MongoDB: A read query can return the old or new data before the write query has been completed. However a readers/writer lock mechanism is used, it seems that after releasing the lock, the write query still has to execute extra steps. When reading from a secondary or the nearest server, there will be monotone read consistency, except if the driver of MongoDB selects another server between the reads, as there is no guarantee that the other servers already have the value. The process of finding the nearest server happens periodically in the background. \\
 From the test results, the writer configuration has no influence on the speed the replication will have, as the read queries get the same consistency window based on the start moment. The difference is the guarantee a user has when a write query has finished. 

@@ -1,5 +1,9 @@
-\chapter{Uitwerking IMP} \label{chap:AppendixUitwerkingIMP}
-In dit hoofdstuk zal voor de verschillende systemen de automatisering van installatie en configuratie met behulp van IMP uitgelegd worden. Er zal steeds de afhankelijkheden gegeven worden, een domeinmodel, uitleg bij het domeinmodel en voorbeeld configuratie gegeven worden. 
+\chapter{Opstellen van de testomgeving en uitvoering van de testen} \label{chap:AppendixUitwerkingIMP}
+
+Dit hoofdstuk bestaat uit 2 gedeelten, eerst komt een uitgebreide beschrijving aanbod voor het opzetten van de verschillende systemen met behulp van IMP. Nadien zal er uitgelegd worden hoe de volledige test uitgevoerd wordt. 
+
+\section{Uitwerking in IMP}
+In deze sectie zal voor de verschillende systemen de automatisering van installatie en configuratie met behulp van IMP uitgelegd worden. Er zal steeds de afhankelijkheden gegeven worden, een domeinmodel, uitleg bij het domeinmodel en voorbeeld configuratie gegeven worden. 
 
 De automatisatie van installatie is ontwikkeld en getest met Fedora 18 en 20, op andere distributies en versies is er niet getest. 
 Elk systeem maakt gebruik van \textit{ip::services::Server}, een instantie hiervan is een (virtuele) machine met een IP adres en besturingssysteem. 
@@ -13,14 +17,14 @@ sed -i "s/SELINUX=enforcing/SELINUX=permissive/g" /etc/sysconfig/selinux
 sed -i "s/SELINUX=enforcing/SELINUX=permissive/g" /etc/selinux/config|
 \end{lstlisting}
 
-\section{HBase}
+\subsection{HBase}
 \textit{Link: \url{https://github.com/thuys/hbase}}
 
 Benodigde IMP modules: std, net, ip, redhat, hosts en yum. 
 
 De installatie en configuratie is gebeurd aan de hand van de uitleg en yum-repository van Cloudera\footnote{\url{http://www.cloudera.com/content/cloudera-content/cloudera-docs/CDH4/4.2.0/CDH4-Installation-Guide/CDH4-Installation-Guide.html}}. 
 
-\subsection{Domein model en uitleg}
+\subsubsection{Domein model en uitleg}
 Het domeinmodel is te zien in figuur \ref{fig:imp-hbase-domeinmodel}.
 
 \paragraph{HBaseMaster} Dit is de implementatie van de HMaster, dient toegewezen worden aan een host met java installatie. De poort is de poort waarop de HMaster actief is. 
@@ -42,20 +46,20 @@ Het domeinmodel is te zien in figuur \ref{fig:imp-hbase-domeinmodel}.
 \label{fig:imp-hbase-domeinmodel}
 \end{figure}
 
-\subsection{Voorbeeld configuratie}
+\subsubsection{Voorbeeld configuratie}
 De configuratie voor de testomgeving gaat als volgt: 
 
 \lstinputlisting[language=Python, breaklines=true, frame=single]{code/imp-hbase.conf}
 
 
-\section{MongoDB}
+\subsection{MongoDB}
 \textit{Link: \url{https://github.com/thuys/mongodb}}
 
 Benodigde IMP modules: std, net, ip, redhat, hosts en yum. 
 
 De installatie en configuratie is gebeurd aan de hand van de uitleg en yum-repository van MongoDB\footnote{\url {http://docs.mongodb.org/manual/tutorial/install-mongodb- on-red-hat-centos-or-fedora-linux/}, \url{http://docs.mongodb.org/manual/tutorial/deploy-replica-set-for-testing/} en  \url{http://docs.mongodb.org/manual/tutorial/deploy-shard-cluster/}}. 
 
-\subsection{Domein model en uitleg}
+\subsubsection{Domein model en uitleg}
 Het domeinmodel is te zien in figuur \ref{fig:imp-mongodb-domeinmodel}.
 
 	\paragraph{MongoDB} is een server in het IMP model en is verantwoordelijk voor het installeren van de basis van MongoDB. Hierna zijn basis commando's voor connectie te maken met een MongoDB instantie beschikbaar. 
@@ -78,7 +82,7 @@ Het domeinmodel is te zien in figuur \ref{fig:imp-mongodb-domeinmodel}.
 \label{fig:imp-mongodb-domeinmodel}
 \end{figure}
 
-\subsection{Voorbeeld configuratie}
+\subsubsection{Voorbeeld configuratie}
 De configuratie voor de testomgeving gaat als onderstaand. Bij de uitrol van IMP gaat dit verschillende keren uitgevoerd moeten worden omdat eerst de MongoDBNodes moeten draaien, vervolgens kunnen de replicasets aangemaakt worden, daarna kunnen de replicasets pas toegevoegd worden in de cluster. 
 
 In IMP was het nog niet mogelijk om een te zeggen dat x uitgevoerd moet zijn op een andere instantie, vooraleer y kan uitgevoerd worden, ondertussen is dit mogelijk door de thesis van Harm De Weirdt\cite{thesisHarm} waar de nieuwe installatie beschikbaar is op \url{https://github.com/Foezjie/mongodb} maar hierbij dient ook gebruik gemaakt te worden van zijn IMP installatie.  \\
@@ -87,14 +91,14 @@ Met het ontbreken hieraan kan het zijn dat er 3 keer een volledige IMP deploy ui
 \lstinputlisting[language=Python, breaklines=true, frame=single]{code/imp-mongodb.conf}
 
 
-\section{Pgpool-II}
+\subsection{Pgpool-II}
 \textit{Link: \url{https://github.com/thuys/postgresql}}
 
 Benodigde IMP modules: std, net, ip, redhat, hosts en yum. 
 
 De installatie en configuratie is gebeurd aan de hand van de uitleg Pgpool-II\footnote{\url {http://pgpool.projects.pgfoundry.org/pgpool-II/doc/tutorial-en.html/}}. 
 
-\subsection{Domein model en uitleg}
+\subsubsection{Domein model en uitleg}
 Het domeinmodel is te zien in figuur \ref{fig:imp-pgpool-domeinmodel}.
 
 	\paragraph{PgpoolMain} Dit is de implementatie van de Pgpool-II router node. 
@@ -110,7 +114,7 @@ Het domeinmodel is te zien in figuur \ref{fig:imp-pgpool-domeinmodel}.
 \label{fig:imp-pgpool-domeinmodel}
 \end{figure}
 
-\subsection{Voorbeeld configuratie}
+\subsubsection{Voorbeeld configuratie}
 De configuratie van Pgpool-II gebeurt in verschillende stappen: shell code, IMP uitrol, extra configuratie stap, IMP uitrol. 
 
 De eerste shell code bestaat erin om de SELinux volledig uit te schakelen: 
@@ -131,14 +135,14 @@ De configuratie bestaat erin om al de verschillende nodes van Pgpool-II, ongeach
 Hierna kan de IMP uitrol nog een keer gebeuren en het systeem zou moeten werken. 
 
 
-\section{YCSB}
+\subsection{YCSB}
 \textit{Link: \url{https://github.com/thuys/ycsb}}
 
 Benodigde IMP modules: std, net, ip, redhat, hosts, yum, git, hbase, mongodb, pgpool-II 
 
 De installatie en configuratie is gebeurd aan de hand van de uitleg van YCSB\footnote{\url {https://github.com/brianfrankcooper/YCSB/wiki/}}. 
 
-\subsection{Domein model en uitleg}
+\subsubsection{Domein model en uitleg}
 Het domeinmodel is te zien in figuur \ref{fig:imp-ycsb-domeinmodel}.
 \begin{figure}[ht!]
 \centering
@@ -149,10 +153,18 @@ Het domeinmodel is te zien in figuur \ref{fig:imp-ycsb-domeinmodel}.
 
 Dit model bevat maar 1 nieuw element en dit is YCSB. Deze dient verbonden te zijn met één van de 3 systemen die hierboven zijn beschreven. Elk van deze systemen zal getest worden voor alle testen die geactiveerd zijn. MongoDB heeft 2 connecties omdat de cluster voor de beschikbaarheidstesten wordt gebruikt en een replicaset voor de consistentie testen. Pgpool-II heeft geen ondersteuning voor de consistentie testen. 
 
-\subsection{Voorbeeld configuratie}
+\subsubsection{Voorbeeld configuratie}
 
 De configuratie voor de testomgeving gaat als volgt in IMP: 
 
 \lstinputlisting[language=Python, breaklines=true, frame=single]{code/imp-ycsb.conf}
 
 De testen starten door het uitvoeren van {{directory}}/scripts/ycsb-script. De resultaten komen in de folder {{directory}}/results. 
+
+
+\section{Uitvoeren testen}
+Voor het uitvoeren van de testen dienen de besproken systemen online gebracht te worden, met op het minst YCSB en daarnaast 1 database systeem. 
+
+In de installatie folder van YCSB bevindt zich de map \textit{scripts}. Om al de testen uit te voeren dient het bestand \textit{ycsb-script} van die folder uitgevoerd te worden. De configuratie van elke script kan aangepast worden in de map \textit{config} van YCSB. 
+
+Als het script voltooid it, kan met behulp van de R-code (\url{https://github.com/thuys/YCSB-R-Scripts}) de grafieken gecreeërd worden. Dit gebeurt door het aanpassen en uitvoeren van \textit{Plot-consistentie.R} en \textit{Plot-calibratie-en-beschikbaarheid.R}. Belangrijk is om de \textit{basicDir} van beide scripts correct te zetten. 
