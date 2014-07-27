@@ -45,6 +45,14 @@
 \usepackage{caption}
 \usepackage{pdfpages}
 
+\usepackage{todonotes}
+\usepackage{placeins}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+
+
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -100,15 +108,14 @@ De eerste twee systemen zullen een server die opnieuw online komt, automatisch h
 %\listoffigures
 %\listoftables
 % Bij een beperkt aantal figuren en tabellen gebruik je liever het volgende:
-\listoffiguresandtables
+%\listoffiguresandtables
 % De lijst van symbolen is eveneens optioneel.
 % Deze lijst moet wel manueel aangemaakt worden, bv. als volgt:
-\include{overige/afkortingen}
+%\include{overige/afkortingen}
 
 % Nu begint de eigenlijke tekst
 \mainmatter
 
-%\include{hoofdstukken/1.inleiding}
 \include{hoofdstukken/2.overzichtvandetechnologie}
 \include{hoofdstukken/3.methodiekvandetesten}
 \include{hoofdstukken/4.implementatie}

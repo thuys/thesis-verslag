@@ -1,6 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: masterproef.aux
 The style file: biblatex.bst
-A level-1 auxiliary file: overige/afkortingen.aux
 A level-1 auxiliary file: hoofdstukken/2.overzichtvandetechnologie.aux
 A level-1 auxiliary file: hoofdstukken/3.methodiekvandetesten.aux
 A level-1 auxiliary file: hoofdstukken/4.implementatie.aux
@@ -12,6 +11,7 @@ A level-1 auxiliary file: appendix/app-implementatie.aux
 A level-1 auxiliary file: appendix/app-resultaten.aux
 A level-1 auxiliary file: appendix/app-IMP.aux
 A level-1 auxiliary file: appendix/app-paper.aux
+A level-1 auxiliary file: appendix/app-poster.aux
 Database file #1: masterproef-blx.bib
 Database file #2: overige/referenties.bib
 Biblatex version: 2.8

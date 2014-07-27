@@ -1,14 +1,7 @@
 \chapter{Overzicht van gedetailleerde implementatie keuzes}
 In dit hoofdstuk bevinden zich het deployment van de testomgeving en de verschillende configuratie mogelijkheden voor de testuitbreidingen en configuratie van de testen. 
  
-\begin{figure}[htbf]
-\centering
-\subfigure[Deployment van HBase met 5 instanties. ]{\label{fig:HBase-deployment}\includegraphics[width=0.55\textwidth]{img/HBase-deployment}}
-\subfigure[Deployment van Pgpool-II met 3 instanties. ]{\label{fig:pgpool-deployment}\includegraphics[width=0.35\textwidth]{img/Pgpool-II-deployment}}
-\subfigure[Deployment van MongoDB met 6 instanties. ]{\label{fig:MongoDB-deployment}\includegraphics[width=0.65\textwidth]{img/MongoDB-deployment}}
-\subfigure[Deployment van de testomgeving met 2 YCSB instanties. ]{\label{fig:YCSB-deployment}\includegraphics[width=0.25\textwidth]{img/YCSB-deployment}}
-\caption{Deployment van de verschillende DBMS's en de testomgeving.}\label{fig:deployment-testomgeving}
-\end{figure}
+
 
 \begin{figure}[htbf]
 
@@ -56,7 +49,7 @@ Exit code & Integer
 			\parbox[t]{4cm}{maxDelayConsistency- \newline BeforeDropInMicros} & \parbox[t]{2cm}{Micro-\newline seconden} & \parbox[t]{6.5cm}{De maximale afwijking tussen de eigenlijke start van de query en het geplande moment} \\ 
 			\parbox[t]{4cm}{timeoutConsistency- \newline BeforeDropInMicro} & \parbox[t]{2cm}{Micro-\newline seconden} & \parbox[t]{6.5cm}{De maximale tijd dat een leesactie geprobeerd wordt}\\
 		\end{tabular} 
-	\captionof{table}{Configuratie van de consistentie testen}
+	\captionof{table}{Configuratie van de consistentie testen met uitzondering van de locatie voor de logbestanden. }
 	\label{table:consistentieinput}
 \end{table}
 
