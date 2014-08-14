@@ -1,0 +1,5 @@
+,0 ms,2 ms,4 ms,6 ms,8 ms
+Nearest,26,77,91,91,92
+Primary,73,98,99,99,99
+Primary-preferred,77,99,99,99,100
+Secondary,0,61,82,85,89

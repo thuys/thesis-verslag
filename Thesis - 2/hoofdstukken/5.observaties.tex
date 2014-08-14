@@ -136,6 +136,15 @@ Voor de consistentietesten worden er empirische verdelingsfuncties gebruikt. Dit
 
 Voor de consistentie testen wordt er op de x-as de start- en/of stoptijdstippen van de verschillende soorten getoond. Het verschil tussen de y-waarde van de start- en stoptijdstippen geeft aan hoeveel queries er op dat moment uitgevoerd worden. De getoonde tijdstippen van een lezer zijn de eerste keer dat deze de correcte data leest. 
 
+\begin{figure}[b] 
+	\centering
+	\includegraphics[width=\textwidth]{img/Observaties/HBase/consistency-plot-R-1-insertRawData-5}
+
+	\caption{\textbf{Consistentie van HBase: Tijdsverloop} \newline
+ 	In de figuur zijn op de x-as verschillende pogingen doorheen de tijd voorgesteld. Op de y-as staat de vertraging voor elke bewerking. De lezer zal een tweede keer moeten lezen de eerste poging van de leesactie gedaan is voor de schrijfactie voltooid is. Ook volgt het einde van de leesactie het einde van de schrijfactie. }
+	\label{fig:consistentie-hbase-tijdschaal-lezer-1}
+\end{figure}
+
 \begin{figure}[ht!] 
 	\centering
 	\subfigure{\label{fig:consistentie-hbase-start} \includegraphics[width=.7\textwidth]{img/Observaties/HBase/ECDF-plot-Start-insertRawData-5}}
@@ -148,14 +157,6 @@ Voor de consistentie testen wordt er op de x-as de start- en/of stoptijdstippen 
 \end{figure}
 
 
-\begin{figure}[ht!] 
-	\centering
-	\includegraphics[width=\textwidth]{img/Observaties/HBase/consistency-plot-R-1-insertRawData-5}
-
-	\caption{\textbf{Consistentie van HBase: Tijdsverloop} \newline
- 	In de figuur zijn op de x-as verschillende pogingen doorheen de tijd voorgesteld. Op de y-as staat de vertraging voor elke bewerking. De lezer zal een tweede keer moeten lezen de eerste poging van de leesactie gedaan is voor de schrijfactie voltooid is. Ook volgt het einde van de leesactie het einde van de schrijfactie. }
-	\label{fig:consistentie-hbase-tijdschaal-lezer-1}
-\end{figure}
 
 \begin{figure}[htb!] 
 	\centering

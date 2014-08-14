@@ -1,20 +1,15 @@
 \documentclass[master=cws,masteroption=gs]{kulemt}
 
-\setup{title={Consistentie en beschikbaarheidstesten voor gedistribueerde database systemen},
+\setup{title={Evaluatie van consistentie en beschikbaarheid in gedistribueerde database systemen},
   author={Thomas Uyttendaele},
   promotor={Prof.\,dr.\,ir.\ Wouter Joosen},
-  assessor={Prof.\,dr.\,ir.\ Tias Guns, \\ Prof.\,dr.\,ir.\ Christophe Huygens},
+  assessor={dr.\,ir.\ Tias Guns, \\ Prof.\,dr.\,ir.\ Christophe Huygens},
   assistant={Dr.\ ir.\ Bart Vanbrabant \\ Dr. Bert Lagaisse}}
 % De volgende \setup mag verwijderd worden als geen fiche gewenst is.
 \setup{filingcard,
-  translatedtitle={Consistency and availability benchmarking for distributed database systems},
+  translatedtitle={Evaluation of consistency and availability for distributed database systems},
   udc=681.3,
-  shortabstract={De meest gebruikte database management systemen zijn momenteel relationele of NoSQL systemen waarbij er verschillen zijn naar het ondersteunde datamodel. Daarnaast zijn er ook verschillende keuze gemaakt naar het opzetten van deze systemen in een gedistribueerde omgeving. \\ 
-  Volgens het CAP theorema, kan een systeem niet tegelijk consistentie en hoge beschikbaarheid aanbieden en partitie tolerant te zijn. Deze thesis introduceert een model om verschillende database systemen gekwantificeerd te vergelijken naar consistentie en beschikbaarheid. Bij consistentie wordt het leesgedrag vergeleken bij het invoegen of aanpassen van data: hoelang het duurt vooraleer de data beschikbaar is voor elke gebruiker en het gedrag van de query gedurende deze periode. \\
-  Voor de beschikbaarheidstesten wordt het gedrag van de queries opgevolgd terwijl database instantie stoppen en of er netwerk partities ontstaan.  
-  Dit model is praktisch uitgewerkt met behulp van YCSB en verschillende database systemen zijn getest. \\   
-  Waar zowel HBase als MongoDB stikte consistentie afleveren, is er een praktisch verschil in hun gedrag: bij HBase worden leesbewerkingen, gestart na de schrijfbewerking, uitgesteld om de nieuwe data terug te geven onmiddellijk na het voltooien van de schrijfbewerking. Bij MongoDB daarin tegen kunnen leesbewerkingen de nieuwe data al teruggeven vooraleer de schrijfbewerking is voltooid. Ook zijn er verschillend garanties bij MongoDB mogelijk voor de lees- en schrijfbewerkingen. \\   
-  Bij de beschikbaarheidstesten zijn er verschillen tussen de aanpak bij MongoDB, HBase en Pgpool-II zowel wanneer een server onbeschikbaar of terug beschikbaar wordt.  }
+  shortabstract={ }
  }
 % Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
 %\setup{coverpageonly}
@@ -85,23 +80,14 @@ Mijn promotor Wouter Joosen zou ik graag willen bedanken voor het vertrouwen en 
 
 Met mijn studiegenoot Arnaud Schoonjans heb ik gesprekken gehad over de mogelijke testmethodes, een grotere variëteit aan database systemen kunnen zien, ook hiervoor bedankt. 
 
-Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun in de thesis en het brengen van extra motivatie op momenten op de momenten dat ik het nodig vond. 
+Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun in de thesis en het brengen van extra motivatie op de momenten dat ik het nodig had. 
 
   
 \end{preface}
 
 \tableofcontents*
 \begin{abstract}
-De meest gebruikte database management systemen zijn momenteel de relationele of NoSQL systemen waarbij er verschillen zijn naar het ondersteunde datamodel. Daarnaast zijn er ook verschillende keuze gemaakt naar het opzetten van deze systemen in een gedistribueerde omgeving. 
 
-Volgens het CAP theorema, kan een systeem niet tegelijk consistentie en hoge beschikbaarheid aanbieden en partitie tolerant te zijn. Deze thesis introduceert een model om verschillende database systemen gekwantificeerd te vergelijken naar consistentie en beschikbaarheid. Bij de consistentie testen wordt het leesgedrag vergeleken bij het invoegen of aanpassen van data: hoelang het duurt vooraleer de data beschikbaar is voor elke gebruiker en het gedrag van de query gedurende deze periode. \\
-Voor de beschikbaarheidstesten wordt het gedrag van de queries opgevolgd terwijl een database instantie stopt en of er netwerk partities ontstaan.  
-Dit model is praktisch uitgewerkt met behulp van YCSB en verschillende database systemen zijn getest. 
-
-Waar zowel HBase als MongoDB stikte consistentie afleveren, is er een praktisch verschil in hun gedrag: bij HBase worden leesbewerkingen, gestart na de schrijfbewerking, uitgesteld om de nieuwe data terug te geven onmiddellijk na het voltooien van de schrijfbewerking. Bij MongoDB daarin tegen kunnen leesbewerkingen de nieuwe data al teruggeven vooraleer de schrijfbewerking is voltooid. Ook zijn er verschillend garanties bij MongoDB mogelijk voor de lees- en schrijfbewerkingen. 
-
-Bij de beschikbaarheidstesten zijn er verschillen tussen de aanpak bij MongoDB, HBase en Pgpool-II. Bij MongoDB en HBase worden er sessies gebruikt en kan de data enige tijd onbeschikbaar zijn bij het uitvallen van een instantie. Pgpool-II verbreekt al de verbindingen als een enkele instantie offline gaat waarna onmiddellijk daarna de data al opnieuw kan gelezen worden. \\
-De eerste twee systemen zullen een server die opnieuw online komt, automatisch hernemen in hun systeem, bij Pgpool-II moet dit proces handmatig opgestart worden. 
 \end{abstract}
 
 % Een lijst van figuren en tabellen is optioneel
@@ -129,8 +115,8 @@ De eerste twee systemen zullen een server die opnieuw online komt, automatisch h
 \appendix
 \include{appendix/app-database-beschrijving}
 \include{appendix/app-implementatie}
-\include{appendix/app-resultaten}
-\include{appendix/app-IMP}
+%\include{appendix/app-resultaten}
+%\include{appendix/app-IMP}
 \include{appendix/app-paper}
 \include{appendix/app-poster}
 %\include{appendix/app-A}
