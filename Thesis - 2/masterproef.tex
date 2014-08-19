@@ -9,7 +9,13 @@
 \setup{filingcard,
   translatedtitle={Evaluation of consistency and availability for distributed database systems},
   udc=681.3,
-  shortabstract={ }
+  shortabstract={In de database wereld zijn er 2 grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie bestaat uit een grote diversiteit naar datamodel, performantie en keuzes in het CAP theorema. 
+  Deze thesis focust op een benchmarking tool naar consistentie en beschikbaarheid in een gedistribueerde omgeving. Zowel een uitvoerige bespreking van de werkwijze komt aan bod als de testresultaten en analyse van enkele voorbeeld systemen. \\
+  De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het uitvallen en inschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met schrijf- en parallelle leesbewerkingen op dezelfde dataeenheid. \\
+  Deze benchmark heeft als doel om op een analytische wijze het gedrag in de praktijk te kunnen vergelijken met wat staat beschreven in de documentatie. Daarnaast kunnen ook verschillende database systemen vergeleken worden ten opzichte van elkaar. \\
+  Een analyse van drie verschillende database management systemen wordt uitgevoerd door middel van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten kunnen verschillen gevonden worden onder andere het omgaan met het parallel lezen en schrijven. \\  
+  Deze thesis draagt naast de resultaten ook een benchmarking tool bij die de beschikbaarheid en consistentie-eigenschappen vergelijkt. De tool is ontwikkeld om eenvoudig uitvoerbaar te zijn op de reeds uitgewerkte database systemen en met een beperkte kost ook uitvoerbaar te zijn om andere database systemen. 
+  }
  }
 % Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
 %\setup{coverpageonly}
@@ -26,7 +32,7 @@
 % Dit mag verwijderd worden voor de af te drukken versie.
 
 \usepackage[hyphens]{url}
-\usepackage[pdfusetitle,colorlinks,plainpages]{hyperref}
+\usepackage[pdfusetitle,hidelinks, plainpages]{hyperref}
 \usepackage[dutch]{babel}
 \usepackage{lipsum} % for dummy text only
 \usepackage{csquotes}
@@ -46,8 +52,7 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{verbatim}
-
-
+\usepackage{color}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -62,7 +67,7 @@
  {\usepackage{lipsum}\setlipsumdefault{11-13}}%
  {\newcommand{\lipsum}[1][11-13]{\par Hier komt wat tekst: lipsum ##1.\par}}
 %%%%%%%
-
+\definecolor{kuleuvenblue}{RGB}{220,221,222}
 %\includeonly{hfdst-n}
 \begin{document}
 
@@ -78,7 +83,7 @@ Ik zou graag beginnen met mijn begeleiders Bart Vanbrabant en Bert Lagaisse voor
 
 Mijn promotor Wouter Joosen zou ik graag willen bedanken voor het vertrouwen en de ondersteuning doorheen het jaar. 
 
-Met mijn studiegenoot Arnaud Schoonjans heb ik gesprekken gehad over de mogelijke testmethodes, een grotere variëteit aan database systemen kunnen zien, ook hiervoor bedankt. 
+Met mijn studiegenoot Arnaud Schoonjans heb ik vele vruchtbare gesprekken gehad over de mogelijke testmethodes en onze kennis over de verschillende database systemen kunnen delen. 
 
 Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun in de thesis en het brengen van extra motivatie op de momenten dat ik het nodig had. 
 
@@ -87,6 +92,17 @@ Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun
 
 \tableofcontents*
 \begin{abstract}
+In de database wereld zijn er 2 grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie bestaat uit een grote diversiteit naar datamodel, performantie en keuzes in het CAP theorema. \\
+Deze thesis focust op een benchmarking tool naar consistentie en beschikbaarheid in een gedistribueerde omgeving. Zowel een uitvoerige bespreking van de werkwijze komt aan bod als de testresultaten en analyse van enkele voorbeeld systemen.
+ 
+De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het uitvallen en inschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met schrijf- en parallelle leesbewerkingen op dezelfde dataeenheid. 
+
+Deze benchmark heeft als doel om op een analytische wijze het gedrag in de praktijk te kunnen vergelijken met wat staat beschreven in de documentatie. Daarnaast kunnen ook verschillende database systemen vergeleken worden ten opzichte van elkaar. 
+
+Een analyse van drie verschillende database management systemen wordt uitgevoerd door middel van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten kunnen verschillen gevonden worden onder andere het omgaan met het parallel lezen en schrijven. 
+
+Deze thesis draagt naast de resultaten ook een benchmarking tool bij die de beschikbaarheid en consistentie-eigenschappen vergelijkt. De tool is ontwikkeld om eenvoudig uitvoerbaar te zijn op de reeds uitgewerkte database systemen en met een beperkte kost ook uitvoerbaar te zijn om andere database systemen. 
+
 
 \end{abstract}
 
@@ -108,6 +124,7 @@ Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun
 \include{hoofdstukken/5.observaties}
 \include{hoofdstukken/6.analysevanderesultaten}
 \include{hoofdstukken/7.conclusie}
+%\include{hoofdstukken/7.conclusie-old}
 
 
 % Indien er bijlagen zijn:
@@ -115,10 +132,12 @@ Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun
 \appendix
 \include{appendix/app-database-beschrijving}
 \include{appendix/app-implementatie}
+\include{appendix/app-links}
 %\include{appendix/app-resultaten}
 %\include{appendix/app-IMP}
 \include{appendix/app-paper}
 \include{appendix/app-poster}
+
 %\include{appendix/app-A}
 % ... en zo verder tot
 %\include{appendix/app-n}

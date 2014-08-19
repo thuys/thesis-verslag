@@ -77,7 +77,7 @@ Bij de beschikbaarheidstest wordt er gekeken hoe het systeem reageert op tijdeli
 
 \paragraph{Zachte stop} De DMBS service wordt gevraagd om te stoppen. Op deze manier krijgt de service eerst een signaal dat deze moet stoppen en kan deze de andere waarschuwen. Achteraf wordt dezelfde service terug opgestart. Dit simuleert het gepland uitschakelen van een systeem. 
 
-\paragraph{Harde stop} De DMBS service wordt onmiddellijk gestopt door het process te beëindigen. De service heeft geen tijd om de andere te waarschuwen. Achteraf wordt dezelfde service terug opgestart. Dit simuleert een crash van de service die de systeembeheerders later opmerken en de service opnieuw opgestart wordt. 
+\paragraph{Harde stop} De DMBS service wordt onmiddellijk gestopt door het proces te beëindigen. De service heeft geen tijd om de andere te waarschuwen. Achteraf wordt dezelfde service terug opgestart. Dit simuleert een crash van de service die de systeembeheerders later opmerken en de service opnieuw opgestart wordt. 
 
 \paragraph{Netwerk onderbreken} Al het in- en uitgaand netwerkverkeer wordt gestopt zonder enige waarschuwing. De service heeft geen tijd om de andere te waarschuwen én de zender krijgt geen onbereikbaar antwoord. Achteraf wordt het netwerk verkeer terug toegelaten. Dit simuleert een onderbroken internetverbinding of een gecrashte server.  
 
@@ -88,7 +88,7 @@ In dit geval kan er onderzoek gedaan worden naar het verschil in vertraging en d
 \subsection{Consistentietest}
 In de consistentietest wordt onderzocht welke consistentie het DBMS ondersteund. Zoals voordien besproken in deel \ref{sec:eventualconsistency}, bestaan er verschillende soorten. 
 
-In deze testen is er gekozen om caching bij de gebruiker \textbf{uit te schakelen}, dit om de reden dat dit gedrag zeer onvoorspelbaar is en afhankelijk van andere acties van de lezer en schrijver. Een andere reden is dat eventueel consistentie alleen een probleem is voor data die onmiddellijk beschikbaar moet zijn, met andere woorden data die men niet mag cachen. Dit heeft als gevolg dat de belasting op de server hoger kan zijn. 
+In deze testen is er gekozen om caching bij de gebruiker \textbf{uit te schakelen}, dit om de reden dat dit gedrag zeer onvoorspelbaar is en afhankelijk van andere acties van de lezer en schrijver. Een andere reden is dat uiteindelijke consistentie alleen een probleem is voor data die onmiddellijk beschikbaar moet zijn, met andere woorden data die men niet mag cachen. Dit heeft als gevolg dat de belasting op de server hoger kan zijn. 
 
 \paragraph{Beschrijving van de test} Deze test bestaat uit 3 soorten gebruikers: er is een gebruiker die data schrijft (=S), een aantal lezer (=L's) en tenslotte zijn er nog andere gebruikers die zorgen voor de basisbelasting. De berekening van deze basisbelasting komt verder aanbod.  
 Het is belangrijk dat er een exacte synchronisatie in tijd is tussen de verschillende gebruikers, dit om de geregistreerde tijdstippen te kunnen vergelijken.
@@ -110,11 +110,11 @@ Het is belangrijk dat er een exacte synchronisatie in tijd is tussen de verschil
 
 \subparagraph{Schatten van de basisbelasting} De basisbelasting kan de berekende belasting zijn in stap 2, waardoor het reëel aantal queries hoger ligt. De belasting kan ook verminderd worden met een geschat aantal queries die de schrijvers en lezers zullen uitvoeren. Het aantal queries van de schrijver en lezers per seconde kan berekend worden aan de hand van de hand van volgende formule: $(S + \#L*\#queriesperschrijfperiode / schrijfinterval$. Het aantal leesbewerkingen per schrijf periode zal geschat moeten worden, maar kan bijvoorbeeld op 1 gezet worden. Op deze manier krijgen systemen die geen strikte consistentie afdwingen een hogere belasting om de correcte waarde te lezen. Er zal immers een tweede keer of meer geprobeerd moeten worden. 
 
-\paragraph{Soorten eventuele consistentie} Met deze uitgevoerde testen en data kan aangetoond worden dat bepaalde systemen bepaalde eventuele consistentie vereisten niet volgen. Het is in mogelijk om met deze testen een tegenvoorbeeld te vinden zie tonen dat een systeem een eigenschap niet garandeert. Maar het vinden van geen tegenvoorbeeld is geen bewijs, maar kan wel een indicatie zijn hoe vaak het kan voorkomen. 
+\paragraph{Soorten uiteindelijke consistentie} Met deze uitgevoerde testen en data kan aangetoond worden dat bepaalde systemen bepaalde uiteindelijke consistentie vereisten niet volgen. Het is in mogelijk om met deze testen een tegenvoorbeeld te vinden zie tonen dat een systeem een eigenschap niet garandeert. Maar het vinden van geen tegenvoorbeeld is geen bewijs, maar kan wel een indicatie zijn hoe vaak het kan voorkomen. 
 
 \subparagraph{Consistentie} Een systeem is niet consistent indien één van de lezers het nieuwe record of de update niet leest \textit{indien de leesactie gestart is na het voltooien van de schrijfactie}. Als dit voorkomt, gedraagt het systeem zich niet alsof er maar een enkele data-instantie is. 
 
-\subparagraph{Read your own writes consistentie} Deze eventuele consistentie kan ontkracht worden indien een schrijver onmiddellijk na het voltooien zijn eigen data opvraagt en niet de nieuwe waarde leest. Voor deze testen dient de server ondersteuning te bieden om meerdere connecties te hebben per gebruiker. 
+\subparagraph{Read your own writes consistentie} Deze uiteindelijke consistentie kan ontkracht worden indien een schrijver onmiddellijk na het voltooien zijn eigen data opvraagt en niet de nieuwe waarde leest. Voor deze testen dient de server ondersteuning te bieden om meerdere connecties te hebben per gebruiker. 
 
 \subparagraph{Session consistentie} Session consistentie is een verzwakking van de vorig eis. Het is nu slechts nodig om de data te lezen van een schrijfactie in een zelfde sessie, niet voor nieuwe sessies van dezelfde gebruiker. Dit kan ontkracht worden door met dezelfde connectie als de schrijver te lezen en de oude data te lezen. 
 

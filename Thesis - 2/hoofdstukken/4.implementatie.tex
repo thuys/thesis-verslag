@@ -143,7 +143,7 @@ MongoDB is een DBMS dat de vereisten van replicatie en data distributie op een g
 	\label{fig:mongodb-architectuur}
 \end{figure}
 
-\paragraph{Replicatie\cite{mongodb-replicaset}} Replicatie gebeurt door middel van een master/slave configuratie tussen verschillende \textit{MongoD} instanties, of in hun termen primary/secondary. Een verzameling van deze MongoD instanties wordt een \textit{replicaset} genoemd. Een replicaset verkiest zelf de primary die verantwoordelijk is voor het afhandelen van de schrijfacties. De data zal vervolgens gerepliceerd worden naar de secondaries. Of deze actie synchroon of asynchroon is, hangt af van de gekozen schrijfconfiguratie.  Het is slechts mogelijk om een instantie tot een enkele set toe te voegen. De data is beschikbaar zo lang er meer dan de helft van de servers beschikbaar zijn. 
+\paragraph{Replicatie\cite{mongodb-replicaset}} Replicatie gebeurt door middel van een master/slave configuratie tussen verschillende \textit{MongoD} instanties, of in hun termen primary/secondary. Een verzameling van deze MongoD instanties wordt een \textit{replicaset} genoemd. Een replicaset kiest zelf de primary die verantwoordelijk is voor het afhandelen van de schrijfacties. De data zal vervolgens gerepliceerd worden naar de secondaries. Of deze actie synchroon of asynchroon is, hangt af van de gekozen schrijfconfiguratie.  Het is slechts mogelijk om een instantie tot een enkele set toe te voegen. De data is beschikbaar zo lang er meer dan de helft van de servers beschikbaar zijn. 
 
 \paragraph{Data distributie\cite{mongodb-shard}} Horizontale schaalbaarheid wordt in MongoDB bereikt door verschillende replicaset's of zelfstandige MongoD instanties te combineren tot een cluster. In het geval van een zelfdstandige instantie, zal de data niet gerepliceerd worden en wordt om deze reden niet aangeraden voor productie. Voor datadistributie bestaan er 3 verschillende type servers, sharding-, configuratie- en toegangsservers. Een overzicht is gegeven in figuur \ref{fig:mongodb-sharding}. 
 
@@ -197,7 +197,7 @@ Het uitvoeren van de testen vereist het installeren van het verschillende instan
 
 De automatisatie gebeurt met het Integrated configuration Management Platform (IMP) beschreven in \cite{KULeuven-453199}. Dit modulair framework is uitgebreid met de 3 DBMS's en YCSB waardoor de configuratie als een declaratief gewenste staat wordt uitgedrukt. IMP zal deze staat toepassen op de verschillende systemen bij het uitrollen. 
 
-Een uitgebreider bespreking van de uitwerking in IMP kan gevonden worden in bijlage \ref{chap:AppendixUitwerkingIMP} met het domeindiagram van het systeem, uitleg en voorbeeldcode. 
+Een uitgebreider bespreking van de uitwerking in IMP kan gevonden worden in de IMP pakketten op GitHub, zie appendix \ref{app:externlinks}. Elk project bevat een bestand met een domeindiagram van het systeem, uitleg en voorbeeldcode. 
 
 Voor de uitvoering van de testen, is er voor elk DBMS gekozen voor een minimaal aantal instantie dat datadistributie én replicatie ondersteunt. Voor de laatste eigenschap zou de data beschikbaar moeten blijven bij het uitvallen van 1 server na de overgangsperiode. In de testen is er enkel gefocust op het uitvallen van dataservers, niet naar configuratieservers. De configuratieservers zijn enkel minimaal opgezet omdat deze online blijven tijdens de testen.  
 
