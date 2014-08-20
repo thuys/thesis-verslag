@@ -9,12 +9,12 @@
 \setup{filingcard,
   translatedtitle={Evaluation of consistency and availability for distributed database systems},
   udc=681.3,
-  shortabstract={In de database wereld zijn er 2 grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie bestaat uit een grote diversiteit naar datamodel, performantie en keuzes in het CAP theorema. 
-  Deze thesis focust op een benchmarking tool naar consistentie en beschikbaarheid in een gedistribueerde omgeving. Zowel een uitvoerige bespreking van de werkwijze komt aan bod als de testresultaten en analyse van enkele voorbeeld systemen. \\
-  De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het uitvallen en inschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met schrijf- en parallelle leesbewerkingen op dezelfde dataeenheid. \\
-  Deze benchmark heeft als doel om op een analytische wijze het gedrag in de praktijk te kunnen vergelijken met wat staat beschreven in de documentatie. Daarnaast kunnen ook verschillende database systemen vergeleken worden ten opzichte van elkaar. \\
-  Een analyse van drie verschillende database management systemen wordt uitgevoerd door middel van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten kunnen verschillen gevonden worden onder andere het omgaan met het parallel lezen en schrijven. \\  
-  Deze thesis draagt naast de resultaten ook een benchmarking tool bij die de beschikbaarheid en consistentie-eigenschappen vergelijkt. De tool is ontwikkeld om eenvoudig uitvoerbaar te zijn op de reeds uitgewerkte database systemen en met een beperkte kost ook uitvoerbaar te zijn om andere database systemen. 
+  shortabstract={In de database wereld zijn er momenteel twee grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie heeft uit een grote diversiteit aan datamodellen, performantie-eigenschappen en keuzes in het CAP theorema. \\
+  Deze thesis focust op de uitwerking van een benchmarking tool om consistentie en beschikbaarheid in een gedistribueerde omgeving te testen. \\
+  De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het in- en uitschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met gelijktijdige schrijf- en leesbewerkingen op dezelfde dataeenheid. \\
+  Deze benchmark onderzoek het gedrag van een database systeem in de praktijk en vergelijkt dit met de documentatie. Daarnaast worden verschillende database systemen met elkaar vergeleken. \\
+  Drie verschillende database management systemen worden getest met behulp van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten komt verschillend gedrag tussen de systemen tot uiting zoals op een verschillende wijze omgaan met gelijktijdig lezen en schrijven van een data-element. \\
+  De installatie en configuratie van de benchmarking tool en de reeds geteste database systemen is geautomatiseerd om te kunnen opstellen en uitvoeren zonder voorkennis van de specifieke systemen. Met een beperkte kennis en kost kan de tool ook uitgevoerd worden op andere database systemen. 
   }
  }
 % Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
@@ -92,16 +92,16 @@ Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun
 
 \tableofcontents*
 \begin{abstract}
-In de database wereld zijn er 2 grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie bestaat uit een grote diversiteit naar datamodel, performantie en keuzes in het CAP theorema. \\
-Deze thesis focust op een benchmarking tool naar consistentie en beschikbaarheid in een gedistribueerde omgeving. Zowel een uitvoerige bespreking van de werkwijze komt aan bod als de testresultaten en analyse van enkele voorbeeld systemen.
+In de database wereld zijn er momenteel twee grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie heeft uit een grote diversiteit aan datamodellen, performantie-eigenschappen en keuzes in het CAP theorema. \\
+Deze thesis focust op de uitwerking van een benchmarking tool om consistentie en beschikbaarheid in een gedistribueerde omgeving te testen. 
  
-De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het uitvallen en inschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met schrijf- en parallelle leesbewerkingen op dezelfde dataeenheid. 
+De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het in- en uitschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met gelijktijdige schrijf- en leesbewerkingen op dezelfde dataeenheid. 
 
-Deze benchmark heeft als doel om op een analytische wijze het gedrag in de praktijk te kunnen vergelijken met wat staat beschreven in de documentatie. Daarnaast kunnen ook verschillende database systemen vergeleken worden ten opzichte van elkaar. 
+Deze benchmark onderzoek het gedrag van een database systeem in de praktijk en vergelijkt dit met de documentatie. Daarnaast worden verschillende database systemen met elkaar vergeleken. 
 
-Een analyse van drie verschillende database management systemen wordt uitgevoerd door middel van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten kunnen verschillen gevonden worden onder andere het omgaan met het parallel lezen en schrijven. 
+Drie verschillende database management systemen worden getest met behulp van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten komt verschillend gedrag tussen de systemen tot uiting zoals op een verschillende wijze omgaan met gelijktijdig lezen en schrijven van een data-element. 
 
-Deze thesis draagt naast de resultaten ook een benchmarking tool bij die de beschikbaarheid en consistentie-eigenschappen vergelijkt. De tool is ontwikkeld om eenvoudig uitvoerbaar te zijn op de reeds uitgewerkte database systemen en met een beperkte kost ook uitvoerbaar te zijn om andere database systemen. 
+De installatie en configuratie van de benchmarking tool en de reeds geteste database systemen is geautomatiseerd om te kunnen opstellen en uitvoeren zonder voorkennis van de specifieke systemen. Met een beperkte kennis en kost kan de tool ook uitgevoerd worden op andere database systemen. 
 
 
 \end{abstract}
