@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.1.4}{Verder verloop}{chapter.1}% 7
 \BOOKMARK [0][-]{chapter.2}{Voorgestelde testmethodiek }{}% 8
 \BOOKMARK [1][-]{section.2.1}{Stap 1: Opstellen van de testomgeving}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Stap 2: Calibratie van de testomgeving}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Stap 2: Kalibratie van de testomgeving}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.3}{Stap 3: Testen van de systemen}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.4}{Stap 4: Verzamelen en analyseren van de testdata}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.5}{Conclusie}{chapter.2}% 13
@@ -16,16 +16,16 @@
 \BOOKMARK [1][-]{section.3.2}{Gedetailleerde bespreking van de model DBMS's}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.3}{Selectie en uitwerking van de testsoftware}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.4}{Installatie en opstelling van de DBMS's en YCSB}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.5}{Uitvoeren van de calibratie en testen}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.5}{Uitvoeren van de kalibratie en testen}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.6}{Verzamelen en analyse van de testresultaten}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.7}{Conclusie}{chapter.3}% 21
 \BOOKMARK [0][-]{chapter.4}{Observaties}{}% 22
-\BOOKMARK [1][-]{section.4.1}{Calibratie}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.1}{Kalibratie}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.2}{Beschikbaarheidstest}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.3}{Consistentietest}{chapter.4}% 25
 \BOOKMARK [1][-]{section.4.4}{Conclusie}{chapter.4}% 26
 \BOOKMARK [0][-]{chapter.5}{Analyse van de resultaten}{}% 27
-\BOOKMARK [1][-]{section.5.1}{Calibratie}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.1}{Kalibratie}{chapter.5}% 28
 \BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 29
 \BOOKMARK [1][-]{section.5.3}{Consistentietest}{chapter.5}% 30
 \BOOKMARK [1][-]{section.5.4}{Conclusie}{chapter.5}% 31

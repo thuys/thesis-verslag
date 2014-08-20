@@ -1,0 +1,24 @@
+\chapter{Conclusie}
+In deze thesis is er gefocust op drie verschillende doelen: het creëren van een benchmark, het uitvoeren van de testen en het automatiseren van de testen. Elk van deze verschillende doelen zijn uitgewerkt waarbij de nodige problemen zijn overwonnen. 
+
+Voor het implementeren van de benchmarkt werd een testmethode besproken en uitgewerkt, dit met het doel om de consistentie- en beschikbaarheidsverschillen van op een analytische manier te testen. Er is getest naar de beschikbaarheid van de systemen bij het verwachte en onverwacht stopzetten van instantie of netwerk onderbreking. Bij consistentie is er gekeken hoe lang het duurt voor de data beschikbaar is voor de verschillende gebruikers en welke garanties er aangeleverd kunnen worden. 
+
+Vervolgens is de benchmark uitgevoerd op  HBase en MongoDB, een respectievelijk column en document database management systeem. Voor Pgpool-II, een gedistribueerde uitbreiding van PostgreSQL, zijn enkel de beschikbaarheidstesten uitgevoerd. 
+
+De testresultaten tonen dat hoewel op papier HBase en MongoDB een gelijke strikte consistentie aanbieden, zijn er in de praktijk verschillen. HBase stelt de data beschikbaar voor alle leesgebruikers na de voltooiing van de schrijfbewerking, in tussentijd zullen de leesbewerkingen voor dat record vertraagd worden. MongoDB kiest ervoor om zo snel een leesbewerking te voltooien met indien mogelijk de nieuwe waarde, ook als de schrijfactie nog niet voltooid is. 
+
+Bij de beschikbaarheidstesten is er groot verschil tussen de werking van Pgpool-II en de andere 2 systemen. Pgpool-II zal de status controleren door tussen de toegangsserver en de verschillende data instanties een data verbinding op te zetten. Indien deze verbinding verbroken wordt,is het datasysteem offline. 
+
+HBase werkt met sessies van configureerbare duur, tijdens een sessie is een bepaalde server verantwoordelijk voor een deel van de data. Bij een verwachte stop kan deze sessie stopgezet worden en zal de data kort onbereikbaar zijn, bij een onverwachte stop of netwerk onderbreking wordt er gewacht tot na het verlopen van de sessie. Bij een harde stop kan er af en toe voorkomen dat er geen data gelezen wordt als men als gebruiker niet expliciet nieuwe connecties laat aanmaken, bij de andere mogelijkheden gebeurt dit automatisch. 
+
+MongoDB werkt met een heartbeat protocol om de status van andere servers te controleren. Bij een verachte of onverwachte stop, is de data kort onbeschikbaar doordat een nieuwe verantwoordelijke moet worden aangeduid. Bij een netwerk onderbreking is, in tegenstelling tot het stoppen van een query, een nieuwe connectie met MongoDB nodig, anders zal de oude data niet gelezen worden. 
+
+Als laatste doelstelling is de benchmarking software geautomatiseerd te samen met de drie database systemen voor de installeren en configuratie in een gedistribueerd systeem. De drie database systemen bestaan elk uit verschillende services en afhankelijkheden waarmee elk systeem de nodige uitdagingen met zich meebracht. Bij MongoDB is de installatie eenvoudig,  maar voor een automatische configuratie dient er code geschreven om de console configuratie te overkomen. HBase bestaat uit de combinatie van 3 verschillende software pakketten, die elk één voor één opgezet moeten worden. Pgpool-II heeft een zeer beperkte documentatie die voornamelijk gefocust is op Ubuntu, niet Fedora. 
+\section{Verder werk}
+In deze thesistekst zijn de eerste resultaten en conclusies naar beschikbaarheid en consistentie getrokken. Maar deze test methodes kunnen op meer systemen uitgevoerd worden tot een nieuwe vergelijkingsmethode voor vele database systemen.
+
+Daarnaast kunnen de gebruikte testparameters ook aangepast worden om bepaalde assumpties te verifiëren of mathematische verbanden te zoeken. In de uitgevoerde testen hadden al de verschillende servers met een ping tijd rond de 0.5ms, maar wat is bijvoorbeeld de invloed van deze parameter in de testen, hetzelfde geldt voor het aantal instanties van het DBMS en de belasting op de systemen (verkleint of vergroot het inconsistentie interval bij een hogere belasting?). 
+
+Daarnaast kunnen ook de testmethode aangepast worden zoals bij de consistentie test de lezer en schrijver fysiek scheiden. De beschikbaarheidstesten kunnen ook getest worden met verschillende fysieke gebruikers en te onderzoeken of deze hetzelfde gedrag meten. 
+
+Als laatste mogelijke uitbreiding, kunnen beide testen gecombineerd worden: verdwijnt er data als een instantie crasht en dit zowel vanuit het perspectief van de schrijver als de lezen. In MongoDB zou het mogelijk kunnen zijn dat een schrijfbewerking nog niet gerepliceerd was naar een secondary maar al wel gelezen was op de primary. Komt dit voor of zijn er mechanismen die dit voorkomen?  

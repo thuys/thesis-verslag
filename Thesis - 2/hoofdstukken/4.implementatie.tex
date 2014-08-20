@@ -1,24 +1,24 @@
 \chapter{Implementatie}\label{sec:implementatie}
-In het vorige hoofdstuk is uitgelegd wat de methode is voor het testen, maar hoe vertalen deze vereisten naar een werkende test programma? In dit hoofdstuk zal deze vertaling uitgelegd worden die op deze thesis is toegepast. 
+In het vorige hoofdstuk is besproken wat de methodiek is voor het uitvoeren testen, maar hoe worden deze vereisten vertaald naar een werkende testprogramma? In dit hoofdstuk zal deze vertaling uitgelegd worden die in deze thesis is toegepast. 
 
-In het eerste deel wordt uitgelegd wat de selectie criteria waren om HBase, MongoDB en Pgpool-II (PostgreSQL) te verkiezen. Daarna zullen de drie vermelde systemen in meer detail aanbod komen om zo de specifieke architectuur uit de doeken te doen. Tenslotte wordt besproken hoe de testsoftware geselecteerd is en uitgebreid is in samen met de verschillende DBMS's; hoe de verschillende testen zijn uitgevoerd en de resultaten zijn verwerkt. 
+In het eerste deel wordt uitgelegd wat de selectie criteria waren om HBase, MongoDB en Pgpool-II (PostgreSQL) te verkiezen. Daarna zullen de drie vermelde systemen in meer detail aan bod komen om zo de specifieke architectuur uit de doeken te doen. Tenslotte wordt besproken hoe de testsoftware geselecteerd en uitgebreid is. Dit is gevolgd door de configuratie van de testen voor de verschillende DBMS's: hoe de zijn de verschillende testen uitgevoerd en de resultaten verwerkt. 
  
 \section{Selectie van de DBMS's}
-Voor de selectie van de systemen is er onderzocht of een systeem een bepaalde eigenschap al dan niet ondersteunt. In het totaal zijn er 5 verschillende eigenschappen waarop de selectie is gebaseerd. 
+Bij de selectie van de systemen is er onderzocht of een systeem een bepaalde eigenschap al dan niet ondersteunt. In het totaal is de selectie op er vijf verschillende eigenschappen gebaseerd. 
 
-\paragraph{Vrije software} Om testen tussen verschillende DBMS's te kunnen vergelijken op een gelijkaardige infrastructuur, is het nodig dat deze software kan geïnstalleerd worden op de eigen infrastructuur. In deze thesis is er gefocust op systemen die gratis aangeboden worden. 
+\paragraph{Vrije software} Om de testen tussen verschillende DBMS's te vergelijken, is het nodig dat deze geïnstalleerd kunnen worden op de eigen infrastructuur. Daarnaast is er in deze thesis gefocust op systemen die ook nog gratis aangeboden worden. 
 
-\paragraph{Persistentie} Voor het testen van de beschikbaarheid van de data, is het een voordeel dat de data op harde schijf aanwezig is: bij een herstel dient er minder data over het netwerk gestuurd te worden. Om deze reden hebben persistente systemen een voorkeur op deze die de data enkel in geheugen houden. 
+\paragraph{Persistentie} Voor het testen van de beschikbaarheid van de data, is het een voordeel dat de data op harde schijf aanwezig is: bij het opnieuw opstarten van een service dient er minder data over het netwerk gestuurd te worden aangezien dit van de harde schijf gelezen kan worden. Om deze reden hebben persistente systemen een voorkeur op deze die de data enkel in geheugen houden. 
 
-\paragraph{Replicatie} Eén van de testen is de beschikbaarheidstest. Indien de data maar op een enkele server opgeslagen is, zal de data op de uitgeschakelde server niet langer beschikbaar zijn. Met replicatie zal de data op verschillende servers opgeslagen worden en kan de data in theorie nog beschikbaar zijn in het geval van een enkele uitgeschakelde server. 
+\paragraph{Replicatie} Een deel van de benchmarking tool bestaat uit het onbeschikbaar maken van een service. Indien de data maar op een enkele server opgeslagen is, zal de data die de uitgeschakelde server opgeslagen was, voor geen enkele verbruiker beschikbaar zijn. Met replicatie zal de data op verschillende servers opgeslagen worden, hierdoor kan de data beschikbaar gesteld worden met behulp van de andere servers.
 
-\paragraph{Data distributie} Het is de bedoeling om systemen te testen die een grote hoeveelheid data kunnen opslaan. Om aan deze vereiste te voldoen, is het nodig dat elke server niet al de data opslaat bij een grote dataset. 
+\paragraph{Data distributie} Het is de bedoeling om systemen te testen die een grote hoeveelheid data kunnen opslaan. Om aan deze vereiste te voldoen, is het ongewenst dat elke server al de data opslaat bij een grote dataset maar dat de data verspreid is over verschillende servers. 
 
-\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en het opvragen van een individueel of meerdere record. De DBMS moet ondersteuning voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries, een scan query, is in bepaalde systemen niet ondersteund. Deze scan query is een query waar het record met een bepaalde sleutel wordt opgevraagd en een aantal records dat hierop volgt, het is \textit{geen} query met een begin en eind sleutel. 
+\paragraph{Ondersteuning voor verschillende query methodes} Bij de testen worden er 5 soorten queries uitgevoerd: invoegen, aanpassen, verwijderen en het opvragen van een individueel of meerdere record. Het DBMS moet ondersteuning hebben voor deze queries. De eerste 4 kunnen in al de systemen geïmplementeerd worden met één of meerdere queries. Maar het opvragen van meerdere queries, een scan query, is in bepaalde systemen niet ondersteund. Deze scan query is een query waar het record met een bepaalde sleutel wordt opgevraagd en een aantal records dat hierop volgt, dit is niet hetzelfde als een range query waar de al de records opgevraagd worden tussen een begin en eind sleutel. 
 
-Voor alle systemen van het boek \cite{Strauch.NoSQL},besproken in sectie \ref{sec:BesprekingDBMS}, is het eerste criterium voldaan. Een vergelijking voor de vorige  zijn samengevat in tabel \ref{table:vergelijkingNosql}.
+Alle systemen besproken in sectie \ref{sec:BesprekingDBMS} vervullen het eerste criterium. Een vergelijking voor de overige criteria is samengevat in tabel \ref{table:vergelijkingNosql}.
 
-Bij de selectie is er naast de 4 criteria, ook gekozen voor systemen van verschillende datamodellen. Samen met mijn collega Arnaud Schoonjans \cite{thesisArnaud}, zijn er in 7 verschillende systemen verder onderzocht en als modelsysteem gekozen. Voor deze thesis zijn dit HBase, MongoDB en Pgpool-II verder onderzocht, in de thesis van mijn collega zijn dit Cassandra, Apache CouchDB, Riak en MySQL. 
+Bij de selectie is er naast de 4 criteria, ook gekozen voor systemen van verschillende datamodellen. Samen met mijn collega Arnaud Schoonjans \cite{thesisArnaud}, zijn er in 7 verschillende systemen verder onderzocht en als modelsysteem gekozen. Voor deze thesis zijn dit HBase, MongoDB en Pgpool-II, in de thesis van mijn collega zijn dit Cassandra, Apache CouchDB, Riak en MySQL. Deze systemen zijn gekozen als voorbeeldsystemen die voldoen aan de criteria, maar ook andere DBMS's zouden gekozen kunnen worden.  
  
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
@@ -51,28 +51,27 @@ Bij de selectie is er naast de 4 criteria, ook gekozen voor systemen van verschi
           & (PostgreSQL) & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
     \end{tabular}%
     }
-    \caption{Ondersteuning van de besproken DBMS's naar de selectie criteria. \newline
-    Bij \textit{Redis} is er sprake van een snapshot of een log voor de persistentie, de eigenlijke database wordt enkel in het geheugen gehouden. Hierdoor is er maar half sprake , hierdoor kan de database herstelt worden maar is deze niet in het geheugen.\newline 
-    Bij \textit{replicatie} zijn er 2 mogelijke configuraties: master-slave waarbij er verschillende instanties verschillende functies hebben en één de baas is, of master-master waarbij ze allemaal gelijk zijn. \newline 
-    Bij \textit{aanpassen} zijn er systemen die voor een update al de verschillende kolom waarden nodig hebben of maar 1 kolom per waarde ondersteunen.\newline 
+    \caption{\textbf{Ondersteuning van de besproken DBMS's naar de selectie criteria. \newline}
+    Bij \textit{Redis} is er sprake van een snapshot of een log voor de persistentie, de eigenlijke database wordt enkel in het geheugen gehouden. Hierdoor is er maar half sprake , hierdoor kan de database herstelt worden maar is deze niet in het geheugen.  Bij \textit{replicatie} zijn er 2 mogelijke configuraties: master-slave waarbij er verschillende instanties verschillende functies hebben en één de baas is, of master-master waarbij ze allemaal gelijk zijn.
+    Bij \textit{aanpassen} zijn er systemen die voor een update al de verschillende kolom waarden nodig hebben of maar 1 kolom per waarde ondersteunen.
     Bij \textit{scan} is er bij enkele systemen enkel ondersteuning voor het lezen tussen 2 verschillende sleutels. Met het iteratief opvragen van elementen tussen 2 sleutels en het lezen van een beperkte hoeveelheid data, is het mogelijk om een scan query uit te voeren, maar dit is maar halve ondersteuning. }
   \label{table:vergelijkingNosql}%
 \end{table}%
 
 \section{Gedetailleerde bespreking van de model DBMS's}
-In dit gedeelte zal elk model systemen in meer detail uitgelegd worden. Een gemeenschappelijk element bij al deze systemen is dat niet alle instanties dezelfde functie hebben, in andere DBMS's hebben alle instanties dezelfde functie bij het wat de installatie en configuratie kan vereenvoudigen. 
+In dit gedeelte zal elk gekozen DBMS in meer detail uitgelegd worden. Een gemeenschappelijk element is dat elk systeem bestaat uit verschillende services en configuraties. Verschillende andere DBMS's bestaan uit slechts één service die intern de rest van de taken verdeeld, wat de installatie en configuratie kan vereenvoudigen. 
 
-Voor elk van de geselecteerde systemen zal de aangeboden API besproken worden met een blik op de datastructuur, daarna zal de systeem architectuur besproken worden. 
+Voor elk van de geselecteerde systemen zal de aangeboden API besproken worden met een overzicht van de datastructuur, daarna zal de systeem architectuur besproken worden. 
 
 \subsection{HBase}
 
 \subsubsection{Data structuur\cite{george2011hbase}}
-De data in HBase is gestructureerd in tabellen, bij het aanmaken wordt er een schema voor de tabel gemaakt. Voor elke tabel kunnen de verschillende kolommen meegegeven worden samen met een \textit{kolom familie} voor elke kolom, maar de kolommen kunnen ook gespecificeerd worden bij het schrijven van data. De gegevens per \textit{kolom familie} hebben dezelfde prefix en zullen fysisch samen opgeslagen worden. Indien verschillende kolommen tegelijk worden gelezen of geschreven, is het aangeraden om deze dezelfde \textit{kolom familie} te geven. 
+De data in HBase is gestructureerd in tabellen, het aanmaken van een tabel gebuert door het definiëren van een schema. Voor elke tabel kunnen de verschillende kolommen meegegeven worden samen met een \textit{kolom familie} voor elke kolom, maar de kolommen kunnen ook gespecificeerd worden bij het schrijven van data. De gegevens per \textit{kolom familie} hebben dezelfde prefix en zullen fysisch samen opgeslagen worden. Indien verschillende kolommen tegelijk worden gelezen of geschreven, is het aangeraden om deze dezelfde \textit{kolom familie} te geven. s
 
-De operaties beschikbaar in dit systeem zijn: get (verkrijgen), put (invoegen), scan en delete (verwijderen). Het aanpassen van gegevens wordt uitgevoerd via een put waarbij een enkele kolom waarde van een record kan aanpast worden. Een scan operatie heeft geen optie om het aantal op te halen records te bepalen. Maar HBase ondersteunt de optie om de batch grootte (bytes) te configureren. Doordat er geweten is hoe groot een individueel record is én hoeveel records er opgevraagd worden, kan de cache grootte zo bepaald worden. Op deze manier is er maar een enkele communicatie met de database nodig is. 
+De operaties beschikbaar in dit systeem zijn: get (verkrijgen), put (invoegen), scan en delete (verwijderen). Het aanpassen van gegevens wordt uitgevoerd via een put waarbij een enkele kolomwaarde van een record kan aangepast worden. Een scan operatie heeft geen optie om het aantal op te halen records te bepalen. Maar HBase ondersteunt de optie om de batch grootte (in bytes) te configureren. Doordat er geweten is hoe groot een individueel record is én hoeveel records er opgevraagd worden, kan de cache grootte optimaal bepaald worden. Op deze manier is er maar een enkele communicatie stap met de database nodig is. 
 
 \subsubsection{Architectuur\cite{george2011hbase}}
-De gedistribueerde versie van HBase is afhankelijk van 2 andere software systemen: Zookeeper\cite{hunt2010zookeeper} en Hadoop\cite{borthakur2007hadoop}. Hiermee volgt HBase de structuur van Google's BigTable\cite{chang2008bigtable} die op zijn beurt afhankelijk is van Chubby\cite{burrows2006chubby} en Google File System\cite{ghemawat2003google}. Een overzicht van de architectuur bevindt zich in figuur \ref{fig:Hbase-structure}. De 3 systemen van HBase zullen kort besproken worden, van HBase naar Zookeeper en Hadoop. 
+De gedistribueerde versie van HBase is afhankelijk van 2 andere software systemen: Zookeeper\cite{hunt2010zookeeper} en Hadoop\cite{borthakur2007hadoop}. Hiermee volgt HBase de structuur van Google's BigTable\cite{chang2008bigtable} die op zijn beurt afhankelijk is van respectievelijk Chubby\cite{burrows2006chubby} en Google File System\cite{ghemawat2003google}. Figuur \ref{fig:Hbase-structure} toon een overzicht van de architectuur van HBase. De drie systemen van HBase zullen kort besproken worden. 
 
 \begin{figure}[ht!]
 \centering
@@ -81,25 +80,25 @@ De gedistribueerde versie van HBase is afhankelijk van 2 andere software systeme
 \label{fig:Hbase-structure}
 \end{figure}
 
-\paragraph{HBase\cite{george2011hbase}} HBase is een master/slave systeem welke bestaat uit een HMaster en een HRegionServer. De \textit{HMaster} is verbonden met Zookeeper en houdt op deze manier de status en verantwoordelijkheden van de HRegionServers in het oog. Daarnaast is deze ook verantwoordelijk voor het toewijzen van data verantwoordelijkheden. Onder andere wordt de data uit een tabel opgesplitst over verschillende regio's indien een tabel groeit, ook het toewijzen van een HRegion aan een HRegionServer.\\
-De andere soort, een \textit{HRegionServer}, is verantwoordelijke voor de data van een regio en voor het beheren van deze regio's. Een regio is een deel van een tabel met daar in de feitelijke data die opgeslagen is in verschillende Hadoop datanodes. Een HRegionServer zal consistentie en atomaire queries afdwingen in HBase op een enkele record.  
+\paragraph{HBase\cite{george2011hbase}} HBase is een master/slave systeem welke bestaat uit een \textit{HMaster} en een \textit{HRegionServer}. De \textit{HMaster} is verbonden met Zookeeper en houdt op deze manier de status en verantwoordelijkheden van de HRegionServers in het oog. Daarnaast is de master ook verantwoordelijk voor het toewijzen van dataverantwoordelijkheden. Zo is de master verantwoordelijke voor het opsplitsen van de de data over verschillende regio's indien een tabel groeit en het toewijzen van een HRegion aan een HRegionServer.\\
+Een \textit{HRegionServer} is verantwoordelijke voor de data van een regio en voor het beheren van deze regio's. Een \textit{HRegion} is een deel van een tabel die de data bevat, deze data wordt opgeslagen in verschillende Hadoop datanodes. Een HRegionServer zal consistentie en atomaire queries afdwingen in HBase op een enkele record.  
 
-\paragraph{Hadoop\cite{borthakur2007hadoop}} HBase maakt gebruik van het Hadoop Distributed File System (HDFS), een gedistribueerd file systeem ontworpen om te werken op commodity hardware met een hoge fout tolerantie. HDFS heeft een master/slave architectuur en bestaat uit een enkele \textit{namenode}, de master server, die de naamruimte en toegangscontrole onderhoudt, en \textit{datanode}s. De data wordt opgedeeld in blokken die door een verzameling van datanodes wordt opgeslagen. Aangezien niet elke node in deze verzameling zit, is er op deze manier data distributie. Deze master/slave configuratie zijn verschillende soorten van services die de administrator afzonderlijk moet opzetten. \\
-In de deze configuratie van HBase, is HDFS de methode om data persistent op te slaan met automatische replicatie en data distributie. Er is ook ondersteuning om de opslag naar Amazon S3 te doen in een gedistribueerde omgeving of deze op de lokale harde schrijf op te slaan bij een configuratie met slechts 1 server.\cite{george2011hbase}
+\paragraph{Hadoop\cite{borthakur2007hadoop}} HBase maakt gebruik van het Hadoop Distributed File System (HDFS), een gedistribueerd file systeem ontworpen om te werken op commodity hardware met een hoge fout tolerantie. HDFS heeft een master/slave architectuur en bestaat uit één \textit{namenode}, de master server, die de naamruimte en toegangscontrole onderhoudt, en \textit{datanode}s. De data wordt opgedeeld in blokken die door een verzameling van datanodes wordt opgeslagen. Doordat niet elke node in deze verzameling zit, is er op deze manier datadistributie. Deze master/slave configuraties zijn verschillende services die de administrator afzonderlijk moet opzetten en configureren. \\
+In de deze configuratie van HBase is HDFS de methode om data persistent op te slaan met automatische replicatie en datadistributie. Er is ook ondersteuning om de opslag naar Amazon S3 te doen in een gedistribueerde omgeving of deze op de lokale harde schrijf op te slaan bij een configuratie met slechts 1 server.\cite{george2011hbase}
 
-\paragraph{Zookeeper\cite{hunt2010zookeeper}} Zookeeper is een service voor het coördineren van gedistribueerde applicatie processen. Deze service biedt primitieven aan om synchronisatie, configuratieonderhoud en benaming te doen. Zookeeper is een gedistribueerd master/slave systeem dat ontworpen is om snel te zijn bij dominantie van leesoperaties.  \\
-HBase gebruikt Zookeeper voor het bijhouden van de status van HRegionserver, hun locatie en hun verantwoordelijkheden. De sessie wordt toegekend die een HRegionServer bijvoorbeeld de verantwoordelijkheid voor een Region geeft voor de volgende minuut. Tijdens deze periode kan geen enkele andere HRegionServer een bewerking doen op deze Region, uitgezonderd met de toestemming van de verantwoordelijke server. \cite{george2011hbase} De duur van een sessie kan geconfigureerd worden in Zookeeper maar wordt in dit geval op de standaard 180 seconden gelaten. 
+\paragraph{Zookeeper\cite{hunt2010zookeeper}} Zookeeper is een service voor het coördineren van gedistribueerde applicatie processen. Deze service biedt primitieven aan om synchronisatie, configuratieonderhoud en benaming te doen. Zookeeper is een gedistribueerd master/slave systeem dat ontworpen is om performant te zijn bij een dominantie van leesoperaties.  \\
+HBase gebruikt Zookeeper voor het bijhouden van de status van HRegionserver, hun netwerklocatie en hun verantwoordelijkheden. De sessie wordt toegekend aan een HRegionServer die de verantwoordelijkheid krijgt voor een Region voor de volgende minuut. Tijdens deze periode kan geen enkele andere HRegionServer een bewerking doen op deze Region, uitgezonderd met de toestemming van de verantwoordelijke server. \cite{george2011hbase} De duur van een sessie kan geconfigureerd worden in Zookeeper maar wordt in dit geval op de standaard 180 seconden gelaten. 
 
-Dit is de globale structuur van het HBase systeem, in het totaal zijn er 5 verschillende soorten services: 2 voor Hadoop, 1 voor Zookeeper en 2 bij HBase. Enkele van deze services worden best gegroepeerd op een enkele instantie: de HDFS namenode, een Zookeeper instantie en de HMaster worden samen op een enkele instantie geplaatst. Hetzelfde geldt voor een datanode en een HRegionServer. Zeker deze laatste heeft een extra performantie invloed: HBase detecteert dat er lokale opslag van de data is en de regio zal steeds deze lokale opslag hebben. Dit zorgt bij leesacties voor een performantie verbetering aangezien de data lokaal gelezen kan worden.
+Dit is de globale structuur van het HBase systeem, in het totaal zijn er 5 verschillende soorten services: 2 voor Hadoop, 1 voor Zookeeper en 2 bij HBase. Enkele van deze services worden best gegroepeerd op een enkele instantie: de HDFS namenode, een Zookeeper instantie en de HMaster worden samen op een enkele instantie geplaatst. Hetzelfde geldt voor een datanode en een HRegionServer. Zeker deze laatste heeft een extra performantie invloed: HBase detecteert dat er lokale opslag van de data is en deze lokale datanode zal elke regio bevatten van die de HRegionServer coördineert. Dit zorgt bij leesacties voor een performantie verbetering aangezien de data lokaal gelezen kan worden.
 
-De configuratie van de verschillende systemen gebeurt door middel van configuratiebestanden voor elke service waarna de verschillende systemen zich bij elkaar aanmelden en de volledige configuratie van Region's door het systeem zelf wordt gedaan.  
+De configuratie van de verschillende systemen gebeurt door middel van configuratiebestanden voor elke service waarna de verschillende systemen zich bij elkaar aanmelden. De verdeling en configuratie van de verschillende HRegion's wordt door het systeem zelf afgehandeld.  
 
 \subsection{MongoDB\cite{mongodb-manual}}
 
 \subsubsection{Datastructuur}
-De data in MongoDB is opgeslagen in een database, die op zijn beurt een collectie bevat. Het is niet nodig om een een database en collectie op voorhand aan te maken. Beiden worden automatisch aangemaakt bij het wegschrijven van data, indien de collectie nog niet bestaat. Een record is in MongoDB een document en elk record kan verschillende velden hebben. Er zijn uitgebreide query mogelijkheden om data in te voegen, aan te passen, te verwijderen of een scan uit te voeren. Er is ook ondersteuning voor MapReduce\cite{dean2008mapreduce}. 
+De data in MongoDB is opgeslagen in een database, die op zijn beurt een collectie bevat. Het is niet nodig om een database en collectie op voorhand aan te maken. Beiden worden automatisch aangemaakt bij het wegschrijven van data als de collectie nog niet bestaat. Een record is in MongoDB een document en elk record kan verschillende velden hebben. Er zijn uitgebreide query mogelijkheden om data in te voegen, aan te passen, te verwijderen of een scan uit te voeren. Er is ook ondersteuning voor MapReduce\cite{dean2008mapreduce}. 
 
-Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het voltooien van de actie, startende met de actie is over het netwerk verstuurd, de primary heeft de data geschreven tot een meerderheid van de secondaries heeft de data weg geschreven. \\ Bij het lezen kan men kiezen om de data te lezen van de primary, secondary of de dichtstbijzijnde node. Afhankelijk van de gekozen acties, kan er verondersteld worden dat er een verschillende consistentie garantie zal zijn. Een overzicht van al de mogelijkheden, kan teruggevonden worden in tabel \ref{table:mongodb-query-opties}. Indien er in de tekst verder niet gespecificeerd wordt welke lees- of schrijfconfiguratie er wordt gebruikt, zijn dit de standaard methodes, respectievelijk primary en normal. 
+Bij het schrijven van data, kunnen verschillende eisen gesteld worden aan de bewerkingen. De bewerking kan voltooien nadat bijvoorbeeld de bewerking over het netwerk verstuurd of de primary heeft de data geschreven. \\ Bij het lezen kan men kiezen om de data te lezen van de primary, secondary of de dichtstbijzijnde node. Afhankelijk van de gekozen acties, kunnen er verschillende consistentie garantie verwacht worden. Een overzicht van al de mogelijkheden, kan teruggevonden worden in tabel \ref{table:mongodb-query-opties}. Indien er in de tekst verder niet gespecificeerd wordt welke lees- of schrijfconfiguratie er wordt gebruikt, zijn dit de standaard methodes, respectievelijk primary en normal. 
 
 \begin{table}[ht!]
 	\centering
@@ -121,7 +120,7 @@ Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het v
 		Normal & Wacht tot weggeschreven naar het netwerk socket. \\
 		\multirow{1}[1]{*}{Safe} & Wacht op bevestiging van de primary    \\
 		
-		\multirow{2}[1]{*}{fsync$\_$safe} & Wacht op bevestiging van de primary tot  \\
+		\multirow{2}[1]{*}{fsync$\_$safe} & Wacht op bevestiging van de primary totdat  \\
 				& de data is weggeschreven naar harde schijf.  \\
 		\multirow{2}[1]{*}{Replica acknowledged} & Wacht op bevestiging van primary  \\
 				& en één secondary. \\
@@ -132,7 +131,7 @@ Bij het schrijven van data, kunnen verschillende eisen gesteld worden voor het v
 \end{table}
 
 \subsubsection{Architectuur}
-MongoDB is een DBMS dat de vereisten van replicatie en data distributie op een gelaagde manier tot uitvoering brengt. Eerst zullen instanties gecombineerd worden voor de replicatievereisten invullen, daarna zal horizontale schaalbaarheid ondersteund worden. 
+MongoDB is een DBMS dat de vereisten van replicatie en data distributie op een gelaagde manier tot uitvoering brengt. Eerst zullen instanties gecombineerd worden om de replicatievereisten in te vullen, daarna zal horizontale schaalbaarheid ondersteund worden. 
 
 \begin{figure}[ht!] 
 \centering
@@ -143,28 +142,28 @@ MongoDB is een DBMS dat de vereisten van replicatie en data distributie op een g
 	\label{fig:mongodb-architectuur}
 \end{figure}
 
-\paragraph{Replicatie\cite{mongodb-replicaset}} Replicatie gebeurt door middel van een master/slave configuratie tussen verschillende \textit{MongoD} instanties, of in hun termen primary/secondary. Een verzameling van deze MongoD instanties wordt een \textit{replicaset} genoemd. Een replicaset kiest zelf de primary die verantwoordelijk is voor het afhandelen van de schrijfacties. De data zal vervolgens gerepliceerd worden naar de secondaries. Of deze actie synchroon of asynchroon is, hangt af van de gekozen schrijfconfiguratie.  Het is slechts mogelijk om een instantie tot een enkele set toe te voegen. De data is beschikbaar zo lang er meer dan de helft van de servers beschikbaar zijn. 
+\paragraph{Replicatie\cite{mongodb-replicaset}} Replicatie gebeurt door middel van een master/slave configuratie tussen verschillende \textit{MongoD} instanties, of in MongoDB termen een primary/secondary. Een verzameling van deze MongoD instanties wordt een \textit{replicaset} genoemd. Een replicaset kiest zelf de primary die verantwoordelijk is voor het afhandelen van de schrijfacties. De data zal vervolgens gerepliceerd worden naar de secondaries. Of deze actie synchroon of asynchroon is, hangt af van de gekozen schrijfconfiguratie.  Het is slechts mogelijk om een instantie tot een enkele set toe te voegen. De data is beschikbaar zo lang er meer dan de helft van de servers beschikbaar zijn. 
 
-\paragraph{Data distributie\cite{mongodb-shard}} Horizontale schaalbaarheid wordt in MongoDB bereikt door verschillende replicaset's of zelfstandige MongoD instanties te combineren tot een cluster. In het geval van een zelfdstandige instantie, zal de data niet gerepliceerd worden en wordt om deze reden niet aangeraden voor productie. Voor datadistributie bestaan er 3 verschillende type servers, sharding-, configuratie- en toegangsservers. Een overzicht is gegeven in figuur \ref{fig:mongodb-sharding}. 
+\paragraph{Data distributie\cite{mongodb-shard}} Horizontale schaalbaarheid wordt in MongoDB bereikt door verschillende replicaset's of zelfstandige \textit{MongoD} instanties te combineren tot een cluster. In het geval van een zelfstandige instantie, zal de data niet gerepliceerd worden. Om deze reden wordt deze configuratie niet aangeraden voor productieomgeving. Voor datadistributie bestaan er 3 verschillende type servers, sharding-, configuratie- en toegangsservers. Een overzicht is gegeven in figuur \ref{fig:mongodb-sharding}. 
 
 \subparagraph{Shards} De data wordt verdeeld over de verschillende shards nadat is aangegeven dat men deze wilt verdelen over de cluster. Deze verdeling wordt automatisch aangepast indien een enkele shard te groot wordt. 
 \subparagraph{Configuratie servers} De configuratie servers slaan de meta data van de cluster op zoals de verschillende shards en replicaset's. Deze configuratie set bestaat uit 1 tot 3 servers, voor productie zijn 3 servers aangeraden. Deze servers verdelen de data over de verschillende shards en zullen een de data herstructureren als deze te groot wordt. 
-\subparagraph{Toegangsserver} De toegangsserver biedt toegang aan tot de cluster en vraagt de configuratie op aan de configuratie servers. Er kunnen een onbepaald aantal toegangsservers zijn in cluster. 
+\subparagraph{Toegangsserver} De toegangsserver biedt toegang aan tot de cluster en vraagt de configuratie aan de configuratie servers. Er kunnen een onbepaald aantal toegangsservers zijn in cluster. 
 
-De configuratie van de verschillende delen bestaat uit verschillende technieken. Bij replicatie krijgt elke set een naam die in de configuratiebestanden van elke configuratie wordt gezet. Nadien wordt één instantie op de hoogte gebracht van de locatie van de andere instanties. Bij de cluster worden bij het opstarten van de toegangsservers de set van configuratieservers meegegeven, het opzetten van de verschillende shards gebeurt via een toegangsserver m.b.v. de API. 
+De configuratie van de verschillende delen bestaat uit verschillende technieken. Bij replicatie krijgt elke set een naam die in de configuratiebestanden van elke configuratie wordt gezet. Nadien wordt één instantie op de hoogte gebracht van de locatie van de andere instanties. Bij de cluster worden bij het opstarten van de toegangsservers de set van configuratieservers meegegeven. Het opzetten van de verschillende shards gebeurt via een toegangsserver m.b.v. de API. 
 
 \subsection{Pgpool-II (PostgreSQL)\cite{pgpool-doc}}
-Pgpool-II kan op 4 verschillende manieren werken, in deze testen is er gekozen voor de replicatie optie omdat deze zowel replicatie, failover en online recovery aanbiedt en de leesbewerkingen verspreid. Er is de mogelijkheid om ook data distributie aan te bieden maar dit is niet getest. Door de datadistributie bovenop de replicatie te zetten, volgt MongoDB hetzelfde principe als MongoDB. 
+Pgpool-II kan op 4 verschillende manieren werken, in deze testen is er gekozen voor de replicatie optie omdat deze zowel replicatie, failover en online recovery aanbiedt en de leesbewerkingen verspreid. Er is de mogelijkheid om ook data distributie aan te bieden maar dit is niet getest. Door de datadistributie bovenop de replicatie te zetten, volgt Pgpool-II hetzelfde principe als MongoDB. 
 
 Datastructuur en de architectuur van Pgpool-II in replicatie mode wordt nu in meer detail besproken. 
 
 \subsubsection{Datastructuur}
 De data structuur en query mogelijkheden van Pgpool-II zijn gelijklopend aan deze van PostgreSQL. Net zoals in PostgreSQL bestaat het systeem uit een schema die verschillende databases kan bevatten. Een database bestaat uit een verzameling van tabellen, een tabel bevat de records. Voor het opslaan van de data dient de volledige tabel met al de kolommen gespecificeerd zijn. 
 
-Pgpool-II ondersteunt de volledige query mogelijkheden die in de testen nodig zijn. Er zijn enkele restricties ten opzichte van PostgreSQL die beschreven zijn op in de sectie \textit{Restrictions} van de documentatie\cite{pgpool-doc}. 
+Pgpool-II ondersteunt de SQL queries en vervult hiermee de volledige query benodigdheden die in de testen nodig zijn. Er zijn enkele restricties ten opzichte van PostgreSQL die beschreven zijn op in de sectie \textit{Restrictions} van de documentatie\cite{pgpool-doc}. 
 
 \subsubsection{Architectuur}
-Een Pgpool-II infrastructuur bestaat uit 2 delen, een data en routing niveau, een overzicht is gegeven in figuur \ref{fig:Pgpool-structure}. 
+Een Pgpool-II infrastructuur bestaat uit 2 delen, een data en routing niveau. Een overzicht is gegeven in figuur \ref{fig:Pgpool-structure}. 
 
 \begin{figure}[ht!]
 \centering
@@ -173,33 +172,33 @@ Een Pgpool-II infrastructuur bestaat uit 2 delen, een data en routing niveau, ee
 \label{fig:Pgpool-structure}
 \end{figure}
 
-Het data niveau bestaat uit een individuele service uit een PostgreSQL installatie met extra functies, bestanden en een aanpassing aan enkele configuratie bestanden. Daarnaast moet er voor de online recovery ook ssh toegang voorzien worden tussen al de servers. De verschillende data machines hebben een master/slave structuur waar al de schrijfacties naar de master worden gestuurd en de leesoperaties zijn verdeeld over al de machines. De master doet aan synchronisatie met behulp van de \textit{Write-ahead-log} van PostgreSQL. Dit is een log waar al de verschillende schrijfacties worden opgeslagen. Door een andere server deze te laten uitvoeren is er een gelijke database. 
+Het data niveau bestaat uit een individuele service uit een PostgreSQL installatie met extra functies, bestanden en een aanpassing aan enkele configuratie bestanden. Daarnaast moet er voor de online recovery ook ssh toegang voorzien worden tussen al de servers. De verschillende data machines hebben een master/slave structuur waar al de schrijfacties naar de master worden gestuurd. De leesoperaties zijn verdeeld over al de machines. De master doet aan synchronisatie met behulp van de \textit{Write-ahead-log} van PostgreSQL. Dit is een log waar al de verschillende schrijfacties worden opgeslagen. Door een andere dataserver deze te laten uitvoeren zijn er een gelijke databases. 
 
-Op routing niveau draait een Pgpool-II service die als management service dient, hij bepaalt wie master en slave is, volgt de status op van de data services en doet aan online recovery. Op het moment dat een databaseverbinding wordt aangemaakt, kiest Pgpool-II naar welke PostgreSQL server dit gaat. Op deze manier wordt de leesbelasting verdeeld. 
+Op routing niveau draait een Pgpool-II service die als management service dient. Hij bepaalt wie master en slave is, volgt de status op van de data services en doet aan online recovery. Op het moment dat een databaseverbinding wordt aangemaakt, kiest Pgpool-II welke PostgreSQL server dit zal uitvoeren. Op deze manier wordt de leesbelasting verdeeld. 
 
-Pgpool-II kan ook in de parallel mode werken zodat er de mogelijkheid is tot horizontale schaalbaarheid, ook is er de mogelijkheid om caching aan te zetten en een integratie met Memcache is ondersteund. 
+Pgpool-II kan ook in de parallel mode werken zodat er de mogelijkheid is tot horizontale schaalbaarheid. Ook is er de mogelijkheid om caching aan te zetten net zoals integratie met Memcache ondersteund is. 
 
 \section{Selectie en uitwerking van de testsoftware}
-De testen zijn geïmplementeerd als een uitbreiding van YCSB\cite{cooper2010benchmarking} omwille van verschillende redenen. Allereerst is de broncode publiek beschikbaar onder Apache 2.0, YCSB is een uitgebreid systeem voor het uitvoeren van performantie benchmarking, dit op basis van het meten van de vertraging op een query voor verschillende DBMS's. Hierdoor heeft deze al een uitgebreide ondersteuning voor tal van DBMS's, waaronder al de gekozen systemen. Deze ondersteuning is nog verder geoptimaliseerd voor de gekozen systemen zodat er maximaal gebruik gemaakt wordt van de functionaliteiten van elk systeem. Een concreet voorbeeld: bij het opstellen van de scan queries wordt rekening gehouden met het benodigd aantal records wat standaard in YCSB niet gebeurt bij het uitvoeren op een relationele database. 
+De testen zijn geïmplementeerd als een uitbreiding van YCSB\cite{cooper2010benchmarking} omwille van verschillende redenen. Allereerst is de broncode publiek beschikbaar onder Apache 2.0 licentie, hierdoor is de broncode vrij beschikbaar. YCSB is een uitgebreid benchmarking tool voor het uitvoeren van performantietesten, dit gebeurt door het meten van de gemiddelde vertraging op queries voor verschillende DBMS's voor een verschillend aantal queries per seconde. Hierdoor heeft deze al een uitgebreide ondersteuning voor tal van DBMS's, waaronder al de gekozen systemen. Deze ondersteuning is nog verder geoptimaliseerd voor de gekozen systemen zodat er maximaal gebruik gemaakt wordt van de functionaliteiten van elk systeem. Een concreet voorbeeld: bij het opstellen van de scan queries voor Pgpool-II wordt rekening gehouden met het benodigd aantal records wat standaard in YCSB niet gebeurde. 
 
-De 2 testen, beschikbaarheidstest en consistentie test, worden op verschillende manieren geïmplementeerd, naar de leidraad van sectie \ref{sec:testenvandesystemen}.  
+De twee soorten testen, beschikbaarheids- en consistentietest, worden op verschillende manieren geïmplementeerd, naar de leidraad van sectie \ref{sec:testenvandesystemen}.  
 
 \paragraph{Beschikbaarheidstest} De beschikbaarheidstest wordt geïmplementeerd door middel van \textit{event support}, hiermee kan er op vooraf gedefinieerde momenten een bepaald Unix commando uitgevoerd worden. De configuratie gebeurt met behulp van een XML bestand met de parameters van \ref{table:beschikbaarheidinput} in bijlage, de output komt in het logbestand met de elementen van tabel \ref{table:beschikbaarheidoutput} in bijlage. 
 
-Met behulp van deze uitbreiding zullen de beschikbaarheidstesten nadien uitgevoerd kunnen worden. Er zal gekeken worden naar de verandering in vertraging op een query waarmee kan bekeken worden of het systeem nog beschikbaar is. 
+Met behulp van deze uitbreiding zullen de beschikbaarheidstesten nadien uitgevoerd kunnen worden. Er zal gekeken worden naar de verandering in vertraging op een query zodat een conclusie kan getrokken worden over de beschikbaarheid van het volledige systeem. 
 
-\paragraph{Consistentie testen} Voor de consistentie testen is er een extra module geïmplementeerd die het gedrag van sectie \ref{sec:testenvandesystemen} uitvoert. In deze uitwerking leest de schrijver niet zijn eigen data, al zou dit eenvoudig mee geïmplementeerd kunnen worden. Dit is niet getest omdat het niet nodig was in deze testen. De testen kunnen uitgebreid geconfigureerd worden om enkel te testen wat nodig is: een overzicht van de configuratie parameters is te vinden in tabel \ref{table:consistentieinput}. Voor elke uitgevoerde query, wordt een record aangemaakt met de data van tabel \ref{table:consistentieuitvoer} in bijlage. 
+\paragraph{Consistentietesten} Voor de consistentie testen is er een extra module geïmplementeerd die het gedrag van sectie \ref{sec:testenvandesystemen} uitvoert. In deze uitwerking leest de schrijver niet zijn eigen data, al zou dit eenvoudig mee geïmplementeerd kunnen worden. Dit is niet gemeten in deze testen. De testen kunnen uitgebreid geconfigureerd worden om enkel te testen wat nodig is: een overzicht van de configuratie parameters is te vinden in tabel \ref{table:consistentieinput}. Voor elke uitgevoerde query, wordt een record aangemaakt met de data van tabel \ref{table:consistentieuitvoer} in bijlage. 
 
-De code van deze testen is beschikbaar op GitHub onder  \url{https://github.com/thuys/YCSB-Implementation}. 
+De code van deze benchmarking tool is beschikbaar op \url{https://github.com/thuys/YCSB-Implementation}. 
 
 \section{Installatie en opstelling van de DBMS's en YCSB}
-Het uitvoeren van de testen vereist het installeren van het verschillende instanties en de configuratie van de verschillende DBMS's. Voor het uitvoeren van de verschillende testen is het slechts nodig om het systeem een enkele keer op te zetten. Maar om de testen eenvoudiger te kunnen uitvoeren op verschillende infrastructuren en andere gebruikers de resultaten te laten controleren, is de installatie en configuratie van het systeem geautomatiseerd. 
+Het uitvoeren van de testen vereist de installatie van het verschillende instanties en de configuratie van de DBMS's. Voor het uitvoeren van de verschillende testen is het slechts nodig om het systeem één keer op te zetten. Maar om de testen te ontwikkelen, eenvoudiger te kunnen uitvoeren op verschillende infrastructuren en andere gebruikers de resultaten te laten controleren, is de installatie en configuratie van het systeem geautomatiseerd. 
 
-De automatisatie gebeurt met het Integrated configuration Management Platform (IMP) beschreven in \cite{KULeuven-453199}. Dit modulair framework is uitgebreid met de 3 DBMS's en YCSB waardoor de configuratie als een declaratief gewenste staat wordt uitgedrukt. IMP zal deze staat toepassen op de verschillende systemen bij het uitrollen. 
+De automatisatie gebeurt met het Integrated configuration Management Platform (IMP) beschreven in \cite{KULeuven-453199}. Dit modulair framework is uitgebreid met de drie DBMS's en YCSB waardoor de configuratie. Voor de installatie word de gewenste staat declaratief uitgedrukt, bij het uitrollen zal IMP deze staat op de verschillende systemen toepassen. 
 
 Een uitgebreider bespreking van de uitwerking in IMP kan gevonden worden in de IMP pakketten op GitHub, zie appendix \ref{app:externlinks}. Elk project bevat een bestand met een domeindiagram van het systeem, uitleg en voorbeeldcode. 
 
-Voor de uitvoering van de testen, is er voor elk DBMS gekozen voor een minimaal aantal instantie dat datadistributie én replicatie ondersteunt. Voor de laatste eigenschap zou de data beschikbaar moeten blijven bij het uitvallen van 1 server na de overgangsperiode. In de testen is er enkel gefocust op het uitvallen van dataservers, niet naar configuratieservers. De configuratieservers zijn enkel minimaal opgezet omdat deze online blijven tijdens de testen.  
+Voor de uitvoering van de testen, is elk DBMS zo geconfigureerd dat het voor een minimaal aantal instantie heeft dat datadistributie én replicatie ondersteunt. Voor de laatste eigenschap zou de data beschikbaar moeten blijven bij het uitvallen van 1 server na de overgangsperiode. In de testen is er enkel gefocust op het uitvallen van dataservers, niet naar configuratieservers. De configuratieservers, routers en toegangsservers zijn minimaal opgezet omdat deze online blijven tijdens de testen.  
 
 De opstelling van de systemen is getoond in figuur \ref{fig:deployment-testomgeving}, elke uitrol van de systemen zal in meer detail besproken worden nadat de testinfrastructuur is besproken.  
 
@@ -212,23 +211,23 @@ De opstelling van de systemen is getoond in figuur \ref{fig:deployment-testomgev
 \caption{Deployment van de verschillende DBMS's en de testomgeving.}\label{fig:deployment-testomgeving}
 \end{figure}
 
-De testinfrastructuur is een IaaS (Infrastructure as a Service) gebaseerd op OpenStack\footnote{https://www.openstack.org/}. De infrastructuur bestaat uit 3 Dell R610 en R620 servers met een totaal van 196GB RAM, 44 fysische CPU's (88 met hypertreading), verbonden met een Gigabit switch. Deze infrastructuur is gedeeld met andere gebruikers. Elke instantie heeft 2 virtuele CPU's, 4GB RAM en 50GB schijfruimte. De instanties worden verdeeld over de verschillende servers. De netwerkinfrastructuur heeft een gemiddelde ping van 0.4ms naar elke node ($\sigma = 0.2$ bij 10 000 ping's). 
+De testinfrastructuur is een IaaS (Infrastructure as a Service) gebaseerd op OpenStack\footnote{https://www.openstack.org/}. De infrastructuur bestaat uit 3 servers met een totaal van 196GB RAM, 44 fysische CPU's (88 met hypertreading), verbonden met een Gigabit switch. Deze infrastructuur is gedeeld met andere gebruikers. Elke instantie heeft 2 virtuele CPU's, 4GB RAM en 50GB schijfruimte. De instanties worden willekeurig verdeeld over de verschillende servers. De netwerkinfrastructuur heeft een gemiddelde ping van 0.4ms naar elke node ($\sigma = 0.2$ bij 10 000 ping's). 
 
-\paragraph{HBase} Voor HBase wordt de data standaard 3 maal gerepliceerd en zijn er voor datadistributie dus 4 data instanties nodig. Elk van deze instanties hebben eenHBaseRegionServer en Hadoop datanode. Daarnaast zijn er nog een HMaster, Zookeeper en Hadoop namenode nodig die samen op een enkele instantie worden uitgerold. In het totaal zijn er 5 instanties. Een overzicht van de infrastructuur getoond in figuur \ref{fig:HBase-deployment}. De installatie en configuratiebestanden kunnen gevonden worden op \url{https://github.com/thuys/hbase}. 
+\paragraph{HBase} Voor HBase wordt de data standaard 3 maal gerepliceerd en zijn er voor datadistributie dus 4 data instanties nodig. Elk van deze instanties hebben een HBaseRegionServer en Hadoop datanode. Daarnaast zijn er nog een HMaster, Zookeeper en Hadoop namenode nodig die samen op een enkele instantie worden uitgerold. In het totaal zijn er 5 instanties. Een overzicht van de infrastructuur getoond in figuur \ref{fig:HBase-deployment}. De installatie en configuratiebestanden kunnen gevonden worden op \url{https://github.com/thuys/hbase}. 
 
 \paragraph{Pgpool-II} Bij Pgpool-II is er ondersteuning voor horizontale schaalbaarheid in de parallel mode maar dit is niet getest. Om deze reden is er enkel replicatie toegepast waarvoor er 3 instanties zijn: een Pgpool-II instantie en twee PostgreSQL instanties. De configuratie van deze instanties zijn standaard met uitzondering van de activatie van de Write-Ahead-Log van PostgreSQL en de activatie van de replicatie mode in Pgpool-II. Een overzicht van de infrastructuur is getoond in figuur \ref{fig:pgpool-deployment}. De installatie en configuratiebestanden kunnen gevonden worden op \url{https://github.com/thuys/postgresql}.
 
-\paragraph{MongoDB} MongoDB heeft ondersteuning in replicatie en datadistributie. Voor het beschikbaar zijn van de data bij het uitzetten van een enkele instantie, zijn er 3 MongoDB datanodes nodig in een replicaset. De data wordt verdeeld over 2 replicaset met behulp van sharding op basis van de hash van de key voor het opzoeken van de query. Omdat de toegangsserver en configuratie instanties niet veel resources innemen, zijn deze verspreid over de verschillende data instanties. Er zijn meerdere toegangsnodes geplaatst om de queries te verdelen naar verschillende toegangsnodes, bij de beschikbaarheidstesten zal een toegangsnode altijd beschikbaar blijven. In het totaal zijn er 6 instanties nodig. Deze zijn beschreven in \ref{fig:MongoDB-deployment} in bijlage. De installatie en configuratiebestanden kunnen gevonden worden op \url{https://github.com/thuys/mongodb}.
+\paragraph{MongoDB} MongoDB heeft ondersteuning in replicatie en datadistributie. Voor het beschikbaar zijn van de data bij het uitzetten van een enkele instantie, zijn er 3 MongoDB datanodes nodig in een replicaset. De data wordt verdeeld over 2 replicaset met behulp van sharding op basis van de hash van de key voor het opzoeken van de query. Omdat de toegangsserver en configuratie instanties niet veel resources innemen, zijn deze verspreid over de verschillende data instanties. Er zijn meerdere toegangsnodes geplaatst om de queries te verdelen naar verschillende toegangsnodes, bij de beschikbaarheidstesten zal er altijd een toegangsnode altijd beschikbaar blijven. In het totaal zijn er 6 instanties nodig. Deze zijn beschreven in \ref{fig:MongoDB-deployment} in bijlage. De installatie en configuratiebestanden kunnen gevonden worden op \url{https://github.com/thuys/mongodb}.
 
-\paragraph{YCSB} YCSB kan naar meerdere instanties uitgerold worden. In deze testen is er gekozen om maar een enkele instantie uit te rollen om de testen eenvoudiger te kunnen uitvoeren.  Een overzicht is getoond in figuur \ref{fig:YCSB-deployment}. 
+\paragraph{YCSB} YCSB kan naar meerdere instanties uitgerold worden. In deze testen is er gekozen om maar een enkele instantie uit te rollen om de testen op de eenvoudigste mogelijke manier uit te voeren.  Een overzicht is getoond in figuur \ref{fig:YCSB-deployment}. 
 
 
-\section{Uitvoeren van de calibratie en testen}
-Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de type queries gespecificeerd worden, deze zijn voor alle verschillende systemen gelijk. Een overzicht van deze parameters kunnen gevonden worden in tabel \ref{table:calibratiequeries}. 40\% van de uitgevoerde queries past de database aan, er is dus een dynamische database. Bij het lezen wordt er de helft van de keren in batch gelezen met gemiddeld 50 records per bewerking. Tenslotte wordt er met een \textit{zipfian} verdeling gekozen om regelmatig dezelfde records te lezen waardoor de data aan het DBMS uit cache gelezen kan worden. 
+\section{Uitvoeren van de kalibratie en testen}
+Voor het uitvoeren van de volledige benchmarking dient eerst de verdeling van de type queries gespecificeerd worden, deze zijn voor alle verschillende DBMS's gelijk. Een overzicht van deze parameters kunnen gevonden worden in tabel \ref{table:calibratiequeries}. 40\% van de uitgevoerde queries past de database aan, er is dus een dynamische database. Bij het lezen wordt er de helft van de keren in batch gelezen met gemiddeld 50 records per bewerking. Tenslotte wordt er met een \textit{zipfian} verdeling gekozen om regelmatig dezelfde records te lezen waardoor de data aan het DBMS uit cache gelezen kan worden. 
 
 Voor later de data optimaal te kunnen analyseren, wordt er elke second de gemiddelde vertraging gelogd voor elk type query. 
 
-\paragraph{Calibratie testen} Voor de calibratie van de omgeving zijn er 2 soorten testen gedraaid, de parameters voor het aantal connecties kunnen gevonden worden in tabel \ref{table:calibratiegebruikers}. De parameters voor het aantal queries per second zijn te vinden in tabel \ref{table:calibratiequeriesperseconde}. In dit geval is het aantal gebruikers bepaalt door de uitkomst van de calibratie van het aantal gebruikers. 
+\paragraph{Kalibratietesten} Voor de kalibratie van de omgeving zijn er twee soorten testen gedraaid, de parameters voor het aantal connecties kunnen gevonden worden in tabel \ref{table:calibratiegebruikers}. De parameters voor het aantal queries per second zijn te vinden in tabel \ref{table:calibratiequeriesperseconde}. In de tweede test is het aantal gebruikers bepaalt door de uitkomst van de kalibratie van het aantal gebruikers. 
 
 \begin{table}[htb!]
 	\centering
@@ -262,7 +261,7 @@ Voor later de data optimaal te kunnen analyseren, wordt er elke second de gemidd
 	Aantal gebruikers & 1, 2, 3, 4, 5, 7, 10, 15, \\
 	& 20, 30, 40, 50, 75, 100\\
 	\end{tabular}
-	\caption{Calibratie: Overzicht van de parameters voor het testen van het aantal gebruikers}
+	\caption{Kalibratie: Overzicht van de parameters voor het testen van het aantal gebruikers}
 	\label{table:calibratiegebruikers}
 \end{table}
 
@@ -277,11 +276,11 @@ Voor later de data optimaal te kunnen analyseren, wordt er elke second de gemidd
 		Theoretisch aantal records & 20, 50, 100, 150, 200, 250, 300, 400, 500, \\
 		per seconde  & 600, 700, 800,  900, 1000, 2000, 2500, 3000\\
 	\end{tabular}
-	\caption{Calibratie: Overzicht van de parameters voor het testen van het aantal records per seconde}
+	\caption{Kalibratie: Overzicht van de parameters voor het testen van het aantal records per seconde}
 	\label{table:calibratiequeriesperseconde}
 \end{table}
 
-\paragraph{Beschikbaarheidstesten} Bij het uitvoeren van de testen op de beschikbaarheid van de verschillende systemen zijn de parameters in tabel \ref{table:beschikbaarheidstesten-parameters} gebruikt. Het aantal vooraf ingeladen records is op 300 000 geplaatst zodat zowel HBase als MongoDB aan sharding doen. De commando's voor het stoppen en starten van de systemen zijn te vinden in tabel \ref{table:beschikbaarheidstesten-commandos}.  Voor Pgpool-II is er een extra commando toegevoegd dat na het herstarten van de systemen wordt uitgevoerd. Dit komt omdat er geen automatische recovery in Pgpool-II is. Tenslotte worden deze testen uitgevoerd op al de datanodes, een overzicht hiervan met de overeenkomstige service is te vinden in tabel \ref{table:beschikbaarheidstesten-nodes}. De testen voor MongoDB zijn uitgevoerd op replicaset 2, dit is de set zonder enige configuratie- en toegangsservers servers. Een enkele replicaset is voldoende omdat de verschillende replicasets dezelfde functie hebben, enkel andere data opslaan. 
+\paragraph{Beschikbaarheidstesten} Bij het uitvoeren van de testen op de beschikbaarheid van de verschillende systemen zijn de parameters vermeld in tabel \ref{table:beschikbaarheidstesten-parameters} gebruikt. Het aantal vooraf ingeladen records is op 300 000 geplaatst zodat zowel HBase als MongoDB aan sharding doen. De commando's voor het stoppen en starten van de systemen zijn te vinden in tabel \ref{table:beschikbaarheidstesten-commandos} van de appendix.  Voor Pgpool-II is er een extra commando toegevoegd dat na het herstarten van de systemen wordt uitgevoerd. Dit komt omdat er geen automatische recovery in Pgpool-II is. Tenslotte worden deze testen uitgevoerd op de datanodes, een overzicht hiervan met de overeenkomstige service is te vinden in tabel \ref{table:beschikbaarheidstesten-nodes}. De testen voor MongoDB zijn uitgevoerd op replicaset 2, dit is de set zonder enige configuratie- en toegangsservers servers. Een enkele replicaset is voldoende omdat de verschillende replicasets dezelfde functie hebben, enkel andere records worden hier bewaard. 
 
 \begin{table}[ht!]
 	\centering
@@ -313,9 +312,9 @@ Voor later de data optimaal te kunnen analyseren, wordt er elke second de gemidd
 	\label{table:beschikbaarheidstesten-nodes}
 \end{table}
 
-\paragraph{Consistentie testen} Voor de consistentie testen moeten de parameters van tabel \ref{table:consistentieinput} geconfigureerd worden, de parameters zijn te vinden in tabel \ref{table:consistentie-testen-parameters}. Deze test wordt uitgevoerd op HBase en MongoDB. 
+\paragraph{Consistentietesten} Voor de consistentietesten moeten de parameters van tabel \ref{table:consistentieinput} geconfigureerd worden, de parameters zijn te vinden in tabel \ref{table:consistentie-testen-parameters}. Deze test wordt uitgevoerd op HBase en MongoDB. 
 
-Om de analyse van de gegevens eenvoudiger te maken is er bij MongoDB gekozen om de test enkel uit te voeren op een replicaset en niet op een volledige cluster. Er is de aanname dat het consistentievenster afhankelijk is van de lengte tot de gegevens beschikbaar zijn op al de verschillende instanties van een replicaset. Het testen van een cluster voegt zo extra complexiteit toe. Deze test zou in de toekomst ook uitgevoerd kunnen worden op een cluster maar is in dit geval niet gedaan.  
+Om de analyse van de gegevens eenvoudiger te maken is er bij MongoDB gekozen om de test enkel uit te voeren op een replicaset en niet op een volledige cluster. De aanname is dat er consistentie is zodra de gegevens beschikbaar zijn op al de verschillende instanties van een replicaset. Het testen van een cluster die twee replicasets bevat, voegt enkel extra complexiteit toe. Deze test zou in de toekomst ook uitgevoerd kunnen worden op een cluster maar is in dit geval niet gedaan.  
 
 \begin{table}[htb!]
 	\centering
@@ -338,15 +337,16 @@ Om de analyse van de gegevens eenvoudiger te maken is er bij MongoDB gekozen om 
 	\captionof{table}{Consistentie testen: Overzicht van de parameters}
 	\label{table:consistentie-testen-parameters}
 \end{table}
+\paragraph{Overzicht van de testmethode} De grote lijnen van de testmethode uit hoofdstuk \ref{sec:methodiekvantesten} zijn geïmplementeerd, maar bepaalde mogelijkheden zijn niet geïmplementeerd. Dit is onder meer het geval voor lezen na het schrijven in de consistentie test en controleren of een waarde beschikbaar is in andere instanties na het platleggen van een instantie in de beschikbaarheidstest. 
 
 \section{Verzamelen en analyse van de testresultaten}
 De analyse van de data gebeurt aan de hand van de informatie die gelogd wordt tijdens de executie van de testen. Voor alle mogelijke testen maakt R-code de data visueel in verschillende grafieken. Voor elke test kan de data op een andere wijze voorgesteld worden. 
 
 De uitleg en voorbeelden van deze grafieken zullen getoond worden bij het presenteren van de resultaten in het volgende hoofdstuk. 
 
-De R code kan gevonden worden op GitHub \url{https://github.com/thuys/YCSB-R-Scripts}.  
+De R-code kan gevonden worden op \url{https://github.com/thuys/YCSB-R-Scripts}.  
 
 \section{Conclusie}
-In dit hoofdstuk is de vertaling gemaakt van een theoretisch testmodel tot de implementatie. Daarbij zijn keuzes gemaakt en is de configuratie voor de volgende testen vastgelegd. De code voor elk gedeelte is te vinden op Github zodat anderen de testen kunnen reproduceren en aanpassen. De installatie van de model DBMS's is geautomatiseerd zodat deze met slechts weinig kennis kunnen opgesteld worden. De testresultaten zullen tenslotte visueel worden voorgesteld zodat het eenvoudiger is om de data te verwerken. 
+In dit hoofdstuk is de vertaling gemaakt van een theoretisch testmodel tot de implementatie. Daarbij zijn keuzes gemaakt en is de configuratie voor de testen vastgelegd. De code voor elk gedeelte is te vinden op Github zodat anderen de testen kunnen reproduceren en aanpassen. De installatie van de model DBMS's is geautomatiseerd met behulp van IMP zodat deze met slechts weinig kennis kunnen opgesteld worden. De testresultaten worden visueel voorgesteld zodat het eenvoudiger is om de data te verwerken. 
 
-De grote lijnen van de testmethode uit hoofdstuk 2 zijn geïmplementeerd, maar bepaalde mogelijkheden zijn niet geïmplementeerd. Dit is onder meer het geval voor lezen na het schrijven in de consistentie test en controleren of een waarde beschikbaar is in andere instanties na het platleggen van een instantie in de beschikbaarheidstest. 
+%
