@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  21 AUG 2014 01:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  21 AUG 2014 02:50
 entering extended mode
 **masterproef.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\masterproef.tex"
@@ -2634,11 +2634,11 @@ Package logreq Info: Writing requests to 'masterproef.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 40290 strings out of 493921
- 861820 string characters out of 3147279
- 1365911 words of memory out of 3000000
+ 40288 strings out of 493921
+ 861796 string characters out of 3147279
+ 1366911 words of memory out of 3000000
  42214 multiletter control sequences out of 15000+200000
- 103448 words of font info for 168 fonts, out of 3000000 for 9000
+ 103318 words of font info for 167 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  60i,20n,77p,2285b,4151s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -2665,7 +2665,7 @@ ram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on masterproef.pdf (102 pages, 5031025 bytes).
+Output written on masterproef.pdf (102 pages, 5032281 bytes).
 PDF statistics:
  1507 PDF objects out of 1728 (max. 8388607)
  407 named destinations out of 1000 (max. 500000)

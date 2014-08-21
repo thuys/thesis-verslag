@@ -13,37 +13,37 @@ Deze keuze van deze systemen is gebaseerd op de paper van Christophe Strauch \ci
 \section{Column database}
 \subsection{Cassandra}
 \textit{Website: \url{http://cassandra.apache.org/}}\\
-Cassandra is een database systeem die gebaseerd is op 2 verschillende systemen, Amazon's Dynamo en Google's Bigtable, wat voor een combinatie van een column- en key-value-based database zorgt. 
+Cassandra is een database systeem dat geïnspireerd is door Amazon's Dynamo en Google's Bigtable, wat voor een combinatie van een column- en key-value-based database zorgt. 
 
-De query taal is beperkt tot 3 operaties: get, insert en delete \cite{Lakshman:2010:CDS:1773912.1773922}, waar de  laatste waarde in geval van een conflict zal opgeslagen worden.
+De query taal is beperkt tot 3 operaties: get, insert en delete \cite{Lakshman:2010:CDS:1773912.1773922}, waar de  laatst geschreven waarde in geval van een conflict zal opgeslagen worden.
 
-De database kan gedistribueerd uitgerold worden waar door middel van partitionering en een consistent hashing algoritme de data verspreid wordt over de verschillende instanties. Om beschikbaarheid van de data te hebben bij een failure, wordt deze gerepliceerd over verschillende instanties met verschillende configuratie modellen. 
+De database kan gedistribueerd uitgerold worden. Door middel van partitionering en een consistent hashing algoritme de data verspreid wordt over de verschillende instanties. Om beschikbaarheid van de data te hebben bij een failure, wordt deze gerepliceerd over verschillende instanties met verschillende configuratie mogelijkheden. 
 
 \subsection{HBase}
 \textit{Website: \url{http://hbase.apache.org/}}\\
-HBase is een database systeem die gebaseerd is op Google's BigTable en draait boven op HDFS, Hadoop Distibuted File System.
+HBase is een database systeem dat gebaseerd is op Google's BigTable en gebruik maakt van Zookeeper en HDFS, Hadoop Distibuted File System.
 
 De query taal voor HBase bestaat uit 4 elementen, een get, put en delete als standaard operaties en een scan om over verschillende rijen te gaan. 
 
-Voor het gedistribueerd draaien van de database, wordt de database ingedeeld in Regions. Vervolgens is een RegionServer verantwoordelijk voor de data van Regions. Daarnaast zijn er nog Zookeeper en Hadoop die respectievelijk verantwoordelijk zijn voor het management van de instanties en de eigenlijke dataopslag.
+Voor het gedistribueerd draaien van de database, wordt de database ingedeeld in HRegions. Een HRegionServer is een verantwoordelijk voor de data van bepaalde HRegions. Daarnaast zijn er nog Zookeeper en Hadoop die respectievelijk verantwoordelijk zijn voor het management van de instanties en de eigenlijke dataopslag.
 
 \section{Document database}
-\subsection{Apache CoucheDB}
+\subsection{Apache CouchDB}
 \textit{Website: \url{http://couchdb.apache.org/}}\\
-Apache CoucheDB is een document database systeem waar alles wordt voorgesteld met behulp van JSON. Het systeem kan bevraagd worden door middel van Map-Reduce, de map gebeurd door een \textit{view}, een JavaScript-functie die de gegevens zal selecteren. Nadien kan met een reduce view de data geaggregeerd worden. 
+Apache CoucheDB is een document database systeem waar alles wordt voorgesteld de interactie verloopt met behulp JSON. Het systeem kan bevraagd worden door middel van Map-Reduce: de map gebeurd door een \textit{view}, een JavaScript-functie die de gegevens zal selecteren. Nadien kan met een reduce view de data geaggregeerd worden. 
 
-Bij het gedistribueerd uitrollen zal de data met consistent hashing over verschillende instanties verdeeld worden waar elke instantie dezelfde rol heeft. Nu zal CoucheDB enkel updates van data van instantie veranderen en niet data automatisch verdelen. Ook is het mogelijk om een exacte replica van de ene naar de andere instantie te sturen, dit wordt bijvoorbeeld handig indien documenten naar een laptop gesynchroniseerd worden om later offline te kunnen werken.
+Bij het gedistribueerd uitrollen zal de data met consistent hashing over verschillende instanties verdeeld worden waar elke instantie dezelfde rol heeft. Het is mogelijk om een exacte replica van de ene naar de andere instantie te sturen, dit wordt bijvoorbeeld handig indien documenten naar een laptop gesynchroniseerd worden om later offline verder te kunnen werken.
 
-In een gedistribueerde omgeving ziet CouchDB conflicten niet als een uitzondering maar als een normale omstandigheid. Wel zullen updates atomisch per rij afgewerkt worden op een enkele instantie, zodat hier geen conflict in kan bestaan. Maar indien een conflict optreedt, is het aan de bovenliggende applicatie om deze af te handelen. 
+In een gedistribueerde omgeving ziet CouchDB conflicten niet als een uitzondering maar als een normale omstandigheid. Updates zullen atomisch op rijbasis afgewerkt worden op een enkele instantie, zodat hier geen conflict in kan bestaan. Maar indien een conflict optreedt, is het aan de bovenliggende applicatie om deze af te handelen. 
 
 \subsection{MongoDB}
 \textit{Website: \url{http://www.mongodb.org/}}\\
-MongoDB is een document database systeem waar de data wordt voorgesteld aan de hand van BSON, een binaire vorm vergelijkbaar met JSON. Data kan ingegegeven worden via JSON aangezien er een eenvoudige map mogelijk is. 
+MongoDB is een document database systeem waar de data wordt voorgesteld aan de hand van BSON, een binaire vorm vergelijkbaar met JSON. 
 
 Er is een uitgebreide query taal, waar er naast het invoegen, verwijderen en opvragen van een document ook talrijke zoekparameters meegegeven kunnen worden: dit gaat van zoeken op een enkel veld tot conjuncties, sorteren, projecties, ... 
 
-MongoDB kan in een gedistribueerde omgeving opgezet worden met een opsplitsing tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan wordt toepast door het combineren van instanties in een ReplicaSet waar er een master-slave configuratie is. Daarnaast kan data ook verdeeld worden over verschillende instanties of replica sets, dit kan door middel van het configureren van shards. 
-Conflicts worden opgevangen door de master waar er telkens een meerderheid van de instanties nodig is om deze te verkiezen. 
+MongoDB kan in een gedistribueerde omgeving opgezet worden met een opsplitsing tussen het redundant opslaan van data en het verdelen van data. Het redundant opslaan wordt toepast door het combineren van instanties in een ReplicaSet waar er een master-slave configuratie is die door de servers zelf wordt gekozen en opgevolgd. Daarnaast kan data ook verdeeld worden over verschillende instanties of replica sets, dit kan door middel van het configureren van shards. 
+Conflicts worden opgevangen door de master waar er telkens een meerderheid van de instanties nodig is om deze te kiezen. 
 
 \section{Key-Value database}
 \subsection{LightCloud (Tokyo)}
@@ -62,37 +62,37 @@ De query mogelijkheden zijn beperkt tot get, put en delete van een waarde. In he
 
 \subsection{Redis}
 \textit{Website: \url{http://www.redis.io/}}\\
-Redis is een key-value database met de mogelijkheid tot opslaan van complexe datastructuren zoals lijsten, sets en mappen. Naast de standaard instructies om een enkele waarde toe te voegen, zijn er specifieke commando's om operaties op de complexere objecten te doen. Redis biedt ook ondersteuning voor transacties en heeft deze de mogelijkheid tot expire, hierdoor zal een waarde automatisch vergeten worden na een meegegeven tijd. 
+Redis is een key-value database met de mogelijkheid voor het opslaan van complexe datastructuren zoals lijsten, sets en mappen. Naast de standaard instructies om een enkele waarde toe te voegen, zijn er specifieke commando's om operaties op de complexere objecten uit te voeren. Redis biedt ook ondersteuning voor transacties en heeft de mogelijkheid tot expire. Hierdoor zal een waarde automatisch vergeten worden na een meegegeven tijd. 
 
-De database wordt volledig in geheugen geplaatst maar ondersteunt 2 soorten van persistentie, oftewel door middel van RDB, oftewel met een AOF log. Bij RDB worden er over tijd snapshots gemaakt van de database en weggeschreven op harde schijf. In het geval van AOF wordt elke schrijfoperaties weggeschreven en kan de database opgebouwd worden met behulp van deze lijst.
+De database wordt volledig in geheugen geplaatst maar ondersteunt 2 soorten van persistentie, oftewel door middel van RDB, oftewel met een AOF log. Bij RDB worden er over tijd snapshots gemaakt van de database en weggeschreven op harde schijf. In het geval van AOF wordt elke schrijfoperatie weggeschreven en kan de database opnieuw opgebouwd worden met behulp van deze lijst.
 
-Tenslotte heeft Redis momenteel een relatief beperkte mogelijkheid tot een gedistribueerde database. Het is mogelijk om data over verschillende instanties te distribueren met behulp van sharding welke op voorhand gedefinieerd dient te worden en is er ook de mogelijkheid tot master-slave opstelling met automatische failure detection.
-De laatste is nog wel in beta, al is het mogelijk om deze te gebruiken. Tenslotte is er in de toekomst meer ondersteuning op komst met behulp van Redis Cluster waar data automatisch verspreid wordt over verschillende instanties. 
+Tenslotte heeft Redis momenteel een mogelijkheid tot een gedistribueerde database. Het is mogelijk om data over verschillende instanties te distribueren met behulp van sharding welke op voorhand gedefinieerd dient te worden. Er is ook de mogelijkheid tot master-slave opstelling met automatische failure detection.
+Dit laatste is nog wel in beta, al is het mogelijk om deze functie te gebruiken. Tenslotte is er in de toekomst meer ondersteuning op komst met behulp van Redis Cluster waar data automatisch verdeeld wordt over verschillende instanties. 
 
 \subsection{Riak}
 \textit{Website: \url{http://basho.com/riak/}}\\
-Riak is een key-value database met de mogelijkheid tot opslaan van strings, JSON en XML. Daarnaast heeft deze standaard operaties maar hier enkele uitbreidingen op gemaakt. Allereerst is het mogelijk om secundaire indexen te definiëren op de elementen, MapReduce toe te passen en een full-text search. 
+Riak is een key-value database met de mogelijkheid tot opslaan van strings, JSON en XML objecten. Daarnaast ondersteunt de database de standaard operaties zoals het invoegen, lezen, aanpassen en verwijderen met enkele uitbreidingen hierop. Zo is het mogelijk om secundaire indexen te definiëren op de elementen, MapReduce toe te passen en een full-text search uit te voeren. 
 
-Riak is gebouwd om gedistribueerd te draaien waar al de instanties evenwaardig zijn. Data wordt verdeeld over de verschillende instanties en elk element wordt standaard op 3 verschillende instanties opgeslagen. Indien een bepaalde instantie faalt, wordt dit met een gossiping algoritme verspreid over de verschillende instanties waarmee een naburige instantie overneemt. Daarnaast is er automatische recovery indien een instantie terug online komt. 
+Riak is gebouwd om in gedistribueerde omgeving te werken waar instanties gelijkaardige functies hebben. Data wordt verdeeld over de verschillende instanties en elk element wordt standaard op 3 verschillende instanties opgeslagen. Indien een bepaalde instantie faalt, wordt dit met een gossiping algoritme verspreid over de verschillende instanties waardoor een naburige instantie overneemt. Daarnaast is er automatische recovery indien een instantie terug online komt. 
 
 \subsection{Project Voldemort}
 \textit{Website: \url{http://www.project-voldemort.com/}}\\
 Project Voldemort is een key-value store met enkel 3 basis operaties: get, put en delete met de mogelijkheid voor als keys en values strings, serializable objecten, protocol buffers of raw byte arrays te gebruiken. 
 
-Deze database ondersteunt verschillende modes van distributie. De opbouw bestaat uit verschillende lagen, elk met hun eigen gedefinieerde functie. Met behulp van deze lagen kan de ontwikkelaar extra functionaliteit toevoegen met behulp van een extra laag om de applicatie meer te finetunen naar zijn uitwerking. 
-Data wordt verdeeld met behulp van consistent hashing over de verschillende servers, waarbij data verschillende keren wordt bijgehouden om ervoor te zorgen dat de data nog beschikbaar is in het geval van falen. 
+Deze database ondersteunt verschillende modes van distributie. De opbouw bestaat uit verschillende lagen, elk met hun eigen gedefinieerde functie. Met behulp van deze lagen kan de ontwikkelaar de functionaliteit aanpassen door het toevoegen van een nieuwe laag. 
+Data wordt verdeeld met behulp van consistente hashing over de verschillende servers. Hierbij wordt data verschillende keren wordt bijgehouden om ervoor te zorgen dat de data nog beschikbaar is in het geval van falen van een enkele instantie. 
 
 \section{Relationele database}
 \subsection{MySQL}
 \textit{Website: \url{http://www.mysql.com/}}\\
-MySQL is een relationele database waarin data kan voorgesteld worden in verschillende vormen, beginnend met een bool tot een blok tekst. Daarnaast zijn de query mogelijkheden uitgebreid. 
+MySQL is een relationele database waarin data kan voorgesteld worden in verschillende vormen, beginnend met een bool tot een blok tekst. Daarnaast zijn de query mogelijkheden uitgebreid door het gebruik van SQL.  
 
-De uitbreiding van een gedistribueerd systeem is bij MySQL ingebouwd door middel van een Master-Slave configuratie. Als mysqlfailover een faal detecteert in één van de slaven, zal de database verder werken, bij het falen van de master zal een nieuwe master handmatig aangeduid moeten worden. Ook de recovery moet handmatig gestart worden, waarna indien gewenst de originele master opnieuw als master kan gezet worden (bv. omdat deze de krachtigste computer is). 
+De uitbreiding van een gedistribueerd systeem is bij MySQL ingebouwd door middel van een Master-Slave configuratie. Als mysqlfailover een faal detecteert in één van de slaves, zal de database verder werken. Bij het falen van de master zal een nieuwe master handmatig aangeduid moeten worden. Ook de recovery moet handmatig opgestart worden, waarna de originele master opnieuw als master kan gezet worden indien dit gewenst is(bv. omdat deze de krachtigste computer is). 
 
 \subsection{Pgpool-II (PostgreSQL)}
 \textit{Website: \url{http://www.pgpool.net/}}\\
-PostgreSQL is een relationele database en heeft soortgelijke specificaties als MySQL op een enkele computer, verschillende soorten data kunnen voorgesteld worden met uitgebreide query mogelijkheden. 
+PostgreSQL is een relationele database en heeft soortgelijke specificaties als MySQL op een enkele computer, verschillende soorten data kunnen voorgesteld worden met uitgebreide query mogelijkheden met behulp van SQL. 
 
-Enkel als de database ook gedistribueerd moet uitgerold worden, is er een verschil. Bij PostgreSQL is er standaard geen ondersteuning hiervoor maar moet er op externe elementen vertrouwd worden. Er bestaan verschillende componenten soorten systemen, maar het meeste uitgebreide pakket is Pgpool-II. Deze ondersteund load-balancing, een vergelijking van de systemen kan gevonden worden op de wiki van PostgreSQL \cite{postgresql-clustering}. 
+Er is een groter verschil als de database ook gedistribueerd moet uitgerold worden. De standaard ondersteuning van PostgreSQL in een gedistribueerde omgeving is net zoals bij MySQL een Master-Slave configuratie. Maar deze ondersteuning kan uitgebreid worden door het gebruik maken van externe modules. Er bestaan verschillende modules, maar het meeste uitgebreide pakket is Pgpool-II. Deze ondersteund load-balancing, een vergelijking van de systemen kan gevonden worden op de wiki van PostgreSQL \cite{postgresql-clustering}. 
 
-Pgpool-II heeft verschillende mode, zoals parallel mode waar de data verdeeld wordt over verschillende instanties of replicatie waar de data op meerdere instanties wordt opgeslagen zodat deze nog beschikbaar is bij het falen van een enkele instantie.
+Pgpool-II heeft verschillende mode, zoals parallel mode waar de data verdeeld wordt over verschillende instanties. De replicatie mode zorgt ervoor dat data op meerdere instanties wordt opgeslagen zodat de data nog beschikbaar is bij het falen van een enkele instantie.

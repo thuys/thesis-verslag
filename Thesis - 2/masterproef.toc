@@ -300,7 +300,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{MongoDB}{62}{section*.143}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Samenvatting}{63}{section*.146}
+\contentsline {paragraph}{Samenvatting}{64}{section*.146}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Implicatie van de resultaten voor een gebruiker}{65}{section*.147}
 \defcounter {refsection}{0}\relax 
@@ -336,7 +336,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.2}Document database}{74}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.1}Apache CoucheDB}{74}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.1}Apache CouchDB}{74}{subsection.A.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {A.2.2}MongoDB}{74}{subsection.A.2.2}
 \defcounter {refsection}{0}\relax 
