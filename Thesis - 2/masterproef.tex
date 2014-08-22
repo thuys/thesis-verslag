@@ -3,18 +3,18 @@
 \setup{title={Evaluatie van consistentie en beschikbaarheid in gedistribueerde database systemen},
   author={Thomas Uyttendaele},
   promotor={Prof.\,dr.\,ir.\ Wouter Joosen},
-  assessor={dr.\,ir.\ Tias Guns, \\ Prof.\,dr.\,ir.\ Christophe Huygens},
-  assistant={Dr.\ ir.\ Bart Vanbrabant \\ Dr. Bert Lagaisse}}
+  assessor={Dr.\, Tias Guns \and Dr.\,ir.\ Christophe Huygens},
+  assistant={Dr.\ ir.\ Bart Vanbrabant \and Dr. Bert Lagaisse}}
 % De volgende \setup mag verwijderd worden als geen fiche gewenst is.
 \setup{filingcard,
   translatedtitle={Evaluation of consistency and availability for distributed database systems},
   udc=681.3,
-  shortabstract={In de database wereld zijn er momenteel twee grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie heeft uit een grote diversiteit aan datamodellen, performantie-eigenschappen en keuzes in het CAP theorema. \\
+  shortabstract={In de database wereld zijn er momenteel twee grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie maakt verschillende keuzes in het CAP theorema en heeft uit een grote diversiteit aan datamodellen en performantie-eigenschappen. \\
   Deze thesis focust op de uitwerking van een benchmarking tool om consistentie en beschikbaarheid in een gedistribueerde omgeving te testen. \\
-  De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het in- en uitschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met gelijktijdige schrijf- en leesbewerkingen op dezelfde dataeenheid. \\
+  De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het in- en uitschakelen van een service, een node in het gedistribueerde opslag systeem of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met gelijktijdige schrijf- en leesbewerkingen op hetzelfde datarecord. \\
   Deze benchmark onderzoek het gedrag van een database systeem in de praktijk en vergelijkt dit met de documentatie. Daarnaast worden verschillende database systemen met elkaar vergeleken. \\
-  Drie verschillende database management systemen worden getest met behulp van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten komt verschillend gedrag tussen de systemen tot uiting zoals op een verschillende wijze omgaan met gelijktijdig lezen en schrijven van een data-element. \\
-  De installatie en configuratie van de benchmarking tool en de reeds geteste database systemen is geautomatiseerd om te kunnen opstellen en uitvoeren zonder voorkennis van de specifieke systemen. Met een beperkte kennis en kost kan de tool ook uitgevoerd worden op andere database systemen. 
+  Drie verschillende database systemen worden getest met behulp van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten komt het verschillend gedrag tussen de systemen tot uiting zoals op een verschillende wijze omgaan met gelijktijdig lezen en schrijven van een data-element. \\
+  De installatie en configuratie van de benchmarking tool en de reeds geteste database systemen is geautomatiseerd om te kunnen opstellen en uitvoeren zonder voorkennis van de specifieke systemen. Met een beperkte kennis en kost kan de tool uitgevoerd worden op andere database systemen. 
   }
  }
 % Verwijder de "%" op de volgende lijn als je de kaft wil afdrukken
@@ -90,18 +90,18 @@ Tenslotte wil ik mijn familie, studiegenoten en vrienden bedanken voor hun steun
   
 \end{preface}
 
-\tableofcontents*
+\tableofcontents
 \begin{abstract}
-In de database wereld zijn er momenteel twee grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie heeft uit een grote diversiteit aan datamodellen, performantie-eigenschappen en keuzes in het CAP theorema. \\
+In de database wereld zijn er momenteel twee grote categorieën van database systemen actief: de relationele en NoSQL systemen. De laatste categorie maakt verschillende keuzes in het CAP theorema en heeft uit een grote diversiteit aan datamodellen en performantie-eigenschappen. \\
 Deze thesis focust op de uitwerking van een benchmarking tool om consistentie en beschikbaarheid in een gedistribueerde omgeving te testen. 
  
-De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het in- en uitschakelen van een service, server of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met gelijktijdige schrijf- en leesbewerkingen op dezelfde dataeenheid. 
+De beschikbaarheidstesten onderzoeken het gedrag van het gehele database systeem bij het in- en uitschakelen van een service, een node in het gedistribueerde opslag systeem of netwerk verbinding. De consistentietest bestudeert hoe het systeem omgaat met gelijktijdige schrijf- en leesbewerkingen op hetzelfde datarecord. 
 
 Deze benchmark onderzoek het gedrag van een database systeem in de praktijk en vergelijkt dit met de documentatie. Daarnaast worden verschillende database systemen met elkaar vergeleken. 
 
-Drie verschillende database management systemen worden getest met behulp van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten komt verschillend gedrag tussen de systemen tot uiting zoals op een verschillende wijze omgaan met gelijktijdig lezen en schrijven van een data-element. 
+Drie verschillende database systemen worden getest met behulp van de benchmarking tool, waarna de resultaten geanalyseerd worden. Op basis van deze resultaten komt verschillend gedrag tussen de systemen tot uiting zoals op een verschillende wijze omgaan met gelijktijdig lezen en schrijven van een data-element. 
 
-De installatie en configuratie van de benchmarking tool en de reeds geteste database systemen is geautomatiseerd om te kunnen opstellen en uitvoeren zonder voorkennis van de specifieke systemen. Met een beperkte kennis en kost kan de tool ook uitgevoerd worden op andere database systemen. 
+De installatie en configuratie van de benchmarking tool en de reeds geteste database systemen is geautomatiseerd om te kunnen opstellen en uitvoeren zonder voorkennis van de specifieke systemen. Met een beperkte kennis en kost kan de tool uitgevoerd worden op andere database systemen. 
 
 
 \end{abstract}

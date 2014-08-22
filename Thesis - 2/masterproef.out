@@ -1,45 +1,46 @@
 \BOOKMARK [0][-]{chapter*.1}{Voorwoord}{}% 1
-\BOOKMARK [0][-]{chapter*.2}{Samenvatting}{}% 2
-\BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Relationele en NoSQL DBMS's}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Vergelijking van DBMS's naar performantie en CAP}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Doelstelling en bijdrage}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Verder verloop}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Voorgestelde testmethodiek }{}% 8
-\BOOKMARK [1][-]{section.2.1}{Stap 1: Opstellen van de testomgeving}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Stap 2: Kalibratie van de testomgeving}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Stap 3: Testen van de systemen}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.4}{Stap 4: Verzamelen en analyseren van de testdata}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.5}{Conclusie}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Implementatie}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Selectie van de DBMS's}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{Gedetailleerde bespreking van de model DBMS's}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.3}{Selectie en uitwerking van de testsoftware}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Installatie en opstelling van de DBMS's en YCSB}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.5}{Uitvoeren van de kalibratie en testen}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.6}{Verzamelen en analyse van de testresultaten}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.7}{Conclusie}{chapter.3}% 21
-\BOOKMARK [0][-]{chapter.4}{Observaties}{}% 22
-\BOOKMARK [1][-]{section.4.1}{Kalibratie}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.2}{Beschikbaarheidstest}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.3}{Consistentietest}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.4}{Conclusie}{chapter.4}% 26
-\BOOKMARK [0][-]{chapter.5}{Analyse van de resultaten}{}% 27
-\BOOKMARK [1][-]{section.5.1}{Kalibratie}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.3}{Consistentietest}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.4}{Conclusie}{chapter.5}% 31
-\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 32
-\BOOKMARK [1][-]{section.6.1}{Uitdagingen}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{Verder werk}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.3}{Evaluatie van de doelstellingen en bijdragen}{chapter.6}% 35
-\BOOKMARK [0][-]{appendix.A}{Bespreking van verschillende DBMS's}{}% 36
-\BOOKMARK [1][-]{section.A.1}{Column database}{appendix.A}% 37
-\BOOKMARK [1][-]{section.A.2}{Document database}{appendix.A}% 38
-\BOOKMARK [1][-]{section.A.3}{Key-Value database}{appendix.A}% 39
-\BOOKMARK [1][-]{section.A.4}{Relationele database}{appendix.A}% 40
-\BOOKMARK [0][-]{appendix.B}{Overzicht van gedetailleerde implementatie keuzes}{}% 41
-\BOOKMARK [0][-]{appendix.C}{Extern beschikbare code en resultaten}{}% 42
-\BOOKMARK [0][-]{appendix.D}{Paper}{}% 43
-\BOOKMARK [0][-]{appendix.E}{Poster}{}% 44
-\BOOKMARK [0][-]{section*.159}{Bibliografie}{}% 45
+\BOOKMARK [0][-]{section*.2}{Inhoudsopgave}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{Samenvatting}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Inleiding}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Relationele en NoSQL DBMS's}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Vergelijking van DBMS's naar performantie en CAP}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Doelstelling en bijdrage}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{Verder verloop}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Voorgestelde testmethodiek }{}% 9
+\BOOKMARK [1][-]{section.2.1}{Stap 1: Opstellen van de testomgeving}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Stap 2: Kalibratie van de testomgeving}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Stap 3: Testen van de systemen}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{Stap 4: Verzamelen en analyseren van de testdata}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.5}{Conclusie}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Implementatie}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Selectie van de DBMS's}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Gedetailleerde bespreking van de model DBMS's}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Selectie en uitwerking van de testsoftware}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.4}{Installatie en opstelling van de DBMS's en YCSB}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.5}{Uitvoeren van de kalibratie en testen}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.6}{Verzamelen en analyse van de testresultaten}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.7}{Conclusie}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Observaties}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Kalibratie}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{Beschikbaarheidstest}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.3}{Consistentietest}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.4}{Conclusie}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Analyse van de resultaten}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Kalibratie}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{Beschikbaarheidstest}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.3}{Consistentietest}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.4}{Conclusie}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Uitdagingen}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{Verder werk}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.3}{Evaluatie van de doelstellingen en bijdragen}{chapter.6}% 36
+\BOOKMARK [0][-]{appendix.A}{Bespreking van verschillende DBMS's}{}% 37
+\BOOKMARK [1][-]{section.A.1}{Column database}{appendix.A}% 38
+\BOOKMARK [1][-]{section.A.2}{Document database}{appendix.A}% 39
+\BOOKMARK [1][-]{section.A.3}{Key-Value database}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.4}{Relationele database}{appendix.A}% 41
+\BOOKMARK [0][-]{appendix.B}{Overzicht van gedetailleerde implementatie keuzes}{}% 42
+\BOOKMARK [0][-]{appendix.C}{Extern beschikbare code en resultaten}{}% 43
+\BOOKMARK [0][-]{appendix.D}{Paper: ''CAP in practice: HBase and MongoDB''}{}% 44
+\BOOKMARK [0][-]{appendix.E}{Poster: ''CAP in de praktijk: MongoDB''}{}% 45
+\BOOKMARK [0][-]{section*.160}{Bibliografie}{}% 46

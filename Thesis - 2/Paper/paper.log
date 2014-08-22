@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  21 JUL 2014 13:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.14)  21 AUG 2014 20:42
 entering extended mode
 **paper.tex
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.tex"
@@ -562,40 +562,161 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 )
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\latex\pgfplots\pgfplots.sty
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplots.revis
+ion.tex)
+Package: pgfplots 2014/02/28 v1.10 Data Visualization (1.10-2-gb39fe75)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplots.code.
+tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplotscore.c
+ode.tex
+\t@pgfplots@toka=\toks36
+\t@pgfplots@tokb=\toks37
+\t@pgfplots@tokc=\toks38
+\pgfplots@tmpa=\dimen181
+\c@pgfplots@coordindex=\count129
+\c@pgfplots@scanlineindex=\count130
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\sys\pgfplotssy
+sgeneric.code.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\libs\pgfplotsl
+ibrary.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\oldpgfcompatib
+\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yfpu.code.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsu
+til.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
+pgfplotsliststructure.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
+pgfplotsliststructureext.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
+pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count131
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
+pgfplotsmatrix.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\numtable\pgfpl
+otstableshared.code.tex
+\c@pgfplotstable@counta=\count132
+\t@pgfplotstable@a=\toks39
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\liststructure\
+pgfplotsdeque.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsb
+inary.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsb
+inary.data.code.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsu
+til.verb.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\libs\pgflibrar
+ypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count133
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\sys\pgflibrary
+pgfplots.surfshading.pgfsys-pdftex.def)))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsc
+olormap.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\util\pgfplotsc
+olor.code.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplotsstacke
+dplots.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplotsplotha
+ndlers.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplotsmeshpl
+othandler.code.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplots.scali
+ng.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplotscoordp
+rocessing.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplots.error
+bars.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplots.marke
+rs.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplotsticks.
+code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgfplots\pgfplots.paths
+.code.tex)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodulede
+corations.code.tex
+\pgfdecoratedcompleteddistance=\dimen182
+\pgfdecoratedremainingdistance=\dimen183
+\pgfdecoratedinputsegmentcompleteddistance=\dimen184
+\pgfdecoratedinputsegmentremainingdistance=\dimen185
+\pgf@decorate@distancetomove=\dimen186
+\pgf@decorate@repeatstate=\count134
+\pgfdecorationsegmentamplitude=\dimen187
+\pgfdecorationsegmentlength=\dimen188
+)
+\tikz@lib@dec@box=\box40
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\decoratio
+ns\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\decoratio
+ns\pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count135
+\pgfplots@xmin@reg=\dimen189
+\pgfplots@xmax@reg=\dimen190
+\pgfplots@ymin@reg=\dimen191
+\pgfplots@ymax@reg=\dimen192
+\pgfplots@zmin@reg=\dimen193
+\pgfplots@zmax@reg=\dimen194
+)
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tikz\
+libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibrar
+yplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
+)))
 ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 102.
+LaTeX Font Info:    ... okay on input line 102.
 
 (C:\Users\Thomas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen181
-\scratchbox=\box40
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen182
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count136
+\scratchdimen=\dimen195
+\scratchbox=\box41
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen196
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
+\everyMPtoPDFconversion=\toks41
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 122.
 
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.10} into 
+your preamble.
+ on input line 102.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 127.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 122.
+LaTeX Font Info:    Try loading font information for U+msb on input line 127.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -603,38 +724,41 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-Underfull \hbox (badness 6316) in paragraph at lines 155--156
+Underfull \hbox (badness 6316) in paragraph at lines 160--161
 []\OT1/ptm/m/n/10 HBase[[]] is an open-sourced, dis-tributed, ver-sioned
  []
 
-[2] <../img/Consistency-test-period.png, id=16, 873.0216pt x 344.7279pt>
+[2] <../img/Consistency-test-period.png, id=16, 880.2486pt x 344.7279pt>
 File: ../img/Consistency-test-period.png Graphic file (type png)
 
 <use ../img/Consistency-test-period.png>
 Package pdftex.def Info: ../img/Consistency-test-period.png used on input line 
-213.
-(pdftex.def)             Requested size: 252.0pt x 99.50563pt.
+218.
+(pdftex.def)             Requested size: 252.0pt x 98.6903pt.
 
-<img/HBase/single-graph-2-drop-1.png, id=17, 422.88274pt x 422.88274pt>
+<img/HBase/single-graph-2-drop-1.png, id=18, 422.88274pt x 422.88274pt>
 File: img/HBase/single-graph-2-drop-1.png Graphic file (type png)
 
 <use img/HBase/single-graph-2-drop-1.png>
 Package pdftex.def Info: img/HBase/single-graph-2-drop-1.png used on input line
- 238.
+ 243.
 (pdftex.def)             Requested size: 252.0pt x 252.00227pt.
  [3 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/img/Consistency-test-per
-iod.png (PNG copy)>]
-<img/HBase/ECDF-plot-R-1-insertRawData-5.png, id=23, 1042.33989pt x 422.88274pt
+iod.png>]
+<img/HBase/ECDF-plot-R-1-insertRawData-5.png, id=25, 1042.33989pt x 422.88274pt
 >
 File: img/HBase/ECDF-plot-R-1-insertRawData-5.png Graphic file (type png)
  <use img/HBase/ECDF-plot-R-1-insertRawData-5.png>
 Package pdftex.def Info: img/HBase/ECDF-plot-R-1-insertRawData-5.png used on in
-put line 270.
+put line 275.
 (pdftex.def)             Requested size: 252.0pt x 102.23598pt.
  [4 <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/Paper/img/HBase/single-g
 raph-2-drop-1.png> <D:/Schooljaar 2013-2014/Thesis/verslag/Thesis - 2/Paper/img
 /HBase/ECDF-plot-R-1-insertRawData-5.png>]
-("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.bbl"
+Underfull \vbox (badness 4634) has occurred while \output is active []
+
+
+("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.bbl" [5]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 17.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
@@ -644,7 +768,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--30
 \OT1/ptm/m/n/8 URL \OT1/pcr/m/n/8 http://hadoop-hbase.blogspot.be/2012/03/
  []
 
-[5])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -660,13 +784,13 @@ Before submitting the final camera ready copy, remember to:
 
 ] ("D:\Schooljaar 2013-2014\Thesis\verslag\Thesis - 2\Paper\paper.aux") ) 
 Here is how much of TeX's memory you used:
- 13212 strings out of 493921
- 262344 string characters out of 3147279
- 295789 words of memory out of 3000000
- 16243 multiletter control sequences out of 15000+200000
- 44922 words of font info for 91 fonts, out of 3000000 for 9000
+ 22234 strings out of 493921
+ 561256 string characters out of 3147279
+ 722288 words of memory out of 3000000
+ 25139 multiletter control sequences out of 15000+200000
+ 43815 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,12n,56p,993b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,19n,103p,991b,2163s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
@@ -676,9 +800,9 @@ er/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (6 pages, 423812 bytes).
+Output written on paper.pdf (6 pages, 447448 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

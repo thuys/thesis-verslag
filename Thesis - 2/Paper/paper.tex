@@ -55,6 +55,10 @@
 \usepackage{multirow}
 
 \usepackage{array}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -92,14 +96,15 @@
 %% \address[label1]{<address>}
 %% \address[label2]{<address>}
 
-\author{Thomas Uyttendaele}
+\author{Thomas Uyttendaele (thomas.uyttendaele@student.kuleuven.be) \\ 
+Departement Computerwetenschappen, KULeuven, Belgi\"e}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-This papers introduced a new, quantified method to test distributed database system in regard to their behaviour to availability in case of a failing node and consistency of data from the users perspective. This method is tested on HBase and MongoDB, two consistent and partition tolerant systems, with the most important outcomes included. 
+This papers introduces a new, quantified method to test distributed database system in regard to their behaviour to availability in case of a failing node and consistency of data from the users perspective. This method is tested on HBase and MongoDB, two consistent and partition tolerant systems, some interesting outcomes are described in this paper. 
 \end{abstract}
 
 %%
@@ -110,14 +115,14 @@ This papers introduced a new, quantified method to test distributed database sys
 %% main text
 \section{Introduction}
 
-New online services and more online users means more data, data and load a single server can't handle. More and more database systems are distributed, for higher availability in case of an unexpected crash but also for horizontal distribution: the data of a single database is spread over different systems. These new services have different requirements; e.g.. an update doesn't need to be visible for all users immediately, it can take time, this behaviour is called eventual consistency. 
+New online services and more online users means more data, data and load a single server can't handle. Database systems are transformed towards a more distributed approach, for higher availability in case of an unexpected crash but also for horizontal scalability: the data of a single database is spread over different systems. Several new software have other requirements on the database than a few years ago; e.g. a change in a record doesn't need to be read correctly by other users immediately, this can happen in time. This behaviour is called eventual consistency. 
 
-Over the past years, many new systems have been build on this wave of changes, categorized as NoSQL. Some applications contain a high volume of data, have the need for consistent data and being able to work in a highly distributed environment, this are the CP systems in the CAP Theorem. Two examples that offer these guarantees are HBase and MongoDB. They greatly differ in supported queries on their system, but what happens if you only use the bare essentials and compare their behaviour in a distributed environment going from expected shut downs of instances towards crashes and network partitions? 
+Over the past years, many new systems have been build on this wave of changes, categorized as NoSQL. Some applications contain a high volume of data, have the need for consistent data and need to work in a highly distributed environment, this are the CP systems in the CAP Theorem. Two examples that offer these guarantees are HBase and MongoDB. They greatly differ in supported queries on their system. But what happens if you only use the bare essentials and compare their behaviour in a distributed environment going from expected shut downs of instances towards crashes and network partitions? 
 
-In this article, a comparison of both this systems on these 3 behaviours will be made. In chapter \ref{sec:CAPTheorem} a brief overview of the CAP Theorem is given, chapter \ref{sec:hbaseandmongodb} discusses HBase and MongoDB on paper. Chapter \ref{sec:testmethod} gives an overview of the used test method and chapter \ref{sec:result} presents the results. The future work is presented in chapter \ref{sec:futurework}, an overview of related work is given in chapter \ref{sec:related work} and a conclusion is made in chapter \ref{sec:conclusion}.  
+In this article, a comparison of this systems will be described. In chapter \ref{sec:CAPTheorem} a brief overview of the CAP Theorem is given, chapter \ref{sec:hbaseandmongodb} discusses HBase and MongoDB based on the literature. Chapter \ref{sec:testmethod} gives an overview of the used test method and chapter \ref{sec:result} presents the results. The future work is presented in chapter \ref{sec:futurework}, an overview of related work is given in chapter \ref{sec:related work} and a conclusion is formulated in chapter \ref{sec:conclusion}.  
 
 \section{The CAP Theorem\cite{brewer2000towards}\cite{brewer2012cap}}\label{sec:CAPTheorem}
-The CAP Theorem was introduced by E. Brewer \cite{brewer2000towards}  in 2000 and discusses 3 properties of which each network shared-data system can guarantee at most 2: (definitions based on \cite{brewer2012cap})
+The CAP Theorem was introduced by E. Brewer \cite{brewer2000towards}  in 2000 and discusses three properties of which each network shared-data system can guarantee at most two: (definitions based on \cite{brewer2012cap})
 \begin{itemize}
 \item (Strict)\textbf{C}onsistency: The system acts like there is only single storage 
 \item High \textbf{a}vailability: The system is available (for updates)
@@ -125,26 +130,26 @@ The CAP Theorem was introduced by E. Brewer \cite{brewer2000towards}  in 2000 an
 \end{itemize}
 Designers used this model to explain their design decisions, others used it to compare different system and sometimes it was misused. As E. Brewer explains 12 year after the launch, the "2 of 3" can be misleading.
 
-One of the reasons is that there exist several types of consistency, partition tolerance and different availability guarantees. The choice for the properties needs to be made several times in the different subsystems and the end solution is not black or white. 
+One of the reasons is that there exist several types of consistency, partition tolerance and there are different availability guarantees. The choice for the properties needs to be made several times in the different subsystems and the end solution is not black or white. 
 
-At first glance, it also looks like partition tolerance has to be implemented and therefore consistency and availability needs to be given up. In the practice, partition splits are only rare and therefore both consistency and availability can be allowed most of the time. 
+At first glance, it also looks like partition tolerance has to be implemented and therefore consistency or availability needs to be given up. In the practice, partition splits are only rare and therefore both consistency and availability can be allowed most of the time. 
 
 Each of the 3 choices will be discussed in more detail, how their implementation could work, what the influences are and some examples. 
 
 \subsection{CA: Consistency and availability}
 When forfeiting partition tolerance, these systems provide all the time consistent data available to all nodes, except when there are one or more nodes unavailable. In that case, write requests will be not allowed. 
 
-These systems can be build around the 2 phase commit and have cache invalidation protocols. Examples of this types are the typical relational databases roll out in clusters. 
+These systems can be build based on the two phase commit and have cache invalidation protocols. Examples of this types are the typical relational databases roll out in clusters. 
 
 \subsection{CP: Consistency and partition tolerance}
-A consistent system with partition tolerance will provide all the time the last data, even in the case of network splits. This comes with the loss of the availability of all nodes all the time. 
+A consistent system with partition tolerance will provide all the time the last data, even in the case of network splits. This comes with the loss of the availability of some nodes during the partition time.
 
 The system can allow operations only on the majority partition. In case multiple splits are present and no partition has a majority of nodes, the whole system can be unavailable. These systems can be build around a master/slave principle where the operations will be directed to the master, the slaves are present to continue operation when the master fails.
 
 In practice, systems like MongoDB, HBase and Redis select CP. 
 
 \subsection{AP: Availability and partition tolerance}
-In a highly available systems with partition tolerance, is it possible to read inconsistent data. As read and write operations are still allowed when there are different partitions, it is possible that the database has other content depending on the used node. When the split is dissolved, a need for manual conflict resolution can be needed. In case a record is adapted in both partitions, the user will need to choose the correct version. 
+In a highly available systems with partition tolerance. It is possible to read inconsistent data. As read and write operations are still allowed when there are different partitions, it is possible that the database has other content depending on the used node. When the split is dissolved, a need for manual conflict resolution can be needed. In case a record is adapted in both partitions, the user will need to choose the correct version. 
 
 Example systems following AP are Cassandra, Riak and Voldemort. 
 
@@ -152,34 +157,34 @@ Example systems following AP are Cassandra, Riak and Voldemort.
 In this article, 2 CP systems will be discussed more in detail regarding their choices to forfeit availability and the influence on their behaviour in practice. The systems are HBase and MongoDB, an architectural overview will be given in this section. 
 
 \subsection{HBase}
-HBase\cite{hbase-doc} is an open-sourced, distributed, versioned database designed after Google's BigTable \cite{chang2008bigtable}. HBase relies on Zookeeper for the distributed task coordination and the persistent storage can be done on the local hard disk, Hadoop Distributed File System or Amazon S3. In this article is chosen for Hadoop. 
+HBase\cite{hbase-doc} is an open-sourced, distributed, versioned database designed after Google's BigTable \cite{chang2008bigtable}. HBase relies on Zookeeper for the distributed task coordination. The persistent storage can be done on the local hard disk, Hadoop Distributed File System or Amazon S3. In this article is chosen for Hadoop. 
 
-HBase nodes exists out of HMasters and HRegionServers, the coordination of the system is done by one HMaster, the handling of data is done by the HRegionServer. To store the data, multiple Hadoop datanode instance should be deployed for data storage, preferable one on each HRegionServer. The data will be replicated to a configurable amount of other nodes, default modus is 3. The data is stored in a table, which is split in one or more regions. A region is leased to a given HRegionServer for a defined time. During this time, only this server will provide the data of the region to the different users. This way the consistency of data can be guaranteed because there is for each record only a single system responsible. Consistency on a single record is provided by a readers/writer lock on a single record for the according queries, this way there is a guarantee to atomicity on a single record, the full procedure is explained by Lars Hofhansl\cite{hbase-acid}. 
+HBase nodes exists out of HMasters and HRegionServers, the coordination of the system is done by one HMaster, the handling of data is done by the HRegionServer. Multiple Hadoop datanode instance should be deployed for data storage, preferable one on each HRegionServer. The data will be replicated to a configurable amount of other nodes, default modus is 3. The data is stored in a table, which is split in one or more regions. A region is leased to a given HRegionServer for a defined time. During this time, only this server will provide the data of the region to the different users. This way the consistency of data is guaranteed due to the fact that there is a single system responsible for the storage of a record.  Consistency on a single record is provided by a readers/writer lock on a single record for the according queries, this way there is a guarantee to atomicity on a single record, the full procedure is explained by Lars Hofhansl\cite{hbase-acid}. 
 
 To be partition tolerant, the partition with the majority of the Zookeeper servers and a HMaster will appoint regions to available HRegionServers, let's call this the data serving partition. In this approach, it is important to place the Zookeeper and HMaster servers in diverse location as otherwise a partition of only management servers will make the whole system unavailable. 
 
-In HBase, a node will be able to answer to requests if the node is present in the data serving partition. Only in rare cases that all data copies of Hadoop are stored in unavailable servers, the data will be unreachable. The nodes not in the data serving partition, will be unable to complete any requests. 
+In HBase, a node will be able to reply to requests if the node is present in the data serving partition. Only in rare cases that all data copies of Hadoop are stored in unavailable servers, the data will be unreachable. The nodes that are not in the data serving partition, will be unable to complete any requests. 
 
 When a server goes down, he can release the lease in case there is a graceful shut down (the HBase server is notified) and another server can get the lease immediately. In other cases, a new lease can only be given after the decay of the old lease, if the server comes back online in meantime, he will still be responsible. 
 
 \subsection{MongoDB}
 MongoDB\cite{mongodb-doc} is an open-sourced, distributed database designed for document storage, this are data entries where the format of each record can be different. According to their website they provide high performance and high availability, but this is incorrect to the given definition in this article. 
 
-MongoDB provides data replication and data distribution, the first is done by grouping different MongoDB servers into a ReplicaSet, the second is done by grouping different of these ReplicaSets. 
+MongoDB provides data replication and data distribution. The first is done by grouping different MongoDB servers into a ReplicaSet. The second is done by grouping different of these ReplicaSets and dividing the data between them.  
 
-A ReplicaSet exists out of different MongoDB servers whom work as a master/slave configuration. A master is a primary and a slave is called a secondary. The primary is responsible for the write actions, by default a query will succeed once it has a confirmation that the write has been executed on the primary. The read operation will go by default on the primary as well. Both query methods are configurable to give other guarantees, for a write operation there are multiple \textit{write concerns}, it is possible to wait till it has written on hard disc or a number of secondary servers, however all need a primary. For read operation there are multiple \textit{read preferences}, it is possible to read from a secondary or the closest server. \\ 
+A ReplicaSet exists out of different MongoDB servers whom work as master and slaves. A master is a primary and a slave is called a secondary. The primary is responsible for the write actions, by default a query will succeed once it has a confirmation that the write has been executed on the primary. The read operation will go by default on the primary as well. Both query methods are configurable to give other guarantees. For a write operation there are multiple \textit{write concerns}, it is possible to wait till it has written on hard disc or a number of secondary servers, however all need a primary. For read operation there are multiple \textit{read preferences}, it is possible to read from a secondary or the closest server. \\ 
 In the default configuration, MongoDB provides a consistency guarantee.
 
 In a ReplicaSet, there is at least half of the ReplicaSet needed for the primary election. As there is always a primary needed, the system has partition tolerance but no high availability, contrary to the statement on the documentation. However, it is possible to read from a secondary but writing is not possible.
 
-The state of the different members of a ReplicaSet is maintained by a heartbeat system: a server is marked as offline if no beat has been received for 10 seconds. In case the primary goes offline, election will be started to re-elect a new one. In other words, a primary has a lease of 10 seconds. This value of 10 seconds is non-configurable. 
+The liveness of the different members of a ReplicaSet is maintained by a heartbeat system: a server is marked as offline if no beat has been received for 10 seconds. In case the primary goes offline, election will be started to re-elect a new one. In other words, a primary has a lease of 10 seconds. This value of 10 seconds is non-configurable. 
 
 De data distributions happens by merging replica sets in a cluster. Furthermore, there is the need for access server (as many as you want) and configuration servers (1 or 3). The availability and partition tolerance of the data is the same as in the ReplicaSets as it handled by the ReplicaSets. In case a access server can't reach a primary, another access server will be needed to write data. If a majority of the configuration servers are not reachable, their will be no reconfiguration of the data over the different servers.  
 
 \subsection{Differences between databases} 
 Both systems provide consistency and partition tolerance and forfeit high availability, but some differences are in their implementation. 
 
-First of all, they differ in their handling of partition tolerance, in HBase there are dedicated management servers (HMaster and Zookeeper) to distribute the responsibilities of regions and if the management servers are in a partition with a minority of the data servers, data will be not available. In MongoDB the management of a ReplicaSet is done internally with as result that the write queries will be available in the partition with the majority of the data servers.
+First of all, they differ in their handling of partition tolerance. HBase has dedicated management servers (HMaster and Zookeeper) to distribute the responsibilities of regions and if the management servers are in a partition with a minority of the data servers, data will be not available. In MongoDB the management of a ReplicaSet is done internally with as result that the write queries will be available in the partition with the majority of the data servers.
 
 Both decisions have their reasons and possible motivations, in HBase it is possible to write every record, as a new region can be created if the old region is unavailable. In MongoDB it is possible that in sharding you can read all the data from multiple secondaries but only write given ranges of records.
 
@@ -188,23 +193,23 @@ In availability, there is a small difference: where in MongoDB it is possible to
 In section \ref{sec:result}, a detailed analyse will be done to the consistency and the behaviour of the systems in the case of network or server failure. 
 
 \section{Test method}\label{sec:testmethod}
-To test the behaviour of database systems towards consistency and availability, the Yahoo Cloud Serving Benchmarking (YCSB \cite{cooper2010benchmarking}) has been extended with event support for availability and reader-writers for consistency.
+To test the behaviour of database systems towards consistency and availability, the Yahoo Cloud Serving Benchmarking (YCSB \cite{cooper2010benchmarking}) has been extended with event support for availability and reader-writer support for consistency.
 
 Each of this tests follows the same steps: calibrating the system, records are preloaded, the test is started and in the end all the records are removed again and they are executed for HBase and MongoDB. During the calibration, a workload is chosen so there is a medium load on the different databases. 
 
 \subsection{Event support}
-The implementation of event support is integrated so it supports the execution of UNIX commandos at specified moments, the execution time and result code is logged. 
+The implementation of event support is integrated in YCSB so it supports the execution of UNIX commandos at specified moments. The execution time and result code is logged. 
 
-Before the test are 300 000 records stored in the database to enable the sharding in all database softwares. In these tests were 3 kinds of tests executed of which each one took 900 second. The first action takes place at 300 seconds, the second at 600 seconds.
+Before the test are 300 000 records stored in the database to enable the sharding in all database softwares. These tests contains 3 kinds of tests, of which an individual test takes 900 second. The first action takes place at 300 seconds, the second at 600 seconds.
 \begin{itemize}
-\item Graceful shut down of a data service and restart of the service
-\item Hard kill of the data service and a restart of the service
-\item Blocking of all network traffic from and to a server and the allowance of all network traffic
+\item (1) Graceful shut down of a data service and (2) restart of the service
+\item (1) Hard kill of the data service and (2) a restart of the service
+\item (1) Blocking of all network traffic from and to a server and (2) the allowance of all network traffic
 \end{itemize}
 
-Each element tests the behaviour of the system under different circumstances, the first two checks what happens in case of a respectively planned and unexpected shut down, the latter check the behaviour in case the network fails. 
+Each element tests the behaviour of the system under different circumstances, the first two checks what happens in case of a respectively planned and unexpected shut down, the latter check the behaviour in case the network fails or a server crashes.
 
-The tests are executed on each of the data nodes of HBase and MongoDB, caching and buffering on the client side are disabled in both tests. 
+The tests are executed on each of the data nodes of HBase and MongoDB.Caching and buffering on the client side are disabled in both tests. 
 
 \subsection{Consistency support}
 To implement consistency support, the YCSB software is extended with an extra workload. A graphical representation of an example workload is shown in figure \ref{fig:consistence-method}. 
@@ -214,11 +219,11 @@ To implement consistency support, the YCSB software is extended with an extra wo
 \caption{Example of consistency support for one write period with 1 writer and 4 readers}
 \label{fig:consistence-method}
 \end{figure}
-This workload exists out of 1 writer and a user-defined amount of readers.  Each writer will inserts or updates a value in the database with at a user-defined pace. The readers will read the record till they read the last written data element, each reader reads in a period defined by the user. The different readers are scheduled uniformly within the reading period. 
+This workload exists out of 1 writer and a user-defined amount of readers.  Each writer will insert or update a value in the database at a user-configurable pace. The readers will read the record till they read the last written data element, each reader reads in a period defined by the user. The different readers are scheduled uniformly within the reading period. 
 
-All this data is logged and gives possibilities to analyse when a record is visible for different users, compared to the time the queries where started or ended. 
+All this data is logged and gives possibilities to analyse when a record is visible for different users, compared to the time when the queries were started or ended. 
 
-Before the test, there are 30 000 records stored in the database, each tests takes 500 seconds and results start to be gathered after 30 seconds. In the tests is chosen to write every 0.5s and read with 5 readers every 10ms for MongoDB, for HBase there are 10 readers who read every 30ms.  
+Before the test, there are 30 000 records stored in the database, each tests takes 500 seconds and results start to be gathered after 30 seconds. In the tests is chosen to write every 0.5s and read with 5 readers every 10ms in MongoDB. In HBase there are 10 readers who read every 30ms.  
  
 
 \section{Results}\label{sec:result}
@@ -228,7 +233,7 @@ HBase is configured with 5 instances, of which 1 for management (HMaster, Hadoop
 
 MongoDB is configured with 6 instance, grouped by 3 in a ReplicaSet. There was a single configuration server and 3 instances had an access server. 
 
-YCSB was deployed on a single instance and used to calibrate the load on both systems. An individual record has 10 fields which each field a size of 100 bytes. The workload existed out of 20\% inserts and updates, 40\% selects and 20\% scans of an uniform spread between 1 and 100. The requests are spread according to Zipfian\footnote{Some record are popular, others rare to be used.}  The basic load for HBase is an average of 600 queries/second spread over 50 threads, for MongoDB there are 15 threads with a total of 200 queries/second. 
+YCSB was deployed on a single instance and used to calibrate the load on both systems. An individual record has 10 fields which each field a size of 100 bytes. The workload existed out of 20\% inserts and updates, 40\% selects and 20\% scans of an uniform spread between 1 and 100. The order of the reading and updating of the records is defined by a Zipfian\footnote{Some record are popular, others rare to be used.} distribution. The basic load for HBase is an average of 600 queries/second spread over 50 threads, for MongoDB there are 15 threads with a total of 200 queries/second. 
 
 \subsection{Availability}
 When reading and writing in the default setting of MongoDB, both MongoDB and HBase will read and write from a leader of a set of data. Both have a lease period for the leader, which can't be set for MongoDB (10 seconds), but can be configured for HBase (default 180 seconds). 
@@ -239,9 +244,9 @@ When reading and writing in the default setting of MongoDB, both MongoDB and HBa
 \caption{Example of network partition. The requests block for 110 seconds }
 \end{figure}
 
-In case of a stop of a HBase server in this configuration, the queries will halt till the lease for the region has been expired, this can take between 0 seconds and 180, depending on the moment of the action. In case of a graceful stop of the service, the service will release the lease and a faster handover is possible. During the tests it happened that with a hard stop of the service, the queries are impossible on the connections till the server is brought back online. In this scenario it was needed to manually dis- en reconnect to the database. A reason why this happens here is not known. 
+In case of a stop of a HBase server in this configuration, the queries will halt till the lease for the region has been expired, this can take between 0 seconds and 180, depending on the moment of the action. In case of a graceful stop of the service, the service will release the lease and a faster handover is possible. During the tests it happened that with a hard stop of the service, no queries can be executed on the database connection till the server is brought back online. In this scenario it was needed to manually dis- en reconnect to the database. A reason why this happens is still unknown.
 
-For MongoDB, there is no difference between the graceful or hard stop of an instance; in case it was a secondary, no influences on the latency will be seen. In case a primary was stopped, the data will be in both cases temporarily unavailable for a few seconds. It seems that in a hard stop, there is still a messaging of the shut down to the other nodes. In case of a network interruption, the results are varied, going from no influence, a temporary unavailability for a few seconds, or no completed queries the whole time the server is down. When in the last case, all connections are reinitialised, the queries can happen, when this is not done the table seems empty. 
+For MongoDB, there is no difference between the graceful or hard stop of an instance; in case it was a secondary, no influences on the latency will be seen. In case a primary was stopped, the data will be temporarily unavailable for a few seconds. It seems that in a hard stop, there is still a messaging of the shut down to the other nodes. In case of a network interruption, the results are varied. It goes from no influence, a temporary unavailability for a few seconds, or no completed queries the whole time the server is down. If all connections are reinitialised for the last case, new queries can executed. If this is not done the table seems empty. 
 
 A short overview of all the reactions is shown in table \ref{table:beschikbaarheid-stop-resultaat}. 
 \begin{table}[htbp]
@@ -261,9 +266,9 @@ A short overview of all the reactions is shown in table \ref{table:beschikbaarhe
 \end{table}
 
 \subsection{Consistency}
-In consistency HBase and MongoDB have a different approach, in MongoDB it is possible to configure the read and write queries, in HBase there is the choice to use cache at client side. In the tests the cache is disabled but the different options of MongoDB are tested. 
+Based on consistency, HBase and MongoDB have a different approach. In MongoDB it is possible to configure the read and write queries, in HBase there is the choice to use cache at client side. In the tests the cache is disabled but the different options of MongoDB are tested. 
 
-HBase: If a record is read while a write query is creating or updating the value, the read query will wait till the completion of the write query and return immediately the correct value. If a read query is send too soon, it will return the old data, but each query returned after the completion of a write query, will return the new data. A graphical representation of this can be seen in figure \ref{fig:consistentie-hbase-voorbeeld}. The stop time of the reader follows the one of the writer, together with extra information, it can be concluded that this is coming from the blocking till the write query has finished. 
+HBase: If a record is read while a write query is inserting or updating the value, the read query will wait till the completion of the write query and return immediately the correct value. If a read query is send too soon, it will return the old data. Each query that is finished after the completion of a write query, will return the new data. A graphical representation of this can be seen in figure \ref{fig:consistentie-hbase-voorbeeld}. The stop time of the reader follows the one of the writer, together with extra information, it can be concluded that this is coming from the blocking till the write query has finished. 
 
 \begin{figure}[h]
 \centering
@@ -272,63 +277,124 @@ HBase: If a record is read while a write query is creating or updating the value
 \label{fig:consistentie-hbase-voorbeeld}
 \end{figure}
 
-MongoDB: A read query can return the old or new data before the write query has been completed. However a readers/writer lock mechanism is used, it seems that after releasing the lock, the write query still has to execute extra steps. When reading from a secondary or the nearest server, there will be monotone read consistency, except if the driver of MongoDB selects another server between the reads, as there is no guarantee that the other servers already have the value. The process of finding the nearest server happens periodically in the background. \\
-From the test results, the writer configuration has no influence on the speed the replication will have, as the read queries get the same consistency window based on the start moment. The difference is the guarantee a user has when a write query has finished. 
+MongoDB: A read query can return the old or new data before the write query has been completed. Despite of the use of a readers/writer lock mechanism, it seems that after releasing the lock, the write query still has to execute extra steps. When reading from a secondary or the nearest server, there will be monotone read consistency, except if the driver of MongoDB selects another server between the reads, as there is no guarantee that the other servers already have the value. The process of finding the nearest server happens periodically in the background. \\
+From the test results, the writer configuration has no influence on consistency window for the different readers if the start moments of the writers and the successful read queries are compared. The difference is the guarantee a user has when a write query has finished. 
 
-An overview of the consistency windows is shown in table \ref{table:consistentie-hbase-correct} and \ref{table:consistentie-mongodb-correct} for respectively HBase and MongoDB. 
+An overview of the consistency windows is shown in figure \ref{fig:consistentie-hbase-correct} and \ref{fig:consistentie-mongodb-correct} for respectively HBase and MongoDB. 
 
-\begin{table}
-\centering
-\begin{tabular}{l| l l}
-	\textbf{Reader} & \textbf{Start time (ms)} & \textbf{Percentage correct read} \\
-	\hline
-	1 &  0 ms & 2.6\%\\
-	2 &  3 ms & 68\%\\
-	3 &  6 ms & 90\%\\
-	4 &  9 ms & 93\%\\
-	5 &  12 ms & 94\%\\
-	6 &  15 ms & 96\%\\
-	7 &  18 ms & 96\%\\
-	8 &  21 ms & 96\%\\
-	9 &  24 ms & 97\%\\
-	10 & 27 ms & 97\% 
-\end{tabular}
+\begin{figure}[!htf]
+
+\begin{tikzpicture}
+	
+	\begin{axis}[
+		xlabel={Start of the read query (ms)},
+		ylabel={Percentage new value},
+		domain = 0:1,
+		grid = major,
+		height=7cm,
+		width=.45\textwidth
+	]
+	
+
+	\addplot[color=black,mark=x]
+	        plot coordinates {
+	       		(0, 2.6)
+				(3, 68)
+				(6,90)
+				(9,93)
+				(12,94)
+				(15,96)
+				(18,96)
+				(21,96)
+				(24,97)
+				(27,97)
+	        };
+
+	\end{axis}
+\end{tikzpicture}
 \caption{Consistency: Percentage of the queries started at the given time moment that will read the newest inserted data. The average latency in a random read transaction is around 6ms.}
-\label{table:consistentie-hbase-correct}
-\end{table}
+\label{fig:consistentie-hbase-correct}
+\end{figure}
 
-\begin{table*}
-\centering
-\begin{tabular}{l | l l l l}
-& nearest & primary & primary- \newline preferred & secondary \\ 
-  \hline
-safe & 28, 69, 89, 91, 92 & 80, 98, 98, 99, 99 & 74, 99, 99, 99, 99 & 0, 65, 83, 85, 88 \\ 
-  normal & 24, 68, 87, 89, 92 & 72, 99, 100, 100, 100 & 75, 98, 98, 98, 98 & 0, 69, 85, 89, 92 \\ 
-  fsync\_safe & 28, 73, 87, 90, 90 & 68, 96, 98, 98, 98 & 78, 97, 98, 98, 98 & 0, 66, 80, 85, 86 \\ 
-  replicas\_safe & 24, 74, 87, 88, 91 & 75, 98, 99, 99, 99 & 79, 98, 98, 98, 98 & 1, 67, 84, 87, 89 \\ 
-  majority & 26, 77, 91, 91, 92 & 73, 98, 99, 99, 99 & 77, 99, 99, 99, 100 & 0, 61, 82, 85, 89 \\ 
-\end{tabular}
-	\caption{Consistency: Percentage of the queries started at 0, 2, 4 and 8ms  that will read the newest inserted data with the each row for a write configuration and a column for the read configuration. The average latency on a read transaction is for all read queries around 1ms. }
-	\label{table:consistentie-mongodb-correct}
-\end{table*}
+\begin{figure}[!htf]
+
+\begin{tikzpicture}
+	
+	\begin{axis}[
+		xlabel={Start of the read query (ms)},
+		ylabel={Percentage new value},
+		domain = 0:1,
+		grid = major,
+		height=7cm,
+		width=.45\textwidth,
+		legend pos= south east,
+		cycle list name=black white
+	]
+	
+		\addplot
+		        plot coordinates {
+		       		(0, 73)
+					(2, 98)
+					(4,99)
+					(6,99)
+					(8,99)
+		        };
+		\addlegendentry{Primary}
+		
+		\addplot
+	      plot coordinates {
+		       		(0, 77)
+					(2, 99)
+					(4,99)
+					(6,99)
+					(8,100)
+	      };
+		\addlegendentry{Primary-preferred}
+		
+	\addplot
+	        plot coordinates {
+	       		(0, 26)
+				(2, 77)
+				(4,91)
+				(6,91)
+				(8,92)
+	        };
+	\addlegendentry{Nearest}
+
+
+	
+	\addplot
+   plot coordinates {
+	       		(0, 0)
+				(2, 61)
+				(4,82)
+				(6,85)
+				(8,89)
+   };
+	\addlegendentry{Secondary}
+	\end{axis}
+\end{tikzpicture}
+\caption{Consistency: Percentage of the queries started at 0, 2, 4 and 8ms  that will read the newest inserted data with the each row for MongoDB. The average latency on a read transaction is for all read queries around 1ms. }
+\label{fig:consistentie-mongodb-correct}
+\end{figure}
 
 
 \section{Future work}\label{sec:futurework}
-The test run on the different systems are a start to have a quantified approach on the consistency and availability of the different systems. However multiple extensions can be made to this test method, next to testing more systems. 
+The test executed on the different systems are a start to have a quantified approach on the consistency and availability of the different systems. Besides testing more systems, deeper testing can be done and extensions can be added to the benchmarking tool.
 
 First of all, the strange behaviour of MongoDB and HBase of not allowing connections, could be researched in more detailed. 
 
-Secondly, the third element of CAP can be included: Partition tolerance. Right now the connection nodes are chosen when setting up the test, an extension could be to test all connections and see what happens in the case of a partition tolerance. How is the availability of each node, how long is a primary in MongoDB still accepting queries however it is cut off? 
+Secondly, the third element of CAP can be included: Partition tolerance. Right now the connection nodes are chosen when setting up the test, an extension could be to test all connections and see what happens in the case of a partition tolerance. How is the availability of each node? How long is a primary in MongoDB still accepting queries after it has been cut off from the other instances? 
 
 Thirdly, the availability and consistency tests could be tested together: when a node is shut down or cut off, is there the loose of data? Especially in MongoDB it could be the case that the data is already read on the primary but not yet replicated to the primary, what happens if the primary is cut off? 
 
-At last, the test parameters could be adapted, what happens with a different network infrastructure when the network distance is not equal any more, what happens with a higher and lower load? It could be possible in the end to have a mathematical formula which could predict the average consistency window for example.  
+At last, the test parameters could be adapted, what happens with a different network infrastructure when the network distance is not equal any more, what happens with a higher and lower load? It could be possible to come up with a mathematical formula which could predict the average consistency window for example.  
 
 
 \section{Related work}\label{sec:related work}
-The research towards database systems and their consistency guaranties is rare to have a measured approach. In recent paper (February 2014), Golab et al. states that there is only a limited amount of research done towards eventual consistency \cite{golab2014eventually}. They present a new view on consistency, were already some research is done towards active analyse (how long before the data is replicated to all nodes), the amount of passive analyse is limited (what do the users see). Compared to the consistency results from this paper, both are discussed: as well the delays before the data is present everywhere but also on the acting of the specific systems, in example the behaviour of HBase. 
+The is only a limited amount of research executed towards the guaranties a database system provides towards consistency and availability. In recent paper (February 2014), Golab et al. states that there is only a limited amount of research done towards eventual consistency \cite{golab2014eventually}. They present the current research and describe a missing category of testing methods towards consistency. This category is called the passive analysis, this analysis focusses on how a database user observers the consistency guaranties. This is different from the active analysis where they mostly focus on the time it takes to replicated to all nodes.  With the testing method described in this paper, both are covered: as well the delays before the data is present everywhere but also on the acting of the specific systems, in example the behaviour of HBase. 
 
-Another extension of YCSB called YCSB++\cite{patil2011ycsb++}, provides more logging information on all systems in the first place, but they also test the consistency of HBase in regards of the client caches. The reasoning for this is that it is the standard run configuration of HBase, but the submitting of the client cache towards the system depends not only on the time, but also on the amount of traffic that is being submitted. In the study they compare different cache sizes and this shows already a difference in time. Furthermore, it is possible to disable this caching in case there are records in the need of this strict consistency. 
+Another extension of YCSB called YCSB++\cite{patil2011ycsb++}, provides more logging information on all systems in the first place, but they also test the consistency of HBase in regards of the client caches. These caches are by default enabled on the client side, but the submission of the client cache towards the system does not only depend on the time. Also the amount of traffic generated at the client influences this speed. In the study they compare different cache sizes and this shows already a difference in time. In case data needs to be strict consistent, it is better to disable caching at this moment, this way the behaviour is more predictable and in general also faster available for other clients. 
 
 For availability benchmarking, there was no research found on related databases. However, research from 2004 \cite{mauro2004system} discuss a way to let a standalone system recover and provide a starting benchmark for it.  
 
@@ -338,7 +404,7 @@ A new testing method to quantify consistency and availability has been presented
 
 Another contribution are the results for two consistent and partition tolerant systems, HBase and MongoDB. These 2 systems are tested with the new method and show their relevance. According to the documentation, MongoDB and HBase both guarantee strict consistency but based on our results their characteristics are different: HBase blocks read queries till the completion of the write queries to guarantee a read will always be the same, MongoDB returns the ready query soon with new or old data before the write operation has been finished. 
 
-In the availability of the systems, HBase is in the standard configuration longer unavailable but with a change in the session time out, they can be made more the same. However both have a strange behaviour of not returning any results, in the case of HBase this is for a hard stop, in the case of MongoDB it is for a network partition. This doesn't happen in the other situations and in case of reconnecting to the database, the problems are solved. 
+In the availability of the systems, HBase is in the standard configuration longer unavailable but with a change in the session time out, they can be made more the same. In some occasions both systems have a strange behaviour of not returning any results, in the case of HBase this is for a hard stop, in the case of MongoDB it is for a network partition. This doesn't happen in the other situations and in case of reconnecting to the database, the problems are solved. 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
 %% \appendix

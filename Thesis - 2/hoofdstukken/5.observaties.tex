@@ -31,7 +31,7 @@ Het aantal gebruikers wordt zo gekozen dat het totale aantal queries maximaal is
 		MongoDB & 15\\
 		Pgpool-II & 30\\
 	\end{tabular}
-	\caption{Kalibratie: Aantal gebruikers per test voor de verschillende DBMS's}
+	\caption{\textbf{Kalibratie}: Aantal gebruikers per test voor de verschillende DBMS's}
 	\label{table:calibratie-gebruikers-resultaat}
 \end{table}
 
@@ -44,7 +44,7 @@ Voor elk DBMS kan met behulp van beide figuren een matige belasting gekozen word
 	\centering
 	\subfigure[Gemiddelde vertraging bij een verandering in aantal queries per seconde.] {\label{fig:calibratie-queriesperseconde-hbase-1} \includegraphics[width=0.95\textwidth]{img/Observaties/loadbalance-db-HBase}}
 	\subfigure[Verhouding van het aantal uitgevoerde queries ten opzichte van het aantal gevraagde queries.] {\label{fig:calibratie-queriesperseconde-hbase-2} \includegraphics[width=0.95\textwidth]{img/Observaties/loadbalance-realthroughput-db-HBase}}
-	\caption{Kalibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor HBase. }
+	\caption{\textbf{Kalibratie}: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor HBase. }
 	\label{fig:calibratie-queriesperseconde-hbase}
 \end{figure}
 
@@ -52,7 +52,7 @@ Voor elk DBMS kan met behulp van beide figuren een matige belasting gekozen word
 	\centering
 	\subfigure[Gemiddelde vertraging bij een verandering in aantal queries per seconde.] {\label{fig:calibratie-queriesperseconde-mongodb-1} \includegraphics[width=0.95\textwidth]{img/Observaties/loadbalance-db-MongoDB}}
 	\subfigure[Verhouding van het aantal uitgevoerde queries ten opzichte van het aantal gevraagde queries.] {\label{fig:calibratie-queriesperseconde-mongodb-2} \includegraphics[width=0.95\textwidth]{img/Observaties/loadbalance-realthroughput-db-MongoDB}}
-	\caption{Kalibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor MongoDB. }
+	\caption{\textbf{Kalibratie}: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor MongoDB. }
 	\label{fig:calibratie-queriesperseconde-mongodb}
 \end{figure}
 
@@ -60,20 +60,20 @@ Voor elk DBMS kan met behulp van beide figuren een matige belasting gekozen word
 	\centering
 	\subfigure[Gemiddelde vertraging bij een verandering in aantal queries per seconde.] {\label{fig:calibratie-queriesperseconde-pgpool-ii-1} \includegraphics[width=0.95\textwidth]{img/Observaties/loadbalance-db-PostgreSQL}}
 	\subfigure[Verhouding van het aantal uitgevoerde queries ten opzichte van het aantal gevraagde queries.] {\label{fig:calibratie-queriesperseconde-pgpool-ii-2} \includegraphics[width=0.95\textwidth]{img/Observaties/loadbalance-realthroughput-db-PostgreSQL}}
-	\caption{Kalibratie: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor Pgpool-II. }
+	\caption{\textbf{Kalibratie}: Overzicht van de vertraging t.o.v. het theoretisch aantal aanvragen met een vergelijking hoeveel werkelijke aanvragen er waren voor Pgpool-II. }
 	\label{fig:calibratie-queriesperseconde-pgpool-ii}
 \end{figure}
 
 \begin{table}[htb!]
 	\centering
 	\begin{tabular}{l| l }
-		\textbf{DBMS} & Aantal requests per seconde \\
+		\textbf{DBMS} & Aantal queries per seconde \\
 		\hline
 		HBase & 600 \\
 		MongoDB & 200\\
 		Pgpool-II & 100\\
 	\end{tabular}
-	\caption{Kalibratie: Aantal queries per seconde per test bij een matige belasting voor de verschillende DBMS's.}
+	\caption{\textbf{Kalibratie}: Aantal queries per seconde per test bij een matige belasting voor de verschillende DBMS's.}
 	\label{table:calibratie-queriesperseconde-resultaat}
 \end{table}
 
@@ -141,7 +141,7 @@ De tweede soort figuren heeft op de x-as het sleutel nummer en op de y-as wordt 
 	\centering
 	\includegraphics[width=\textwidth]{img/Observaties/HBase/consistency-plot-R-1-insertRawData-5}
 
-	\caption{\textbf{Consistentie van HBase: Tijdsverloop} \newline
+	\caption{\textbf{Consistentie van HBase}: Tijdsverloop \newline
  	In de figuur zijn op de x-as verschillende pogingen doorheen de tijd voorgesteld. Op de y-as staat de vertraging voor elke bewerking. De lezer zal een tweede keer moeten lezen de eerste poging van de leesactie gedaan is voor de schrijfactie voltooid is. Ook volgt het einde van de leesactie het einde van de schrijfactie. }
 	\label{fig:consistentie-hbase-tijdschaal-lezer-1}
 \end{figure}
@@ -162,14 +162,14 @@ De tweede soort figuren heeft op de x-as het sleutel nummer en op de y-as wordt 
 \begin{figure}[htb!] 
 	\centering
 	\includegraphics[width=.7\textwidth]{img/Observaties/MongoDB/ECDF-Compare-Write-insert-1}
-	\caption{\textbf{Consistentie van MongoDB: Verloop van schrijfoperaties} \newline
+	\caption{\textbf{Consistentie van MongoDB}: Verloop van schrijfoperaties \newline
 	Dit is de ruwe data van MongoDB's verschillende schrijfoperaties met een 90-percentiel, de start- en stoptijden zijn in dezelfde kleur.  }
 	\label{fig:consistentie-mongodb-all-mongodb-write}
 \end{figure}
 
 \begin{figure}[ht!] 
 	\centering \includegraphics[width=.70\textwidth]{img/Observaties/MongoDB/ECDF-Write-update-primarypreferred-1-2}
-	\caption{\textbf{Consistentie van MongoDB: Leesgedrag bij verschillende schrijfconfiguraties } \newline
+	\caption{\textbf{Consistentie van MongoDB}: Leesgedrag bij verschillende schrijfconfiguraties \newline
 	Een vergelijking van het leesgedrag onder verschillende schrijfconfiguratie toont dat er geen significant verschil is. In de figuur is een 99-percentiel getoond voor een update operatie met als leesactie primary, de start- en stoptijden zijn in dezelfde kleur.  
 	 } 
 	\label{fig:consistentie-mongodb-verschillende-schrijfacties}
@@ -179,7 +179,7 @@ De tweede soort figuren heeft op de x-as het sleutel nummer en op de y-as wordt 
 	\centering
 	\subfigure[Majority Update]{\label{fig:consistentie-mongodb-R2-majority} \includegraphics[width=.70\textwidth]{img/Observaties/MongoDB/ECDF-Reads-update-majority-1-2}}
 	\subfigure[Majority Insert]{\label{fig:consistentie-mongodb-R2-majority-insert} \includegraphics[width=.70\textwidth]{img/Observaties/MongoDB/ECDF-Reads-insert-majority-1-2}}
-	\caption{\textbf{Consistentie van MongoDB: Insert vs Update voor lezer 2} \newline
+	\caption{\textbf{Consistentie van MongoDB}: Insert vs Update voor lezer 2 \newline
 	Overzicht van MongoDB's insert vs update met een 99-percentiel voor lezer 2. De start- en stoptijden zijn in dezelfde kleur. Lezer 2 start met lezen op 2ms en vervolgens elke 10ms. Er is geen significant verschil tussen een insert of een update bij dezelfde leesconfiguratie en dezelfde lezer.  }
 	\label{fig:consistentie-mongodb-update-vs-insert}
 \end{figure}
@@ -206,7 +206,7 @@ De tweede soort figuren heeft op de x-as het sleutel nummer en op de y-as wordt 
 \begin{figure}[htb!] 
 	\centering
 	\includegraphics[width=.70\textwidth]{img/Observaties/MongoDB/ECDF-plot-Start-updateRawData-majority-secondary-1}
-	\caption{Consistentie van MongoDB: Overzicht van startmoment van consistente leesactie voor het lezen op de secondary }
+	\caption{\textbf{Consistentie van MongoDB}: Overzicht van startmoment van consistente leesactie voor het lezen op de secondary }
 	\label{fig:consistentie-mongodb-secondary}
 \end{figure}
 \begin{figure}[htb!] 
